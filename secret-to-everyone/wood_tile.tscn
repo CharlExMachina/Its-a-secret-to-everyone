@@ -3,5 +3,5 @@
 [ext_resource type="Texture2D" uid="uid://bchbdwlv578k8" path="res://floor tile.png" id="1_goie3"]
 
 [node name="WoodTile" type="Sprite3D"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+transform = Transform3D(1.77619, 0, 0, 0, -7.76398e-08, -1.77619, 0, 1.77619, -7.76398e-08, 0, 0, 0)
 texture = ExtResource("1_goie3")

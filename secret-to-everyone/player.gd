@@ -1,7 +1,7 @@
-extends Camera3D
+extends CharacterBody3D
 
 @export var movement_speed = 400
-@export var sensitivity_value = 0.006
+@export var sensitivity_value = 0.02
 
 const MOTION_X_MIN_THRESHOLD := 13.0
 const MOTION_Y_MIN_THRESHOLD := 13.0
@@ -31,13 +31,20 @@ func _physics_process(delta: float) -> void:
 		else:
 			velocity_y = 0.0
 
-		position += Vector3(velocity_x, 0.0, velocity_y) * delta * sensitivity_value
+		var final_motion = Vector3(velocity_x, 0.0, velocity_y)
+
+		velocity = final_motion * sensitivity_value
+
+		velocity.x = clampf(velocity.x, -10, 10)
+		velocity.y = clampf(velocity.y, -3, 3)
+	else:
+		velocity *= 0.8
+
+	move_and_slide()
 
 
 func stop_movement() -> void:
 	is_moving = false
-	mouse_drag_start_pos = Vector2.ZERO
-	mouse_drag_current_pos = Vector2.ZERO
 
 
 func calculate_span_motion() -> Vector2:

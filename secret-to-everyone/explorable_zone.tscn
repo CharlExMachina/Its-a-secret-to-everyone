@@ -23,88 +23,77 @@ cast_shadow = 0
 mesh = SubResource("BoxMesh_6k66e")
 
 [node name="Pot" parent="." instance=ExtResource("1_vwojm")]
-transform = Transform3D(0.0407898, 0, 0, 0, 0.0407898, 0, 0, 0, 1, 0, 0.632719, 0)
+transform = Transform3D(0.281704, 0, 0, 0, 0.281704, 0, 0, 0, 0.281704, 6.68555, 1.36394, -2.07896)
 modulate = Color(0.907942, 0.901922, 0.87912, 1)
 
 [node name="Pot2" parent="." instance=ExtResource("1_vwojm")]
-transform = Transform3D(0.0407898, 0, 0, 0, 0.0407898, 0, 0, 0, 1, 1.38676, 0.632719, 0.296357)
+transform = Transform3D(0.281704, 0, 0, 0, 0.281704, 0, 0, 0, 0.281704, 8.83853, 1.3048, -0.434424)
 modulate = Color(0.907942, 0.901922, 0.87912, 1)
 
 [node name="Pot3" parent="." instance=ExtResource("1_vwojm")]
-transform = Transform3D(0.0407898, 0, 0, 0, 0.0407898, 0, 0, 0, 1, -2.26775, 0.632719, 1.19328)
+transform = Transform3D(0.281704, 0, 0, 0, 0.281704, 0, 0, 0, 0.281704, -4.16885, 1.33481, -2.00507)
 modulate = Color(0.907942, 0.901922, 0.87912, 1)
 
 [node name="WoodTile" parent="." instance=ExtResource("3_fkm8p")]
-transform = Transform3D(-1.12233e-08, -0.256758, 1.12233e-08, 0, -1.12233e-08, -0.256758, 0.256758, -1.12233e-08, 4.90584e-16, -4.76079, 0.503976, -1.05326)
+transform = Transform3D(-1.23137e-08, -0.281704, 1.23137e-08, 0, -1.23137e-08, -0.281704, 0.281704, -1.23137e-08, 5.38248e-16, -2.79049, 0.55432, 1.39668)
 
 [node name="WoodTile2" parent="." instance=ExtResource("3_fkm8p")]
-transform = Transform3D(-1.12233e-08, -0.256758, 1.12233e-08, 0, -1.12233e-08, -0.256758, 0.256758, -1.12233e-08, 4.90584e-16, -3.65744, 0.503976, -0.707247)
+transform = Transform3D(-1.23137e-08, -0.281704, 1.23137e-08, 0, -1.23137e-08, -0.281704, 0.281704, -1.23137e-08, 5.38248e-16, 8.30359, 0.55432, 0.9725)
 
 [node name="WoodTile3" parent="." instance=ExtResource("3_fkm8p")]
-transform = Transform3D(-1.12233e-08, -0.256758, 1.12233e-08, 0, -1.12233e-08, -0.256758, 0.256758, -1.12233e-08, 4.90584e-16, -3.87441, 0.503976, 0.518477)
+transform = Transform3D(-1.23137e-08, -0.281704, 1.23137e-08, 0, -1.23137e-08, -0.281704, 0.281704, -1.23137e-08, 5.38248e-16, -0.451949, 0.55432, 1.78727)
 
 [node name="WoodTile4" parent="." instance=ExtResource("3_fkm8p")]
-transform = Transform3D(-1.12233e-08, -0.256758, 1.12233e-08, 0, -1.12233e-08, -0.256758, 0.256758, -1.12233e-08, 4.90584e-16, -5.55775, 0.503976, 0.0236427)
+transform = Transform3D(-1.23137e-08, -0.281704, 1.23137e-08, 0, -1.23137e-08, -0.281704, 0.281704, -1.23137e-08, 5.38248e-16, -7.7281, 0.55432, -0.53777)
 
 [node name="WoodTile5" parent="." instance=ExtResource("3_fkm8p")]
-transform = Transform3D(-1.12233e-08, -0.256758, 1.12233e-08, 0, -1.12233e-08, -0.256758, 0.256758, -1.12233e-08, 4.90584e-16, -2.43767, 0.503976, 0.496738)
+transform = Transform3D(-1.23137e-08, -0.281704, 1.23137e-08, 0, -1.23137e-08, -0.281704, 0.281704, -1.23137e-08, 5.38248e-16, -1.58904, 0.55432, 0.260568)
 
 [node name="WoodTile6" parent="." instance=ExtResource("3_fkm8p")]
-transform = Transform3D(-1.12233e-08, -0.256758, 1.12233e-08, 0, -1.12233e-08, -0.256758, 0.256758, -1.12233e-08, 4.90584e-16, -0.662109, 0.503976, -1.31726)
+transform = Transform3D(-1.23137e-08, -0.281704, 1.23137e-08, 0, -1.23137e-08, -0.281704, 0.281704, -1.23137e-08, 5.38248e-16, 5.15497, 0.55432, 0.290156)
 
 [node name="WoodTile7" parent="." instance=ExtResource("3_fkm8p")]
-transform = Transform3D(-1.12233e-08, -0.256758, 1.12233e-08, 0, -1.12233e-08, -0.256758, 0.256758, -1.12233e-08, 4.90584e-16, 0.501415, 0.503976, 1.31521)
+transform = Transform3D(-1.23137e-08, -0.281704, 1.23137e-08, 0, -1.23137e-08, -0.281704, 0.281704, -1.23137e-08, 5.38248e-16, -6.17574, 0.55432, 0.965668)
 
 [node name="WoodTile8" parent="." instance=ExtResource("3_fkm8p")]
-transform = Transform3D(-1.12233e-08, -0.256758, 1.12233e-08, 0, -1.12233e-08, -0.256758, 0.256758, -1.12233e-08, 4.90584e-16, 1.72168, 0.503976, 1.7429)
+transform = Transform3D(-1.23137e-08, -0.281704, 1.23137e-08, 0, -1.23137e-08, -0.281704, 0.281704, -1.23137e-08, 5.38248e-16, -3.5162, 0.55432, -0.800913)
 
 [node name="WoodTile9" parent="." instance=ExtResource("3_fkm8p")]
-transform = Transform3D(-1.12233e-08, -0.256758, 1.12233e-08, 0, -1.12233e-08, -0.256758, 0.256758, -1.12233e-08, 4.90584e-16, 3.16441, 0.503976, -0.408578)
+transform = Transform3D(-1.23137e-08, -0.281704, 1.23137e-08, 0, -1.23137e-08, -0.281704, 0.281704, -1.23137e-08, 5.38248e-16, 1.56097, 0.55432, -0.940325)
 
 [node name="Plants" parent="." instance=ExtResource("4_1dgnf")]
-transform = Transform3D(0.0509706, 0, 0, 0, 0.0509706, 0, 0, 0, 0.0509706, -1.12353, 0.593863, 1.39626)
-modulate = Color(0.907942, 0.901922, 0.87912, 1)
-
-[node name="Plants2" parent="." instance=ExtResource("4_1dgnf")]
-transform = Transform3D(0.0509706, 0, 0, 0, 0.0509706, 0, 0, 0, 0.0509706, -3.16263, 0.593863, 0.915382)
+transform = Transform3D(0.281704, 0, 0, 0, 0.281704, 0, 0, 0, 0.281704, -0.48764, 0.982207, -0.724265)
 modulate = Color(0.907942, 0.901922, 0.87912, 1)
 
 [node name="Plants3" parent="." instance=ExtResource("4_1dgnf")]
-transform = Transform3D(0.0509706, 0, 0, 0, 0.0509706, 0, 0, 0, 0.0509706, -2.43226, 0.593863, -0.946791)
+transform = Transform3D(0.281704, 0, 0, 0, 0.281704, 0, 0, 0, 0.281704, -1.58751, 0.92387, -1.97606)
 modulate = Color(0.907942, 0.901922, 0.87912, 1)
 
 [node name="Plants4" parent="." instance=ExtResource("4_1dgnf")]
-transform = Transform3D(0.0509706, 0, 0, 0, 0.0509706, 0, 0, 0, 0.0509706, -7.50422, 0.593863, -0.264342)
+transform = Transform3D(0.281704, 0, 0, 0, 0.281704, 0, 0, 0, 0.281704, -7.18262, 1.01303, -1.34681)
 modulate = Color(0.907942, 0.901922, 0.87912, 1)
 
 [node name="Plants5" parent="." instance=ExtResource("4_1dgnf")]
-transform = Transform3D(0.0509706, 0, 0, 0, 0.0509706, 0, 0, 0, 0.0509706, -5.36834, 0.593863, 2.37589)
+transform = Transform3D(0.281704, 0, 0, 0, 0.281704, 0, 0, 0, 0.281704, -7.93203, 0.579642, 0.789934)
 modulate = Color(0.907942, 0.901922, 0.87912, 1)
 
 [node name="SinglePlant" parent="." instance=ExtResource("5_tdxep")]
-transform = Transform3D(0.0722278, 0, 0, 0, 0.0722278, 0, 0, 0, 0.0722278, -4.27422, 0.618544, 1.70166)
+transform = Transform3D(0.281704, 0, 0, 0, 0.281704, 0, 0, 0, 0.281704, -4.3007, 1.06248, 1.40268)
 
 [node name="SinglePlant2" parent="." instance=ExtResource("5_tdxep")]
-transform = Transform3D(0.0722278, 0, 0, 0, 0.0722278, 0, 0, 0, 0.0722278, -4.14139, 0.618544, -1.09559)
+transform = Transform3D(0.281704, 0, 0, 0, 0.281704, 0, 0, 0, 0.281704, -4.88273, 1.02512, -0.7823)
 
 [node name="SinglePlant3" parent="." instance=ExtResource("5_tdxep")]
-transform = Transform3D(0.0722278, 0, 0, 0, 0.0722278, 0, 0, 0, 0.0722278, -1.42414, 0.618544, -0.910533)
+transform = Transform3D(0.281704, 0, 0, 0, 0.281704, 0, 0, 0, 0.281704, 4.04315, 1.31043, -1.863)
 
 [node name="SinglePlant4" parent="." instance=ExtResource("5_tdxep")]
-transform = Transform3D(0.0722278, 0, 0, 0, 0.0722278, 0, 0, 0, 0.0722278, -1.42414, 0.618544, 0.817536)
-
-[node name="SinglePlant5" parent="." instance=ExtResource("5_tdxep")]
-transform = Transform3D(0.0722278, 0, 0, 0, 0.0722278, 0, 0, 0, 0.0722278, 1.48456, 0.618544, -0.934957)
+transform = Transform3D(0.281704, 0, 0, 0, 0.281704, 0, 0, 0, 0.281704, 1.48057, 1.10511, -1.83898)
 
 [node name="SinglePlant6" parent="." instance=ExtResource("5_tdxep")]
-transform = Transform3D(0.0722278, 0, 0, 0, 0.0722278, 0, 0, 0, 0.0722278, 3.16514, 0.618544, 0.526353)
+transform = Transform3D(0.281704, 0, 0, 0, 0.281704, 0, 0, 0, 0.281704, 6.79, 1.15681, 0.268911)
 
 [node name="SinglePlant7" parent="." instance=ExtResource("5_tdxep")]
-transform = Transform3D(0.0722278, 0, 0, 0, 0.0722278, 0, 0, 0, 0.0722278, 4.34706, 0.618544, -0.629584)
-
-[node name="SinglePlant8" parent="." instance=ExtResource("5_tdxep")]
-transform = Transform3D(0.0722278, 0, 0, 0, 0.0722278, 0, 0, 0, 0.0722278, 6.61529, 0.618544, -0.832019)
+transform = Transform3D(0.281704, 0, 0, 0, 0.281704, 0, 0, 0, 0.281704, 2.90888, 1.06939, 0.351125)
 
 [node name="Player" parent="." instance=ExtResource("6_5bv0d")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.93278, 0.792466, 3.08243)
-fov = 50.0
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.00846, 0.496474, 2.75105)
