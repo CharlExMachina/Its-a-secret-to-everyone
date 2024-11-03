@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bp2oa71rlpxuq"]
 
-[ext_resource type="Texture2D" uid="uid://c6j1vqouoq4do" path="res://pot.png" id="1_libcg"]
+[ext_resource type="Texture2D" uid="uid://c6j1vqouoq4do" path="res://src/assets/sprites/pot.png" id="1_libcg"]
 
 [node name="Pot" type="Sprite3D"]
 transform = Transform3D(0.0801677, 0, 0, 0, 0.0801677, 0, 0, 0, 1.96539, 0, 0.269265, 0)

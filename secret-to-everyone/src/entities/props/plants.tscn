@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://kah8tdguoi58"]
 
-[ext_resource type="Texture2D" uid="uid://mquw0fausdyb" path="res://plants.png" id="1_u72o7"]
+[ext_resource type="Texture2D" uid="uid://mquw0fausdyb" path="res://src/assets/sprites/plants.png" id="1_u72o7"]
 
 [node name="Plants" type="Sprite3D"]
 transform = Transform3D(0.115348, 0, 0, 0, 0.115348, 0, 0, 0, 0.115348, 0, 0.211613, 0)
