@@ -1,12 +1,18 @@
 extends CharacterBody3D
 
-@export var movement_speed = 400
-@export var sensitivity_value = 0.02
+@export var movement_speed := 400.0
+@export var sensitivity_value := 0.02
 
-const MOTION_X_MIN_THRESHOLD := 13.0
-const MOTION_Y_MIN_THRESHOLD := 13.0
+const DRAG_MOTION_X_MIN_THRESHOLD := 13.0
+const DRAG_MOTION_Y_MIN_THRESHOLD := 13.0
+
+const DRAG_MOTION_MAX_X := 800.0
+const DRAG_MOTION_MAX_Y := 300.0
+
+const BODY_MAX_SPEED_X := 10.0
+const BODY_MAX_SPEED_Y := 3.0
+
 var is_moving := false
-
 
 var mouse_drag_start_pos: Vector2
 var mouse_drag_current_pos: Vector2
@@ -21,13 +27,13 @@ func _physics_process(delta: float) -> void:
 	var velocity_y := 0.0
 
 	if is_moving:
-		if abs(motion.x) > MOTION_X_MIN_THRESHOLD:
-			velocity_x = clampf(-motion.x, -800, 800) # we invert the X value so the spanning motion feels natural
+		if abs(motion.x) > DRAG_MOTION_X_MIN_THRESHOLD:
+			velocity_x = clampf(-motion.x, -DRAG_MOTION_MAX_X, DRAG_MOTION_MAX_X) # we invert the X value so the spanning motion feels natural
 		else:
 			velocity_x = 0.0
 
-		if abs(motion.y) > MOTION_X_MIN_THRESHOLD:
-			velocity_y = clampf(-motion.y, -300, 300) # we invert Y for the same reason as above
+		if abs(motion.y) > DRAG_MOTION_Y_MIN_THRESHOLD:
+			velocity_y = clampf(-motion.y, -DRAG_MOTION_MAX_Y, DRAG_MOTION_MAX_Y) # we invert Y for the same reason as above
 		else:
 			velocity_y = 0.0
 
@@ -35,8 +41,8 @@ func _physics_process(delta: float) -> void:
 
 		velocity = final_motion * sensitivity_value
 
-		velocity.x = clampf(velocity.x, -10, 10)
-		velocity.y = clampf(velocity.y, -3, 3)
+		velocity.x = clampf(velocity.x, -BODY_MAX_SPEED_X, BODY_MAX_SPEED_X)
+		velocity.y = clampf(velocity.y, -BODY_MAX_SPEED_Y, BODY_MAX_SPEED_Y)
 	else:
 		velocity *= 0.8
 
