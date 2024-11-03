@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://c7sepyyxwa6t3"]
+
+[ext_resource type="Texture2D" uid="uid://bh3ykvdv4mckg" path="res://single-plant.png" id="1_84n4v"]
+
+[node name="SinglePlant" type="Sprite3D"]
+transform = Transform3D(0.0722278, 0, 0, 0, 0.0722278, 0, 0, 0, 0.0722278, 0, 0, 0)
+modulate = Color(0.907942, 0.901922, 0.87912, 1)
+texture = ExtResource("1_84n4v")

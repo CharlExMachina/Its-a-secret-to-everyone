@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://bp2oa71rlpxuq"]
+
+[ext_resource type="Texture2D" uid="uid://c6j1vqouoq4do" path="res://pot.png" id="1_libcg"]
+
+[node name="Pot" type="Sprite3D"]
+transform = Transform3D(0.0407898, 0, 0, 0, 0.0407898, 0, 0, 0, 1, 0, 0, 0)
+texture = ExtResource("1_libcg")

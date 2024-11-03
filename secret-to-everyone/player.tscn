@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://1upkvfuvg5k7"]
+
+[ext_resource type="Script" path="res://player.gd" id="1_gkc18"]
+
+[node name="Player" type="Camera3D"]
+script = ExtResource("1_gkc18")
+movement_speed = 1
