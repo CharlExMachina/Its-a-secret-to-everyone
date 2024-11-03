@@ -1,10 +1,10 @@
 extends Camera3D
 
 @export var movement_speed = 400
-@export var sensitivity_value = 0.02
+@export var sensitivity_value = 0.006
 
-const MOTION_X_MIN_THRESHOLD := 15.0
-const MOTION_Y_MIN_THRESHOLD := 15.0
+const MOTION_X_MIN_THRESHOLD := 13.0
+const MOTION_Y_MIN_THRESHOLD := 13.0
 var is_moving := false
 
 
@@ -22,12 +22,12 @@ func _physics_process(delta: float) -> void:
 
 	if is_moving:
 		if abs(motion.x) > MOTION_X_MIN_THRESHOLD:
-			velocity_x = clampf(-motion.x, -700, 700) # we invert the X value so the spanning motion feels natural
+			velocity_x = clampf(-motion.x, -800, 800) # we invert the X value so the spanning motion feels natural
 		else:
 			velocity_x = 0.0
 
 		if abs(motion.y) > MOTION_X_MIN_THRESHOLD:
-			velocity_y = clampf(-motion.y, -90, 90) # we invert Y for the same reason as above
+			velocity_y = clampf(-motion.y, -300, 300) # we invert Y for the same reason as above
 		else:
 			velocity_y = 0.0
 
