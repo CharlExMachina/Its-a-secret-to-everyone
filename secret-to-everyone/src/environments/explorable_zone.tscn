@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://yqbjk2dtw1hk"]
+[gd_scene load_steps=10 format=3 uid="uid://yqbjk2dtw1hk"]
 
 [ext_resource type="Material" uid="uid://bnao8dtevx3oi" path="res://src/assets/materials/void_material.tres" id="1_cce0b"]
 [ext_resource type="PackedScene" uid="uid://bp2oa71rlpxuq" path="res://src/entities/props/pot.tscn" id="2_yp4li"]
@@ -6,10 +6,14 @@
 [ext_resource type="PackedScene" uid="uid://kah8tdguoi58" path="res://src/entities/props/plants.tscn" id="4_agoex"]
 [ext_resource type="PackedScene" uid="uid://c7sepyyxwa6t3" path="res://src/entities/props/single_plant.tscn" id="5_21qpq"]
 [ext_resource type="PackedScene" uid="uid://1upkvfuvg5k7" path="res://src/entities/player/player.tscn" id="6_l2t86"]
+[ext_resource type="PackedScene" uid="uid://nhyis68owura" path="res://src/entities/systems/cursor_controller/cursor_controller.tscn" id="7_kkkgd"]
+[ext_resource type="PackedScene" uid="uid://vhf0l0b53njs" path="res://src/entities/props/interactable_props/interactable_scroll.tscn" id="8_wxula"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_6k66e"]
 
 [node name="ExplorableZone" type="Node"]
+
+[node name="CursorController" parent="." groups=["CursorController"] instance=ExtResource("7_kkkgd")]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(19.843, 0, 0, 0, 1, 0, 0, 0, 6.3492, 0, 0, 0)
@@ -17,7 +21,7 @@ material_override = ExtResource("1_cce0b")
 mesh = SubResource("BoxMesh_6k66e")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
-transform = Transform3D(19.843, 0, 0, 0, -4.37114e-08, -6.3492, 0, 1, -2.77532e-07, -0.345512, 2.36153, -3.86103)
+transform = Transform3D(39.8913, 0, 0, 0, -4.37114e-08, -12.1151, 0, 1, -5.29566e-07, -0.345512, 2.36153, -3.86103)
 material_override = ExtResource("1_cce0b")
 cast_shadow = 0
 mesh = SubResource("BoxMesh_6k66e")
@@ -83,9 +87,6 @@ transform = Transform3D(0.281704, 0, 0, 0, 0.281704, 0, 0, 0, 0.281704, -4.3007,
 [node name="SinglePlant2" parent="." instance=ExtResource("5_21qpq")]
 transform = Transform3D(0.281704, 0, 0, 0, 0.281704, 0, 0, 0, 0.281704, -4.88273, 1.02512, -0.7823)
 
-[node name="SinglePlant3" parent="." instance=ExtResource("5_21qpq")]
-transform = Transform3D(0.281704, 0, 0, 0, 0.281704, 0, 0, 0, 0.281704, 4.04315, 1.31043, -1.863)
-
 [node name="SinglePlant4" parent="." instance=ExtResource("5_21qpq")]
 transform = Transform3D(0.281704, 0, 0, 0, 0.281704, 0, 0, 0, 0.281704, 1.48057, 1.10511, -1.83898)
 
@@ -97,3 +98,6 @@ transform = Transform3D(0.281704, 0, 0, 0, 0.281704, 0, 0, 0, 0.281704, 2.90888,
 
 [node name="Player" parent="." instance=ExtResource("6_l2t86")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.00846, 0.496474, 2.75105)
+
+[node name="InteractableScroll" parent="." instance=ExtResource("8_wxula")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.4563, 2.28192, -3.04338)

@@ -27,6 +27,8 @@ func _physics_process(delta: float) -> void:
 	var velocity_y := 0.0
 
 	if is_moving:
+		get_tree().call_group("CursorController", "set_cursor_pan")
+		
 		if abs(motion.x) > DRAG_MOTION_X_MIN_THRESHOLD:
 			velocity_x = clampf(-motion.x, -DRAG_MOTION_MAX_X, DRAG_MOTION_MAX_X) # we invert the X value so the spanning motion feels natural
 		else:
@@ -51,6 +53,8 @@ func _physics_process(delta: float) -> void:
 
 func stop_movement() -> void:
 	is_moving = false
+	get_tree().call_group("CursorController", "reset_cursor")
+	get_tree().call_group("CursorController", "set_default_cursor")
 
 
 func calculate_span_motion() -> Vector2:
