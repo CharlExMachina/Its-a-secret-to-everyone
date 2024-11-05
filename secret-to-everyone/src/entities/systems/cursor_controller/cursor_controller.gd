@@ -45,7 +45,7 @@ func set_investigation_cursor() -> void:
 func reset_cursor() -> void:
 	if cursor_override_enabled == false:
 		return
-	
+
 	cursor_override_enabled = false
 
 

@@ -28,7 +28,7 @@ func _physics_process(delta: float) -> void:
 
 	if is_moving:
 		get_tree().call_group("CursorController", "set_cursor_pan")
-		
+
 		if abs(motion.x) > DRAG_MOTION_X_MIN_THRESHOLD:
 			velocity_x = clampf(-motion.x, -DRAG_MOTION_MAX_X, DRAG_MOTION_MAX_X) # we invert the X value so the spanning motion feels natural
 		else:

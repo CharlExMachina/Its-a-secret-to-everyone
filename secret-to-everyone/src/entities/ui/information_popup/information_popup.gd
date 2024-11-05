@@ -13,3 +13,7 @@ var description: String:
 	set(value):
 		description = value
 		$Panel/DescriptionLabel.text = value
+
+
+func _on_exit_button_pressed() -> void:
+	queue_free()
