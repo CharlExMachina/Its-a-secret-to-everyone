@@ -4,6 +4,7 @@ var open_hand = preload("res://src/assets/sprites/cursors/hand_open.png")
 var pointer_hand = preload("res://src/assets/sprites/cursors/hand_point.png")
 var closed_hand = preload("res://src/assets/sprites/cursors/hand_closed.png")
 var investigate_object_cursor = preload("res://src/assets/sprites/cursors/zoom.png")
+var dialogue_cursor = preload("res://src/assets/sprites/cursors/message_dots_square.png")
 
 var cursor_override_enabled := false
 
@@ -31,6 +32,14 @@ func set_cursor_pan() -> void:
 		return
 
 	Input.set_custom_mouse_cursor(closed_hand)
+	cursor_override_enabled = true
+
+
+func set_cursor_dialogue() -> void:
+	if cursor_override_enabled:
+		return
+
+	Input.set_custom_mouse_cursor(dialogue_cursor)
 	cursor_override_enabled = true
 
 

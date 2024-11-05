@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://yqbjk2dtw1hk"]
+[gd_scene load_steps=12 format=3 uid="uid://yqbjk2dtw1hk"]
 
 [ext_resource type="Material" uid="uid://bnao8dtevx3oi" path="res://src/assets/materials/void_material.tres" id="1_cce0b"]
 [ext_resource type="PackedScene" uid="uid://bp2oa71rlpxuq" path="res://src/entities/props/pot.tscn" id="2_yp4li"]
@@ -7,7 +7,9 @@
 [ext_resource type="PackedScene" uid="uid://c7sepyyxwa6t3" path="res://src/entities/props/single_plant.tscn" id="5_21qpq"]
 [ext_resource type="PackedScene" uid="uid://1upkvfuvg5k7" path="res://src/entities/player/player.tscn" id="6_l2t86"]
 [ext_resource type="PackedScene" uid="uid://nhyis68owura" path="res://src/entities/systems/cursor_controller/cursor_controller.tscn" id="7_kkkgd"]
-[ext_resource type="PackedScene" uid="uid://vhf0l0b53njs" path="res://src/entities/props/interactable_props/interactable_scroll.tscn" id="8_wxula"]
+[ext_resource type="PackedScene" uid="uid://vhf0l0b53njs" path="res://src/entities/props/interactable_props/information_interactable/information_interactable_prop.tscn" id="8_wxula"]
+[ext_resource type="Texture2D" uid="uid://cyxbfkntq7dag" path="res://src/assets/sprites/scroll.png" id="9_ay5tm"]
+[ext_resource type="PackedScene" uid="uid://cee50qhn61vky" path="res://src/entities/props/interactable_props/dialogue_interactable/dialogue_interactable.tscn" id="10_3qp37"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_6k66e"]
 
@@ -101,3 +103,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.00846, 0.496474, 2.75105)
 
 [node name="InteractableScroll" parent="." instance=ExtResource("8_wxula")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.4563, 2.28192, -3.04338)
+item_name = "Another test"
+item_description = "This is a test :D"
+sprite = ExtResource("9_ay5tm")
+
+[node name="ViktorS" parent="." instance=ExtResource("10_3qp37")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.00582, 1.81346, -3.04509)
