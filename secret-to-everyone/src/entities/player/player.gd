@@ -13,12 +13,15 @@ const BODY_MAX_SPEED_X := 10.0
 const BODY_MAX_SPEED_Y := 3.0
 
 var is_moving := false
-
+var is_frozen := false
 var mouse_drag_start_pos: Vector2
 var mouse_drag_current_pos: Vector2
 
 
 func _physics_process(delta: float) -> void:
+	if is_frozen:
+		return
+
 	if Input.is_action_just_released("pan_view"):
 		stop_movement()
 
@@ -26,7 +29,7 @@ func _physics_process(delta: float) -> void:
 	var velocity_x := 0.0
 	var velocity_y := 0.0
 
-	if is_moving:
+	if is_moving and motion.length() > 40:
 		get_tree().call_group("CursorController", "set_cursor_pan")
 
 		if abs(motion.x) > DRAG_MOTION_X_MIN_THRESHOLD:
@@ -49,6 +52,15 @@ func _physics_process(delta: float) -> void:
 		velocity *= 0.8
 
 	move_and_slide()
+
+
+func freeze() -> void:
+	is_frozen = true
+	velocity = Vector3.ZERO
+
+
+func unfreeze() -> void:
+	is_frozen = false
 
 
 func stop_movement() -> void:

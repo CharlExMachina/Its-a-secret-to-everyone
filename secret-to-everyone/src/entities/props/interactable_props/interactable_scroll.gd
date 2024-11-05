@@ -15,7 +15,6 @@ func _process(delta: float) -> void:
 		frames_pressed += delta
 
 
-
 func _on_mouse_entered() -> void:
 	get_tree().call_group("CursorController", "set_investigation_cursor")
 
