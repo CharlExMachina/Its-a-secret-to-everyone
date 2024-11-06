@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cdiact1qib4sb"
-path.s3tc="res://.godot/imported/evergreen_2.png-e10a6f098a2cafd4eca92daa7f181f50.s3tc.ctex"
+uid="uid://bts1a5c58otl3"
+path.s3tc="res://.godot/imported/SummerTree1.png-08a66afbf8a0b028782fa7bc10e5c3ac.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://src/assets/sprites/evergreen/evergreen_2.png"
-dest_files=["res://.godot/imported/evergreen_2.png-e10a6f098a2cafd4eca92daa7f181f50.s3tc.ctex"]
+source_file="res://src/assets/sprites/environment/trees/SummerTree1.png"
+dest_files=["res://.godot/imported/SummerTree1.png-08a66afbf8a0b028782fa7bc10e5c3ac.s3tc.ctex"]
 
 [params]
 

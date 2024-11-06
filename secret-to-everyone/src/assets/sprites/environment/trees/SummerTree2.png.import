@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dvtbbandy7obn"
-path="res://.godot/imported/foliage_4.png-bf77f0eba98d3af479d11c483462a380.ctex"
+uid="uid://dqrv0fto1lpnd"
+path="res://.godot/imported/SummerTree2.png-eea6cce6a4b1f51e3113685abe98530e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/assets/sprites/foliage/foliage_4.png"
-dest_files=["res://.godot/imported/foliage_4.png-bf77f0eba98d3af479d11c483462a380.ctex"]
+source_file="res://src/assets/sprites/environment/trees/SummerTree2.png"
+dest_files=["res://.godot/imported/SummerTree2.png-eea6cce6a4b1f51e3113685abe98530e.ctex"]
 
 [params]
 

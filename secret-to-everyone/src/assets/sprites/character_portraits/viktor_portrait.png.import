@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dqrv0fto1lpnd"
-path="res://.godot/imported/SummerTree2.png-92ee27d8e0bfa775d58f146a369e2f76.ctex"
+uid="uid://o56kgbpoymqv"
+path="res://.godot/imported/viktor_portrait.png-22d1ca0e023f274bbc5a1d28ad970086.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/assets/sprites/trees/SummerTree2.png"
-dest_files=["res://.godot/imported/SummerTree2.png-92ee27d8e0bfa775d58f146a369e2f76.ctex"]
+source_file="res://src/assets/sprites/character_portraits/viktor_portrait.png"
+dest_files=["res://.godot/imported/viktor_portrait.png-22d1ca0e023f274bbc5a1d28ad970086.ctex"]
 
 [params]
 

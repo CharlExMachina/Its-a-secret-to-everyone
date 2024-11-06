@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cl66d678rr8uw"
-path.s3tc="res://.godot/imported/foliage_12.png-3ea0d0d6f40b7a996c3a28883d3aa2e5.s3tc.ctex"
+uid="uid://cdiact1qib4sb"
+path.s3tc="res://.godot/imported/evergreen_2.png-5c195d07b61cf1fd6fe0664d44c5d78f.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://src/assets/sprites/foliage/foliage_12.png"
-dest_files=["res://.godot/imported/foliage_12.png-3ea0d0d6f40b7a996c3a28883d3aa2e5.s3tc.ctex"]
+source_file="res://src/assets/sprites/environment/evergreen/evergreen_2.png"
+dest_files=["res://.godot/imported/evergreen_2.png-5c195d07b61cf1fd6fe0664d44c5d78f.s3tc.ctex"]
 
 [params]
 

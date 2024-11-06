@@ -1,9 +1,10 @@
 extends Area3D
 
+var dialogue_popup = preload("res://src/entities/ui/dialogue_popup/dialogue_popup.tscn")
 
-@export var item_name: String = ""
-@export_multiline var item_description: String = ""
-@export var sprite: Texture2D
+@export var npc_name: String = ""
+@export var portrait_texture: Texture2D
+@export var dialogue_sequence: Dialogue
 
 var frames_pressed := 0.0
 
@@ -40,11 +41,11 @@ func _on_input_event(camera: Node, event: InputEvent, event_position: Vector3, n
 
 			if frames_pressed <= 0.5:
 				pass
-				#var popup_instance = information_popup.instantiate()
-#
-				#popup_instance.title = item_name
-				#popup_instance.description = item_description
-#
-				#get_parent().add_child(popup_instance)
+				var popup_instance = dialogue_popup.instantiate()
+
+				popup_instance.character_portrait = portrait_texture
+				popup_instance.dialogue_secuence = dialogue_sequence
+
+				get_parent().add_child(popup_instance)
 
 			frames_pressed = 0.0

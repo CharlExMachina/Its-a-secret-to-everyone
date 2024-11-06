@@ -1,12 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://cee50qhn61vky"]
+[gd_scene load_steps=5 format=3 uid="uid://cee50qhn61vky"]
 
 [ext_resource type="Texture2D" uid="uid://ch6v4vkk16jp3" path="res://src/assets/sprites/placeholder_npc.png" id="1_dpysd"]
 [ext_resource type="Script" path="res://src/entities/props/interactable_props/dialogue_interactable/dialogue_interactable_prop.gd" id="1_wxerh"]
+[ext_resource type="Resource" uid="uid://y7a5dnpil6p4" path="res://src/dialogue_sequences/test_sequence/test_1.tres" id="2_5gbm8"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_moxm3"]
 
 [node name="DialogueInteractable" type="Area3D"]
 script = ExtResource("1_wxerh")
+npc_name = "Viktor S."
+dialogue_sequence = ExtResource("2_5gbm8")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("CapsuleShape3D_moxm3")
