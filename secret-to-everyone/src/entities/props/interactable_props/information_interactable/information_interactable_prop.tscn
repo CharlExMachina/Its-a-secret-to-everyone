@@ -14,7 +14,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.168404, 0, 0)
 shape = SubResource("SphereShape3D_6ncqy")
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
-transform = Transform3D(0.338045, 0, 0, 0, 0.338045, 0, 0, 0, 1, 0, 0, 0)
+transform = Transform3D(0.338045, 0, 0, 0, 0.338045, 0, 0, 0, 1, 0, 0.645455, 0)
 texture = ExtResource("1_tfyfj")
 
 [connection signal="input_event" from="." to="." method="_on_input_event"]

@@ -1,15 +1,25 @@
-[gd_scene load_steps=12 format=3 uid="uid://yqbjk2dtw1hk"]
+[gd_scene load_steps=21 format=3 uid="uid://yqbjk2dtw1hk"]
 
 [ext_resource type="Material" uid="uid://bnao8dtevx3oi" path="res://src/assets/materials/void_material.tres" id="1_cce0b"]
-[ext_resource type="PackedScene" uid="uid://bp2oa71rlpxuq" path="res://src/entities/props/pot.tscn" id="2_yp4li"]
-[ext_resource type="PackedScene" uid="uid://bnco27xu3o838" path="res://src/entities/props/wood_tile.tscn" id="3_7ncfc"]
-[ext_resource type="PackedScene" uid="uid://kah8tdguoi58" path="res://src/entities/props/plants.tscn" id="4_agoex"]
-[ext_resource type="PackedScene" uid="uid://c7sepyyxwa6t3" path="res://src/entities/props/single_plant.tscn" id="5_21qpq"]
+[ext_resource type="Texture2D" uid="uid://bo1htqyuonq2w" path="res://src/assets/sprites/evergreen/evergreen_1.png" id="2_r6rah"]
+[ext_resource type="Texture2D" uid="uid://evn6wejj3rc6" path="res://src/assets/sprites/foliage/foliage_1.png" id="2_yp8an"]
+[ext_resource type="Texture2D" uid="uid://cdiact1qib4sb" path="res://src/assets/sprites/evergreen/evergreen_2.png" id="3_migum"]
+[ext_resource type="Texture2D" uid="uid://biujt8t48vnf1" path="res://src/assets/sprites/foliage/foliage_6.png" id="3_p85xm"]
+[ext_resource type="Texture2D" uid="uid://cro3oe0qlenby" path="res://src/assets/sprites/foliage/foliage_10.png" id="4_8gq8o"]
+[ext_resource type="Texture2D" uid="uid://bts1a5c58otl3" path="res://src/assets/sprites/trees/SummerTree1.png" id="4_hchq8"]
+[ext_resource type="Texture2D" uid="uid://pfttwafr75vp" path="res://src/assets/sprites/backgrounds/forest/forest.png" id="4_otyjq"]
+[ext_resource type="Texture2D" uid="uid://cl66d678rr8uw" path="res://src/assets/sprites/foliage/foliage_12.png" id="5_ysuse"]
+[ext_resource type="Texture2D" uid="uid://bl61ibr6cw7ah" path="res://src/assets/sprites/foliage/foliage_5.png" id="6_1g2jw"]
 [ext_resource type="PackedScene" uid="uid://1upkvfuvg5k7" path="res://src/entities/player/player.tscn" id="6_l2t86"]
+[ext_resource type="Texture2D" uid="uid://cfsylhvcsjmce" path="res://src/assets/sprites/foliage/foliage_8.png" id="7_ig5jh"]
 [ext_resource type="PackedScene" uid="uid://nhyis68owura" path="res://src/entities/systems/cursor_controller/cursor_controller.tscn" id="7_kkkgd"]
+[ext_resource type="Texture2D" uid="uid://b2wpw13npstri" path="res://src/assets/sprites/foliage/foliage_2.png" id="8_kqyom"]
 [ext_resource type="PackedScene" uid="uid://vhf0l0b53njs" path="res://src/entities/props/interactable_props/information_interactable/information_interactable_prop.tscn" id="8_wxula"]
 [ext_resource type="Texture2D" uid="uid://cyxbfkntq7dag" path="res://src/assets/sprites/scroll.png" id="9_ay5tm"]
 [ext_resource type="PackedScene" uid="uid://cee50qhn61vky" path="res://src/entities/props/interactable_props/dialogue_interactable/dialogue_interactable.tscn" id="10_3qp37"]
+[ext_resource type="Texture2D" uid="uid://cphdqabe34ndr" path="res://src/assets/sprites/interactables/capybara.png" id="10_elw2f"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_6hla7"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_6k66e"]
 
@@ -17,86 +27,387 @@
 
 [node name="CursorController" parent="." groups=["CursorController"] instance=ExtResource("7_kkkgd")]
 
+[node name="Trees" type="Node" parent="."]
+
+[node name="Evergreen" type="Sprite3D" parent="Trees"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.78629, 1.09698, -3.3278)
+texture = ExtResource("2_r6rah")
+
+[node name="Evergreen2" type="Sprite3D" parent="Trees"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.341851, 1.2497, -2.38894)
+texture = ExtResource("3_migum")
+
+[node name="Evergreen8" type="Sprite3D" parent="Trees"]
+transform = Transform3D(1.72943, 0, 0, 0, 1.72943, 0, 0, 0, 1.72943, 7.68526, 1.42509, -1.14607)
+texture = ExtResource("4_hchq8")
+
+[node name="Evergreen9" type="Sprite3D" parent="Trees"]
+transform = Transform3D(1.72943, 0, 0, 0, 1.72943, 0, 0, 0, 1.72943, -4.63699, 1.42509, -2.01354)
+texture = ExtResource("4_hchq8")
+
+[node name="Evergreen10" type="Sprite3D" parent="Trees"]
+transform = Transform3D(1.72943, 0, 0, 0, 1.72943, 0, 0, 0, 1.72943, -12.2894, 1.42509, -2.51514)
+texture = ExtResource("4_hchq8")
+
+[node name="Evergreen11" type="Sprite3D" parent="Trees"]
+transform = Transform3D(1.72943, 0, 0, 0, 1.72943, 0, 0, 0, 1.72943, -19.0938, 1.42509, -2.65998)
+texture = ExtResource("4_hchq8")
+
+[node name="Evergreen3" type="Sprite3D" parent="Trees"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.341851, 1.2497, -7.28885)
+texture = ExtResource("4_otyjq")
+
+[node name="Evergreen4" type="Sprite3D" parent="Trees"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.90257, 1.2497, -7.28885)
+texture = ExtResource("4_otyjq")
+
+[node name="Evergreen5" type="Sprite3D" parent="Trees"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5086, 1.2497, -7.28885)
+texture = ExtResource("4_otyjq")
+
+[node name="Evergreen6" type="Sprite3D" parent="Trees"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.26229, 1.2497, -7.28885)
+texture = ExtResource("4_otyjq")
+
+[node name="Evergreen7" type="Sprite3D" parent="Trees"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.8257, 1.2497, -7.28885)
+texture = ExtResource("4_otyjq")
+
+[node name="Foliage" type="Node" parent="."]
+
+[node name="Foliage1" type="Sprite3D" parent="Foliage"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.560351, 0)
+texture = ExtResource("2_yp8an")
+metadata/_edit_lock_ = true
+
+[node name="Foliage2" type="Sprite3D" parent="Foliage"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.51049, 0.560351, -0.0149899)
+texture = ExtResource("2_yp8an")
+metadata/_edit_lock_ = true
+
+[node name="Foliage3" type="Sprite3D" parent="Foliage"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.01259, 0.560351, -0.682765)
+texture = ExtResource("2_yp8an")
+metadata/_edit_lock_ = true
+
+[node name="Foliage4" type="Sprite3D" parent="Foliage"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.908993, 0.560351, 1.87999)
+texture = ExtResource("2_yp8an")
+metadata/_edit_lock_ = true
+
+[node name="Foliage9" type="Sprite3D" parent="Foliage"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.77306, 0.560351, 1.27334)
+texture = ExtResource("3_p85xm")
+metadata/_edit_lock_ = true
+
+[node name="Foliage10" type="Sprite3D" parent="Foliage"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.98551, 0.560351, -1.2728)
+texture = ExtResource("3_p85xm")
+metadata/_edit_lock_ = true
+
+[node name="Foliage11" type="Sprite3D" parent="Foliage"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.8525, 0.560351, -0.530368)
+texture = ExtResource("3_p85xm")
+metadata/_edit_lock_ = true
+
+[node name="Foliage12" type="Sprite3D" parent="Foliage"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.6872, 0.560351, 1.18209)
+texture = ExtResource("4_8gq8o")
+metadata/_edit_lock_ = true
+
+[node name="Foliage58" type="Sprite3D" parent="Foliage"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.248, 0.560351, -1.35021)
+texture = ExtResource("2_yp8an")
+metadata/_edit_lock_ = true
+
+[node name="Foliage59" type="Sprite3D" parent="Foliage"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.1444, 0.560351, 1.21255)
+texture = ExtResource("2_yp8an")
+metadata/_edit_lock_ = true
+
+[node name="Foliage60" type="Sprite3D" parent="Foliage"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.46239, 0.560351, 0.605895)
+texture = ExtResource("3_p85xm")
+metadata/_edit_lock_ = true
+
+[node name="Foliage61" type="Sprite3D" parent="Foliage"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.24994, 0.560351, -1.94025)
+texture = ExtResource("3_p85xm")
+metadata/_edit_lock_ = true
+
+[node name="Foliage62" type="Sprite3D" parent="Foliage"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.38291, 0.560351, -1.19781)
+texture = ExtResource("3_p85xm")
+metadata/_edit_lock_ = true
+
+[node name="Foliage63" type="Sprite3D" parent="Foliage"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.54827, 0.560351, 0.514641)
+texture = ExtResource("4_8gq8o")
+metadata/_edit_lock_ = true
+
+[node name="Foliage14" type="Sprite3D" parent="Foliage"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.7253, 0.560351, 0.297769)
+texture = ExtResource("5_ysuse")
+metadata/_edit_lock_ = true
+
+[node name="Foliage15" type="Sprite3D" parent="Foliage"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.916, 0.560351, -2.85719)
+texture = ExtResource("5_ysuse")
+metadata/_edit_lock_ = true
+
+[node name="Foliage16" type="Sprite3D" parent="Foliage"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -6.74416, 0.560351, -2.92181)
+texture = ExtResource("5_ysuse")
+metadata/_edit_lock_ = true
+
+[node name="Foliage17" type="Sprite3D" parent="Foliage"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.66166, 0.560351, -2.55514)
+texture = ExtResource("5_ysuse")
+metadata/_edit_lock_ = true
+
+[node name="Foliage18" type="Sprite3D" parent="Foliage"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.182, 0.560351, -2.68687)
+texture = ExtResource("5_ysuse")
+metadata/_edit_lock_ = true
+
+[node name="Foliage19" type="Sprite3D" parent="Foliage"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.14586, 0.56035, 0.822375)
+texture = ExtResource("5_ysuse")
+metadata/_edit_lock_ = true
+
+[node name="Foliage20" type="Sprite3D" parent="Foliage"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.67607, 0.56035, -1.82533)
+texture = ExtResource("5_ysuse")
+metadata/_edit_lock_ = true
+
+[node name="Foliage50" type="Sprite3D" parent="Foliage"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.72059, 0.560351, 3.09297)
+texture = ExtResource("4_8gq8o")
+metadata/_edit_lock_ = true
+
+[node name="Foliage52" type="Sprite3D" parent="Foliage"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.9494, 0.560351, -0.946306)
+texture = ExtResource("5_ysuse")
+metadata/_edit_lock_ = true
+
+[node name="Foliage53" type="Sprite3D" parent="Foliage"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 1.22242, 0.560351, -1.01092)
+texture = ExtResource("5_ysuse")
+metadata/_edit_lock_ = true
+
+[node name="Foliage54" type="Sprite3D" parent="Foliage"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.62824, 0.560351, -0.644249)
+texture = ExtResource("5_ysuse")
+metadata/_edit_lock_ = true
+
+[node name="Foliage55" type="Sprite3D" parent="Foliage"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.1486, 0.560351, -0.775981)
+texture = ExtResource("5_ysuse")
+metadata/_edit_lock_ = true
+
+[node name="Foliage56" type="Sprite3D" parent="Foliage"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.1124, 0.56035, 2.73326)
+texture = ExtResource("5_ysuse")
+metadata/_edit_lock_ = true
+
+[node name="Foliage57" type="Sprite3D" parent="Foliage"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.6427, 0.56035, 0.085557)
+texture = ExtResource("5_ysuse")
+metadata/_edit_lock_ = true
+
+[node name="Foliage21" type="Sprite3D" parent="Foliage"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.31422, 0.56035, -1.91387)
+texture = ExtResource("5_ysuse")
+metadata/_edit_lock_ = true
+
+[node name="Foliage22" type="Sprite3D" parent="Foliage"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.27319, 0.56035, 0.0548811)
+texture = ExtResource("5_ysuse")
+metadata/_edit_lock_ = true
+
+[node name="Foliage23" type="Sprite3D" parent="Foliage"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.5976, 0.56035, 0.367682)
+texture = ExtResource("5_ysuse")
+metadata/_edit_lock_ = true
+
+[node name="Foliage24" type="Sprite3D" parent="Foliage"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 16.2676, 0.560351, 0.260198)
+texture = ExtResource("5_ysuse")
+metadata/_edit_lock_ = true
+
+[node name="Foliage25" type="Sprite3D" parent="Foliage"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.1308, 0.560351, -2.1465)
+texture = ExtResource("5_ysuse")
+metadata/_edit_lock_ = true
+
+[node name="Foliage34" type="Sprite3D" parent="Foliage"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.92309, 0.560351, -1.62237)
+texture = ExtResource("5_ysuse")
+metadata/_edit_lock_ = true
+
+[node name="Foliage35" type="Sprite3D" parent="Foliage"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -13.9592, 0.56035, 1.88687)
+texture = ExtResource("5_ysuse")
+metadata/_edit_lock_ = true
+
+[node name="Foliage36" type="Sprite3D" parent="Foliage"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.429, 0.56035, -0.760837)
+texture = ExtResource("5_ysuse")
+metadata/_edit_lock_ = true
+
+[node name="Foliage37" type="Sprite3D" parent="Foliage"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.7909, 0.56035, -0.84938)
+texture = ExtResource("5_ysuse")
+metadata/_edit_lock_ = true
+
+[node name="Foliage42" type="Sprite3D" parent="Foliage"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 5.05062, 0.56035, 1.68543)
+texture = ExtResource("5_ysuse")
+metadata/_edit_lock_ = true
+
+[node name="Foliage43" type="Sprite3D" parent="Foliage"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 8.37507, 0.56035, 1.99823)
+texture = ExtResource("5_ysuse")
+metadata/_edit_lock_ = true
+
+[node name="Foliage44" type="Sprite3D" parent="Foliage"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 12.045, 0.560351, 1.89075)
+texture = ExtResource("5_ysuse")
+metadata/_edit_lock_ = true
+
+[node name="Foliage45" type="Sprite3D" parent="Foliage"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 10.9083, 0.560351, -0.51595)
+texture = ExtResource("5_ysuse")
+metadata/_edit_lock_ = true
+
+[node name="Foliage46" type="Sprite3D" parent="Foliage"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -13.1457, 0.560351, 0.00817394)
+texture = ExtResource("5_ysuse")
+metadata/_edit_lock_ = true
+
+[node name="Foliage47" type="Sprite3D" parent="Foliage"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -18.1818, 0.56035, 3.51742)
+texture = ExtResource("5_ysuse")
+metadata/_edit_lock_ = true
+
+[node name="Foliage48" type="Sprite3D" parent="Foliage"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -18.6516, 0.56035, 0.869712)
+texture = ExtResource("5_ysuse")
+metadata/_edit_lock_ = true
+
+[node name="Foliage49" type="Sprite3D" parent="Foliage"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -19.0134, 0.56035, 0.781169)
+texture = ExtResource("5_ysuse")
+metadata/_edit_lock_ = true
+
+[node name="Foliage38" type="Sprite3D" parent="Foliage"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.8319, 0.56035, 1.11937)
+texture = ExtResource("5_ysuse")
+metadata/_edit_lock_ = true
+
+[node name="Foliage39" type="Sprite3D" parent="Foliage"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -7.50744, 0.56035, 1.43218)
+texture = ExtResource("5_ysuse")
+metadata/_edit_lock_ = true
+
+[node name="Foliage40" type="Sprite3D" parent="Foliage"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.83746, 0.560351, 1.32469)
+texture = ExtResource("5_ysuse")
+metadata/_edit_lock_ = true
+
+[node name="Foliage41" type="Sprite3D" parent="Foliage"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.97424, 0.560351, -1.08201)
+texture = ExtResource("5_ysuse")
+metadata/_edit_lock_ = true
+
+[node name="Foliage26" type="Sprite3D" parent="Foliage"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.9613, 0.560351, -2.33891)
+texture = ExtResource("6_1g2jw")
+metadata/_edit_lock_ = true
+
+[node name="Foliage27" type="Sprite3D" parent="Foliage"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.44221, 0.56035, 1.3182)
+texture = ExtResource("6_1g2jw")
+metadata/_edit_lock_ = true
+
+[node name="Foliage28" type="Sprite3D" parent="Foliage"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.65427, 0.560351, -0.607071)
+texture = ExtResource("7_ig5jh")
+metadata/_edit_lock_ = true
+
+[node name="Foliage29" type="Sprite3D" parent="Foliage"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.15986, 0.560351, -2.26648)
+texture = ExtResource("7_ig5jh")
+metadata/_edit_lock_ = true
+
+[node name="Foliage30" type="Sprite3D" parent="Foliage"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.80425, 0.560351, -3.45005)
+texture = ExtResource("7_ig5jh")
+metadata/_edit_lock_ = true
+
+[node name="Foliage31" type="Sprite3D" parent="Foliage"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.01866, 0.56035, -2.58544)
+texture = ExtResource("7_ig5jh")
+metadata/_edit_lock_ = true
+
+[node name="Foliage32" type="Sprite3D" parent="Foliage"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.66681, 0.56035, -1.27617)
+texture = ExtResource("7_ig5jh")
+metadata/_edit_lock_ = true
+
+[node name="Foliage33" type="Sprite3D" parent="Foliage"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.9802, 0.56035, -0.850955)
+texture = ExtResource("7_ig5jh")
+metadata/_edit_lock_ = true
+
+[node name="Foliage13" type="Sprite3D" parent="Foliage"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -11.1637, 0.560351, -2.07877)
+texture = ExtResource("4_8gq8o")
+metadata/_edit_lock_ = true
+
+[node name="Foliage5" type="Sprite3D" parent="Foliage"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.43185, 0.560351, 1.47457)
+texture = ExtResource("8_kqyom")
+metadata/_edit_lock_ = true
+
+[node name="Foliage6" type="Sprite3D" parent="Foliage"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.43303, 0.560351, 0.468102)
+texture = ExtResource("8_kqyom")
+metadata/_edit_lock_ = true
+
+[node name="Foliage7" type="Sprite3D" parent="Foliage"]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -1.56803, 0.560351, -2.21229)
+texture = ExtResource("8_kqyom")
+metadata/_edit_lock_ = true
+
+[node name="Foliage8" type="Sprite3D" parent="Foliage"]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -6.30972, 0.560351, -0.794978)
+texture = ExtResource("6_1g2jw")
+metadata/_edit_lock_ = true
+
+[node name="Interactables" type="Node" parent="."]
+
+[node name="CapybaraStatue" parent="Interactables" instance=ExtResource("8_wxula")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.00374, 0.651737, -0.139692)
+item_name = "Capybara Statue"
+item_description = "Is this... a capybara? What's the deal with this statue?"
+sprite = ExtResource("10_elw2f")
+
+[node name="CollisionShape3D" parent="Interactables/CapybaraStatue" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.168404, 0.71388, 0)
+shape = SubResource("CylinderShape3D_6hla7")
+
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(19.843, 0, 0, 0, 1, 0, 0, 0, 6.3492, 0, 0, 0)
+transform = Transform3D(39.7739, 0, 0, 0, 1, 0, 0, 0, 6.3492, 0, 0, 0)
 material_override = ExtResource("1_cce0b")
 mesh = SubResource("BoxMesh_6k66e")
+metadata/_edit_lock_ = true
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
-transform = Transform3D(39.8913, 0, 0, 0, -4.37114e-08, -12.1151, 0, 1, -5.29566e-07, -0.345512, 2.36153, -3.86103)
+transform = Transform3D(129.827, 0, 0, 0, -4.37114e-08, -24.4132, 0, 1, -1.06713e-06, -0.345512, 2.36153, -8.01931)
 material_override = ExtResource("1_cce0b")
 cast_shadow = 0
 mesh = SubResource("BoxMesh_6k66e")
-
-[node name="Pot" parent="." instance=ExtResource("2_yp4li")]
-transform = Transform3D(0.281704, 0, 0, 0, 0.281704, 0, 0, 0, 0.281704, 6.68555, 1.36394, -2.07896)
-modulate = Color(0.907942, 0.901922, 0.87912, 1)
-
-[node name="Pot2" parent="." instance=ExtResource("2_yp4li")]
-transform = Transform3D(0.281704, 0, 0, 0, 0.281704, 0, 0, 0, 0.281704, 8.83853, 1.3048, -0.434424)
-modulate = Color(0.907942, 0.901922, 0.87912, 1)
-
-[node name="Pot3" parent="." instance=ExtResource("2_yp4li")]
-transform = Transform3D(0.281704, 0, 0, 0, 0.281704, 0, 0, 0, 0.281704, -4.16885, 1.33481, -2.00507)
-modulate = Color(0.907942, 0.901922, 0.87912, 1)
-
-[node name="WoodTile" parent="." instance=ExtResource("3_7ncfc")]
-transform = Transform3D(-1.23137e-08, -0.281704, 1.23137e-08, 0, -1.23137e-08, -0.281704, 0.281704, -1.23137e-08, 5.38248e-16, -2.79049, 0.55432, 1.39668)
-
-[node name="WoodTile2" parent="." instance=ExtResource("3_7ncfc")]
-transform = Transform3D(-1.23137e-08, -0.281704, 1.23137e-08, 0, -1.23137e-08, -0.281704, 0.281704, -1.23137e-08, 5.38248e-16, 8.30359, 0.55432, 0.9725)
-
-[node name="WoodTile3" parent="." instance=ExtResource("3_7ncfc")]
-transform = Transform3D(-1.23137e-08, -0.281704, 1.23137e-08, 0, -1.23137e-08, -0.281704, 0.281704, -1.23137e-08, 5.38248e-16, -0.451949, 0.55432, 1.78727)
-
-[node name="WoodTile4" parent="." instance=ExtResource("3_7ncfc")]
-transform = Transform3D(-1.23137e-08, -0.281704, 1.23137e-08, 0, -1.23137e-08, -0.281704, 0.281704, -1.23137e-08, 5.38248e-16, -7.7281, 0.55432, -0.53777)
-
-[node name="WoodTile5" parent="." instance=ExtResource("3_7ncfc")]
-transform = Transform3D(-1.23137e-08, -0.281704, 1.23137e-08, 0, -1.23137e-08, -0.281704, 0.281704, -1.23137e-08, 5.38248e-16, -1.58904, 0.55432, 0.260568)
-
-[node name="WoodTile6" parent="." instance=ExtResource("3_7ncfc")]
-transform = Transform3D(-1.23137e-08, -0.281704, 1.23137e-08, 0, -1.23137e-08, -0.281704, 0.281704, -1.23137e-08, 5.38248e-16, 5.15497, 0.55432, 0.290156)
-
-[node name="WoodTile7" parent="." instance=ExtResource("3_7ncfc")]
-transform = Transform3D(-1.23137e-08, -0.281704, 1.23137e-08, 0, -1.23137e-08, -0.281704, 0.281704, -1.23137e-08, 5.38248e-16, -6.17574, 0.55432, 0.965668)
-
-[node name="WoodTile8" parent="." instance=ExtResource("3_7ncfc")]
-transform = Transform3D(-1.23137e-08, -0.281704, 1.23137e-08, 0, -1.23137e-08, -0.281704, 0.281704, -1.23137e-08, 5.38248e-16, -3.5162, 0.55432, -0.800913)
-
-[node name="WoodTile9" parent="." instance=ExtResource("3_7ncfc")]
-transform = Transform3D(-1.23137e-08, -0.281704, 1.23137e-08, 0, -1.23137e-08, -0.281704, 0.281704, -1.23137e-08, 5.38248e-16, 1.56097, 0.55432, -0.940325)
-
-[node name="Plants" parent="." instance=ExtResource("4_agoex")]
-transform = Transform3D(0.281704, 0, 0, 0, 0.281704, 0, 0, 0, 0.281704, -0.48764, 0.982207, -0.724265)
-modulate = Color(0.907942, 0.901922, 0.87912, 1)
-
-[node name="Plants3" parent="." instance=ExtResource("4_agoex")]
-transform = Transform3D(0.281704, 0, 0, 0, 0.281704, 0, 0, 0, 0.281704, -1.58751, 0.92387, -1.97606)
-modulate = Color(0.907942, 0.901922, 0.87912, 1)
-
-[node name="Plants4" parent="." instance=ExtResource("4_agoex")]
-transform = Transform3D(0.281704, 0, 0, 0, 0.281704, 0, 0, 0, 0.281704, -7.18262, 1.01303, -1.34681)
-modulate = Color(0.907942, 0.901922, 0.87912, 1)
-
-[node name="Plants5" parent="." instance=ExtResource("4_agoex")]
-transform = Transform3D(0.281704, 0, 0, 0, 0.281704, 0, 0, 0, 0.281704, -7.93203, 0.579642, 0.789934)
-modulate = Color(0.907942, 0.901922, 0.87912, 1)
-
-[node name="SinglePlant" parent="." instance=ExtResource("5_21qpq")]
-transform = Transform3D(0.281704, 0, 0, 0, 0.281704, 0, 0, 0, 0.281704, -4.3007, 1.06248, 1.40268)
-
-[node name="SinglePlant2" parent="." instance=ExtResource("5_21qpq")]
-transform = Transform3D(0.281704, 0, 0, 0, 0.281704, 0, 0, 0, 0.281704, -4.88273, 1.02512, -0.7823)
-
-[node name="SinglePlant4" parent="." instance=ExtResource("5_21qpq")]
-transform = Transform3D(0.281704, 0, 0, 0, 0.281704, 0, 0, 0, 0.281704, 1.48057, 1.10511, -1.83898)
-
-[node name="SinglePlant6" parent="." instance=ExtResource("5_21qpq")]
-transform = Transform3D(0.281704, 0, 0, 0, 0.281704, 0, 0, 0, 0.281704, 6.79, 1.15681, 0.268911)
-
-[node name="SinglePlant7" parent="." instance=ExtResource("5_21qpq")]
-transform = Transform3D(0.281704, 0, 0, 0, 0.281704, 0, 0, 0, 0.281704, 2.90888, 1.06939, 0.351125)
 
 [node name="Player" parent="." instance=ExtResource("6_l2t86")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.00846, 0.496474, 2.75105)
@@ -109,3 +420,5 @@ sprite = ExtResource("9_ay5tm")
 
 [node name="ViktorS" parent="." instance=ExtResource("10_3qp37")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.00582, 1.81346, -3.04509)
+
+[editable path="Interactables/CapybaraStatue"]
