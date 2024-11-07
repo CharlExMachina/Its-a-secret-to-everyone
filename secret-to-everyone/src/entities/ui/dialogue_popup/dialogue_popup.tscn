@@ -1,0 +1,114 @@
+[gd_scene load_steps=9 format=3 uid="uid://g6wcptxn1nin"]
+
+[ext_resource type="Script" path="res://src/entities/ui/dialogue_popup/dialogue_popup.gd" id="1_e5p01"]
+[ext_resource type="FontFile" uid="uid://cr0veva7b3pab" path="res://src/assets/fonts/caveat_regular.ttf" id="1_ps6y5"]
+[ext_resource type="Texture2D" uid="uid://o56kgbpoymqv" path="res://src/assets/sprites/character_portraits/viktor_portrait.png" id="3_yoawr"]
+[ext_resource type="PackedScene" uid="uid://rtm3l8h8fmj1" path="res://src/entities/ui/dialogue_popup/dialogue_option/dialogue_options.tscn" id="4_qfroe"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lso4o"]
+bg_color = Color(0, 0, 0, 0.698039)
+
+[sub_resource type="LabelSettings" id="LabelSettings_bpnix"]
+font = ExtResource("1_ps6y5")
+font_size = 24
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ok43c"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_mc5ew"]
+font = ExtResource("1_ps6y5")
+font_size = 26
+
+[node name="DialoguePopup" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_e5p01")
+
+[node name="Background" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_lso4o")
+
+[node name="ContentSection" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -95.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="ContentLabel" type="Label" parent="ContentSection"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 15.0
+offset_right = -278.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Hello there, this is a test. Lorem ipsum dolor sit amet dignissim et sit et et et sed lorem kasd molestie. Et nulla luptatum hendrerit ad consequat adipiscing feugait."
+label_settings = SubResource("LabelSettings_bpnix")
+vertical_alignment = 1
+autowrap_mode = 2
+clip_text = true
+
+[node name="CharacterPortrait" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -268.0
+offset_top = -267.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ok43c")
+
+[node name="Portrait" type="TextureRect" parent="CharacterPortrait"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_yoawr")
+stretch_mode = 5
+
+[node name="ContinueButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 792.0
+offset_top = 515.0
+offset_right = 871.0
+offset_bottom = 546.0
+text = "Continue"
+
+[node name="DialogueOptions" parent="." instance=ExtResource("4_qfroe")]
+visible = false
+layout_mode = 0
+offset_left = 602.0
+offset_top = 382.0
+offset_right = 874.0
+offset_bottom = 551.0
+
+[node name="NpcNameLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 884.0
+offset_top = 345.0
+offset_right = 1150.0
+offset_bottom = 378.0
+text = "Name"
+label_settings = SubResource("LabelSettings_mc5ew")
+horizontal_alignment = 1
+
+[connection signal="pressed" from="ContinueButton" to="." method="_on_continue_button_pressed"]

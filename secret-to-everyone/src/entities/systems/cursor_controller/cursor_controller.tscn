@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://nhyis68owura"]
+
+[ext_resource type="Script" path="res://src/entities/systems/cursor_controller/cursor_controller.gd" id="1_24y70"]
+
+[node name="CursorController" type="Node"]
+script = ExtResource("1_24y70")

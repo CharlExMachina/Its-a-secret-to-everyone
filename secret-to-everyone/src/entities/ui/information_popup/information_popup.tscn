@@ -1,0 +1,74 @@
+[gd_scene load_steps=6 format=3 uid="uid://dch0yp31l32l7"]
+
+[ext_resource type="Script" path="res://src/entities/ui/information_popup/information_popup.gd" id="1_1hke8"]
+[ext_resource type="FontFile" uid="uid://cr0veva7b3pab" path="res://src/assets/fonts/caveat_regular.ttf" id="2_7ps1r"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5flj4"]
+bg_color = Color(0, 0, 0, 0.698039)
+
+[sub_resource type="LabelSettings" id="LabelSettings_l1k13"]
+font_size = 86
+
+[sub_resource type="LabelSettings" id="LabelSettings_0c0bj"]
+font_size = 42
+
+[node name="InformationPopup" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1hke8")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_5flj4")
+metadata/_edit_lock_ = true
+
+[node name="TitleLabel" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 25.0
+offset_bottom = 48.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_7ps1r")
+theme_override_font_sizes/font_size = 41
+text = "Title"
+label_settings = SubResource("LabelSettings_l1k13")
+horizontal_alignment = 1
+
+[node name="DescriptionLabel" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -495.0
+offset_top = -143.0
+offset_right = 495.0
+offset_bottom = 143.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_7ps1r")
+theme_override_font_sizes/font_size = 36
+text = "This is a long description for an item in the game, it has lots and lots of information!"
+label_settings = SubResource("LabelSettings_0c0bj")
+autowrap_mode = 2
+
+[node name="ExitButton" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 1024.0
+offset_top = 16.0
+offset_right = 1110.0
+offset_bottom = 61.0
+text = "Close"
+
+[connection signal="pressed" from="Panel/ExitButton" to="." method="_on_exit_button_pressed"]
