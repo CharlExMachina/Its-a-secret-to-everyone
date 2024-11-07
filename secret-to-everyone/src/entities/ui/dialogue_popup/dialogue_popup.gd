@@ -19,7 +19,7 @@ func set_dialogue_sequence(sequence: Dialogue) -> void:
 
 
 func _ready() -> void:
-	if not dialogue_secuence:
+	if dialogue_secuence == null:
 		return
 
 	current_dialogue_step = dialogue_secuence
@@ -34,13 +34,18 @@ func setup_sequence() -> void:
 
 		$DialogueOptions.options = current_dialogue_step.options
 	else:
+		$ContinueButton.visible = true
 		$DialogueOptions.visible = false
 		$ContentSection/ContentLabel.text = current_dialogue_step.content
 
+		if current_dialogue_step.next == null:
+			$ContinueButton.text = "Finish"
+
 
 func _on_continue_button_pressed() -> void:
-	if not current_dialogue_step.next:
+	if current_dialogue_step.next == null:
 		queue_free()
+		return
 
 	current_dialogue_step = current_dialogue_step.next
 	setup_sequence()
