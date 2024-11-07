@@ -43,6 +43,14 @@ func set_cursor_dialogue() -> void:
 	cursor_override_enabled = true
 
 
+func set_pickup_cursor() -> void:
+	if cursor_override_enabled:
+		return
+
+	Input.set_custom_mouse_cursor(pointer_hand)
+	cursor_override_enabled = true
+
+
 func set_investigation_cursor() -> void:
 	if cursor_override_enabled:
 		return

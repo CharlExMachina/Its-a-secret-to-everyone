@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://yqbjk2dtw1hk"]
+[gd_scene load_steps=24 format=3 uid="uid://yqbjk2dtw1hk"]
 
 [ext_resource type="Material" uid="uid://bnao8dtevx3oi" path="res://src/assets/materials/void_material.tres" id="1_cce0b"]
 [ext_resource type="Texture2D" uid="uid://bo1htqyuonq2w" path="res://src/assets/sprites/environment/evergreen/evergreen_1.png" id="2_r6rah"]
@@ -19,6 +19,8 @@
 [ext_resource type="PackedScene" uid="uid://cee50qhn61vky" path="res://src/entities/props/interactable_props/dialogue_interactable/dialogue_interactable.tscn" id="10_3qp37"]
 [ext_resource type="Texture2D" uid="uid://cphdqabe34ndr" path="res://src/assets/sprites/interactables/capybara.png" id="10_elw2f"]
 [ext_resource type="Texture2D" uid="uid://o56kgbpoymqv" path="res://src/assets/sprites/character_portraits/viktor_portrait.png" id="19_cdcne"]
+[ext_resource type="PackedScene" uid="uid://db8yh7nc2dxqn" path="res://src/entities/props/interactable_props/pickup_interactable/pickup_interactable.tscn" id="20_sj604"]
+[ext_resource type="Texture2D" uid="uid://cvv5tn6f4lsb2" path="res://src/assets/sprites/placeholder_pickup.png" id="21_547fd"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_6hla7"]
 
@@ -336,6 +338,31 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.65427, 0.560351, -0.607071)
 texture = ExtResource("7_ig5jh")
 metadata/_edit_lock_ = true
 
+[node name="Foliage51" type="Sprite3D" parent="Foliage"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.2893, 0.560351, -1.36676)
+texture = ExtResource("5_ysuse")
+metadata/_edit_lock_ = true
+
+[node name="Foliage64" type="Sprite3D" parent="Foliage"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.1525, 0.560351, -3.77346)
+texture = ExtResource("5_ysuse")
+metadata/_edit_lock_ = true
+
+[node name="Foliage65" type="Sprite3D" parent="Foliage"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33.088, 0.560351, -5.03036)
+texture = ExtResource("6_1g2jw")
+metadata/_edit_lock_ = true
+
+[node name="Foliage66" type="Sprite3D" parent="Foliage"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.5689, 0.56035, -1.37325)
+texture = ExtResource("6_1g2jw")
+metadata/_edit_lock_ = true
+
+[node name="Foliage67" type="Sprite3D" parent="Foliage"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.781, 0.560351, -3.29852)
+texture = ExtResource("7_ig5jh")
+metadata/_edit_lock_ = true
+
 [node name="Foliage29" type="Sprite3D" parent="Foliage"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.15986, 0.560351, -2.26648)
 texture = ExtResource("7_ig5jh")
@@ -422,5 +449,11 @@ sprite = ExtResource("9_ay5tm")
 [node name="ViktorS" parent="." instance=ExtResource("10_3qp37")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.00582, 1.81346, -3.04509)
 portrait_texture = ExtResource("19_cdcne")
+
+[node name="PickupInteractable" parent="." instance=ExtResource("20_sj604")]
+transform = Transform3D(0.917581, 0.397548, 0, -0.397548, 0.917581, 0, 0, 0, 1, 11.2946, 0.488546, 0)
+item_name = "Paper airplane"
+item_sprite = ExtResource("21_547fd")
+description = "An actually well built paper airplane, not sure what it's doing here but I'll keep it in case I need it in the future..."
 
 [editable path="Interactables/CapybaraStatue"]
