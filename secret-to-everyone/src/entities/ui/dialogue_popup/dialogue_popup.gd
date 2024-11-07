@@ -26,6 +26,10 @@ func _ready() -> void:
 	$ContentSection/ContentLabel.text = current_dialogue_step.content
 
 
+func set_npc_name(name: String) -> void:
+	$NpcNameLabel.text = name
+
+
 func setup_sequence() -> void:
 	if current_dialogue_step.options.size() > 0:
 		$ContinueButton.visible = false

@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://g6wcptxn1nin"]
+[gd_scene load_steps=9 format=3 uid="uid://g6wcptxn1nin"]
 
 [ext_resource type="Script" path="res://src/entities/ui/dialogue_popup/dialogue_popup.gd" id="1_e5p01"]
 [ext_resource type="FontFile" uid="uid://cr0veva7b3pab" path="res://src/assets/fonts/caveat_regular.ttf" id="1_ps6y5"]
@@ -14,6 +14,10 @@ font_size = 24
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ok43c"]
 bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_mc5ew"]
+font = ExtResource("1_ps6y5")
+font_size = 26
 
 [node name="DialoguePopup" type="Control"]
 layout_mode = 3
@@ -96,5 +100,15 @@ offset_left = 602.0
 offset_top = 382.0
 offset_right = 874.0
 offset_bottom = 551.0
+
+[node name="NpcNameLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 884.0
+offset_top = 345.0
+offset_right = 1150.0
+offset_bottom = 378.0
+text = "Name"
+label_settings = SubResource("LabelSettings_mc5ew")
+horizontal_alignment = 1
 
 [connection signal="pressed" from="ContinueButton" to="." method="_on_continue_button_pressed"]

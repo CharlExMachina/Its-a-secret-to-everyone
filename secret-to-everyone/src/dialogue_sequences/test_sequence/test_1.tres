@@ -1,11 +1,29 @@
-[gd_resource type="Resource" script_class="Dialogue" load_steps=9 format=3 uid="uid://y7a5dnpil6p4"]
+[gd_resource type="Resource" script_class="Dialogue" load_steps=12 format=3 uid="uid://y7a5dnpil6p4"]
 
 [ext_resource type="Script" path="res://src/core/option.gd" id="1_7u8e1"]
 [ext_resource type="Script" path="res://src/core/dialogue.gd" id="2_87ymb"]
 
+[sub_resource type="Resource" id="Resource_o4hsf"]
+script = ExtResource("2_87ymb")
+content = "Have fun, kiddo."
+options = Array[ExtResource("1_7u8e1")]([])
+
+[sub_resource type="Resource" id="Resource_3fuyd"]
+script = ExtResource("2_87ymb")
+content = "Instead of offering you his house like a normal senile billionaire, he'd rather send you on a wild goose chase with nothing but a vague series of instructions in God-knows-where!"
+next = SubResource("Resource_o4hsf")
+options = Array[ExtResource("1_7u8e1")]([])
+
+[sub_resource type="Resource" id="Resource_cv0bp"]
+script = ExtResource("2_87ymb")
+content = "Well, good luck finding it. This island has been inhabited for around 2 years already, and your old man couldn't even remember his name at his worst!"
+next = SubResource("Resource_3fuyd")
+options = Array[ExtResource("1_7u8e1")]([])
+
 [sub_resource type="Resource" id="Resource_rijwv"]
 script = ExtResource("2_87ymb")
 content = "Then you're here for the so-called \"treasure\" of his?"
+next = SubResource("Resource_cv0bp")
 options = Array[ExtResource("1_7u8e1")]([])
 
 [sub_resource type="Resource" id="Resource_nlfkf"]

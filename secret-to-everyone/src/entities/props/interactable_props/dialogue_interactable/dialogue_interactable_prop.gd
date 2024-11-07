@@ -45,6 +45,7 @@ func _on_input_event(camera: Node, event: InputEvent, event_position: Vector3, n
 
 				popup_instance.character_portrait = portrait_texture
 				popup_instance.dialogue_secuence = dialogue_sequence
+				popup_instance.set_npc_name(npc_name)
 
 				get_parent().add_child(popup_instance)
 
