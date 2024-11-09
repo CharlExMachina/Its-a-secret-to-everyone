@@ -1,4 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://b1h41tmqbvrh"]
+[gd_scene load_steps=4 format=3 uid="uid://b1h41tmqbvrh"]
+
+[ext_resource type="Script" path="res://src/entities/ui/inventory_menu/inventory_menu.gd" id="1_6xed0"]
+[ext_resource type="PackedScene" uid="uid://dh14mp3y3o1pj" path="res://src/entities/ui/inventory_menu/inventory_menu_item_slot/inventory_menu_item_slot.tscn" id="2_fc3t2"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ksspg"]
 bg_color = Color(0.0943726, 0.0943726, 0.0943726, 1)
@@ -10,6 +13,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_6xed0")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
@@ -19,3 +23,47 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_ksspg")
+
+[node name="GridContainer" type="GridContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -533.0
+offset_top = -287.0
+offset_right = 151.0
+offset_bottom = 286.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/h_separation = 16
+theme_override_constants/v_separation = 16
+columns = 3
+
+[node name="InventoryMenuItemSlot1" parent="GridContainer" instance=ExtResource("2_fc3t2")]
+layout_mode = 2
+
+[node name="InventoryMenuItemSlot2" parent="GridContainer" instance=ExtResource("2_fc3t2")]
+layout_mode = 2
+
+[node name="InventoryMenuItemSlot3" parent="GridContainer" instance=ExtResource("2_fc3t2")]
+layout_mode = 2
+
+[node name="InventoryMenuItemSlot4" parent="GridContainer" instance=ExtResource("2_fc3t2")]
+layout_mode = 2
+
+[node name="InventoryMenuItemSlot5" parent="GridContainer" instance=ExtResource("2_fc3t2")]
+layout_mode = 2
+
+[node name="InventoryMenuItemSlot6" parent="GridContainer" instance=ExtResource("2_fc3t2")]
+layout_mode = 2
+
+[node name="InventoryMenuItemSlot7" parent="GridContainer" instance=ExtResource("2_fc3t2")]
+layout_mode = 2
+
+[node name="InventoryMenuItemSlot8" parent="GridContainer" instance=ExtResource("2_fc3t2")]
+layout_mode = 2
+
+[node name="InventoryMenuItemSlot9" parent="GridContainer" instance=ExtResource("2_fc3t2")]
+layout_mode = 2

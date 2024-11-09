@@ -89,4 +89,7 @@ func add_to_inventory(item: InventoryItem) -> void:
 func _on_player_ui_on_inventory_opened() -> void:
 	freeze()
 	var menu_instance = inventory_menu.instantiate()
+
+	menu_instance.items = $PlayerInventory.items
+
 	add_child(menu_instance)

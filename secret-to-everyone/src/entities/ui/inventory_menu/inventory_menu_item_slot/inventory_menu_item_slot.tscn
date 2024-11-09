@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://dh14mp3y3o1pj"]
+
+[ext_resource type="Script" path="res://src/entities/ui/inventory_menu/inventory_menu_item_slot/inventory_menu_item_slot.gd" id="1_xnxrg"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_jm28i"]
+
+[node name="InventoryMenuItemSlot" type="TextureRect"]
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = SubResource("CanvasTexture_jm28i")
+script = ExtResource("1_xnxrg")
+
+[node name="ItemIcon" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 5
