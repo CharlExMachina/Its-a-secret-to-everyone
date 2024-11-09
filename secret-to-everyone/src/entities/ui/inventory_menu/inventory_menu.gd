@@ -20,4 +20,6 @@ func _ready() -> void:
 
 func on_inventory_item_clicked(index: int) -> void:
 	var item_to_show = items[index]
-	print("PRESSED ON ", item_to_show.item_name)
+	$DetailsPanel/ItemNameLabel.text = item_to_show.item_name
+	$DetailsPanel/ScrollContainer/MarginContainer/ItemDescriptionLabel.text = item_to_show.description
+	$DetailsPanel/ItemIcon.texture = item_to_show.item_sprite

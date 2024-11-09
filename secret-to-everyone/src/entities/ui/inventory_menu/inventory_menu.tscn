@@ -1,10 +1,22 @@
-[gd_scene load_steps=4 format=3 uid="uid://b1h41tmqbvrh"]
+[gd_scene load_steps=8 format=3 uid="uid://b1h41tmqbvrh"]
 
 [ext_resource type="Script" path="res://src/entities/ui/inventory_menu/inventory_menu.gd" id="1_6xed0"]
 [ext_resource type="PackedScene" uid="uid://dh14mp3y3o1pj" path="res://src/entities/ui/inventory_menu/inventory_menu_item_slot/inventory_menu_item_slot.tscn" id="2_fc3t2"]
+[ext_resource type="FontFile" uid="uid://cr0veva7b3pab" path="res://src/assets/fonts/caveat_regular.ttf" id="3_j3g14"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ksspg"]
 bg_color = Color(0.0943726, 0.0943726, 0.0943726, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n3q32"]
+bg_color = Color(0.173545, 0.173545, 0.173545, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_ha3kn"]
+font = ExtResource("3_j3g14")
+font_size = 30
+
+[sub_resource type="LabelSettings" id="LabelSettings_sl5p1"]
+font = ExtResource("3_j3g14")
+font_size = 24
 
 [node name="InventoryMenu" type="Control"]
 layout_mode = 3
@@ -23,6 +35,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_ksspg")
+metadata/_edit_lock_ = true
 
 [node name="GridContainer" type="GridContainer" parent="."]
 layout_mode = 1
@@ -40,6 +53,7 @@ grow_vertical = 2
 theme_override_constants/h_separation = 16
 theme_override_constants/v_separation = 16
 columns = 3
+metadata/_edit_lock_ = true
 
 [node name="InventoryMenuItemSlot1" parent="GridContainer" instance=ExtResource("2_fc3t2")]
 layout_mode = 2
@@ -67,3 +81,58 @@ layout_mode = 2
 
 [node name="InventoryMenuItemSlot9" parent="GridContainer" instance=ExtResource("2_fc3t2")]
 layout_mode = 2
+
+[node name="DetailsPanel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 753.0
+offset_top = 40.0
+offset_right = 1125.0
+offset_bottom = 607.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_n3q32")
+metadata/_edit_lock_ = true
+
+[node name="ItemNameLabel" type="Label" parent="DetailsPanel"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 47.0
+grow_horizontal = 2
+text = "Item name"
+label_settings = SubResource("LabelSettings_ha3kn")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="DetailsPanel"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 342.0
+offset_right = 371.0
+offset_bottom = 566.0
+
+[node name="MarginContainer" type="MarginContainer" parent="DetailsPanel/ScrollContainer"]
+custom_minimum_size = Vector2(372, 224)
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="ItemDescriptionLabel" type="Label" parent="DetailsPanel/ScrollContainer/MarginContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+text = "Lorem ipsum dolor sit amet ipsum nulla tempor exerci sea aliquyam praesent ea sit sit labore te et magna. Magna ea dolore lorem dolore kasd at feugait ipsum ipsum labore ut duis stet sit labore. "
+label_settings = SubResource("LabelSettings_sl5p1")
+autowrap_mode = 2
+
+[node name="ItemIcon" type="TextureRect" parent="DetailsPanel"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -203.5
+offset_bottom = 59.5
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 5
