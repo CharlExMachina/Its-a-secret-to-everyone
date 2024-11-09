@@ -136,3 +136,13 @@ grow_horizontal = 2
 grow_vertical = 2
 expand_mode = 1
 stretch_mode = 5
+
+[node name="ExitButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1080.0
+offset_top = 6.0
+offset_right = 1121.0
+offset_bottom = 37.0
+text = "EXIT"
+
+[connection signal="pressed" from="ExitButton" to="." method="_on_exit_button_pressed"]
