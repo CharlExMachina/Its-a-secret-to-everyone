@@ -20,7 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://cphdqabe34ndr" path="res://src/assets/sprites/interactables/capybara.png" id="10_elw2f"]
 [ext_resource type="Texture2D" uid="uid://o56kgbpoymqv" path="res://src/assets/sprites/character_portraits/viktor_portrait.png" id="19_cdcne"]
 [ext_resource type="PackedScene" uid="uid://db8yh7nc2dxqn" path="res://src/entities/props/interactable_props/pickup_interactable/pickup_interactable.tscn" id="20_sj604"]
-[ext_resource type="Texture2D" uid="uid://cvv5tn6f4lsb2" path="res://src/assets/sprites/placeholder_pickup.png" id="21_547fd"]
+[ext_resource type="Resource" uid="uid://byq3as07hgpfv" path="res://src/key_items/paper_airplane.tres" id="21_2jvpy"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_6hla7"]
 
@@ -452,8 +452,6 @@ portrait_texture = ExtResource("19_cdcne")
 
 [node name="PickupInteractable" parent="." instance=ExtResource("20_sj604")]
 transform = Transform3D(0.917581, 0.397548, 0, -0.397548, 0.917581, 0, 0, 0, 1, 11.2946, 0.488546, 0)
-item_name = "Paper airplane"
-item_sprite = ExtResource("21_547fd")
-description = "An actually well built paper airplane, not sure what it's doing here but I'll keep it in case I need it in the future..."
+item = ExtResource("21_2jvpy")
 
 [editable path="Interactables/CapybaraStatue"]

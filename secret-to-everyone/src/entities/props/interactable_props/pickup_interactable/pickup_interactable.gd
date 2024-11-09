@@ -2,16 +2,14 @@ extends Area3D
 
 var pickable_popup = preload("res://src/entities/ui/pickable_popup/pickable_popup.tscn")
 
-@export var item_name: String = ""
-@export var item_sprite: Texture2D
-@export_multiline var description: String = ""
+@export var item: InventoryItem
 
 var frames_pressed := 0.0
 var is_pressing := false
 
 
 func _ready() -> void:
-	$Sprite3D.texture = item_sprite
+	$Sprite3D.texture = item.item_sprite
 
 
 func _on_input_event(camera: Node, event: InputEvent, event_position: Vector3, normal: Vector3, shape_idx: int) -> void:
@@ -27,9 +25,10 @@ func _on_input_event(camera: Node, event: InputEvent, event_position: Vector3, n
 				pass
 				var popup_instance = pickable_popup.instantiate()
 
-				popup_instance.item_name = item_name
-				popup_instance.item_sprite = item_sprite
-				popup_instance.description = description
+				popup_instance.item_name = item.item_name
+				popup_instance.item_sprite = item.item_sprite
+				popup_instance.description = item.description
+				popup_instance.item = item
 
 				get_parent().add_child(popup_instance)
 

@@ -97,3 +97,5 @@ offset_bottom = -21.0
 grow_horizontal = 2
 grow_vertical = 0
 text = "Store in bag"
+
+[connection signal="pressed" from="Background/Button" to="." method="_on_button_pressed"]

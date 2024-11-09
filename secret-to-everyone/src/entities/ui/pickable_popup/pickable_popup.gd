@@ -1,5 +1,7 @@
 extends Control
 
+var item: InventoryItem
+
 var item_name: String:
 	set(value):
 		item_name = value
@@ -15,5 +17,12 @@ var description: String:
 		description = value
 		$Background/DescriptionLabel.text = value
 
+
 func _ready() -> void:
 	get_tree().call_group("Player", "freeze")
+
+
+func _on_button_pressed() -> void:
+	get_tree().call_group("Player", "add_to_inventory", item)
+	get_tree().call_group("Player", "unfreeze")
+	queue_free()

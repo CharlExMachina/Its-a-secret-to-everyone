@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="InventoryItem" load_steps=3 format=3 uid="uid://byq3as07hgpfv"]
+
+[ext_resource type="Script" path="res://src/core/inventory/inventory_item.gd" id="1_ea7ng"]
+[ext_resource type="Texture2D" uid="uid://cvv5tn6f4lsb2" path="res://src/assets/sprites/placeholder_pickup.png" id="1_ycuor"]
+
+[resource]
+script = ExtResource("1_ea7ng")
+item_name = "Paper airplane"
+item_sprite = ExtResource("1_ycuor")
+description = "A curiously well designed paper airplane... Who had the time to build something like this in this place?
+
+I'll take it with me, might be useful later on..."

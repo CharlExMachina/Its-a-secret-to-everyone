@@ -78,3 +78,7 @@ func calculate_span_motion() -> Vector2:
 		mouse_drag_current_pos = get_viewport().get_mouse_position()
 
 	return mouse_drag_current_pos - mouse_drag_start_pos
+
+
+func add_to_inventory(item: InventoryItem) -> void:
+	$PlayerInventory.items.append(item)
