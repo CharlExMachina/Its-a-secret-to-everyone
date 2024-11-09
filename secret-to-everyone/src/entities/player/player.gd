@@ -1,5 +1,7 @@
 extends CharacterBody3D
 
+var inventory_menu = preload("res://src/entities/ui/inventory_menu/inventory_menu.tscn")
+
 @export var movement_speed := 400.0
 @export var sensitivity_value := 0.02
 
@@ -82,3 +84,9 @@ func calculate_span_motion() -> Vector2:
 
 func add_to_inventory(item: InventoryItem) -> void:
 	$PlayerInventory.items.append(item)
+
+
+func _on_player_ui_on_inventory_opened() -> void:
+	freeze()
+	var menu_instance = inventory_menu.instantiate()
+	add_child(menu_instance)
