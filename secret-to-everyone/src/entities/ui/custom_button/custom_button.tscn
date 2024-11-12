@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://db0mili71rbvq"]
+
+[ext_resource type="Theme" uid="uid://bwxwh5iv6r8jx" path="res://src/assets/ui_themes/ui_theme.tres" id="1_2oe38"]
+[ext_resource type="Script" path="res://src/entities/ui/custom_button/custom_button.gd" id="2_4xk6p"]
+
+[node name="CustomButton" type="Button"]
+offset_right = 258.0
+offset_bottom = 88.0
+pivot_offset = Vector2(129, 44)
+size_flags_horizontal = 0
+theme = ExtResource("1_2oe38")
+text = "Enter"
+script = ExtResource("2_4xk6p")
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

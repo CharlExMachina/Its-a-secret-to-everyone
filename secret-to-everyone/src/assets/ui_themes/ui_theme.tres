@@ -1,0 +1,75 @@
+[gd_resource type="Theme" load_steps=6 format=3 uid="uid://bwxwh5iv6r8jx"]
+
+[ext_resource type="FontFile" uid="uid://cr0veva7b3pab" path="res://src/assets/fonts/caveat_regular.ttf" id="1_vnfb8"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u3ucy"]
+bg_color = Color(0.976471, 0.964706, 0.913725, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.423529, 0.423529, 0.423529, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0.644441, 0.644441, 0.644441, 0.6)
+shadow_size = 9
+shadow_offset = Vector2(2, 2)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ys3wc"]
+bg_color = Color(0.982783, 0.974144, 0.951283, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.423529, 0.423529, 0.423529, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0.644441, 0.644441, 0.644441, 0.6)
+shadow_size = 9
+shadow_offset = Vector2(2, 2)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vijai"]
+bg_color = Color(0.976471, 0.964706, 0.913725, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.360871, 0.346823, 0.373713, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0.644441, 0.644441, 0.644441, 0.6)
+shadow_size = 2
+shadow_offset = Vector2(2, 2)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ri4bk"]
+bg_color = Color(0.806632, 0.736815, 0.554063, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.423529, 0.423529, 0.423529, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0.644441, 0.644441, 0.644441, 0.6)
+shadow_size = 9
+shadow_offset = Vector2(2, 2)
+
+[resource]
+Button/colors/font_color = Color(0.306514, 0.306514, 0.306514, 1)
+Button/colors/font_focus_color = Color(0.422661, 0.422663, 0.422664, 1)
+Button/colors/font_hover_color = Color(0.423529, 0.423529, 0.423529, 1)
+Button/colors/font_pressed_color = Color(0.0879822, 0.0879822, 0.0879822, 1)
+Button/font_sizes/font_size = 32
+Button/fonts/font = ExtResource("1_vnfb8")
+Button/styles/focus = SubResource("StyleBoxFlat_u3ucy")
+Button/styles/hover = SubResource("StyleBoxFlat_ys3wc")
+Button/styles/normal = SubResource("StyleBoxFlat_vijai")
+Button/styles/pressed = SubResource("StyleBoxFlat_ri4bk")
