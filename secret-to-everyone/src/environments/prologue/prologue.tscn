@@ -1,0 +1,78 @@
+[gd_scene load_steps=7 format=3 uid="uid://cai8ble1q174o"]
+
+[ext_resource type="PackedScene" uid="uid://cjy3njsadptrw" path="res://src/entities/ui/custom_button/date_label/date_label.tscn" id="1_qt8af"]
+[ext_resource type="FontFile" uid="uid://cr0veva7b3pab" path="res://src/assets/fonts/caveat_regular.ttf" id="1_tc3ak"]
+[ext_resource type="Script" path="res://src/environments/prologue/prologue.gd" id="1_u7g5w"]
+[ext_resource type="PackedScene" uid="uid://db0mili71rbvq" path="res://src/entities/ui/custom_button/custom_button.tscn" id="3_5fjjx"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lngj2"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_x7q62"]
+font = ExtResource("1_tc3ak")
+font_size = 40
+
+[node name="Prologue" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_u7g5w")
+prologue_text = Array[String](["I opened this letter that seemingly appeared out of nowhere in this abandoned hut of his.
+
+I've been visiting this place for months, no one ever comes here.", "It's handwritten, its contents puzzle me. It reads as follows:", "\"I hope this letter finds you well...
+
+It is of big importance you follow the instructions found in this letter. My private island, St. Angela, contains a secret. It's a secret to everyone. There you will find the answers to all your questions; I can't offer any more details in case this letter falls in the wrong hands.
+
+Search for Viktor in the island, he's the one taking care of things in there.
+
+Best,
+
+T. B\"", "My grandfather disappeared almost a year ago. How-, WHY is this letter here? St. Angela Island? He never took any of us in there. But I need answers, maybe this can help us find him.
+
+The island is not far off from here... Maybe I can reach it in a boat, I need an oar. Maybe this place has one, gramps loved fishing", "I'm not sure what awaits me in the other side, let's hope for the best..."])
+
+[node name="Background" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_lngj2")
+metadata/_edit_lock_ = true
+
+[node name="DateLabel" parent="." instance=ExtResource("1_qt8af")]
+layout_mode = 1
+
+[node name="ContinueButton" parent="." instance=ExtResource("3_5fjjx")]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -306.0
+offset_top = -120.0
+offset_right = -48.0
+offset_bottom = -32.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "Continue"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 0
+offset_left = 141.0
+offset_top = 71.0
+offset_right = 1011.0
+offset_bottom = 496.0
+
+[node name="ContentLabel" type="Label" parent="ScrollContainer"]
+custom_minimum_size = Vector2(870, 425)
+layout_mode = 2
+label_settings = SubResource("LabelSettings_x7q62")
+autowrap_mode = 2
+
+[connection signal="pressed" from="ContinueButton" to="." method="_on_continue_button_pressed"]

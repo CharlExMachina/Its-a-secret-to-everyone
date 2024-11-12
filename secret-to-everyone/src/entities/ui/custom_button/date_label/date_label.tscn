@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://cjy3njsadptrw"]
+
+[ext_resource type="FontFile" uid="uid://cr0veva7b3pab" path="res://src/assets/fonts/caveat_regular.ttf" id="1_lgj4s"]
+[ext_resource type="Script" path="res://src/entities/ui/custom_button/date_label/date_label.gd" id="2_m6wmw"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_exrel"]
+font = ExtResource("1_lgj4s")
+font_size = 40
+
+[node name="DateLabel" type="Label"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -435.0
+offset_top = -253.0
+offset_right = 435.0
+offset_bottom = 253.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "It's march 20th, 2024"
+label_settings = SubResource("LabelSettings_exrel")
+horizontal_alignment = 1
+autowrap_mode = 2
+script = ExtResource("2_m6wmw")

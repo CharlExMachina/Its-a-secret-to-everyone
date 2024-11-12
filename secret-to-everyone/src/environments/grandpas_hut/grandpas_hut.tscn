@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://bebkvm85m2rdl"]
+
+[ext_resource type="PackedScene" uid="uid://yqbjk2dtw1hk" path="res://src/environments/explorable_zone.tscn" id="1_k13o8"]
+
+[node name="GrandpasHut" instance=ExtResource("1_k13o8")]
