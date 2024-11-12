@@ -1,0 +1,101 @@
+[gd_scene load_steps=6 format=3 uid="uid://b7ua7tauu6kmg"]
+
+[ext_resource type="Script" path="res://src/entities/ui/pickable_popup/pickable_popup.gd" id="1_lll8w"]
+[ext_resource type="FontFile" uid="uid://cr0veva7b3pab" path="res://src/assets/fonts/caveat_regular.ttf" id="2_wsarn"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lhxjq"]
+bg_color = Color(0, 0, 0, 0.698039)
+
+[sub_resource type="LabelSettings" id="LabelSettings_1kksk"]
+font = ExtResource("2_wsarn")
+font_size = 45
+
+[sub_resource type="LabelSettings" id="LabelSettings_rbjwo"]
+font = ExtResource("2_wsarn")
+font_size = 28
+
+[node name="PickablePopup" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_lll8w")
+
+[node name="Background" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_lhxjq")
+metadata/_edit_lock_ = true
+
+[node name="ItemNameLabel" type="Label" parent="Background"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -333.5
+offset_top = 31.0
+offset_right = 333.5
+offset_bottom = 89.0
+grow_horizontal = 2
+text = "Item name"
+label_settings = SubResource("LabelSettings_1kksk")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ItemTexture" type="TextureRect" parent="Background"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -227.0
+offset_top = -191.0
+offset_right = 227.0
+offset_bottom = 104.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="DescriptionLabel" type="Label" parent="Background"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -506.0
+offset_top = -196.0
+offset_right = 518.0
+offset_bottom = -106.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Lorem ipsum dolor sit amet Elitr delenit vel consetetur adipiscing sea no. Ut vero dolor amet ipsum eos. Eros et suscipit at at justo dolor erat justo no consequat aliquyam eleifend dolor eu dolor et ea. "
+label_settings = SubResource("LabelSettings_rbjwo")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Button" type="Button" parent="Background"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -171.0
+offset_top = -85.0
+offset_right = 171.0
+offset_bottom = -21.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Store in bag"
+
+[connection signal="pressed" from="Background/Button" to="." method="_on_button_pressed"]

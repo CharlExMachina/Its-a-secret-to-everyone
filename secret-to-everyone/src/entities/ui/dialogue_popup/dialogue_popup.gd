@@ -19,6 +19,8 @@ func set_dialogue_sequence(sequence: Dialogue) -> void:
 
 
 func _ready() -> void:
+	get_tree().call_group("Player", "freeze")
+
 	if dialogue_secuence == null:
 		return
 
@@ -49,6 +51,7 @@ func setup_sequence() -> void:
 func _on_continue_button_pressed() -> void:
 	if current_dialogue_step.next == null:
 		queue_free()
+		get_tree().call_group("Player", "unfreeze")
 		return
 
 	current_dialogue_step = current_dialogue_step.next

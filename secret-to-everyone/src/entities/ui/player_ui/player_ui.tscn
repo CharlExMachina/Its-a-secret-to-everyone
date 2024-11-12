@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=3 uid="uid://db30vjwfo6yxp"]
+
+[ext_resource type="Script" path="res://src/entities/ui/player_ui/player_ui.gd" id="1_1wh6a"]
+
+[node name="PlayerUI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+script = ExtResource("1_1wh6a")
+
+[node name="OpenInventoryButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 28.0
+offset_right = 108.0
+offset_bottom = 59.0
+text = "Inventory"
+
+[connection signal="pressed" from="OpenInventoryButton" to="." method="_on_open_inventory_button_pressed"]
