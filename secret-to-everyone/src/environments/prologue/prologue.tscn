@@ -24,7 +24,9 @@ prologue_text = Array[String](["I opened this letter that seemingly appeared out
 
 I've been visiting this place for months, no one ever comes here.", "It's handwritten, its contents puzzle me. It reads as follows:", "\"I hope this letter finds you well...
 
-It is of big importance you follow the instructions found in this letter. My private island, St. Angela, contains a secret. It's a secret to everyone. There you will find the answers to all your questions; I can't offer any more details in case this letter falls in the wrong hands.
+It is of big importance you follow the instructions outlined here. Do not speak with anyone about this, not even your family. 
+
+My private island, St. Angela, contains a secret. It's a secret to everyone. There you will find the answers to all your questions; I can't offer any more details in case this letter falls in the wrong hands.
 
 Search for Viktor in the island, he's the one taking care of things in there.
 
@@ -32,7 +34,7 @@ Best,
 
 T. B\"", "My grandfather disappeared almost a year ago. How-, WHY is this letter here? St. Angela Island? He never took any of us in there. But I need answers, maybe this can help us find him.
 
-The island is not far off from here... Maybe I can reach it in a boat, I need an oar. Maybe this place has one, gramps loved fishing", "I'm not sure what awaits me in the other side, let's hope for the best..."])
+The island is not far off from here... Maybe I can reach it in a boat, I need an oar. Maybe this place has one, gramps loved fishing.", "I'm not sure what awaits me in the other side, let's hope for the best..."])
 
 [node name="Background" type="Panel" parent="."]
 layout_mode = 1
