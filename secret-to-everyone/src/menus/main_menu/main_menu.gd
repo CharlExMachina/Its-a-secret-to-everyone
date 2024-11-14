@@ -28,3 +28,7 @@ func animate_start_button() -> void:
 	var tween = get_tree().create_tween()
 
 	tween.tween_property(button, "self_modulate", Color(Color.WHITE, 1.0), 3.5)
+
+
+func _on_start_game_button_pressed() -> void:
+	get_tree().change_scene_to_file("res://src/environments/prologue/prologue.tscn")

@@ -61,3 +61,5 @@ grow_vertical = 0
 stream = ExtResource("4_7ri7n")
 volume_db = -6.38
 autoplay = true
+
+[connection signal="pressed" from="StartGameButton" to="." method="_on_start_game_button_pressed"]

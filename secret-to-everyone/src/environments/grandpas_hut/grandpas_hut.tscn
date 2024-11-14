@@ -1,5 +1,180 @@
-[gd_scene load_steps=2 format=3 uid="uid://bebkvm85m2rdl"]
+[gd_scene load_steps=24 format=3 uid="uid://bebkvm85m2rdl"]
 
 [ext_resource type="PackedScene" uid="uid://yqbjk2dtw1hk" path="res://src/environments/explorable_zone.tscn" id="1_k13o8"]
+[ext_resource type="Texture2D" uid="uid://d2bxyxtcya3ux" path="res://src/assets/sprites/environment/grandpas_hut/background-hut.png" id="2_4bhrh"]
+[ext_resource type="PackedScene" uid="uid://db8yh7nc2dxqn" path="res://src/entities/props/interactable_props/pickup_interactable/pickup_interactable.tscn" id="2_hv2at"]
+[ext_resource type="Script" path="res://src/environments/grandpas_hut/grandpas_hut.gd" id="2_ju8ew"]
+[ext_resource type="Texture2D" uid="uid://cepajafwycwi0" path="res://src/assets/sprites/environment/grandpas_hut/oar-1.png" id="2_nqfo6"]
+[ext_resource type="Resource" uid="uid://byq3as07hgpfv" path="res://src/key_items/oar.tres" id="3_qsck1"]
+[ext_resource type="PackedScene" uid="uid://vhf0l0b53njs" path="res://src/entities/props/interactable_props/information_interactable/information_interactable_prop.tscn" id="5_3b15k"]
+[ext_resource type="Texture2D" uid="uid://dxmgd6misk86b" path="res://src/assets/sprites/environment/grandpas_hut/bed-1.png" id="7_qjqvm"]
+[ext_resource type="Texture2D" uid="uid://jbba8sdxfnh1" path="res://src/assets/sprites/environment/grandpas_hut/coat-1.png" id="8_wda30"]
+[ext_resource type="Texture2D" uid="uid://cumwntnp5itx3" path="res://src/assets/sprites/environment/grandpas_hut/shelf-1.png" id="9_o8ili"]
+[ext_resource type="Texture2D" uid="uid://bmwl0485lefeb" path="res://src/assets/sprites/environment/grandpas_hut/hanger-1.png" id="9_tube4"]
+[ext_resource type="Texture2D" uid="uid://ycpw7m51wgl5" path="res://src/assets/sprites/environment/grandpas_hut/nightstand-1.png" id="10_6704g"]
+[ext_resource type="Texture2D" uid="uid://bev84s8jv6g86" path="res://src/assets/sprites/environment/grandpas_hut/table-1.png" id="10_exui0"]
+[ext_resource type="Texture2D" uid="uid://5d6jnq5lyl6v" path="res://src/assets/sprites/environment/grandpas_hut/chair-1.png" id="11_8cnbj"]
+[ext_resource type="Texture2D" uid="uid://crloa53mdx5uc" path="res://src/assets/sprites/environment/grandpas_hut/glass-1.png" id="11_50lvi"]
+[ext_resource type="Texture2D" uid="uid://li01c1timfkr" path="res://src/assets/sprites/environment/grandpas_hut/drawer-1.png" id="11_enyx2"]
+[ext_resource type="Texture2D" uid="uid://iuf4i6gns1g" path="res://src/assets/sprites/environment/grandpas_hut/stove-1.png" id="12_hismr"]
+[ext_resource type="PackedScene" uid="uid://drc087t34sdxo" path="res://src/entities/props/interactable_props/action_interactable/action_interactable.tscn" id="12_rvbe8"]
+[ext_resource type="Texture2D" uid="uid://cpnfkq5pwcnag" path="res://src/assets/sprites/environment/grandpas_hut/rug-1.png" id="15_tpe0c"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rm6fh"]
+size = Vector3(5.37277, 1, 0.684692)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_202el"]
+size = Vector3(0.304199, 0.653442, 0.123047)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7ete4"]
+size = Vector3(0.346619, 0.33667, 0.0710449)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ufv8t"]
+size = Vector3(7.3349, 3.20007, 1)
 
 [node name="GrandpasHut" instance=ExtResource("1_k13o8")]
+script = ExtResource("2_ju8ew")
+required_item = ExtResource("3_qsck1")
+
+[node name="MeshInstance3D" parent="." index="1"]
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D2" parent="." index="2"]
+transform = Transform3D(129.827, 0, 0, 0, -4.37114e-08, -79.2961, 0, 1, -3.46613e-06, -0.345512, 4.71619, -8.01931)
+metadata/_edit_lock_ = true
+
+[node name="Player" parent="." index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.68222, 5.81425, 4.42869)
+
+[node name="Backround" type="Sprite3D" parent="." index="4"]
+transform = Transform3D(1.99948, 0, 0, 0, 1.99948, 0, 0, 0, 1.99948, -3.01495, 6.50857, -3.44366)
+alpha_cut = 1
+texture = ExtResource("2_4bhrh")
+
+[node name="Interactables" type="Node" parent="." index="5"]
+
+[node name="OarItem" parent="Interactables" index="0" instance=ExtResource("2_hv2at")]
+transform = Transform3D(2.06461, 0, 0, 0, 2.06461, 0, 0, 0, 2.06461, 5.34678, 8.62087, -3.41873)
+item = ExtResource("3_qsck1")
+metadata/_edit_group_ = true
+
+[node name="Sprite3D" parent="Interactables/OarItem" index="0"]
+transform = Transform3D(0.531244, 0, 0, 0, 0.531244, 0, 0, 0, 0.531244, 0, 0, 0)
+alpha_cut = 1
+texture = ExtResource("2_nqfo6")
+
+[node name="BedProp" parent="Interactables" index="1" instance=ExtResource("5_3b15k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.576088, 5.73482, -3.3089)
+item_name = "Old bed"
+item_description = "I don't feel like sleeping right now, and this bed is quite uncomfortable..."
+sprite = ExtResource("7_qjqvm")
+
+[node name="CollisionShape3D" parent="Interactables/BedProp" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0413055, 0.820798, -0.224265)
+shape = SubResource("BoxShape3D_rm6fh")
+
+[node name="Sprite3D" parent="Interactables/BedProp" index="1"]
+transform = Transform3D(1.27519, 0, 0, 0, 1.27519, 0, 0, 0, 3.77226, 0, 0.645455, 0)
+alpha_cut = 1
+texture = ExtResource("7_qjqvm")
+
+[node name="CoatProp" parent="Interactables" index="2" instance=ExtResource("5_3b15k")]
+transform = Transform3D(3.42995, 0, 0, 0, 3.42995, 0, 0, 0, 3.42995, -14.8069, 9.15961, -4.86598)
+item_name = "Old Coat"
+item_description = "If I'm going to an island, I don't think I'll need a coat like this one."
+sprite = ExtResource("8_wda30")
+
+[node name="CollisionShape3D" parent="Interactables/CoatProp" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.013803, -0.107324, 0.401462)
+shape = SubResource("BoxShape3D_202el")
+
+[node name="Sprite3D" parent="Interactables/CoatProp" index="1"]
+transform = Transform3D(0.472506, 0, 0, 0, 0.472506, 0, 0, 0, 1.39776, 0, -0.120305, 0.446416)
+texture = ExtResource("8_wda30")
+
+[node name="ShelfProp" parent="Interactables" index="3" instance=ExtResource("5_3b15k")]
+transform = Transform3D(4.39273, 0, 0, 0, 4.39273, 0, 0, 0, 4.39273, -8.35937, 9.21038, -5.39401)
+item_name = "Bookshelf"
+item_description = "Got some very old books, it's too high and I can't reach it"
+sprite = ExtResource("9_o8ili")
+
+[node name="CollisionShape3D" parent="Interactables/ShelfProp" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00228448, -0.028136, 0.402857)
+shape = SubResource("BoxShape3D_7ete4")
+
+[node name="Sprite3D" parent="Interactables/ShelfProp" index="1"]
+transform = Transform3D(0.338045, 0, 0, 0, 0.338045, 0, 0, 0, 1, 0, 0, 0.446416)
+texture = ExtResource("9_o8ili")
+
+[node name="TableAndChairs" parent="Interactables" index="4" instance=ExtResource("5_3b15k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.02009, 2.8658, -3.28396)
+item_name = "Table"
+item_description = "I used to have good conversation with gramps here, the man always gave me the weirdest advice..."
+sprite = ExtResource("10_exui0")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape3D" parent="Interactables/TableAndChairs" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.52709, 0.778922, 0)
+shape = SubResource("BoxShape3D_ufv8t")
+
+[node name="Sprite3D" parent="Interactables/TableAndChairs" index="1"]
+transform = Transform3D(1.77698, 0, 0, 0, 1.77698, 0, 0, 0, 5.25664, -1.39482, 0.645455, 0.0843101)
+texture = ExtResource("10_exui0")
+
+[node name="Chair" type="Sprite3D" parent="Interactables/TableAndChairs" index="2"]
+transform = Transform3D(1.77698, 0, 0, 0, 1.77698, 0, 0, 0, 5.25664, -5.01791, 1.45409, 0)
+alpha_cut = 1
+texture = ExtResource("11_8cnbj")
+
+[node name="Chair2" type="Sprite3D" parent="Interactables/TableAndChairs" index="3"]
+transform = Transform3D(1.77698, 0, 0, 0, 1.77698, 0, 0, 0, 5.25664, -5.23822, 0.172785, 0.0934515)
+alpha_cut = 1
+texture = ExtResource("11_8cnbj")
+
+[node name="ExitToMansion" parent="Interactables" index="5" instance=ExtResource("12_rvbe8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.2133, 3.12275, -2.69938)
+metadata/_edit_group_ = true
+
+[node name="Label3D" parent="Interactables/ExitToMansion/Sprite3D" index="0"]
+text = "Head to St. Angela"
+
+[node name="Props" type="Node" parent="." index="6"]
+
+[node name="Hanger" type="Sprite3D" parent="Props" index="0"]
+transform = Transform3D(1.57304, 0, 0, 0, 1.57304, 0, 0, 0, 1.57304, -15.7488, 10.2105, -3.43248)
+alpha_cut = 1
+texture = ExtResource("9_tube4")
+
+[node name="Drawer" type="Sprite3D" parent="Props" index="1"]
+transform = Transform3D(1.57304, 0, 0, 0, 1.57304, 0, 0, 0, 1.57304, -15.9328, 4.71965, -3.41879)
+alpha_cut = 1
+texture = ExtResource("11_enyx2")
+
+[node name="Nightstand" type="Sprite3D" parent="Props" index="2"]
+transform = Transform3D(1.57304, 0, 0, 0, 1.57304, 0, 0, 0, 1.57304, 3.69928, 5.27367, -3.22591)
+alpha_cut = 1
+texture = ExtResource("10_6704g")
+
+[node name="Glass" type="Sprite3D" parent="Props" index="3"]
+transform = Transform3D(1.57304, 0, 0, 0, 1.57304, 0, 0, 0, 1.57304, 3.69401, 6.22091, -3.17675)
+alpha_cut = 1
+texture = ExtResource("11_50lvi")
+
+[node name="Stove" type="Sprite3D" parent="Props" index="4"]
+transform = Transform3D(1.57304, 0, 0, 0, 1.57304, 0, 0, 0, 1.57304, -9.08576, 7.78973, -3.37173)
+alpha_cut = 1
+texture = ExtResource("12_hismr")
+
+[node name="Rug" type="Sprite3D" parent="Props" index="5"]
+transform = Transform3D(1.57304, 0, 0, 0, 1.57304, 0, 0, 0, 1.57304, -9.89758, 2.01238, -3.43013)
+alpha_cut = 1
+texture = ExtResource("15_tpe0c")
+
+[connection signal="action_triggered" from="Interactables/ExitToMansion" to="." method="_on_exit_to_mansion_action_triggered"]
+
+[editable path="Interactables/OarItem"]
+[editable path="Interactables/BedProp"]
+[editable path="Interactables/CoatProp"]
+[editable path="Interactables/ShelfProp"]
+[editable path="Interactables/TableAndChairs"]
+[editable path="Interactables/ExitToMansion"]

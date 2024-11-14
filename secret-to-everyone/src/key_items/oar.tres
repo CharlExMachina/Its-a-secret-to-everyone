@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="InventoryItem" load_steps=3 format=3 uid="uid://byq3as07hgpfv"]
+
+[ext_resource type="Texture2D" uid="uid://cepajafwycwi0" path="res://src/assets/sprites/environment/grandpas_hut/oar-1.png" id="1_6tuao"]
+[ext_resource type="Script" path="res://src/core/inventory/inventory_item.gd" id="2_pf5co"]
+
+[resource]
+script = ExtResource("2_pf5co")
+item_name = "Oar"
+item_sprite = ExtResource("1_6tuao")
+description = "This oar has definitely seen better days. It's usable enough to get to St. Angela Island."

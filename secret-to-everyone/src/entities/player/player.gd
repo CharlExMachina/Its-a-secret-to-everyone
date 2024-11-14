@@ -86,6 +86,16 @@ func add_to_inventory(item: InventoryItem) -> void:
 	$PlayerInventory.items.append(item)
 
 
+func get_inventory() -> Array[InventoryItem]:
+	return $PlayerInventory.items
+
+
+func has_item(item: InventoryItem) -> bool:
+	var items: Array[InventoryItem] = $PlayerInventory.items
+
+	return items.has(item)
+
+
 func _on_player_ui_on_inventory_opened() -> void:
 	freeze()
 	var menu_instance = inventory_menu.instantiate()

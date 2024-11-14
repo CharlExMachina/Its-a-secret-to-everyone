@@ -1,5 +1,7 @@
 extends Control
 
+signal item_picked
+
 var item: InventoryItem
 
 var item_name: String:
@@ -25,4 +27,5 @@ func _ready() -> void:
 func _on_button_pressed() -> void:
 	get_tree().call_group("Player", "add_to_inventory", item)
 	get_tree().call_group("Player", "unfreeze")
+	emit_signal("item_picked")
 	queue_free()

@@ -38,7 +38,7 @@ func _on_input_event(camera: Node, event: InputEvent, event_position: Vector3, n
 		elif event.button_index == MOUSE_BUTTON_LEFT and event.is_released() and is_pressing:
 			is_pressing = false
 
-			if frames_pressed <= 0.5:
+			if frames_pressed <= 0.3:
 				var popup_instance = information_popup.instantiate()
 
 				popup_instance.title = item_name

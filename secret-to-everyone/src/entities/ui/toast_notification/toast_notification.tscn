@@ -1,0 +1,51 @@
+[gd_scene load_steps=5 format=3 uid="uid://cbgejjxqakpk0"]
+
+[ext_resource type="Texture2D" uid="uid://bjp5bu764gugs" path="res://src/assets/sprites/ui/toast_notification/toast_background.png" id="1_52dbc"]
+[ext_resource type="Script" path="res://src/entities/ui/toast_notification/toast_notification.gd" id="1_vn2uc"]
+[ext_resource type="FontFile" uid="uid://cr0veva7b3pab" path="res://src/assets/fonts/caveat_regular.ttf" id="2_cle3u"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_pfo23"]
+font = ExtResource("2_cle3u")
+font_size = 30
+font_color = Color(0.106933, 0.106933, 0.106933, 1)
+
+[node name="ToastNotification" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+script = ExtResource("1_vn2uc")
+
+[node name="Popup" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -361.0
+offset_top = 24.0
+offset_right = -26.0
+offset_bottom = 133.0
+grow_horizontal = 0
+texture = ExtResource("1_52dbc")
+expand_mode = 1
+metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="Popup"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 13.0
+offset_top = 9.0
+offset_right = -19.0
+offset_bottom = -13.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Oar added to inventory"
+label_settings = SubResource("LabelSettings_pfo23")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
