@@ -1,4 +1,5 @@
 extends CharacterBody3D
+class_name Player
 
 var inventory_menu = preload("res://src/entities/ui/inventory_menu/inventory_menu.tscn")
 
@@ -18,6 +19,10 @@ var is_moving := false
 var is_frozen := false
 var mouse_drag_start_pos: Vector2
 var mouse_drag_current_pos: Vector2
+var min_clamp_x: float
+var max_clamp_x: float
+var min_clamp_z: float
+var max_clamp_z: float
 
 
 func _physics_process(delta: float) -> void:
@@ -54,6 +59,9 @@ func _physics_process(delta: float) -> void:
 		velocity *= 0.8
 
 	move_and_slide()
+
+	position.x = clampf(position.x, min_clamp_x, max_clamp_x)
+	position.z = clampf(position.z, min_clamp_z, max_clamp_z)
 
 
 func freeze() -> void:
