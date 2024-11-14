@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://cai8ble1q174o"]
+[gd_scene load_steps=8 format=3 uid="uid://cai8ble1q174o"]
 
 [ext_resource type="PackedScene" uid="uid://cjy3njsadptrw" path="res://src/entities/ui/custom_button/date_label/date_label.tscn" id="1_qt8af"]
 [ext_resource type="FontFile" uid="uid://cr0veva7b3pab" path="res://src/assets/fonts/caveat_regular.ttf" id="1_tc3ak"]
 [ext_resource type="Script" path="res://src/environments/prologue/prologue.gd" id="1_u7g5w"]
 [ext_resource type="PackedScene" uid="uid://db0mili71rbvq" path="res://src/entities/ui/custom_button/custom_button.tscn" id="3_5fjjx"]
+[ext_resource type="AudioStream" uid="uid://cg8r2nh0wn05x" path="res://src/assets/ost/prologue.mp3" id="5_7pkuf"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lngj2"]
 bg_color = Color(0, 0, 0, 1)
@@ -76,5 +77,10 @@ custom_minimum_size = Vector2(870, 425)
 layout_mode = 2
 label_settings = SubResource("LabelSettings_x7q62")
 autowrap_mode = 2
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_7pkuf")
+volume_db = -7.337
+autoplay = true
 
 [connection signal="pressed" from="ContinueButton" to="." method="_on_continue_button_pressed"]
