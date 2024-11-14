@@ -2,8 +2,6 @@ extends Area3D
 
 signal action_triggered
 
-@export var item: InventoryItem
-
 var frames_pressed := 0.0
 var is_pressing := false
 

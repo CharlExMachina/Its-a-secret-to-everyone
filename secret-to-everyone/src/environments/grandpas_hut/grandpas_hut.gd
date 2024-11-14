@@ -18,6 +18,6 @@ func _ready() -> void:
 
 func _on_exit_to_mansion_action_triggered() -> void:
 	if $Player.has_item(required_item):
-		print("GO TO ST. ANGELA!!")
+		get_tree().change_scene_to_file("res://src/environments/dock/dock.tscn")
 	else:
 		ToastLoader.show_toast("You can't go to the island without an oar")

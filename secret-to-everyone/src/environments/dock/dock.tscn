@@ -1,12 +1,19 @@
-[gd_scene load_steps=6 format=3 uid="uid://c2e1uk380jjn3"]
+[gd_scene load_steps=10 format=3 uid="uid://c2e1uk380jjn3"]
 
 [ext_resource type="PackedScene" uid="uid://yqbjk2dtw1hk" path="res://src/environments/explorable_zone.tscn" id="1_xa2if"]
+[ext_resource type="Script" path="res://src/environments/dock/dock.gd" id="2_qssnm"]
 [ext_resource type="Texture2D" uid="uid://d333ngcsovsb3" path="res://src/assets/sprites/environment/dock/dock-1.png" id="2_wa6tv"]
 [ext_resource type="Texture2D" uid="uid://bjf84vgj157s" path="res://src/assets/sprites/environment/dock/boat-1.png" id="3_gpwne"]
 [ext_resource type="Texture2D" uid="uid://dmwdja67jibd7" path="res://src/assets/sprites/environment/dock/repeat-waves.png" id="4_7b7at"]
+[ext_resource type="PackedScene" uid="uid://drc087t34sdxo" path="res://src/entities/props/interactable_props/action_interactable/action_interactable.tscn" id="4_yeael"]
 [ext_resource type="Texture2D" uid="uid://cdjcc8hga727o" path="res://src/assets/sprites/environment/backgrounds/repeat-clouds.png" id="5_2k0bo"]
+[ext_resource type="PackedScene" uid="uid://vhf0l0b53njs" path="res://src/entities/props/interactable_props/information_interactable/information_interactable_prop.tscn" id="7_crie4"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_r8tpq"]
+radius = 1.01039
 
 [node name="Dock" instance=ExtResource("1_xa2if")]
+script = ExtResource("2_qssnm")
 
 [node name="MeshInstance3D2" parent="." index="2"]
 metadata/_edit_lock_ = true
@@ -14,7 +21,29 @@ metadata/_edit_lock_ = true
 [node name="Player" parent="." index="3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.84366, 8.73359, 8.13293)
 
-[node name="Props" type="Node" parent="." index="4"]
+[node name="Interactables" type="Node" parent="." index="4"]
+
+[node name="SeaProp" parent="Interactables" index="0" instance=ExtResource("7_crie4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.29497, 13.4474, -2.93135)
+item_name = "The sea"
+item_description = "This is such a beautiful view"
+metadata/_edit_group_ = true
+
+[node name="CollisionShape3D" parent="Interactables/SeaProp" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.394235, 0.306091, 0.570435)
+shape = SubResource("SphereShape3D_r8tpq")
+
+[node name="Sprite3D" parent="Interactables/SeaProp" index="1"]
+transform = Transform3D(0.338045, 0, 0, 0, 0.338045, 0, 0, 0, 1, 0, 0.645455, -12.5359)
+
+[node name="ActionInteractable" parent="Interactables" index="1" instance=ExtResource("4_yeael")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.4349, 9.30141, -2.95944)
+metadata/_edit_group_ = true
+
+[node name="Label3D" parent="Interactables/ActionInteractable/Sprite3D" index="0"]
+text = "Go to grandpa's hut"
+
+[node name="Props" type="Node" parent="." index="5"]
 
 [node name="DockingStation" type="Sprite3D" parent="Props" index="0"]
 transform = Transform3D(3.16219, 0, 0, 0, 3.16219, 0, 0, 0, 3.16219, 5.46914, 8.40756, -3.00551)
@@ -26,7 +55,7 @@ transform = Transform3D(4.1275, 0, 0, 0, 4.1275, 0, 0, 0, 4.1275, 12.0669, 7.541
 alpha_cut = 1
 texture = ExtResource("3_gpwne")
 
-[node name="BackgroundElements" type="Node" parent="." index="5"]
+[node name="BackgroundElements" type="Node" parent="." index="6"]
 
 [node name="Waves" type="Sprite3D" parent="BackgroundElements" index="0"]
 transform = Transform3D(1.67475, 0, 0, 0, 1.67475, 0, 0, 0, 1.67475, -1.59044, 10.5641, -3.50315)
@@ -72,3 +101,8 @@ texture = ExtResource("5_2k0bo")
 transform = Transform3D(1.67475, 0, 0, 0, 1.67475, 0, 0, 0, 1.67475, -17.688, 17.4195, -4.18059)
 alpha_cut = 2
 texture = ExtResource("5_2k0bo")
+
+[connection signal="action_triggered" from="Interactables/ActionInteractable" to="." method="_on_action_interactable_action_triggered"]
+
+[editable path="Interactables/SeaProp"]
+[editable path="Interactables/ActionInteractable"]
