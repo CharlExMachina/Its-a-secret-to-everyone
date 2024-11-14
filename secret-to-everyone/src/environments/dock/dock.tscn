@@ -1,0 +1,74 @@
+[gd_scene load_steps=6 format=3 uid="uid://c2e1uk380jjn3"]
+
+[ext_resource type="PackedScene" uid="uid://yqbjk2dtw1hk" path="res://src/environments/explorable_zone.tscn" id="1_xa2if"]
+[ext_resource type="Texture2D" uid="uid://d333ngcsovsb3" path="res://src/assets/sprites/environment/dock/dock-1.png" id="2_wa6tv"]
+[ext_resource type="Texture2D" uid="uid://bjf84vgj157s" path="res://src/assets/sprites/environment/dock/boat-1.png" id="3_gpwne"]
+[ext_resource type="Texture2D" uid="uid://dmwdja67jibd7" path="res://src/assets/sprites/environment/dock/repeat-waves.png" id="4_7b7at"]
+[ext_resource type="Texture2D" uid="uid://cdjcc8hga727o" path="res://src/assets/sprites/environment/backgrounds/repeat-clouds.png" id="5_2k0bo"]
+
+[node name="Dock" instance=ExtResource("1_xa2if")]
+
+[node name="MeshInstance3D2" parent="." index="2"]
+metadata/_edit_lock_ = true
+
+[node name="Player" parent="." index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.84366, 8.73359, 8.13293)
+
+[node name="Props" type="Node" parent="." index="4"]
+
+[node name="DockingStation" type="Sprite3D" parent="Props" index="0"]
+transform = Transform3D(3.16219, 0, 0, 0, 3.16219, 0, 0, 0, 3.16219, 5.46914, 8.40756, -3.00551)
+alpha_cut = 1
+texture = ExtResource("2_wa6tv")
+
+[node name="Boat" type="Sprite3D" parent="Props" index="1"]
+transform = Transform3D(4.1275, 0, 0, 0, 4.1275, 0, 0, 0, 4.1275, 12.0669, 7.54151, -3.30923)
+alpha_cut = 1
+texture = ExtResource("3_gpwne")
+
+[node name="BackgroundElements" type="Node" parent="." index="5"]
+
+[node name="Waves" type="Sprite3D" parent="BackgroundElements" index="0"]
+transform = Transform3D(1.67475, 0, 0, 0, 1.67475, 0, 0, 0, 1.67475, -1.59044, 10.5641, -3.50315)
+alpha_cut = 2
+texture = ExtResource("4_7b7at")
+
+[node name="Waves3" type="Sprite3D" parent="BackgroundElements" index="1"]
+transform = Transform3D(1.67475, 0, 0, 0, 1.67475, 0, 0, 0, 1.67475, -17.4156, 10.5641, -3.50315)
+alpha_cut = 2
+texture = ExtResource("4_7b7at")
+
+[node name="Waves4" type="Sprite3D" parent="BackgroundElements" index="2"]
+transform = Transform3D(1.67475, 0, 0, 0, 1.67475, 0, 0, 0, 1.67475, 30.3389, 10.5641, -3.50315)
+alpha_cut = 2
+texture = ExtResource("4_7b7at")
+
+[node name="Waves2" type="Sprite3D" parent="BackgroundElements" index="3"]
+transform = Transform3D(1.67475, 0, 0, 0, 1.67475, 0, 0, 0, 1.67475, 14.3541, 10.5641, -3.50315)
+alpha_cut = 2
+texture = ExtResource("4_7b7at")
+
+[node name="Clouds" type="Sprite3D" parent="BackgroundElements" index="4"]
+transform = Transform3D(1.67475, 0, 0, 0, 1.67475, 0, 0, 0, 1.67475, 14.3541, 17.4195, -4.18059)
+alpha_cut = 2
+texture = ExtResource("5_2k0bo")
+
+[node name="Clouds5" type="Sprite3D" parent="BackgroundElements" index="5"]
+transform = Transform3D(1.67475, 0, 0, 0, 1.67475, 0, 0, 0, 1.67475, 18.859, 19.4556, -4.00779)
+alpha_cut = 2
+texture = ExtResource("5_2k0bo")
+
+[node name="Clouds4" type="Sprite3D" parent="BackgroundElements" index="6"]
+transform = Transform3D(1.67475, 0, 0, 0, 1.67475, 0, 0, 0, 1.67475, 30.3909, 17.4195, -4.18059)
+alpha_cut = 2
+texture = ExtResource("5_2k0bo")
+
+[node name="Clouds2" type="Sprite3D" parent="BackgroundElements" index="7"]
+transform = Transform3D(1.67475, 0, 0, 0, 1.67475, 0, 0, 0, 1.67475, -1.64758, 17.4195, -4.18059)
+alpha_cut = 2
+texture = ExtResource("5_2k0bo")
+
+[node name="Clouds3" type="Sprite3D" parent="BackgroundElements" index="8"]
+transform = Transform3D(1.67475, 0, 0, 0, 1.67475, 0, 0, 0, 1.67475, -17.688, 17.4195, -4.18059)
+alpha_cut = 2
+texture = ExtResource("5_2k0bo")
