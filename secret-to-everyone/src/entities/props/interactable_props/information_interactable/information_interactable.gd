@@ -4,15 +4,10 @@ var information_popup = preload("res://src/entities/ui/information_popup/informa
 
 @export var item_name: String = ""
 @export_multiline var item_description: String = ""
-@export var sprite: Texture2D
 
 var frames_pressed := 0.0
 
 var is_pressing := false
-
-
-func _ready() -> void:
-	$Sprite3D.texture = sprite
 
 
 func _process(delta: float) -> void:

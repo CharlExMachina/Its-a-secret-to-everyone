@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://bebkvm85m2rdl"]
+[gd_scene load_steps=26 format=3 uid="uid://bebkvm85m2rdl"]
 
 [ext_resource type="PackedScene" uid="uid://yqbjk2dtw1hk" path="res://src/environments/explorable_zone.tscn" id="1_k13o8"]
 [ext_resource type="Texture2D" uid="uid://d2bxyxtcya3ux" path="res://src/assets/sprites/environment/grandpas_hut/background-hut.png" id="2_4bhrh"]
@@ -32,6 +32,12 @@ size = Vector3(0.346619, 0.33667, 0.0710449)
 [sub_resource type="BoxShape3D" id="BoxShape3D_ufv8t"]
 size = Vector3(7.3349, 3.20007, 1)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_424xj"]
+size = Vector3(3.82166, 2.19446, 0.610352)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_17wwy"]
+size = Vector3(4.50043, 2.26959, 0.503418)
+
 [node name="GrandpasHut" instance=ExtResource("1_k13o8")]
 script = ExtResource("2_ju8ew")
 required_item = ExtResource("3_qsck1")
@@ -64,10 +70,9 @@ alpha_cut = 1
 texture = ExtResource("2_nqfo6")
 
 [node name="BedProp" parent="Interactables" index="1" instance=ExtResource("5_3b15k")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.576088, 5.73482, -3.3089)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.576088, 5.73482, -3.4346)
 item_name = "Old bed"
 item_description = "I don't feel like sleeping right now, and this bed is quite uncomfortable..."
-sprite = ExtResource("7_qjqvm")
 
 [node name="CollisionShape3D" parent="Interactables/BedProp" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0413055, 0.820798, -0.224265)
@@ -79,10 +84,10 @@ alpha_cut = 1
 texture = ExtResource("7_qjqvm")
 
 [node name="CoatProp" parent="Interactables" index="2" instance=ExtResource("5_3b15k")]
-transform = Transform3D(3.42995, 0, 0, 0, 3.42995, 0, 0, 0, 3.42995, -14.8069, 9.15961, -4.86598)
+transform = Transform3D(3.42995, 0, 0, 0, 3.42995, 0, 0, 0, 3.42995, -14.6782, 9.15961, -4.86598)
 item_name = "Old Coat"
 item_description = "If I'm going to an island, I don't think I'll need a coat like this one."
-sprite = ExtResource("8_wda30")
+metadata/_edit_group_ = true
 
 [node name="CollisionShape3D" parent="Interactables/CoatProp" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.013803, -0.107324, 0.401462)
@@ -93,10 +98,10 @@ transform = Transform3D(0.472506, 0, 0, 0, 0.472506, 0, 0, 0, 1.39776, 0, -0.120
 texture = ExtResource("8_wda30")
 
 [node name="ShelfProp" parent="Interactables" index="3" instance=ExtResource("5_3b15k")]
-transform = Transform3D(4.39273, 0, 0, 0, 4.39273, 0, 0, 0, 4.39273, -8.35937, 9.21038, -5.39401)
+transform = Transform3D(5.26384, 0, 0, 0, 5.26384, 0, 0, 0, 5.26384, -8.40863, 10.0069, -5.70136)
 item_name = "Bookshelf"
 item_description = "Got some very old books, it's too high and I can't reach it"
-sprite = ExtResource("9_o8ili")
+metadata/_edit_group_ = true
 
 [node name="CollisionShape3D" parent="Interactables/ShelfProp" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00228448, -0.028136, 0.402857)
@@ -110,7 +115,6 @@ texture = ExtResource("9_o8ili")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.02009, 2.8658, -3.28396)
 item_name = "Table"
 item_description = "I used to have good conversation with gramps here, the man always gave me the weirdest advice..."
-sprite = ExtResource("10_exui0")
 metadata/_edit_group_ = true
 
 [node name="CollisionShape3D" parent="Interactables/TableAndChairs" index="0"]
@@ -122,7 +126,7 @@ transform = Transform3D(1.77698, 0, 0, 0, 1.77698, 0, 0, 0, 5.25664, -1.39482, 0
 texture = ExtResource("10_exui0")
 
 [node name="Chair" type="Sprite3D" parent="Interactables/TableAndChairs" index="2"]
-transform = Transform3D(1.77698, 0, 0, 0, 1.77698, 0, 0, 0, 5.25664, -5.01791, 1.45409, 0)
+transform = Transform3D(1.3581, 0, 0, 0, 1.3581, 0, 0, 0, 4.01751, -4.70159, 1.45409, 0)
 alpha_cut = 1
 texture = ExtResource("11_8cnbj")
 
@@ -131,12 +135,38 @@ transform = Transform3D(1.77698, 0, 0, 0, 1.77698, 0, 0, 0, 5.25664, -5.23822, 0
 alpha_cut = 1
 texture = ExtResource("11_8cnbj")
 
-[node name="ExitToMansion" parent="Interactables" index="5" instance=ExtResource("12_rvbe8")]
+[node name="StoveProp" parent="Interactables" index="5" instance=ExtResource("5_3b15k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.40067, 5.63086, -3.3244)
+item_name = "Old stove"
+item_description = "I'm not sure if this is even able to turn on..."
+metadata/_edit_group_ = true
+
+[node name="CollisionShape3D" parent="Interactables/StoveProp" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0751877, 0.597229, -0.194824)
+shape = SubResource("BoxShape3D_424xj")
+
+[node name="Sprite3D" parent="Interactables/StoveProp" index="1"]
+texture = null
+
+[node name="ExitToMansion" parent="Interactables" index="6" instance=ExtResource("12_rvbe8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.2133, 3.12275, -2.69938)
 metadata/_edit_group_ = true
 
 [node name="Label3D" parent="Interactables/ExitToMansion/Sprite3D" index="0"]
 text = "Head to St. Angela"
+
+[node name="DrawerProp" parent="Interactables" index="7" instance=ExtResource("5_3b15k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.7253, 4.33916, -3.39131)
+item_name = "Old drawer"
+item_description = "I basically store in here anything I can't find a space for in home. I can't remember storing any oars though."
+metadata/_edit_group_ = true
+
+[node name="CollisionShape3D" parent="Interactables/DrawerProp" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.110146, 0.620209, -0.248291)
+shape = SubResource("BoxShape3D_17wwy")
+
+[node name="Sprite3D" parent="Interactables/DrawerProp" index="1"]
+texture = null
 
 [node name="Props" type="Node" parent="." index="6"]
 
@@ -151,17 +181,17 @@ alpha_cut = 1
 texture = ExtResource("11_enyx2")
 
 [node name="Nightstand" type="Sprite3D" parent="Props" index="2"]
-transform = Transform3D(1.57304, 0, 0, 0, 1.57304, 0, 0, 0, 1.57304, 3.69928, 5.27367, -3.22591)
+transform = Transform3D(1.46519, 0, 0, 0, 1.46519, 0, 0, 0, 1.46519, 3.44131, 5.30451, -3.33781)
 alpha_cut = 1
 texture = ExtResource("10_6704g")
 
 [node name="Glass" type="Sprite3D" parent="Props" index="3"]
-transform = Transform3D(1.57304, 0, 0, 0, 1.57304, 0, 0, 0, 1.57304, 3.69401, 6.22091, -3.17675)
+transform = Transform3D(1.05699, 0, 0, 0, 1.05699, 0, 0, 0, 1.05699, 2.94591, 6.0965, -3.31896)
 alpha_cut = 1
 texture = ExtResource("11_50lvi")
 
 [node name="Stove" type="Sprite3D" parent="Props" index="4"]
-transform = Transform3D(1.57304, 0, 0, 0, 1.57304, 0, 0, 0, 1.57304, -9.08576, 7.78973, -3.37173)
+transform = Transform3D(1.98942, 0, 0, 0, 1.98942, 0, 0, 0, 1.98942, -9.2135, 8.39534, -3.33858)
 alpha_cut = 1
 texture = ExtResource("12_hismr")
 
@@ -177,4 +207,6 @@ texture = ExtResource("15_tpe0c")
 [editable path="Interactables/CoatProp"]
 [editable path="Interactables/ShelfProp"]
 [editable path="Interactables/TableAndChairs"]
+[editable path="Interactables/StoveProp"]
 [editable path="Interactables/ExitToMansion"]
+[editable path="Interactables/DrawerProp"]
