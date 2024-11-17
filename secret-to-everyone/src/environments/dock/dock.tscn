@@ -10,7 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://vhf0l0b53njs" path="res://src/entities/props/interactable_props/information_interactable/information_interactable_prop.tscn" id="7_crie4"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_r8tpq"]
-radius = 1.45054
+radius = 1.01039
 
 [node name="Dock" instance=ExtResource("1_xa2if")]
 script = ExtResource("2_qssnm")
@@ -30,7 +30,7 @@ item_description = "This is such a beautiful view"
 metadata/_edit_group_ = true
 
 [node name="CollisionShape3D" parent="Interactables/SeaProp" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.394235, 0.619241, 0.570435)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.394235, 0.306091, 0.570435)
 shape = SubResource("SphereShape3D_r8tpq")
 
 [node name="Sprite3D" parent="Interactables/SeaProp" index="1"]
@@ -42,13 +42,6 @@ metadata/_edit_group_ = true
 
 [node name="Label3D" parent="Interactables/ActionInteractable/Sprite3D" index="0"]
 text = "Go to grandpa's hut"
-
-[node name="GoToCrossroadsInteractable" parent="Interactables" index="2" instance=ExtResource("4_yeael")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.40336, 4.49639, -2.95944)
-metadata/_edit_group_ = true
-
-[node name="Label3D" parent="Interactables/GoToCrossroadsInteractable/Sprite3D" index="0"]
-text = "Go to the crossroads"
 
 [node name="Props" type="Node" parent="." index="5"]
 
@@ -110,8 +103,6 @@ alpha_cut = 2
 texture = ExtResource("5_2k0bo")
 
 [connection signal="action_triggered" from="Interactables/ActionInteractable" to="." method="_on_action_interactable_action_triggered"]
-[connection signal="action_triggered" from="Interactables/GoToCrossroadsInteractable" to="." method="_on_action_interactable_action_triggered"]
 
 [editable path="Interactables/SeaProp"]
 [editable path="Interactables/ActionInteractable"]
-[editable path="Interactables/GoToCrossroadsInteractable"]

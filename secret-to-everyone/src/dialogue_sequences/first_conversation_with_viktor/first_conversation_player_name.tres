@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Dialogue" load_steps=3 format=3 uid="uid://b40uhmx6hfr1j"]
+
+[ext_resource type="Script" path="res://src/core/option.gd" id="1_n0mhn"]
+[ext_resource type="Script" path="res://src/core/dialogue.gd" id="2_k0kuj"]
+
+[resource]
+script = ExtResource("2_k0kuj")
+content = "Oh, so you're %s. You're here to get gramp's good 'ol bag of coin."
+options = Array[ExtResource("1_n0mhn")]([])
+variables = Array[String]([])

@@ -5,3 +5,4 @@ class_name Dialogue
 @export_multiline var content: String = ""
 @export var next: Dialogue
 @export var options: Array[Option] = []
+@export var variables: Array[String] = []

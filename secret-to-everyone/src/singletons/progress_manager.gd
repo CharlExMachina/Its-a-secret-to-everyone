@@ -1,6 +1,8 @@
 extends Node
 
 var items: Array[InventoryItem] = []
+var player_name: String
+var met_viktor := false
 
 
 func add_to_inventory(item: InventoryItem) -> void:

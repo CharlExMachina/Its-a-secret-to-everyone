@@ -2,9 +2,11 @@ extends Node
 
 @export var mansion_keys_item: InventoryItem
 @export var initial_dialog_sequence: Dialogue
+@export var ending_dialog_sequence: Dialogue
 @export var npc_portrait: Texture2D
 
 var dialogue_popup = preload("res://src/entities/ui/dialogue_popup/dialogue_popup.tscn")
+var enter_name_popup = preload("res://src/entities/ui/enter_name_popup/enter_name_popup.tscn")
 
 func _ready() -> void:
 	var limit_min_x = -8.63
@@ -24,14 +26,42 @@ func _on_enter_mansion_interactable_action_triggered() -> void:
 	if ProgressManager.has_item(mansion_keys_item):
 		print("CAN ENTER")
 	else:
-		ToastLoader.show_toast('"The door won\'t open, now what!?"')
+		if ProgressManager.met_viktor:
+			ToastLoader.show_toast("I need a key to enter")
+		else:
+			ProgressManager.met_viktor = true
+			ToastLoader.show_toast('"The door won\'t open, now what!?"')
 
-		await get_tree().create_timer(2.0).timeout
+			await get_tree().create_timer(2.0).timeout
 
-		var popup_instance = dialogue_popup.instantiate()
+			var popup_instance = dialogue_popup.instantiate()
 
-		popup_instance.character_portrait = npc_portrait
-		popup_instance.set_dialogue_sequence(initial_dialog_sequence)
-		popup_instance.set_npc_name("Viktor")
+			popup_instance.connect("dialogue_finished", handle_name_prompt)
+			popup_instance.character_portrait = npc_portrait
+			popup_instance.set_dialogue_sequence(initial_dialog_sequence)
+			popup_instance.set_npc_name("Viktor")
 
-		get_parent().add_child(popup_instance)
+			get_parent().add_child(popup_instance)
+
+
+func handle_name_prompt() -> void:
+	var popup_instance = enter_name_popup.instantiate()
+
+	add_child(popup_instance)
+
+	popup_instance.connect("name_set", set_player_name.bind())
+
+
+func set_player_name(name: String) -> void:
+	ProgressManager.player_name = name
+	
+	get_node("EnterNamePopup").queue_free()
+	
+	var popup_instance = dialogue_popup.instantiate()
+
+	get_parent().add_child(popup_instance)
+	ending_dialog_sequence.variables.append(name)
+
+	popup_instance.character_portrait = npc_portrait
+	popup_instance.set_dialogue_sequence(ending_dialog_sequence)
+	popup_instance.set_npc_name("Viktor")
