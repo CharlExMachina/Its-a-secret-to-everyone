@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://ch6v4vkk16jp3" path="res://src/assets/sprites/placeholder_npc.png" id="1_dpysd"]
 [ext_resource type="Script" path="res://src/entities/props/interactable_props/dialogue_interactable/dialogue_interactable_prop.gd" id="1_wxerh"]
-[ext_resource type="Resource" uid="uid://y7a5dnpil6p4" path="res://src/dialogue_sequences/test_sequence/test_1.tres" id="2_5gbm8"]
+[ext_resource type="Resource" uid="uid://y7a5dnpil6p4" path="res://src/dialogue_sequences/first_conversation_with_viktor/first_conversation_with_viktor.tres" id="2_5gbm8"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_moxm3"]
 

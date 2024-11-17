@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://o56kgbpoymqv"
-path="res://.godot/imported/viktor_portrait.png-22d1ca0e023f274bbc5a1d28ad970086.ctex"
+uid="uid://bdn6n4f613x2r"
+path="res://.godot/imported/npc_portrait.png-a03b34e7cc642d23052e9841e2267fbb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/assets/sprites/character_portraits/viktor_portrait.png"
-dest_files=["res://.godot/imported/viktor_portrait.png-22d1ca0e023f274bbc5a1d28ad970086.ctex"]
+source_file="res://src/assets/sprites/character_portraits/npc_portrait.png"
+dest_files=["res://.godot/imported/npc_portrait.png-a03b34e7cc642d23052e9841e2267fbb.ctex"]
 
 [params]
 

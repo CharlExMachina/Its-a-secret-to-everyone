@@ -1,0 +1,63 @@
+[gd_resource type="Resource" script_class="Dialogue" load_steps=13 format=3 uid="uid://y7a5dnpil6p4"]
+
+[ext_resource type="Script" path="res://src/core/option.gd" id="1_gbrwn"]
+[ext_resource type="Script" path="res://src/core/dialogue.gd" id="2_0u5fl"]
+[ext_resource type="Resource" uid="uid://daljhr38257pa" path="res://src/dialogue_sequences/first_conversation_with_viktor/first_conversation_followup.tres" id="3_76d83"]
+
+[sub_resource type="Resource" id="Resource_ppe38"]
+script = ExtResource("2_0u5fl")
+content = "Now that we're throwing all sorts of good manners out to the sea, let me introduce myself."
+next = ExtResource("3_76d83")
+options = Array[ExtResource("1_gbrwn")]([])
+
+[sub_resource type="Resource" id="Resource_t15w1"]
+script = ExtResource("2_0u5fl")
+content = "Well, I'm happy to meet you too!
+
+Kids these days I swear..."
+next = SubResource("Resource_ppe38")
+options = Array[ExtResource("1_gbrwn")]([])
+
+[sub_resource type="Resource" id="Resource_u07y4"]
+script = ExtResource("1_gbrwn")
+title = "Who are you?"
+outcome = SubResource("Resource_t15w1")
+
+[sub_resource type="Resource" id="Resource_p8lpm"]
+script = ExtResource("2_0u5fl")
+content = "Anyways, if you're done playing tough..."
+next = ExtResource("3_76d83")
+options = Array[ExtResource("1_gbrwn")]([])
+
+[sub_resource type="Resource" id="Resource_kalse"]
+script = ExtResource("2_0u5fl")
+content = "That's what I should be asking YOU!"
+next = SubResource("Resource_p8lpm")
+options = Array[ExtResource("1_gbrwn")]([])
+
+[sub_resource type="Resource" id="Resource_8mkk2"]
+script = ExtResource("1_gbrwn")
+title = "What are you doing here!?"
+outcome = SubResource("Resource_kalse")
+
+[sub_resource type="Resource" id="Resource_7ruye"]
+script = ExtResource("2_0u5fl")
+content = "Kids these days I swear..."
+next = ExtResource("3_76d83")
+options = Array[ExtResource("1_gbrwn")]([])
+
+[sub_resource type="Resource" id="Resource_t2rbe"]
+script = ExtResource("2_0u5fl")
+content = "You'd wish, and what if I am? I'll haunt you till the end of your days now!"
+next = SubResource("Resource_7ruye")
+options = Array[ExtResource("1_gbrwn")]([])
+
+[sub_resource type="Resource" id="Resource_g1f5n"]
+script = ExtResource("1_gbrwn")
+title = "... a ghost!?"
+outcome = SubResource("Resource_t2rbe")
+
+[resource]
+script = ExtResource("2_0u5fl")
+content = "Hey kiddo"
+options = Array[ExtResource("1_gbrwn")]([SubResource("Resource_u07y4"), SubResource("Resource_8mkk2"), SubResource("Resource_g1f5n")])

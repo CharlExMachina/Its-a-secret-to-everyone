@@ -1,8 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://g6wcptxn1nin"]
+[gd_scene load_steps=8 format=3 uid="uid://g6wcptxn1nin"]
 
 [ext_resource type="Script" path="res://src/entities/ui/dialogue_popup/dialogue_popup.gd" id="1_e5p01"]
 [ext_resource type="FontFile" uid="uid://cr0veva7b3pab" path="res://src/assets/fonts/caveat_regular.ttf" id="1_ps6y5"]
-[ext_resource type="Texture2D" uid="uid://o56kgbpoymqv" path="res://src/assets/sprites/character_portraits/viktor_portrait.png" id="3_yoawr"]
 [ext_resource type="PackedScene" uid="uid://rtm3l8h8fmj1" path="res://src/entities/ui/dialogue_popup/dialogue_option/dialogue_options.tscn" id="4_qfroe"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lso4o"]
@@ -82,7 +81,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("3_yoawr")
 stretch_mode = 5
 
 [node name="ContinueButton" type="Button" parent="."]
