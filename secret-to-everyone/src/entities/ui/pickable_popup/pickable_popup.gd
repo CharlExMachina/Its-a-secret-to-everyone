@@ -25,7 +25,7 @@ func _ready() -> void:
 
 
 func _on_button_pressed() -> void:
-	get_tree().call_group("Player", "add_to_inventory", item)
+	ProgressManager.add_to_inventory(item)
 	get_tree().call_group("Player", "unfreeze")
 	emit_signal("item_picked")
 	queue_free()

@@ -10,6 +10,9 @@ var is_pressing := false
 
 
 func _ready() -> void:
+	if ProgressManager.has_item(item):
+		queue_free()
+
 	$Sprite3D.texture = item.item_sprite
 
 

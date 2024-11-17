@@ -15,6 +15,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0393982, 0, 0.0629883)
 shape = SubResource("BoxShape3D_pviht")
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1, 0, 0, 0)
+alpha_cut = 2
 texture = ExtResource("1_1w3us")
 
 [node name="Label3D" type="Label3D" parent="Sprite3D"]

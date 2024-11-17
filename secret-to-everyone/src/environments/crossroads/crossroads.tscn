@@ -1,0 +1,2453 @@
+[gd_scene load_steps=22 format=3 uid="uid://cs0c5vbrsagnc"]
+
+[ext_resource type="PackedScene" uid="uid://yqbjk2dtw1hk" path="res://src/environments/explorable_zone.tscn" id="1_mbgri"]
+[ext_resource type="Texture2D" uid="uid://ck0ju8q5dlsw0" path="res://src/assets/sprites/environment/nature/evergreen-1.png" id="2_3o314"]
+[ext_resource type="Texture2D" uid="uid://dsj18pdrkufd1" path="res://src/assets/sprites/environment/backgrounds/repeat-hills.png" id="2_u6ymi"]
+[ext_resource type="Script" path="res://src/environments/crossroads/crossroads.gd" id="2_ynxrf"]
+[ext_resource type="Texture2D" uid="uid://c83qsnd4p6gj6" path="res://src/assets/sprites/environment/nature/evergreen-2.png" id="3_db5ma"]
+[ext_resource type="Texture2D" uid="uid://1uwtcbvlugjq" path="res://src/assets/sprites/environment/nature/evergreen-3.png" id="4_afbrr"]
+[ext_resource type="Texture2D" uid="uid://cdjcc8hga727o" path="res://src/assets/sprites/environment/backgrounds/repeat-clouds.png" id="4_dcr30"]
+[ext_resource type="Texture2D" uid="uid://csfk3g667kp46" path="res://src/assets/sprites/environment/nature/flower-1.png" id="5_uxsmk"]
+[ext_resource type="Texture2D" uid="uid://bhqg0trrn6l31" path="res://src/assets/sprites/environment/nature/flower-2.png" id="6_4780g"]
+[ext_resource type="Texture2D" uid="uid://blg4ded72ef4x" path="res://src/assets/sprites/environment/nature/flower-3.png" id="7_domtj"]
+[ext_resource type="Texture2D" uid="uid://b3ermtk81b6o3" path="res://src/assets/sprites/environment/nature/foliage-1.png" id="10_cl4p4"]
+[ext_resource type="Texture2D" uid="uid://d27a441lcq838" path="res://src/assets/sprites/environment/nature/foliage-2.png" id="11_vmvev"]
+[ext_resource type="Texture2D" uid="uid://bux5va0g7eknr" path="res://src/assets/sprites/environment/nature/cattail-1.png" id="12_wh6t7"]
+[ext_resource type="Texture2D" uid="uid://wgtrijt2o57w" path="res://src/assets/sprites/environment/nature/foliage-3.png" id="12_xytxh"]
+[ext_resource type="Texture2D" uid="uid://b1272so4wrug8" path="res://src/assets/sprites/environment/nature/summer-tree-2.png" id="13_858i6"]
+[ext_resource type="Texture2D" uid="uid://bfa5i0sgwxnkk" path="res://src/assets/sprites/environment/nature/cattail-4.png" id="14_7k5rm"]
+[ext_resource type="Texture2D" uid="uid://d3740an18yjpl" path="res://src/assets/sprites/environment/nature/pampas-grass-2.png" id="15_bx0ok"]
+[ext_resource type="Texture2D" uid="uid://70w4mi1yv5sh" path="res://src/assets/sprites/environment/nature/pampas-grass-1.png" id="16_tg8w0"]
+[ext_resource type="PackedScene" uid="uid://vhf0l0b53njs" path="res://src/entities/props/interactable_props/information_interactable/information_interactable_prop.tscn" id="19_dg37q"]
+[ext_resource type="Texture2D" uid="uid://cphdqabe34ndr" path="res://src/assets/sprites/interactables/capybara.png" id="20_aaus7"]
+[ext_resource type="PackedScene" uid="uid://drc087t34sdxo" path="res://src/entities/props/interactable_props/action_interactable/action_interactable.tscn" id="21_w52ix"]
+
+[node name="Crossroads" instance=ExtResource("1_mbgri")]
+script = ExtResource("2_ynxrf")
+
+[node name="MeshInstance3D" parent="." index="1"]
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D2" parent="." index="2"]
+transform = Transform3D(129.827, 0, 0, 0, -4.37114e-08, -79.2961, 0, 1, -3.46613e-06, -0.345512, 2.36153, -23.9911)
+
+[node name="Player" parent="." index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.00846, 0.493032, 6.96201)
+
+[node name="Background" type="Node" parent="." index="4"]
+
+[node name="Sprite3D" type="Sprite3D" parent="Background" index="0"]
+transform = Transform3D(2.99057, 0, 0, 0, 2.99057, 0, 0, 0, 2.99057, 0.00317405, 1.8042, -22.0627)
+texture = ExtResource("2_u6ymi")
+
+[node name="Sprite3D5" type="Sprite3D" parent="Background" index="1"]
+transform = Transform3D(-3.64344, -0.646372, 0, 0.646372, -3.64344, 0, 0, 0, 3.70033, 22.337, 20.5716, -23.4441)
+texture = ExtResource("4_dcr30")
+
+[node name="Sprite3D6" type="Sprite3D" parent="Background" index="2"]
+transform = Transform3D(-3.69786, 0.135271, 0, -0.135271, -3.69786, 0, 0, 0, 3.70033, -19.7957, 23.5972, -23.4441)
+texture = ExtResource("4_dcr30")
+
+[node name="Sprite3D2" type="Sprite3D" parent="Background" index="3"]
+transform = Transform3D(2.99057, 0, 0, 0, 2.99057, 0, 0, 0, 2.99057, -28.6142, 1.8042, -22.0627)
+texture = ExtResource("2_u6ymi")
+
+[node name="Sprite3D3" type="Sprite3D" parent="Background" index="4"]
+transform = Transform3D(2.99057, 0, 0, 0, 2.99057, 0, 0, 0, 2.99057, 28.6063, 1.8042, -22.0627)
+texture = ExtResource("2_u6ymi")
+
+[node name="Evergreen" type="Node" parent="." index="5"]
+
+[node name="Sprite3D" type="Sprite3D" parent="Evergreen" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.1603, 1.09759, -4.45951)
+texture = ExtResource("2_3o314")
+
+[node name="Sprite3D2" type="Sprite3D" parent="Evergreen" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.34987, 1.24097, -4.46325)
+texture = ExtResource("3_db5ma")
+
+[node name="Sprite3D3" type="Sprite3D" parent="Evergreen" index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.26814, 1.26086, -3.95323)
+texture = ExtResource("4_afbrr")
+
+[node name="Sprite3D6" type="Sprite3D" parent="Evergreen" index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.26098, 1.25653, -5.00381)
+texture = ExtResource("4_afbrr")
+
+[node name="Sprite3D5" type="Sprite3D" parent="Evergreen" index="4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.6731, 1.26311, -3.3996)
+texture = ExtResource("4_afbrr")
+
+[node name="Flowers" type="Node" parent="." index="6"]
+
+[node name="Sprite3D" type="Sprite3D" parent="Flowers" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.52543, 0.563862, 0.430758)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D2" type="Sprite3D" parent="Flowers" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.87294, 0.563862, 0.414064)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D3" type="Sprite3D" parent="Flowers" index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.57374, 0.563862, 0.129251)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D4" type="Sprite3D" parent="Flowers" index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.23968, 0.563862, 0.502774)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D5" type="Sprite3D" parent="Flowers" index="4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.69221, 0.563862, 0.84339)
+texture = ExtResource("7_domtj")
+
+[node name="Sprite3D6" type="Sprite3D" parent="Flowers" index="5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.91013, 0.563862, 1.23283)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D7" type="Sprite3D" parent="Flowers" index="6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.35359, 0.563862, 0.642628)
+texture = ExtResource("7_domtj")
+
+[node name="Sprite3D8" type="Sprite3D" parent="Flowers" index="7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.23773, 0.563862, -0.233676)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D9" type="Sprite3D" parent="Flowers" index="8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.9353, 0.563862, 1.27326)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D10" type="Sprite3D" parent="Flowers" index="9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.21488, 0.563862, 1.25473)
+texture = ExtResource("7_domtj")
+
+[node name="Sprite3D11" type="Sprite3D" parent="Flowers" index="10"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.01047, 0.563862, 0.233905)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D12" type="Sprite3D" parent="Flowers" index="11"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.41017, 0.563862, -0.227086)
+texture = ExtResource("6_4780g")
+
+[node name="Sprite3D13" type="Sprite3D" parent="Flowers" index="12"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.3639, 0.563862, -0.733612)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D14" type="Sprite3D" parent="Flowers" index="13"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.7115, 0.563862, -0.750305)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D15" type="Sprite3D" parent="Flowers" index="14"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.4122, 0.563862, -1.03512)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D16" type="Sprite3D" parent="Flowers" index="15"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.0782, 0.563862, -0.661595)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D17" type="Sprite3D" parent="Flowers" index="16"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.5307, 0.563862, -0.32098)
+texture = ExtResource("7_domtj")
+
+[node name="Sprite3D18" type="Sprite3D" parent="Flowers" index="17"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.7486, 0.563862, 0.0684624)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D19" type="Sprite3D" parent="Flowers" index="18"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.1921, 0.563862, -0.521742)
+texture = ExtResource("7_domtj")
+
+[node name="Sprite3D20" type="Sprite3D" parent="Flowers" index="19"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.0762, 0.563862, -1.39805)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D21" type="Sprite3D" parent="Flowers" index="20"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.7738, 0.563862, 0.108886)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D22" type="Sprite3D" parent="Flowers" index="21"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.0534, 0.563862, 0.0903645)
+texture = ExtResource("7_domtj")
+
+[node name="Sprite3D23" type="Sprite3D" parent="Flowers" index="22"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.849, 0.563862, -0.930465)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D24" type="Sprite3D" parent="Flowers" index="23"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.2487, 0.563862, -1.39146)
+texture = ExtResource("6_4780g")
+
+[node name="Sprite3D25" type="Sprite3D" parent="Flowers" index="24"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.36393, 0.563862, -1.73361)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D26" type="Sprite3D" parent="Flowers" index="25"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.71145, 0.563862, -1.75031)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D27" type="Sprite3D" parent="Flowers" index="26"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.41225, 0.563862, -2.03512)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D28" type="Sprite3D" parent="Flowers" index="27"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.07819, 0.563862, -1.6616)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D29" type="Sprite3D" parent="Flowers" index="28"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.53071, 0.563862, -1.32098)
+texture = ExtResource("7_domtj")
+
+[node name="Sprite3D30" type="Sprite3D" parent="Flowers" index="29"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.74863, 0.563862, -0.931538)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D31" type="Sprite3D" parent="Flowers" index="30"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.1921, 0.563862, -1.52174)
+texture = ExtResource("7_domtj")
+
+[node name="Sprite3D32" type="Sprite3D" parent="Flowers" index="31"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.0762, 0.563862, -2.39805)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D33" type="Sprite3D" parent="Flowers" index="32"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.7738, 0.563862, -0.891114)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D34" type="Sprite3D" parent="Flowers" index="33"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.05338, 0.563862, -0.909636)
+texture = ExtResource("7_domtj")
+
+[node name="Sprite3D35" type="Sprite3D" parent="Flowers" index="34"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.84897, 0.563862, -1.93046)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D36" type="Sprite3D" parent="Flowers" index="35"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.24867, 0.563862, -2.39146)
+texture = ExtResource("6_4780g")
+
+[node name="Sprite3D37" type="Sprite3D" parent="Flowers" index="36"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.78417, 0.563862, -2.21848)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D38" type="Sprite3D" parent="Flowers" index="37"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.13169, 0.563862, -2.23518)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D39" type="Sprite3D" parent="Flowers" index="38"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.83248, 0.563862, -2.51999)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D40" type="Sprite3D" parent="Flowers" index="39"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.49843, 0.563862, -2.14647)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D41" type="Sprite3D" parent="Flowers" index="40"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.95095, 0.563862, -1.80585)
+texture = ExtResource("7_domtj")
+
+[node name="Sprite3D42" type="Sprite3D" parent="Flowers" index="41"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.16887, 0.563862, -1.41641)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D43" type="Sprite3D" parent="Flowers" index="42"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.61233, 0.563862, -2.00661)
+texture = ExtResource("7_domtj")
+
+[node name="Sprite3D44" type="Sprite3D" parent="Flowers" index="43"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.49647, 0.563862, -2.88292)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D45" type="Sprite3D" parent="Flowers" index="44"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.19404, 0.563862, -1.37599)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D46" type="Sprite3D" parent="Flowers" index="45"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.47362, 0.563862, -1.39451)
+texture = ExtResource("7_domtj")
+
+[node name="Sprite3D47" type="Sprite3D" parent="Flowers" index="46"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.26921, 0.563862, -2.41534)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D48" type="Sprite3D" parent="Flowers" index="47"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.66891, 0.563862, -2.87633)
+texture = ExtResource("6_4780g")
+
+[node name="Sprite3D49" type="Sprite3D" parent="Flowers" index="48"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.78417, 0.563862, -3.21848)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D50" type="Sprite3D" parent="Flowers" index="49"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.13169, 0.563862, -3.23518)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D51" type="Sprite3D" parent="Flowers" index="50"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.83248, 0.563862, -3.51999)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D52" type="Sprite3D" parent="Flowers" index="51"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.49843, 0.563862, -3.14647)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D53" type="Sprite3D" parent="Flowers" index="52"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.95095, 0.563862, -2.80585)
+texture = ExtResource("7_domtj")
+
+[node name="Sprite3D54" type="Sprite3D" parent="Flowers" index="53"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.16887, 0.563862, -2.41641)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D55" type="Sprite3D" parent="Flowers" index="54"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.61233, 0.563862, -3.00661)
+texture = ExtResource("7_domtj")
+
+[node name="Sprite3D56" type="Sprite3D" parent="Flowers" index="55"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.49647, 0.563862, -3.88292)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D57" type="Sprite3D" parent="Flowers" index="56"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.19404, 0.563862, -2.37599)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D58" type="Sprite3D" parent="Flowers" index="57"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.47362, 0.563862, -2.39451)
+texture = ExtResource("7_domtj")
+
+[node name="Sprite3D59" type="Sprite3D" parent="Flowers" index="58"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.26921, 0.563862, -3.41534)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D60" type="Sprite3D" parent="Flowers" index="59"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.66891, 0.563862, -3.87633)
+texture = ExtResource("6_4780g")
+
+[node name="Sprite3D61" type="Sprite3D" parent="Flowers" index="60"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.21583, 0.563862, -2.21848)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D62" type="Sprite3D" parent="Flowers" index="61"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.868312, 0.563862, -2.23518)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D63" type="Sprite3D" parent="Flowers" index="62"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.16752, 0.563862, -2.51999)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D73" type="Sprite3D" parent="Flowers" index="63"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.74385, 0.563861, 1.47287)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D74" type="Sprite3D" parent="Flowers" index="64"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.44464, 0.563861, 1.18805)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D75" type="Sprite3D" parent="Flowers" index="65"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.11058, 0.563861, 1.56158)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D76" type="Sprite3D" parent="Flowers" index="66"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.56311, 0.563861, 1.90219)
+texture = ExtResource("7_domtj")
+
+[node name="Sprite3D77" type="Sprite3D" parent="Flowers" index="67"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.781027, 0.563861, 2.29163)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D78" type="Sprite3D" parent="Flowers" index="68"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.22449, 0.563861, 1.70143)
+texture = ExtResource("7_domtj")
+
+[node name="Sprite3D79" type="Sprite3D" parent="Flowers" index="69"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.10863, 0.563861, 0.825126)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D80" type="Sprite3D" parent="Flowers" index="70"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8062, 0.563861, 2.33206)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D81" type="Sprite3D" parent="Flowers" index="71"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.08578, 0.563861, 2.31354)
+texture = ExtResource("7_domtj")
+
+[node name="Sprite3D82" type="Sprite3D" parent="Flowers" index="72"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.88137, 0.563861, 1.29271)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D83" type="Sprite3D" parent="Flowers" index="73"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.28107, 0.563861, 0.831716)
+texture = ExtResource("6_4780g")
+
+[node name="Sprite3D84" type="Sprite3D" parent="Flowers" index="74"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.23483, 0.563861, 0.32519)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D85" type="Sprite3D" parent="Flowers" index="75"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.58235, 0.563861, 0.308496)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D86" type="Sprite3D" parent="Flowers" index="76"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.28315, 0.563861, 0.0236826)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D87" type="Sprite3D" parent="Flowers" index="77"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.94909, 0.563861, 0.397206)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D88" type="Sprite3D" parent="Flowers" index="78"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.40162, 0.563861, 0.737822)
+texture = ExtResource("7_domtj")
+
+[node name="Sprite3D89" type="Sprite3D" parent="Flowers" index="79"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.61953, 0.563861, 1.12726)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D90" type="Sprite3D" parent="Flowers" index="80"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.06299, 0.563861, 0.53706)
+texture = ExtResource("7_domtj")
+
+[node name="Sprite3D91" type="Sprite3D" parent="Flowers" index="81"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -5.94713, 0.563861, -0.339244)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D92" type="Sprite3D" parent="Flowers" index="82"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.6447, 0.563861, 1.16769)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D93" type="Sprite3D" parent="Flowers" index="83"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.92429, 0.563861, 1.14917)
+texture = ExtResource("7_domtj")
+
+[node name="Sprite3D94" type="Sprite3D" parent="Flowers" index="84"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.71988, 0.563861, 0.128337)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D95" type="Sprite3D" parent="Flowers" index="85"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.11957, 0.563861, -0.332654)
+texture = ExtResource("6_4780g")
+
+[node name="Sprite3D96" type="Sprite3D" parent="Flowers" index="86"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.23483, 0.563861, -0.67481)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D97" type="Sprite3D" parent="Flowers" index="87"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.58235, 0.563861, -0.691504)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D98" type="Sprite3D" parent="Flowers" index="88"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.28315, 0.563861, -0.976317)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D99" type="Sprite3D" parent="Flowers" index="89"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.94909, 0.563861, -0.602794)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D100" type="Sprite3D" parent="Flowers" index="90"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.40162, 0.563861, -0.262178)
+texture = ExtResource("7_domtj")
+
+[node name="Sprite3D101" type="Sprite3D" parent="Flowers" index="91"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.61953, 0.563861, 0.127264)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D102" type="Sprite3D" parent="Flowers" index="92"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.06299, 0.563861, -0.46294)
+texture = ExtResource("7_domtj")
+
+[node name="Sprite3D103" type="Sprite3D" parent="Flowers" index="93"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.94713, 0.563861, -1.33924)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D104" type="Sprite3D" parent="Flowers" index="94"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.6447, 0.563861, 0.167687)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D105" type="Sprite3D" parent="Flowers" index="95"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.92429, 0.563861, 0.149166)
+texture = ExtResource("7_domtj")
+
+[node name="Sprite3D106" type="Sprite3D" parent="Flowers" index="96"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.71988, 0.563861, -0.871663)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D107" type="Sprite3D" parent="Flowers" index="97"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.11957, 0.563861, -1.33265)
+texture = ExtResource("6_4780g")
+
+[node name="Sprite3D108" type="Sprite3D" parent="Flowers" index="98"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.655071, 0.563861, -1.15968)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D109" type="Sprite3D" parent="Flowers" index="99"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.00259, 0.563861, -1.17638)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D110" type="Sprite3D" parent="Flowers" index="100"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.703384, 0.563861, -1.46119)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D111" type="Sprite3D" parent="Flowers" index="101"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.369328, 0.563861, -1.08767)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D112" type="Sprite3D" parent="Flowers" index="102"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.821854, 0.563861, -0.74705)
+texture = ExtResource("7_domtj")
+
+[node name="Sprite3D113" type="Sprite3D" parent="Flowers" index="103"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0397711, 0.563861, -0.357608)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D114" type="Sprite3D" parent="Flowers" index="104"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.48323, 0.563861, -0.947812)
+texture = ExtResource("7_domtj")
+
+[node name="Sprite3D115" type="Sprite3D" parent="Flowers" index="105"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.36737, 0.563861, -1.82412)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D116" type="Sprite3D" parent="Flowers" index="106"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.06494, 0.563861, -0.317184)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D117" type="Sprite3D" parent="Flowers" index="107"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.344523, 0.563861, -0.335706)
+texture = ExtResource("7_domtj")
+
+[node name="Sprite3D118" type="Sprite3D" parent="Flowers" index="108"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.140113, 0.563861, -1.35653)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D119" type="Sprite3D" parent="Flowers" index="109"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.539811, 0.563861, -1.81753)
+texture = ExtResource("6_4780g")
+
+[node name="Sprite3D120" type="Sprite3D" parent="Flowers" index="110"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.34493, 0.563861, -2.15968)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D121" type="Sprite3D" parent="Flowers" index="111"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.99741, 0.563861, -2.17638)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D122" type="Sprite3D" parent="Flowers" index="112"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.29662, 0.563861, -2.46119)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D123" type="Sprite3D" parent="Flowers" index="113"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.63067, 0.563861, -2.08767)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D124" type="Sprite3D" parent="Flowers" index="114"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.17815, 0.563861, -1.74705)
+texture = ExtResource("7_domtj")
+
+[node name="Sprite3D125" type="Sprite3D" parent="Flowers" index="115"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.96023, 0.563861, -1.35761)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D126" type="Sprite3D" parent="Flowers" index="116"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.51677, 0.563861, -1.94781)
+texture = ExtResource("7_domtj")
+
+[node name="Sprite3D127" type="Sprite3D" parent="Flowers" index="117"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.63263, 0.563861, -2.82412)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D128" type="Sprite3D" parent="Flowers" index="118"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.93506, 0.563861, -1.31718)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D129" type="Sprite3D" parent="Flowers" index="119"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.65548, 0.563861, -1.33571)
+texture = ExtResource("7_domtj")
+
+[node name="Sprite3D130" type="Sprite3D" parent="Flowers" index="120"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.85989, 0.563861, -2.35653)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D131" type="Sprite3D" parent="Flowers" index="121"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.46019, 0.563861, -2.81753)
+texture = ExtResource("6_4780g")
+
+[node name="Sprite3D132" type="Sprite3D" parent="Flowers" index="122"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.34493, 0.563861, -1.15968)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D133" type="Sprite3D" parent="Flowers" index="123"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.99741, 0.563861, -1.17638)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D134" type="Sprite3D" parent="Flowers" index="124"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.29662, 0.563861, -1.46119)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D135" type="Sprite3D" parent="Flowers" index="125"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.9267, 0.563861, -0.0970345)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D136" type="Sprite3D" parent="Flowers" index="126"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.6275, 0.563861, -0.381848)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D137" type="Sprite3D" parent="Flowers" index="127"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.2935, 0.563861, -0.00832462)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D138" type="Sprite3D" parent="Flowers" index="128"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.746, 0.563861, 0.332291)
+texture = ExtResource("7_domtj")
+
+[node name="Sprite3D139" type="Sprite3D" parent="Flowers" index="129"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.9639, 0.563861, 0.721733)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D140" type="Sprite3D" parent="Flowers" index="130"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.4074, 0.563861, 0.131529)
+texture = ExtResource("7_domtj")
+
+[node name="Sprite3D141" type="Sprite3D" parent="Flowers" index="131"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.2915, 0.563861, -0.744775)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D142" type="Sprite3D" parent="Flowers" index="132"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.9891, 0.563861, 0.762156)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D143" type="Sprite3D" parent="Flowers" index="133"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.2687, 0.563861, 0.743635)
+texture = ExtResource("7_domtj")
+
+[node name="Sprite3D144" type="Sprite3D" parent="Flowers" index="134"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.0642, 0.563861, -0.277194)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D145" type="Sprite3D" parent="Flowers" index="135"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.4639, 0.563861, -0.738185)
+texture = ExtResource("6_4780g")
+
+[node name="Sprite3D146" type="Sprite3D" parent="Flowers" index="136"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.4177, 0.563861, -1.24471)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D147" type="Sprite3D" parent="Flowers" index="137"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.7652, 0.563861, -1.2614)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D148" type="Sprite3D" parent="Flowers" index="138"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.466, 0.563861, -1.54622)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D149" type="Sprite3D" parent="Flowers" index="139"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.132, 0.563861, -1.17269)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D150" type="Sprite3D" parent="Flowers" index="140"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.5845, 0.563861, -0.832079)
+texture = ExtResource("7_domtj")
+
+[node name="Sprite3D151" type="Sprite3D" parent="Flowers" index="141"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.8024, 0.563861, -0.442636)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D152" type="Sprite3D" parent="Flowers" index="142"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.2459, 0.563861, -1.03284)
+texture = ExtResource("7_domtj")
+
+[node name="Sprite3D153" type="Sprite3D" parent="Flowers" index="143"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.13, 0.563861, -1.90914)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D154" type="Sprite3D" parent="Flowers" index="144"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.8276, 0.563861, -0.402213)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D155" type="Sprite3D" parent="Flowers" index="145"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.1072, 0.563861, -0.420734)
+texture = ExtResource("7_domtj")
+
+[node name="Sprite3D156" type="Sprite3D" parent="Flowers" index="146"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.9027, 0.563861, -1.44156)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D157" type="Sprite3D" parent="Flowers" index="147"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.3024, 0.563861, -1.90255)
+texture = ExtResource("6_4780g")
+
+[node name="Sprite3D158" type="Sprite3D" parent="Flowers" index="148"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.4177, 0.563861, -2.24471)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D159" type="Sprite3D" parent="Flowers" index="149"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.7652, 0.563861, -2.2614)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D160" type="Sprite3D" parent="Flowers" index="150"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.466, 0.563861, -2.54622)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D161" type="Sprite3D" parent="Flowers" index="151"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.132, 0.563861, -2.17269)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D162" type="Sprite3D" parent="Flowers" index="152"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.5845, 0.563861, -1.83208)
+texture = ExtResource("7_domtj")
+
+[node name="Sprite3D163" type="Sprite3D" parent="Flowers" index="153"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.8024, 0.563861, -1.44264)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D164" type="Sprite3D" parent="Flowers" index="154"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.2459, 0.563861, -2.03284)
+texture = ExtResource("7_domtj")
+
+[node name="Sprite3D165" type="Sprite3D" parent="Flowers" index="155"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.13, 0.563861, -2.90914)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D166" type="Sprite3D" parent="Flowers" index="156"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.8276, 0.563861, -1.40221)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D167" type="Sprite3D" parent="Flowers" index="157"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.1072, 0.563861, -1.42073)
+texture = ExtResource("7_domtj")
+
+[node name="Sprite3D168" type="Sprite3D" parent="Flowers" index="158"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.9027, 0.563861, -2.44156)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D169" type="Sprite3D" parent="Flowers" index="159"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.3024, 0.563861, -2.90255)
+texture = ExtResource("6_4780g")
+
+[node name="Sprite3D170" type="Sprite3D" parent="Flowers" index="160"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.8379, 0.563861, -2.72958)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D171" type="Sprite3D" parent="Flowers" index="161"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.1855, 0.563861, -2.74628)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D172" type="Sprite3D" parent="Flowers" index="162"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.8863, 0.563861, -3.03109)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D173" type="Sprite3D" parent="Flowers" index="163"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.5522, 0.563861, -2.65757)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D174" type="Sprite3D" parent="Flowers" index="164"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.0047, 0.563861, -2.31695)
+texture = ExtResource("7_domtj")
+
+[node name="Sprite3D175" type="Sprite3D" parent="Flowers" index="165"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.2226, 0.563861, -1.92751)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D176" type="Sprite3D" parent="Flowers" index="166"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.6661, 0.563861, -2.51771)
+texture = ExtResource("7_domtj")
+
+[node name="Sprite3D177" type="Sprite3D" parent="Flowers" index="167"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.5502, 0.563861, -3.39402)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D178" type="Sprite3D" parent="Flowers" index="168"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.2478, 0.563861, -1.88708)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D179" type="Sprite3D" parent="Flowers" index="169"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.5274, 0.563861, -1.90561)
+texture = ExtResource("7_domtj")
+
+[node name="Sprite3D180" type="Sprite3D" parent="Flowers" index="170"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.323, 0.563861, -2.92644)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D181" type="Sprite3D" parent="Flowers" index="171"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.7227, 0.563861, -3.38743)
+texture = ExtResource("6_4780g")
+
+[node name="Sprite3D182" type="Sprite3D" parent="Flowers" index="172"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.83794, 0.563861, -3.72958)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D183" type="Sprite3D" parent="Flowers" index="173"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.1855, 0.563861, -3.74628)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D184" type="Sprite3D" parent="Flowers" index="174"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.88625, 0.563861, -4.03109)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D185" type="Sprite3D" parent="Flowers" index="175"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.5522, 0.563861, -3.65757)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D186" type="Sprite3D" parent="Flowers" index="176"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.0047, 0.563861, -3.31695)
+texture = ExtResource("7_domtj")
+
+[node name="Sprite3D187" type="Sprite3D" parent="Flowers" index="177"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.22264, 0.563861, -2.92751)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D188" type="Sprite3D" parent="Flowers" index="178"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.6661, 0.563861, -3.51771)
+texture = ExtResource("7_domtj")
+
+[node name="Sprite3D189" type="Sprite3D" parent="Flowers" index="179"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.5502, 0.563861, -4.39402)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D190" type="Sprite3D" parent="Flowers" index="180"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.2478, 0.563861, -2.88708)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D191" type="Sprite3D" parent="Flowers" index="181"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.52739, 0.563861, -2.90561)
+texture = ExtResource("7_domtj")
+
+[node name="Sprite3D192" type="Sprite3D" parent="Flowers" index="182"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.32298, 0.563861, -3.92644)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D193" type="Sprite3D" parent="Flowers" index="183"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.72268, 0.563861, -4.38743)
+texture = ExtResource("6_4780g")
+
+[node name="Sprite3D194" type="Sprite3D" parent="Flowers" index="184"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.83794, 0.563861, -2.72958)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D195" type="Sprite3D" parent="Flowers" index="185"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.18546, 0.563861, -2.74628)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D196" type="Sprite3D" parent="Flowers" index="186"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.88625, 0.563861, -3.03109)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D197" type="Sprite3D" parent="Flowers" index="187"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.49294, 0.563862, 1.49956)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D198" type="Sprite3D" parent="Flowers" index="188"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.79214, 0.563862, 1.21475)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D199" type="Sprite3D" parent="Flowers" index="189"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.1262, 0.563862, 1.58827)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D200" type="Sprite3D" parent="Flowers" index="190"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.67367, 0.563862, 1.92889)
+texture = ExtResource("7_domtj")
+
+[node name="Sprite3D201" type="Sprite3D" parent="Flowers" index="191"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.45576, 0.563862, 2.31833)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D202" type="Sprite3D" parent="Flowers" index="192"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.0123, 0.563862, 1.72813)
+texture = ExtResource("7_domtj")
+
+[node name="Sprite3D203" type="Sprite3D" parent="Flowers" index="193"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.12816, 0.563862, 0.851823)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D204" type="Sprite3D" parent="Flowers" index="194"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.43059, 0.563862, 2.35875)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D205" type="Sprite3D" parent="Flowers" index="195"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.151, 0.563862, 2.34023)
+texture = ExtResource("7_domtj")
+
+[node name="Sprite3D206" type="Sprite3D" parent="Flowers" index="196"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.35542, 0.563862, 1.3194)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D207" type="Sprite3D" parent="Flowers" index="197"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.95572, 0.563862, 0.858413)
+texture = ExtResource("6_4780g")
+
+[node name="Sprite3D208" type="Sprite3D" parent="Flowers" index="198"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.00195, 0.563862, 0.351887)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D209" type="Sprite3D" parent="Flowers" index="199"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.65443, 0.563862, 0.335194)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D210" type="Sprite3D" parent="Flowers" index="200"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.95364, 0.563862, 0.0503798)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D211" type="Sprite3D" parent="Flowers" index="201"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.2877, 0.563862, 0.423903)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D212" type="Sprite3D" parent="Flowers" index="202"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.83517, 0.563862, 0.764519)
+texture = ExtResource("7_domtj")
+
+[node name="Sprite3D213" type="Sprite3D" parent="Flowers" index="203"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.61725, 0.563862, 1.15396)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D214" type="Sprite3D" parent="Flowers" index="204"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.17379, 0.563862, 0.563757)
+texture = ExtResource("7_domtj")
+
+[node name="Sprite3D215" type="Sprite3D" parent="Flowers" index="205"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.28965, 0.563862, -0.312547)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D216" type="Sprite3D" parent="Flowers" index="206"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.59208, 0.563862, 1.19438)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D217" type="Sprite3D" parent="Flowers" index="207"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.3125, 0.563862, 1.17586)
+texture = ExtResource("7_domtj")
+
+[node name="Sprite3D218" type="Sprite3D" parent="Flowers" index="208"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.51691, 0.563862, 0.155034)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D219" type="Sprite3D" parent="Flowers" index="209"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.11721, 0.563862, -0.305957)
+texture = ExtResource("6_4780g")
+
+[node name="Sprite3D220" type="Sprite3D" parent="Flowers" index="210"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.00195, 0.563862, -0.648113)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D221" type="Sprite3D" parent="Flowers" index="211"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.65443, 0.563862, -0.664806)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D222" type="Sprite3D" parent="Flowers" index="212"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.95364, 0.563862, -0.94962)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D223" type="Sprite3D" parent="Flowers" index="213"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.28769, 0.563862, -0.576097)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D224" type="Sprite3D" parent="Flowers" index="214"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.83517, 0.563862, -0.235481)
+texture = ExtResource("7_domtj")
+
+[node name="Sprite3D225" type="Sprite3D" parent="Flowers" index="215"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.61725, 0.563862, 0.153961)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D226" type="Sprite3D" parent="Flowers" index="216"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.17379, 0.563862, -0.436243)
+texture = ExtResource("7_domtj")
+
+[node name="Sprite3D227" type="Sprite3D" parent="Flowers" index="217"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.28965, 0.563862, -1.31255)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D228" type="Sprite3D" parent="Flowers" index="218"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.59208, 0.563862, 0.194385)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D229" type="Sprite3D" parent="Flowers" index="219"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.3125, 0.563862, 0.175863)
+texture = ExtResource("7_domtj")
+
+[node name="Sprite3D230" type="Sprite3D" parent="Flowers" index="220"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.51691, 0.563862, -0.844966)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D231" type="Sprite3D" parent="Flowers" index="221"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.11721, 0.563862, -1.30596)
+texture = ExtResource("6_4780g")
+
+[node name="Sprite3D232" type="Sprite3D" parent="Flowers" index="222"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.58171, 0.563862, -1.13299)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D233" type="Sprite3D" parent="Flowers" index="223"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.2342, 0.563862, -1.14968)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D234" type="Sprite3D" parent="Flowers" index="224"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5334, 0.563862, -1.43449)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D235" type="Sprite3D" parent="Flowers" index="225"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.86746, 0.563862, -1.06097)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D236" type="Sprite3D" parent="Flowers" index="226"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.41493, 0.563862, -0.720353)
+texture = ExtResource("7_domtj")
+
+[node name="Sprite3D237" type="Sprite3D" parent="Flowers" index="227"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.19701, 0.563862, -0.330911)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D238" type="Sprite3D" parent="Flowers" index="228"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.75355, 0.563862, -0.921115)
+texture = ExtResource("7_domtj")
+
+[node name="Sprite3D239" type="Sprite3D" parent="Flowers" index="229"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.86941, 0.563862, -1.79742)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D240" type="Sprite3D" parent="Flowers" index="230"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.17184, 0.563862, -0.290487)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D241" type="Sprite3D" parent="Flowers" index="231"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.89226, 0.563862, -0.309009)
+texture = ExtResource("7_domtj")
+
+[node name="Sprite3D242" type="Sprite3D" parent="Flowers" index="232"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.09667, 0.563862, -1.32984)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D243" type="Sprite3D" parent="Flowers" index="233"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.69697, 0.563862, -1.79083)
+texture = ExtResource("6_4780g")
+
+[node name="Sprite3D244" type="Sprite3D" parent="Flowers" index="234"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.5817, 0.563862, -2.13299)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D245" type="Sprite3D" parent="Flowers" index="235"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.2342, 0.563862, -2.14968)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D246" type="Sprite3D" parent="Flowers" index="236"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.5334, 0.563862, -2.43449)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D247" type="Sprite3D" parent="Flowers" index="237"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.8675, 0.563862, -2.06097)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D248" type="Sprite3D" parent="Flowers" index="238"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.4149, 0.563862, -1.72035)
+texture = ExtResource("7_domtj")
+
+[node name="Sprite3D249" type="Sprite3D" parent="Flowers" index="239"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.197, 0.563862, -1.33091)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D250" type="Sprite3D" parent="Flowers" index="240"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.7536, 0.563862, -1.92111)
+texture = ExtResource("7_domtj")
+
+[node name="Sprite3D251" type="Sprite3D" parent="Flowers" index="241"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.8694, 0.563862, -2.79742)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D252" type="Sprite3D" parent="Flowers" index="242"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1718, 0.563862, -1.29049)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D253" type="Sprite3D" parent="Flowers" index="243"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.8923, 0.563862, -1.30901)
+texture = ExtResource("7_domtj")
+
+[node name="Sprite3D254" type="Sprite3D" parent="Flowers" index="244"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.0967, 0.563862, -2.32984)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D255" type="Sprite3D" parent="Flowers" index="245"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.697, 0.563862, -2.79083)
+texture = ExtResource("6_4780g")
+
+[node name="Sprite3D256" type="Sprite3D" parent="Flowers" index="246"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.5817, 0.563862, -1.13299)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D257" type="Sprite3D" parent="Flowers" index="247"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.2342, 0.563862, -1.14968)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D258" type="Sprite3D" parent="Flowers" index="248"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.5334, 0.563862, -1.43449)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D64" type="Sprite3D" parent="Flowers" index="249"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.50157, 0.563862, -2.14647)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D65" type="Sprite3D" parent="Flowers" index="250"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.04905, 0.563862, -1.80585)
+texture = ExtResource("7_domtj")
+
+[node name="Sprite3D66" type="Sprite3D" parent="Flowers" index="251"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.83113, 0.563862, -1.41641)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D67" type="Sprite3D" parent="Flowers" index="252"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.387669, 0.563862, -2.00661)
+texture = ExtResource("7_domtj")
+
+[node name="Sprite3D68" type="Sprite3D" parent="Flowers" index="253"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.503529, 0.563862, -2.88292)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D69" type="Sprite3D" parent="Flowers" index="254"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.80596, 0.563862, -1.37599)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D70" type="Sprite3D" parent="Flowers" index="255"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.52638, 0.563862, -1.39451)
+texture = ExtResource("7_domtj")
+
+[node name="Sprite3D71" type="Sprite3D" parent="Flowers" index="256"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.73079, 0.563862, -2.41534)
+texture = ExtResource("5_uxsmk")
+
+[node name="Sprite3D72" type="Sprite3D" parent="Flowers" index="257"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.33109, 0.563862, -2.87633)
+texture = ExtResource("6_4780g")
+
+[node name="Grass" type="Node" parent="." index="7"]
+
+[node name="Sprite3D" type="Sprite3D" parent="Grass" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.565807, 0)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D16" type="Sprite3D" parent="Grass" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.14769, 0.565807, 2.30823)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D17" type="Sprite3D" parent="Grass" index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.14769, 0.565807, 3.30823)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D18" type="Sprite3D" parent="Grass" index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.23133, 0.565807, 3.48877)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D19" type="Sprite3D" parent="Grass" index="4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.21958, 0.565807, 2.64737)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D20" type="Sprite3D" parent="Grass" index="5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.6065, 0.565807, 0.32916)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D2" type="Sprite3D" parent="Grass" index="6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.39634, 0.565807, 1.04511)
+texture = ExtResource("11_vmvev")
+
+[node name="Sprite3D7" type="Sprite3D" parent="Grass" index="7"]
+transform = Transform3D(0.190252, 0, 0, 0, 0.190252, 0, 0, 0, 0.190252, 4.13525, 0.728373, 0.686574)
+texture = ExtResource("12_wh6t7")
+
+[node name="Sprite3D21" type="Sprite3D" parent="Grass" index="8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.41437, 0.565807, 1.23605)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D22" type="Sprite3D" parent="Grass" index="9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.62588, 0.565807, 2.34888)
+texture = ExtResource("12_xytxh")
+
+[node name="Sprite3D23" type="Sprite3D" parent="Grass" index="10"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.62588, 0.565807, 3.34888)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D24" type="Sprite3D" parent="Grass" index="11"]
+transform = Transform3D(0.366064, 0, 0, 0, 0.366064, 0, 0, 0, 0.366064, -7.48529, 0.916941, 2.50082)
+texture = ExtResource("12_wh6t7")
+
+[node name="Sprite3D45" type="Sprite3D" parent="Grass" index="12"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.445229, 0.565807, -3.86949)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D46" type="Sprite3D" parent="Grass" index="13"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.61946, 0.565807, -0.85691)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D47" type="Sprite3D" parent="Grass" index="14"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.59502, 0.565807, -1.75666)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D48" type="Sprite3D" parent="Grass" index="15"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.9985, 0.565807, 0.323634)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D49" type="Sprite3D" parent="Grass" index="16"]
+transform = Transform3D(-0.25329, 0, -2.21433e-08, 0, 0.25329, 0, 2.21433e-08, 0, -0.25329, -0.877105, 0.80395, 0.151815)
+texture = ExtResource("12_wh6t7")
+
+[node name="Sprite3D50" type="Sprite3D" parent="Grass" index="17"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.13621, 0.565807, -4.73573)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D51" type="Sprite3D" parent="Grass" index="18"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.346364, 0.565807, -4.01978)
+texture = ExtResource("11_vmvev")
+
+[node name="Sprite3D52" type="Sprite3D" parent="Grass" index="19"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -3.93862, 0.565807, -4.19209)
+texture = ExtResource("11_vmvev")
+
+[node name="Sprite3D53" type="Sprite3D" parent="Grass" index="20"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.32834, 0.565807, -3.82885)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D54" type="Sprite3D" parent="Grass" index="21"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.3686, 0.565807, -2.71601)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D55" type="Sprite3D" parent="Grass" index="22"]
+transform = Transform3D(-0.360682, 0, -3.15318e-08, 0, 0.360682, 0, 3.15318e-08, 0, -0.360682, -11.4678, 0.565807, -3.35647)
+texture = ExtResource("14_7k5rm")
+
+[node name="Sprite3D56" type="Sprite3D" parent="Grass" index="23"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.7476, 0.565807, -1.53547)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D57" type="Sprite3D" parent="Grass" index="24"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0869875, 0.565807, -1.05367)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D58" type="Sprite3D" parent="Grass" index="25"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.95326, 0.565807, 0.0591636)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D59" type="Sprite3D" parent="Grass" index="26"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.95326, 0.565807, 1.05916)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D60" type="Sprite3D" parent="Grass" index="27"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.33228, 0.565807, 1.23971)
+texture = ExtResource("12_xytxh")
+
+[node name="Sprite3D61" type="Sprite3D" parent="Grass" index="28"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.15627, 0.565806, -0.0104585)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D62" type="Sprite3D" parent="Grass" index="29"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.49445, 0.565807, -1.91991)
+texture = ExtResource("11_vmvev")
+
+[node name="Sprite3D63" type="Sprite3D" parent="Grass" index="30"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.704605, 0.565807, -1.20396)
+texture = ExtResource("11_vmvev")
+
+[node name="Sprite3D64" type="Sprite3D" parent="Grass" index="31"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.29686, 0.565807, -1.37627)
+texture = ExtResource("11_vmvev")
+
+[node name="Sprite3D65" type="Sprite3D" parent="Grass" index="32"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.68658, 0.565807, -1.01302)
+texture = ExtResource("11_vmvev")
+
+[node name="Sprite3D66" type="Sprite3D" parent="Grass" index="33"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.7268, 0.565807, 0.0998116)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D67" type="Sprite3D" parent="Grass" index="34"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.7268, 0.565807, 1.09981)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D68" type="Sprite3D" parent="Grass" index="35"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.1058, 0.565807, 1.28036)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D69" type="Sprite3D" parent="Grass" index="36"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.337432, 0.565806, 0.64451)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D70" type="Sprite3D" parent="Grass" index="37"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.70281, 0.565806, 1.75734)
+texture = ExtResource("12_xytxh")
+
+[node name="Sprite3D71" type="Sprite3D" parent="Grass" index="38"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.70281, 0.565806, 2.75734)
+texture = ExtResource("12_xytxh")
+
+[node name="Sprite3D72" type="Sprite3D" parent="Grass" index="39"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.08184, 0.565806, 2.93789)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D73" type="Sprite3D" parent="Grass" index="40"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -5.63092, 0.565806, 2.09649)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D74" type="Sprite3D" parent="Grass" index="41"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.84308, 0.565807, 1.11546)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D75" type="Sprite3D" parent="Grass" index="42"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.63292, 0.565806, 1.83141)
+texture = ExtResource("11_vmvev")
+
+[node name="Sprite3D76" type="Sprite3D" parent="Grass" index="43"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.04067, 0.565806, 1.6591)
+texture = ExtResource("11_vmvev")
+
+[node name="Sprite3D77" type="Sprite3D" parent="Grass" index="44"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.65095, 0.565807, 2.02235)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D78" type="Sprite3D" parent="Grass" index="45"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.3893, 0.565807, 3.13518)
+texture = ExtResource("12_xytxh")
+
+[node name="Sprite3D79" type="Sprite3D" parent="Grass" index="46"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.3893, 0.565807, 4.13518)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D80" type="Sprite3D" parent="Grass" index="47"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.76832, 0.565807, 4.31572)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D81" type="Sprite3D" parent="Grass" index="48"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.42452, 0.565806, -2.0183)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D82" type="Sprite3D" parent="Grass" index="49"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.38427, 0.565806, -0.905468)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D83" type="Sprite3D" parent="Grass" index="50"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.38427, 0.565806, 0.094532)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D84" type="Sprite3D" parent="Grass" index="51"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00524616, 0.565806, 0.275076)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D85" type="Sprite3D" parent="Grass" index="52"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.45616, 0.565806, -0.566325)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D86" type="Sprite3D" parent="Grass" index="53"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.84308, 0.565807, -2.88454)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D87" type="Sprite3D" parent="Grass" index="54"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.63292, 0.565806, -2.16859)
+texture = ExtResource("11_vmvev")
+
+[node name="Sprite3D88" type="Sprite3D" parent="Grass" index="55"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.04067, 0.565806, -2.3409)
+texture = ExtResource("11_vmvev")
+
+[node name="Sprite3D89" type="Sprite3D" parent="Grass" index="56"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 2.65095, 0.565807, -1.97765)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D90" type="Sprite3D" parent="Grass" index="57"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3893, 0.565807, -0.86482)
+texture = ExtResource("11_vmvev")
+
+[node name="Sprite3D91" type="Sprite3D" parent="Grass" index="58"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.3893, 0.565807, 0.13518)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D92" type="Sprite3D" parent="Grass" index="59"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.76832, 0.565807, 0.315724)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D93" type="Sprite3D" parent="Grass" index="60"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.9667, 0.565806, -2.4989)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D94" type="Sprite3D" parent="Grass" index="61"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.9264, 0.565806, -1.38606)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D95" type="Sprite3D" parent="Grass" index="62"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.9264, 0.565806, -0.386064)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D96" type="Sprite3D" parent="Grass" index="63"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5397, 0.565806, -1.54271)
+texture = ExtResource("11_vmvev")
+
+[node name="Sprite3D97" type="Sprite3D" parent="Grass" index="64"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0887861, 0.565806, -2.38411)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D98" type="Sprite3D" parent="Grass" index="65"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.29813, 0.565807, -4.70232)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D99" type="Sprite3D" parent="Grass" index="66"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.08797, 0.565806, -3.98637)
+texture = ExtResource("11_vmvev")
+
+[node name="Sprite3D100" type="Sprite3D" parent="Grass" index="67"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.69221, 0.565806, -5.35408)
+texture = ExtResource("11_vmvev")
+
+[node name="Sprite3D101" type="Sprite3D" parent="Grass" index="68"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.08193, 0.565807, -4.99084)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D102" type="Sprite3D" parent="Grass" index="69"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.1222, 0.565807, -3.878)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D103" type="Sprite3D" parent="Grass" index="70"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.1222, 0.565807, -2.878)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D104" type="Sprite3D" parent="Grass" index="71"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.5012, 0.565807, -2.69746)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D25" type="Sprite3D" parent="Grass" index="72"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.7419, 0.565807, 1.49262)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D26" type="Sprite3D" parent="Grass" index="73"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.355, 0.565807, -0.825589)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D27" type="Sprite3D" parent="Grass" index="74"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.56516, 0.565807, -0.109641)
+texture = ExtResource("11_vmvev")
+
+[node name="Sprite3D28" type="Sprite3D" parent="Grass" index="75"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.1574, 0.565807, -0.28195)
+texture = ExtResource("12_xytxh")
+
+[node name="Sprite3D29" type="Sprite3D" parent="Grass" index="76"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.29292, 0.565807, -1.80263)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D30" type="Sprite3D" parent="Grass" index="77"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.3576, 0.565807, 1.20995)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D31" type="Sprite3D" parent="Grass" index="78"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.3332, 0.565807, 0.3102)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D32" type="Sprite3D" parent="Grass" index="79"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.7122, 0.565807, 0.490744)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D33" type="Sprite3D" parent="Grass" index="80"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.26127, 0.565807, -0.350657)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D34" type="Sprite3D" parent="Grass" index="81"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.87435, 0.565807, -2.66887)
+texture = ExtResource("11_vmvev")
+
+[node name="Sprite3D35" type="Sprite3D" parent="Grass" index="82"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.08451, 0.565807, -1.95292)
+texture = ExtResource("11_vmvev")
+
+[node name="Sprite3D36" type="Sprite3D" parent="Grass" index="83"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.67676, 0.565807, -2.12523)
+texture = ExtResource("11_vmvev")
+
+[node name="Sprite3D37" type="Sprite3D" parent="Grass" index="84"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.320498, 0.565807, -2.72107)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D38" type="Sprite3D" parent="Grass" index="85"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.38519, 0.565807, 0.291512)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D39" type="Sprite3D" parent="Grass" index="86"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -7.36074, 0.565807, -0.60824)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D40" type="Sprite3D" parent="Grass" index="87"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -4.23889, 0.565807, 2.17141)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D41" type="Sprite3D" parent="Grass" index="88"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.78797, 0.565807, 1.33001)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D42" type="Sprite3D" parent="Grass" index="89"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.59894, 0.565807, -0.988202)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D43" type="Sprite3D" parent="Grass" index="90"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.38879, 0.565807, -0.272254)
+texture = ExtResource("11_vmvev")
+
+[node name="Sprite3D44" type="Sprite3D" parent="Grass" index="91"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.203467, 0.565807, -0.444563)
+texture = ExtResource("11_vmvev")
+
+[node name="Sprite3D8" type="Sprite3D" parent="Grass" index="92"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.24863, 0.565807, 2.38687)
+texture = ExtResource("11_vmvev")
+
+[node name="Sprite3D9" type="Sprite3D" parent="Grass" index="93"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.751367, 0.565807, 2.38687)
+texture = ExtResource("11_vmvev")
+
+[node name="Sprite3D10" type="Sprite3D" parent="Grass" index="94"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.33604, 0.565807, -0.442384)
+texture = ExtResource("11_vmvev")
+
+[node name="Sprite3D11" type="Sprite3D" parent="Grass" index="95"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.94281, 0.565807, 0.793262)
+texture = ExtResource("11_vmvev")
+
+[node name="Sprite3D105" type="Sprite3D" parent="Grass" index="96"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.95997, 0.565806, 2.87947)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D106" type="Sprite3D" parent="Grass" index="97"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.95997, 0.565806, 3.87947)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D107" type="Sprite3D" parent="Grass" index="98"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.58095, 0.565806, 4.06001)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D108" type="Sprite3D" parent="Grass" index="99"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.03186, 0.565806, 3.21861)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D109" type="Sprite3D" parent="Grass" index="100"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.4188, 0.565807, 0.900398)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D110" type="Sprite3D" parent="Grass" index="101"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.2086, 0.565806, 1.61635)
+texture = ExtResource("11_vmvev")
+
+[node name="Sprite3D111" type="Sprite3D" parent="Grass" index="102"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.61637, 0.565806, 1.44404)
+texture = ExtResource("11_vmvev")
+
+[node name="Sprite3D112" type="Sprite3D" parent="Grass" index="103"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.22665, 0.565807, 1.80728)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D113" type="Sprite3D" parent="Grass" index="104"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1864, 0.565807, 2.92012)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D114" type="Sprite3D" parent="Grass" index="105"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.186403, 0.565807, 3.92012)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D115" type="Sprite3D" parent="Grass" index="106"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.19262, 0.565807, 4.10066)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D116" type="Sprite3D" parent="Grass" index="107"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.25751, 0.565806, -3.29826)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D117" type="Sprite3D" parent="Grass" index="108"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.21726, 0.565806, -2.18542)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D118" type="Sprite3D" parent="Grass" index="109"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.782739, 0.565806, -1.18542)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D119" type="Sprite3D" parent="Grass" index="110"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.16176, 0.565806, -1.00488)
+texture = ExtResource("11_vmvev")
+
+[node name="Sprite3D120" type="Sprite3D" parent="Grass" index="111"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.289155, 0.565806, -1.84628)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D121" type="Sprite3D" parent="Grass" index="112"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.67607, 0.565807, -4.16449)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D122" type="Sprite3D" parent="Grass" index="113"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.46592, 0.565806, -3.44854)
+texture = ExtResource("11_vmvev")
+
+[node name="Sprite3D123" type="Sprite3D" parent="Grass" index="114"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.87366, 0.565806, -3.62085)
+texture = ExtResource("11_vmvev")
+
+[node name="Sprite3D124" type="Sprite3D" parent="Grass" index="115"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.483942, 0.565807, -3.25761)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D125" type="Sprite3D" parent="Grass" index="116"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.58075, 0.565807, -0.245024)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D126" type="Sprite3D" parent="Grass" index="117"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5563, 0.565807, -1.14478)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D127" type="Sprite3D" parent="Grass" index="118"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -10.9598, 0.565807, 0.93552)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D128" type="Sprite3D" parent="Grass" index="119"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.89927, 0.565806, -0.482431)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D129" type="Sprite3D" parent="Grass" index="120"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.85902, 0.565806, 0.630402)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D130" type="Sprite3D" parent="Grass" index="121"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.14098, 0.565806, 1.6304)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D131" type="Sprite3D" parent="Grass" index="122"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.52, 0.565806, 1.81095)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D132" type="Sprite3D" parent="Grass" index="123"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0690861, 0.565806, 0.969545)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D133" type="Sprite3D" parent="Grass" index="124"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.06582, 0.565807, -6.10752)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D134" type="Sprite3D" parent="Grass" index="125"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.275969, 0.565807, -5.39157)
+texture = ExtResource("11_vmvev")
+
+[node name="Sprite3D135" type="Sprite3D" parent="Grass" index="126"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.86822, 0.565807, -5.56388)
+texture = ExtResource("11_vmvev")
+
+[node name="Sprite3D136" type="Sprite3D" parent="Grass" index="127"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.25794, 0.565807, -5.20064)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D137" type="Sprite3D" parent="Grass" index="128"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.2982, 0.565807, -4.0878)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D138" type="Sprite3D" parent="Grass" index="129"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.2982, 0.565807, -3.0878)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D139" type="Sprite3D" parent="Grass" index="130"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.6772, 0.565807, -2.90726)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D140" type="Sprite3D" parent="Grass" index="131"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.766068, 0.565807, -3.54311)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D141" type="Sprite3D" parent="Grass" index="132"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -4.27418, 0.565807, -2.43027)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D142" type="Sprite3D" parent="Grass" index="133"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.27418, 0.565807, -1.43027)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D143" type="Sprite3D" parent="Grass" index="134"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -7.6532, 0.565807, -1.24973)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D144" type="Sprite3D" parent="Grass" index="135"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -5.20228, 0.565807, -2.09113)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D145" type="Sprite3D" parent="Grass" index="136"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.81537, 0.565807, -4.40934)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D146" type="Sprite3D" parent="Grass" index="137"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.45003, 0.565807, -3.9727)
+texture = ExtResource("11_vmvev")
+
+[node name="Sprite3D147" type="Sprite3D" parent="Grass" index="138"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.8706, 0.565807, 0.374651)
+texture = ExtResource("11_vmvev")
+
+[node name="Sprite3D148" type="Sprite3D" parent="Grass" index="139"]
+transform = Transform3D(0.360682, 0, 0, 0, 0.360682, 0, 0, 0, 0.360682, -11.7895, 0.565807, -2.47139)
+texture = ExtResource("14_7k5rm")
+
+[node name="Sprite3D149" type="Sprite3D" parent="Grass" index="140"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.3006, 0.565807, 1.85073)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D150" type="Sprite3D" parent="Grass" index="141"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.128, 0.565807, -0.238345)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D151" type="Sprite3D" parent="Grass" index="142"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.1085, 0.565807, -2.48651)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D152" type="Sprite3D" parent="Grass" index="143"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.103158, 0.565806, 1.4561)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D153" type="Sprite3D" parent="Grass" index="144"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.1434, 0.565806, 2.56894)
+texture = ExtResource("12_xytxh")
+
+[node name="Sprite3D154" type="Sprite3D" parent="Grass" index="145"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.1434, 0.565806, 3.56894)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D155" type="Sprite3D" parent="Grass" index="146"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.52243, 0.565806, 3.74948)
+texture = ExtResource("12_xytxh")
+
+[node name="Sprite3D156" type="Sprite3D" parent="Grass" index="147"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.07151, 0.565806, 2.90808)
+texture = ExtResource("12_xytxh")
+
+[node name="Sprite3D157" type="Sprite3D" parent="Grass" index="148"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.6846, 0.565807, 0.589866)
+texture = ExtResource("11_vmvev")
+
+[node name="Sprite3D158" type="Sprite3D" parent="Grass" index="149"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.89475, 0.565806, 1.30581)
+texture = ExtResource("11_vmvev")
+
+[node name="Sprite3D159" type="Sprite3D" parent="Grass" index="150"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.487, 0.565806, 1.1335)
+texture = ExtResource("11_vmvev")
+
+[node name="Sprite3D160" type="Sprite3D" parent="Grass" index="151"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.87672, 0.565807, 1.49675)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D161" type="Sprite3D" parent="Grass" index="152"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.917, 0.565807, 2.60958)
+texture = ExtResource("12_xytxh")
+
+[node name="Sprite3D162" type="Sprite3D" parent="Grass" index="153"]
+transform = Transform3D(-0.360682, 0, -3.15318e-08, 0, 0.360682, 0, 3.15318e-08, 0, -0.360682, -11.6656, 0.565807, -1.43562)
+texture = ExtResource("14_7k5rm")
+
+[node name="Sprite3D163" type="Sprite3D" parent="Grass" index="154"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.296, 0.565807, 3.79013)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D164" type="Sprite3D" parent="Grass" index="155"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.43898, 0.565806, 0.975507)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D165" type="Sprite3D" parent="Grass" index="156"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.60127, 0.565806, 2.08834)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D166" type="Sprite3D" parent="Grass" index="157"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.60127, 0.565806, 3.08834)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D167" type="Sprite3D" parent="Grass" index="158"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.98029, 0.565806, 3.26888)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D168" type="Sprite3D" parent="Grass" index="159"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.52938, 0.565806, 2.42748)
+texture = ExtResource("12_xytxh")
+
+[node name="Sprite3D169" type="Sprite3D" parent="Grass" index="160"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.857538, 0.565807, 0.10927)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D170" type="Sprite3D" parent="Grass" index="161"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.64738, 0.565806, 0.825219)
+texture = ExtResource("11_vmvev")
+
+[node name="Sprite3D171" type="Sprite3D" parent="Grass" index="162"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.883494, 0.565806, -3.86676)
+texture = ExtResource("11_vmvev")
+
+[node name="Sprite3D172" type="Sprite3D" parent="Grass" index="163"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -0.506226, 0.565807, -3.50351)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D173" type="Sprite3D" parent="Grass" index="164"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.54647, 0.565807, -2.39068)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D174" type="Sprite3D" parent="Grass" index="165"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.54647, 0.565807, -1.39068)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D175" type="Sprite3D" parent="Grass" index="166"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.9255, 0.565807, -1.21013)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D176" type="Sprite3D" parent="Grass" index="167"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.16621, 0.565807, 2.97995)
+texture = ExtResource("12_xytxh")
+
+[node name="Sprite3D177" type="Sprite3D" parent="Grass" index="168"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.77929, 0.565807, 0.661737)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D178" type="Sprite3D" parent="Grass" index="169"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0105519, 0.565807, 1.37769)
+texture = ExtResource("11_vmvev")
+
+[node name="Sprite3D179" type="Sprite3D" parent="Grass" index="170"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5817, 0.565807, 1.20538)
+texture = ExtResource("12_xytxh")
+
+[node name="Sprite3D180" type="Sprite3D" parent="Grass" index="171"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.08671, 0.565807, 1.49244)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D181" type="Sprite3D" parent="Grass" index="172"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -1.95354, 0.565807, 2.60527)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D182" type="Sprite3D" parent="Grass" index="173"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.95354, 0.565807, 3.60527)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D183" type="Sprite3D" parent="Grass" index="174"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.33256, 0.565807, 3.78581)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D184" type="Sprite3D" parent="Grass" index="175"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.88164, 0.565807, 2.94441)
+texture = ExtResource("12_xytxh")
+
+[node name="Sprite3D185" type="Sprite3D" parent="Grass" index="176"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.505273, 0.565807, 0.626199)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D186" type="Sprite3D" parent="Grass" index="177"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.29512, 0.565807, 1.34215)
+texture = ExtResource("11_vmvev")
+
+[node name="Sprite3D187" type="Sprite3D" parent="Grass" index="178"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.29714, 0.565807, 1.16984)
+texture = ExtResource("11_vmvev")
+
+[node name="Sprite3D188" type="Sprite3D" parent="Grass" index="179"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.05913, 0.565807, 0.573996)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D189" type="Sprite3D" parent="Grass" index="180"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.01888, 0.565807, 1.68683)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D190" type="Sprite3D" parent="Grass" index="181"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.981117, 0.565807, 2.68683)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D191" type="Sprite3D" parent="Grass" index="182"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.36014, 0.565807, 2.86737)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D192" type="Sprite3D" parent="Grass" index="183"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0907764, 0.565807, 2.02597)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D193" type="Sprite3D" parent="Grass" index="184"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.47769, 0.565807, -0.292241)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D194" type="Sprite3D" parent="Grass" index="185"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.26754, 0.565807, 0.423707)
+texture = ExtResource("11_vmvev")
+
+[node name="Sprite3D195" type="Sprite3D" parent="Grass" index="186"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.67528, 0.565807, 0.251398)
+texture = ExtResource("11_vmvev")
+
+[node name="Sprite3D196" type="Sprite3D" parent="Grass" index="187"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.826199, 0.565807, 1.27509)
+texture = ExtResource("11_vmvev")
+
+[node name="Sprite3D197" type="Sprite3D" parent="Grass" index="188"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.8262, 0.565807, 1.27509)
+texture = ExtResource("11_vmvev")
+
+[node name="Sprite3D198" type="Sprite3D" parent="Grass" index="189"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.23967, 0.565807, 1.04494)
+texture = ExtResource("11_vmvev")
+
+[node name="Sprite3D199" type="Sprite3D" parent="Grass" index="190"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.7916, 0.565807, 2.00128)
+texture = ExtResource("11_vmvev")
+
+[node name="Sprite3D200" type="Sprite3D" parent="Grass" index="191"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.14368, 0.565807, 3.40208)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D201" type="Sprite3D" parent="Grass" index="192"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.14368, 0.565807, 4.40208)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D202" type="Sprite3D" parent="Grass" index="193"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5227, 0.565807, 4.58263)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D203" type="Sprite3D" parent="Grass" index="194"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.07179, 0.565807, 3.74122)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D204" type="Sprite3D" parent="Grass" index="195"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.315128, 0.565807, 1.42301)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D205" type="Sprite3D" parent="Grass" index="196"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.10497, 0.565807, 2.13896)
+texture = ExtResource("11_vmvev")
+
+[node name="Sprite3D206" type="Sprite3D" parent="Grass" index="197"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.48728, 0.565807, 1.96665)
+texture = ExtResource("11_vmvev")
+
+[node name="Sprite3D207" type="Sprite3D" parent="Grass" index="198"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.877, 0.565807, 2.3299)
+texture = ExtResource("12_xytxh")
+
+[node name="Sprite3D208" type="Sprite3D" parent="Grass" index="199"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -7.91724, 0.565807, 3.44273)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D209" type="Sprite3D" parent="Grass" index="200"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.91724, 0.565807, 4.44273)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D210" type="Sprite3D" parent="Grass" index="201"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.2963, 0.565807, 4.62327)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D211" type="Sprite3D" parent="Grass" index="202"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.84614, 0.565807, -2.77564)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D212" type="Sprite3D" parent="Grass" index="203"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.88639, 0.565807, -1.66281)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D213" type="Sprite3D" parent="Grass" index="204"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.8864, 0.565807, -0.66281)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D214" type="Sprite3D" parent="Grass" index="205"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.2654, 0.565807, -0.482266)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D215" type="Sprite3D" parent="Grass" index="206"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -9.81449, 0.565807, -1.32367)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D216" type="Sprite3D" parent="Grass" index="207"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.42758, 0.565807, -3.64188)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D217" type="Sprite3D" parent="Grass" index="208"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.63773, 0.565807, -2.92593)
+texture = ExtResource("11_vmvev")
+
+[node name="Sprite3D218" type="Sprite3D" parent="Grass" index="209"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.22999, 0.565807, -3.09824)
+texture = ExtResource("11_vmvev")
+
+[node name="Sprite3D219" type="Sprite3D" parent="Grass" index="210"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -9.61971, 0.565807, -2.73499)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D220" type="Sprite3D" parent="Grass" index="211"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.66, 0.565807, -1.62216)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D221" type="Sprite3D" parent="Grass" index="212"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.66, 0.565807, -0.622162)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D222" type="Sprite3D" parent="Grass" index="213"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.039, 0.565807, -0.441618)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D223" type="Sprite3D" parent="Grass" index="214"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.20438, 0.565807, 0.0401826)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D224" type="Sprite3D" parent="Grass" index="215"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -9.24463, 0.565807, 1.15302)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D225" type="Sprite3D" parent="Grass" index="216"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.2446, 0.565807, 2.15302)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D226" type="Sprite3D" parent="Grass" index="217"]
+transform = Transform3D(0.360682, 0, 0, 0, 0.360682, 0, 0, 0, 0.360682, -11.5598, 0.565807, -1.89586)
+texture = ExtResource("14_7k5rm")
+
+[node name="Sprite3D227" type="Sprite3D" parent="Grass" index="218"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.1727, 0.565807, 1.49216)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D228" type="Sprite3D" parent="Grass" index="219"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.78582, 0.565807, -0.826055)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D229" type="Sprite3D" parent="Grass" index="220"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.99597, 0.565807, -0.110106)
+texture = ExtResource("11_vmvev")
+
+[node name="Sprite3D230" type="Sprite3D" parent="Grass" index="221"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.58823, 0.565807, -0.282415)
+texture = ExtResource("11_vmvev")
+
+[node name="Sprite3D231" type="Sprite3D" parent="Grass" index="222"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.97795, 0.565807, 0.0808306)
+texture = ExtResource("12_xytxh")
+
+[node name="Sprite3D232" type="Sprite3D" parent="Grass" index="223"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.0182, 0.565807, 1.19366)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D233" type="Sprite3D" parent="Grass" index="224"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.0182, 0.565807, 2.19366)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D234" type="Sprite3D" parent="Grass" index="225"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.3972, 0.565807, 2.37421)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D235" type="Sprite3D" parent="Grass" index="226"]
+transform = Transform3D(0.011222, 0.293757, -0.00631129, -0.0111744, 0.00673801, 0.29375, 0.293613, -0.0109711, 0.0114208, -3.23029, 0.516767, 1.57142)
+texture = ExtResource("15_bx0ok")
+
+[node name="Sprite3D295" type="Sprite3D" parent="Grass" index="227"]
+transform = Transform3D(-0.282573, 0.0803307, -0.0125918, -0.0111744, 0.00673801, 0.29375, 0.0805401, 0.282773, -0.00342245, -4.5829, 0.516767, 2.50406)
+texture = ExtResource("16_tg8w0")
+
+[node name="Sprite3D304" type="Sprite3D" parent="Grass" index="228"]
+transform = Transform3D(-0.0864273, 0.280882, -0.00973058, -0.0111744, 0.00673801, 0.29375, 0.280828, 0.086712, 0.00869384, -7.53428, 0.516767, 1.43459)
+texture = ExtResource("16_tg8w0")
+
+[node name="Sprite3D305" type="Sprite3D" parent="Grass" index="229"]
+transform = Transform3D(0.292635, 0.0267096, 0.0105193, -0.0111744, 0.00673801, 0.29375, 0.0264423, -0.292746, 0.00772086, -9.35963, 0.516767, 1.9674)
+texture = ExtResource("16_tg8w0")
+
+[node name="Sprite3D306" type="Sprite3D" parent="Grass" index="230"]
+transform = Transform3D(0.292635, 0.0267096, 0.0105193, -0.0111744, 0.00673801, 0.29375, 0.0264423, -0.292746, 0.00772086, -12.7093, 0.516767, 2.39283)
+texture = ExtResource("16_tg8w0")
+
+[node name="Sprite3D307" type="Sprite3D" parent="Grass" index="231"]
+transform = Transform3D(0.0642956, 0.286894, -0.00413492, -0.0111744, 0.00673801, 0.29375, 0.286706, -0.0640751, 0.0123762, -13.0997, 0.516767, 0.488526)
+texture = ExtResource("16_tg8w0")
+
+[node name="Sprite3D296" type="Sprite3D" parent="Grass" index="232"]
+transform = Transform3D(0.011222, 0.293757, -0.00631129, -0.0111744, 0.00673801, 0.29375, 0.293613, -0.0109711, 0.0114208, -1.60078, 0.516767, 3.00355)
+texture = ExtResource("15_bx0ok")
+
+[node name="Sprite3D308" type="Sprite3D" parent="Grass" index="233"]
+transform = Transform3D(-0.209607, -0.206188, -0.00324404, -0.0111744, 0.00673801, 0.29375, -0.20591, 0.209524, -0.012639, 1.58733, 0.516767, 1.48162)
+texture = ExtResource("15_bx0ok")
+
+[node name="Sprite3D309" type="Sprite3D" parent="Grass" index="234"]
+transform = Transform3D(-0.242992, -0.165482, -0.00544771, -0.0111744, 0.00673801, 0.29375, -0.165194, 0.24296, -0.011857, 1.85076, 0.516767, 1.58881)
+texture = ExtResource("15_bx0ok")
+
+[node name="Sprite3D310" type="Sprite3D" parent="Grass" index="235"]
+transform = Transform3D(-0.242992, -0.165482, -0.00544771, -0.0111744, 0.00673801, 0.29375, -0.165194, 0.24296, -0.011857, 2.71145, 0.516767, 1.64838)
+texture = ExtResource("15_bx0ok")
+
+[node name="Sprite3D311" type="Sprite3D" parent="Grass" index="236"]
+transform = Transform3D(-0.293706, -0.00870092, -0.0109731, -0.0111744, 0.00673801, 0.29375, -0.00844093, 0.293833, -0.00706102, 2.25747, 0.516767, 1.73041)
+texture = ExtResource("15_bx0ok")
+
+[node name="Sprite3D312" type="Sprite3D" parent="Grass" index="237"]
+transform = Transform3D(-0.293706, -0.00870092, -0.0109731, -0.0111744, 0.00673801, 0.29375, -0.00844093, 0.293833, -0.00706102, 1.84837, 0.516767, 0.813062)
+texture = ExtResource("15_bx0ok")
+
+[node name="Sprite3D297" type="Sprite3D" parent="Grass" index="238"]
+transform = Transform3D(0.011222, 0.293757, -0.00631129, -0.0111744, 0.00673801, 0.29375, 0.293613, -0.0109711, 0.0114208, -2.9675, 0.516767, -5.42335)
+texture = ExtResource("15_bx0ok")
+
+[node name="Sprite3D298" type="Sprite3D" parent="Grass" index="239"]
+transform = Transform3D(0.011222, 0.293757, -0.00631129, -0.0111744, 0.00673801, 0.29375, 0.293613, -0.0109711, 0.0114208, -6.43765, 0.516767, -5.62124)
+texture = ExtResource("15_bx0ok")
+
+[node name="Sprite3D299" type="Sprite3D" parent="Grass" index="240"]
+transform = Transform3D(0.011222, 0.293757, -0.00631129, -0.0111744, 0.00673801, 0.29375, 0.293613, -0.0109711, 0.0114208, -6.06158, 0.516767, -4.08605)
+texture = ExtResource("15_bx0ok")
+
+[node name="Sprite3D300" type="Sprite3D" parent="Grass" index="241"]
+transform = Transform3D(0.011222, 0.293757, -0.00631129, -0.0111744, 0.00673801, 0.29375, 0.293613, -0.0109711, 0.0114208, -9.06158, 0.516767, -5.08605)
+texture = ExtResource("15_bx0ok")
+
+[node name="Sprite3D301" type="Sprite3D" parent="Grass" index="242"]
+transform = Transform3D(0.011222, 0.293757, -0.00631129, -0.0111744, 0.00673801, 0.29375, 0.293613, -0.0109711, 0.0114208, -4.49413, 0.516767, -5.64766)
+texture = ExtResource("15_bx0ok")
+
+[node name="Sprite3D302" type="Sprite3D" parent="Grass" index="243"]
+transform = Transform3D(0.011222, 0.293757, -0.00631129, -0.0111744, 0.00673801, 0.29375, 0.293613, -0.0109711, 0.0114208, 0.585663, 0.516767, -5.99573)
+texture = ExtResource("15_bx0ok")
+
+[node name="Sprite3D303" type="Sprite3D" parent="Grass" index="244"]
+transform = Transform3D(0.011222, 0.293757, -0.00631129, -0.0111744, 0.00673801, 0.29375, 0.293613, -0.0109711, 0.0114208, 2.48379, 0.516767, -5.73991)
+texture = ExtResource("15_bx0ok")
+
+[node name="Sprite3D236" type="Sprite3D" parent="Grass" index="245"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.99418, 0.565806, 2.85119)
+texture = ExtResource("12_xytxh")
+
+[node name="Sprite3D237" type="Sprite3D" parent="Grass" index="246"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.9942, 0.565806, 3.85119)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D238" type="Sprite3D" parent="Grass" index="247"]
+transform = Transform3D(0.360682, 0, 0, 0, 0.360682, 0, 0, 0, 0.360682, -11.4695, 0.565807, -1.28336)
+texture = ExtResource("14_7k5rm")
+
+[node name="Sprite3D239" type="Sprite3D" parent="Grass" index="248"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -9.92229, 0.565806, 3.19034)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D240" type="Sprite3D" parent="Grass" index="249"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.53538, 0.565807, 0.872124)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D241" type="Sprite3D" parent="Grass" index="250"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.74553, 0.565806, 1.58807)
+texture = ExtResource("11_vmvev")
+
+[node name="Sprite3D242" type="Sprite3D" parent="Grass" index="251"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.33778, 0.565806, 1.41576)
+texture = ExtResource("11_vmvev")
+
+[node name="Sprite3D243" type="Sprite3D" parent="Grass" index="252"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.7275, 0.565807, 1.77901)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D244" type="Sprite3D" parent="Grass" index="253"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.7677, 0.565807, 2.89184)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D245" type="Sprite3D" parent="Grass" index="254"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.7677, 0.565807, 3.89184)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D246" type="Sprite3D" parent="Grass" index="255"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.1468, 0.565807, 4.07239)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D247" type="Sprite3D" parent="Grass" index="256"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.95394, 0.565806, -2.26164)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D248" type="Sprite3D" parent="Grass" index="257"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.0186, 0.565806, 0.750946)
+texture = ExtResource("12_xytxh")
+
+[node name="Sprite3D249" type="Sprite3D" parent="Grass" index="258"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.99418, 0.565806, -0.148806)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D250" type="Sprite3D" parent="Grass" index="259"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.5725, 0.565806, 0.181428)
+texture = ExtResource("12_xytxh")
+
+[node name="Sprite3D251" type="Sprite3D" parent="Grass" index="260"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -7.92229, 0.565806, -0.809663)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D252" type="Sprite3D" parent="Grass" index="261"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.53538, 0.565807, -3.12788)
+texture = ExtResource("11_vmvev")
+
+[node name="Sprite3D253" type="Sprite3D" parent="Grass" index="262"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.74553, 0.565806, -2.41193)
+texture = ExtResource("11_vmvev")
+
+[node name="Sprite3D254" type="Sprite3D" parent="Grass" index="263"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.33778, 0.565806, -2.58424)
+texture = ExtResource("11_vmvev")
+
+[node name="Sprite3D255" type="Sprite3D" parent="Grass" index="264"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.7275, 0.565807, -2.22099)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D256" type="Sprite3D" parent="Grass" index="265"]
+transform = Transform3D(0.360682, 0, 0, 0, 0.360682, 0, 0, 0, 0.360682, -11.6118, 0.565807, -3.13722)
+texture = ExtResource("14_7k5rm")
+
+[node name="Sprite3D257" type="Sprite3D" parent="Grass" index="266"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.7677, 0.565807, -0.108158)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D258" type="Sprite3D" parent="Grass" index="267"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.1468, 0.565807, 0.0723858)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D259" type="Sprite3D" parent="Grass" index="268"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5882, 0.565806, -2.74223)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D260" type="Sprite3D" parent="Grass" index="269"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.45205, 0.565806, -1.6294)
+texture = ExtResource("11_vmvev")
+
+[node name="Sprite3D261" type="Sprite3D" parent="Grass" index="270"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.45205, 0.565806, -0.629402)
+texture = ExtResource("11_vmvev")
+
+[node name="Sprite3D262" type="Sprite3D" parent="Grass" index="271"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.83107, 0.565806, -0.448858)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D263" type="Sprite3D" parent="Grass" index="272"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.38016, 0.565806, -1.29026)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D264" type="Sprite3D" parent="Grass" index="273"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.993242, 0.565807, -3.60847)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D265" type="Sprite3D" parent="Grass" index="274"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.796605, 0.565806, -2.89252)
+texture = ExtResource("11_vmvev")
+
+[node name="Sprite3D266" type="Sprite3D" parent="Grass" index="275"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.79565, 0.565806, -3.06483)
+texture = ExtResource("11_vmvev")
+
+[node name="Sprite3D267" type="Sprite3D" parent="Grass" index="276"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.20982, 0.565807, -0.801835)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D268" type="Sprite3D" parent="Grass" index="277"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.22562, 0.565807, -1.58875)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D269" type="Sprite3D" parent="Grass" index="278"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.2256, 0.565807, -0.588754)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D270" type="Sprite3D" parent="Grass" index="279"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -12.6046, 0.565807, -0.40821)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D271" type="Sprite3D" parent="Grass" index="280"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.84535, 0.565807, 3.78187)
+texture = ExtResource("12_xytxh")
+
+[node name="Sprite3D272" type="Sprite3D" parent="Grass" index="281"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.45844, 0.565807, 1.46366)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D273" type="Sprite3D" parent="Grass" index="282"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.66859, 0.565807, 2.17961)
+texture = ExtResource("12_xytxh")
+
+[node name="Sprite3D274" type="Sprite3D" parent="Grass" index="283"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.26085, 0.565807, 2.0073)
+texture = ExtResource("11_vmvev")
+
+[node name="Sprite3D275" type="Sprite3D" parent="Grass" index="284"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.39635, 0.565807, 0.486617)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D276" type="Sprite3D" parent="Grass" index="285"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.4366, 0.565807, 1.59945)
+texture = ExtResource("12_xytxh")
+
+[node name="Sprite3D277" type="Sprite3D" parent="Grass" index="286"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.4366, 0.565807, 2.59945)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D278" type="Sprite3D" parent="Grass" index="287"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.81562, 0.565807, 2.77999)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D279" type="Sprite3D" parent="Grass" index="288"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.3647, 0.565807, 1.93859)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D280" type="Sprite3D" parent="Grass" index="289"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.97779, 0.565807, -0.379621)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D281" type="Sprite3D" parent="Grass" index="290"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.18794, 0.565807, 0.336328)
+texture = ExtResource("11_vmvev")
+
+[node name="Sprite3D282" type="Sprite3D" parent="Grass" index="291"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.7802, 0.565807, 0.164019)
+texture = ExtResource("11_vmvev")
+
+[node name="Sprite3D283" type="Sprite3D" parent="Grass" index="292"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.57607, 0.565807, -0.431823)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D284" type="Sprite3D" parent="Grass" index="293"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.46418, 0.565807, 0.681009)
+texture = ExtResource("11_vmvev")
+
+[node name="Sprite3D285" type="Sprite3D" parent="Grass" index="294"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.46418, 0.565807, 1.68101)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D286" type="Sprite3D" parent="Grass" index="295"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.8432, 0.565807, 1.86155)
+texture = ExtResource("12_xytxh")
+
+[node name="Sprite3D287" type="Sprite3D" parent="Grass" index="296"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.39228, 0.565807, 1.02015)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D288" type="Sprite3D" parent="Grass" index="297"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00537014, 0.565807, -1.29806)
+texture = ExtResource("10_cl4p4")
+
+[node name="Sprite3D289" type="Sprite3D" parent="Grass" index="298"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.78448, 0.565807, -0.582112)
+texture = ExtResource("11_vmvev")
+
+[node name="Sprite3D290" type="Sprite3D" parent="Grass" index="299"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.80778, 0.565807, -0.754421)
+texture = ExtResource("11_vmvev")
+
+[node name="Sprite3D291" type="Sprite3D" parent="Grass" index="300"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.85294, 0.565807, 2.07701)
+texture = ExtResource("11_vmvev")
+
+[node name="Sprite3D292" type="Sprite3D" parent="Grass" index="301"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.852944, 0.565807, 2.07701)
+texture = ExtResource("11_vmvev")
+
+[node name="Sprite3D293" type="Sprite3D" parent="Grass" index="302"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.56053, 0.565807, 1.84687)
+texture = ExtResource("11_vmvev")
+
+[node name="Sprite3D294" type="Sprite3D" parent="Grass" index="303"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.47075, 0.565807, 2.8032)
+texture = ExtResource("11_vmvev")
+
+[node name="Sprite3D12" type="Sprite3D" parent="Grass" index="304"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.2578, 0.565807, 0.632937)
+texture = ExtResource("11_vmvev")
+
+[node name="Sprite3D13" type="Sprite3D" parent="Grass" index="305"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.3008, 0.565807, -1.95487)
+texture = ExtResource("11_vmvev")
+
+[node name="Sprite3D14" type="Sprite3D" parent="Grass" index="306"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.0981, 0.565807, -1.05596)
+texture = ExtResource("11_vmvev")
+
+[node name="Sprite3D15" type="Sprite3D" parent="Grass" index="307"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.8167, 0.565807, 0.382654)
+texture = ExtResource("11_vmvev")
+
+[node name="Sprite3D3" type="Sprite3D" parent="Grass" index="308"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.1407, 0.565806, 0.932385)
+texture = ExtResource("12_xytxh")
+
+[node name="Sprite3D4" type="Sprite3D" parent="Grass" index="309"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.9454, 0.565806, -0.491689)
+texture = ExtResource("12_xytxh")
+
+[node name="Sprite3D5" type="Sprite3D" parent="Grass" index="310"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.06287, 0.565806, -1.13535)
+texture = ExtResource("12_xytxh")
+
+[node name="Sprite3D6" type="Sprite3D" parent="Grass" index="311"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.44719, 0.565806, -2.28448)
+texture = ExtResource("12_xytxh")
+
+[node name="Trees" type="Node" parent="." index="8"]
+
+[node name="Sprite3D" type="Sprite3D" parent="Trees" index="0"]
+transform = Transform3D(1.87931, 0, 0, 0, 1.87931, 0, 0, 0, 1.87931, 2.06277, 1.52701, 1.34172)
+texture = ExtResource("13_858i6")
+
+[node name="Sprite3D2" type="Sprite3D" parent="Trees" index="1"]
+transform = Transform3D(1.87931, 0, 0, 0, 1.87931, 0, 0, 0, 1.87931, 7.29885, 1.48555, -7.12013)
+texture = ExtResource("13_858i6")
+
+[node name="Sprite3D3" type="Sprite3D" parent="Trees" index="2"]
+transform = Transform3D(1.87931, 0, 0, 0, 1.87931, 0, 0, 0, 1.87931, 2.29885, 1.48555, -7.12013)
+texture = ExtResource("13_858i6")
+
+[node name="Sprite3D4" type="Sprite3D" parent="Trees" index="3"]
+transform = Transform3D(1.87931, 0, 0, 0, 1.87931, 0, 0, 0, 1.87931, -10.2683, 1.48555, -5.32593)
+texture = ExtResource("13_858i6")
+
+[node name="Sprite3D5" type="Sprite3D" parent="Trees" index="4"]
+transform = Transform3D(1.87931, 0, 0, 0, 1.87931, 0, 0, 0, 1.87931, -15.1594, 1.48555, -3.73256)
+texture = ExtResource("13_858i6")
+
+[node name="Sprite3D6" type="Sprite3D" parent="Trees" index="5"]
+transform = Transform3D(1.87931, 0, 0, 0, 1.87931, 0, 0, 0, 1.87931, -5.08437, 1.48555, -6.60701)
+texture = ExtResource("13_858i6")
+
+[node name="Sprite3D7" type="Sprite3D" parent="Trees" index="6"]
+transform = Transform3D(1.87931, 0, 0, 0, 1.87931, 0, 0, 0, 1.87931, -4.38467, 1.48555, -7.29022)
+texture = ExtResource("13_858i6")
+
+[node name="Sprite3D8" type="Sprite3D" parent="Trees" index="7"]
+transform = Transform3D(1.87931, 0, 0, 0, 1.87931, 0, 0, 0, 1.87931, -6.79154, 1.48555, -6.96143)
+texture = ExtResource("13_858i6")
+
+[node name="Sprite3D11" type="Sprite3D" parent="Trees" index="8"]
+transform = Transform3D(1.87931, 0, 0, 0, 1.87931, 0, 0, 0, 1.87931, -8.90675, 1.48555, -7.1567)
+texture = ExtResource("13_858i6")
+
+[node name="Sprite3D12" type="Sprite3D" parent="Trees" index="9"]
+transform = Transform3D(1.87931, 0, 0, 0, 1.87931, 0, 0, 0, 1.87931, -13.4248, 1.48555, -5.17928)
+texture = ExtResource("13_858i6")
+
+[node name="Sprite3D13" type="Sprite3D" parent="Trees" index="10"]
+transform = Transform3D(1.87931, 0, 0, 0, 1.87931, 0, 0, 0, 1.87931, -1.50535, 1.48555, -8.62148)
+texture = ExtResource("13_858i6")
+
+[node name="Sprite3D14" type="Sprite3D" parent="Trees" index="11"]
+transform = Transform3D(1.87931, 0, 0, 0, 1.87931, 0, 0, 0, 1.87931, -2.91433, 1.48555, -6.87254)
+texture = ExtResource("13_858i6")
+
+[node name="Sprite3D9" type="Sprite3D" parent="Trees" index="12"]
+transform = Transform3D(1.87931, 0, 0, 0, 1.87931, 0, 0, 0, 1.87931, 1.23319, 1.48555, -8.00703)
+texture = ExtResource("13_858i6")
+
+[node name="Sprite3D10" type="Sprite3D" parent="Trees" index="13"]
+transform = Transform3D(1.87931, 0, 0, 0, 1.87931, 0, 0, 0, 1.87931, 5.82201, 1.48555, -8.49175)
+texture = ExtResource("13_858i6")
+
+[node name="Interactables" type="Node" parent="." index="9"]
+
+[node name="InteractableProp" parent="Interactables" index="0" instance=ExtResource("19_dg37q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.87357, 0.729538, 0.195071)
+item_name = "Capybara statue"
+item_description = "Statue of a capybara, looking proud. It has something written in it:
+
+\"BRILLIANT FUTURE AHEAD\"
+
+I don't even know what a statue like this is doing here in the middle of nowhere..."
+metadata/_edit_group_ = true
+
+[node name="Sprite3D" parent="Interactables/InteractableProp" index="1"]
+transform = Transform3D(0.406448, 0, 0, 0, 0.406448, 0, 0, 0, 1.20235, 0, 0.645455, 0)
+texture = ExtResource("20_aaus7")
+
+[node name="GoToMansionInteractable" parent="Interactables" index="1" instance=ExtResource("21_w52ix")]
+transform = Transform3D(0.357349, 0, 0, 0, 0.357349, 0, 0, 0, 0.357349, -10.9085, 0.984963, 1.46599)
+
+[node name="Label3D" parent="Interactables/GoToMansionInteractable/Sprite3D" index="0"]
+text = "Go to the mansion"
+
+[node name="GoToBarInteractable" parent="Interactables" index="2" instance=ExtResource("21_w52ix")]
+transform = Transform3D(0.357349, 0, 0, 0, 0.357349, 0, 0, 0, 0.357349, 4.39495, 0.984963, 1.46599)
+
+[node name="Label3D" parent="Interactables/GoToBarInteractable/Sprite3D" index="0"]
+text = "Go to the bar"
+
+[editable path="Interactables/InteractableProp"]
+[editable path="Interactables/GoToMansionInteractable"]
+[editable path="Interactables/GoToBarInteractable"]

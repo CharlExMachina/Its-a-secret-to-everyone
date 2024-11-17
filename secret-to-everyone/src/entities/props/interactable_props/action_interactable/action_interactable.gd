@@ -27,7 +27,7 @@ func _on_mouse_entered() -> void:
 	var tween = get_tree().create_tween()
 	var sprite = $Sprite3D
 
-	tween.tween_property(sprite, "scale", Vector3(1.2, 1.2, 1.2), 0.2).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
+	tween.tween_property(sprite, "scale", Vector3(1.8, 1.8, 1.8), 0.2).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
 	tween.play()
 
 
@@ -38,5 +38,5 @@ func _on_mouse_exited() -> void:
 	var tween = get_tree().create_tween()
 	var sprite = $Sprite3D
 
-	tween.tween_property(sprite, "scale", Vector3(1, 1, 1), 0.2)
+	tween.tween_property(sprite, "scale", Vector3(1.5, 1.5, 1), 0.2)
 	tween.play()

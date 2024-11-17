@@ -90,24 +90,10 @@ func calculate_span_motion() -> Vector2:
 	return mouse_drag_current_pos - mouse_drag_start_pos
 
 
-func add_to_inventory(item: InventoryItem) -> void:
-	$PlayerInventory.items.append(item)
-
-
-func get_inventory() -> Array[InventoryItem]:
-	return $PlayerInventory.items
-
-
-func has_item(item: InventoryItem) -> bool:
-	var items: Array[InventoryItem] = $PlayerInventory.items
-
-	return items.has(item)
-
-
 func _on_player_ui_on_inventory_opened() -> void:
 	freeze()
 	var menu_instance = inventory_menu.instantiate()
 
-	menu_instance.items = $PlayerInventory.items
+	menu_instance.items = ProgressManager.items
 
 	add_child(menu_instance)
