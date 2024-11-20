@@ -7,9 +7,11 @@
 script = ExtResource("2_kunyn")
 content = " I tend this island nowadays. Not there’s much of a point to it... I suppose you're:"
 options = Array[ExtResource("1_hdh7y")]([])
+variables = Array[String]([])
 
 [resource]
 script = ExtResource("2_kunyn")
 content = "The name's Viktor, with a \"K\". I'm and old acquaintance of your dear grandfather. May his soul rest in peace by the way."
 next = SubResource("Resource_26ema")
 options = Array[ExtResource("1_hdh7y")]([])
+variables = Array[String]([])

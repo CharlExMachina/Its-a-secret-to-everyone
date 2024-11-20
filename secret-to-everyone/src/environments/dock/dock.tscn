@@ -43,6 +43,13 @@ metadata/_edit_group_ = true
 [node name="Label3D" parent="Interactables/ActionInteractable/Sprite3D" index="0"]
 text = "Go to grandpa's hut"
 
+[node name="ActionInteractable2" parent="Interactables" index="2" instance=ExtResource("4_yeael")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.44029, 4.27364, -2.95944)
+metadata/_edit_group_ = true
+
+[node name="Label3D" parent="Interactables/ActionInteractable2/Sprite3D" index="0"]
+text = "Go to the crossroads"
+
 [node name="Props" type="Node" parent="." index="5"]
 
 [node name="DockingStation" type="Sprite3D" parent="Props" index="0"]
@@ -103,6 +110,8 @@ alpha_cut = 2
 texture = ExtResource("5_2k0bo")
 
 [connection signal="action_triggered" from="Interactables/ActionInteractable" to="." method="_on_action_interactable_action_triggered"]
+[connection signal="action_triggered" from="Interactables/ActionInteractable2" to="." method="_on_action_interactable_2_action_triggered"]
 
 [editable path="Interactables/SeaProp"]
 [editable path="Interactables/ActionInteractable"]
+[editable path="Interactables/ActionInteractable2"]

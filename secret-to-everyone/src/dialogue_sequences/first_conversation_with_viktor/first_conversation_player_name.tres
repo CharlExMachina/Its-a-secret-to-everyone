@@ -1,10 +1,45 @@
-[gd_resource type="Resource" script_class="Dialogue" load_steps=3 format=3 uid="uid://b40uhmx6hfr1j"]
+[gd_resource type="Resource" script_class="Dialogue" load_steps=8 format=3 uid="uid://b40uhmx6hfr1j"]
 
 [ext_resource type="Script" path="res://src/core/option.gd" id="1_n0mhn"]
 [ext_resource type="Script" path="res://src/core/dialogue.gd" id="2_k0kuj"]
 
+[sub_resource type="Resource" id="Resource_j1iuj"]
+script = ExtResource("2_k0kuj")
+content = "Let me know if you have any luck."
+options = Array[ExtResource("1_n0mhn")]([])
+variables = Array[String]([])
+
+[sub_resource type="Resource" id="Resource_c1ere"]
+script = ExtResource("2_k0kuj")
+content = "So, unfortunately, I can’t help you with that. Still, he wanted you here so better wish to God he had a way of letting you in, I’ll be in my hut drinking myself to oblivion if you don’t mind."
+next = SubResource("Resource_j1iuj")
+options = Array[ExtResource("1_n0mhn")]([])
+variables = Array[String]([])
+
+[sub_resource type="Resource" id="Resource_x8te5"]
+script = ExtResource("2_k0kuj")
+content = "The thing is, I don’t have the precious keys to your old man’s mansion, why would I have them? He frequented this place quite a lot, so we only got in if and when he was around this place."
+next = SubResource("Resource_c1ere")
+options = Array[ExtResource("1_n0mhn")]([])
+variables = Array[String]([])
+
+[sub_resource type="Resource" id="Resource_pvvti"]
+script = ExtResource("2_k0kuj")
+content = "But we aren’t “the people” are we? I also got that weird-ass letter from your old man. How else do you think I’d knew who you are?"
+next = SubResource("Resource_x8te5")
+options = Array[ExtResource("1_n0mhn")]([])
+variables = Array[String]([])
+
+[sub_resource type="Resource" id="Resource_qn5lk"]
+script = ExtResource("2_k0kuj")
+content = "Not like you’d find anything of value here anyways, at least not according to what the people are saying."
+next = SubResource("Resource_pvvti")
+options = Array[ExtResource("1_n0mhn")]([])
+variables = Array[String]([])
+
 [resource]
 script = ExtResource("2_k0kuj")
-content = "Oh, so you're %s. You're here to get gramp's good 'ol bag of coin."
+content = "Yes... I imagined you’d be %s. No one would be sane enough to get into this god-forsaken place.	"
+next = SubResource("Resource_qn5lk")
 options = Array[ExtResource("1_n0mhn")]([])
 variables = Array[String]([])

@@ -24,7 +24,7 @@ func _ready() -> void:
 
 func _on_enter_mansion_interactable_action_triggered() -> void:
 	if ProgressManager.has_item(mansion_keys_item):
-		print("CAN ENTER")
+		get_tree().change_scene_to_file.bind("res://src/environments/mansion_interior_1/mansion_interior_1.tscn").call_deferred()
 	else:
 		if ProgressManager.met_viktor:
 			ToastLoader.show_toast("I need a key to enter")
@@ -52,16 +52,21 @@ func handle_name_prompt() -> void:
 	popup_instance.connect("name_set", set_player_name.bind())
 
 
+func handle_end_of_first_conversation_with_viktor() -> void:
+	ToastLoader.show_toast('"I need those keys, maybe I start by exploring other places"')
+
+
 func set_player_name(name: String) -> void:
 	ProgressManager.player_name = name
-	
+
 	get_node("EnterNamePopup").queue_free()
-	
+
 	var popup_instance = dialogue_popup.instantiate()
 
 	get_parent().add_child(popup_instance)
 	ending_dialog_sequence.variables.append(name)
 
+	popup_instance.connect("dialogue_finished", handle_end_of_first_conversation_with_viktor)
 	popup_instance.character_portrait = npc_portrait
 	popup_instance.set_dialogue_sequence(ending_dialog_sequence)
 	popup_instance.set_npc_name("Viktor")

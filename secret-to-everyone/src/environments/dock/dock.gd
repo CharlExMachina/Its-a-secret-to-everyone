@@ -16,3 +16,7 @@ func _ready() -> void:
 
 func _on_action_interactable_action_triggered() -> void:
 	get_tree().change_scene_to_file.bind("res://src/environments/grandpas_hut/grandpas_hut.tscn").call_deferred()
+
+
+func _on_action_interactable_2_action_triggered() -> void:
+	get_tree().change_scene_to_file.bind("res://src/environments/crossroads/crossroads.tscn").call_deferred()

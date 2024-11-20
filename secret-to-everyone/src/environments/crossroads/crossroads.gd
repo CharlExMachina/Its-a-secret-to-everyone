@@ -12,3 +12,11 @@ func _ready() -> void:
 
 	$Player.min_clamp_z = limit_min_z
 	$Player.max_clamp_z = limit_max_z
+
+
+func _on_go_to_mansion_interactable_action_triggered() -> void:
+	get_tree().change_scene_to_file.bind("res://src/environments/mansion_entrance/mansion_entrance.tscn").call_deferred()
+
+
+func _on_go_to_dock_interactable_2_action_triggered() -> void:
+	get_tree().change_scene_to_file.bind("res://src/environments/dock/dock.tscn").call_deferred()

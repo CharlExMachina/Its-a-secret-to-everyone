@@ -9,6 +9,7 @@ script = ExtResource("2_0u5fl")
 content = "Now that we're throwing all sorts of good manners out to the sea, let me introduce myself."
 next = ExtResource("3_76d83")
 options = Array[ExtResource("1_gbrwn")]([])
+variables = Array[String]([])
 
 [sub_resource type="Resource" id="Resource_t15w1"]
 script = ExtResource("2_0u5fl")
@@ -17,6 +18,7 @@ content = "Well, I'm happy to meet you too!
 Kids these days I swear..."
 next = SubResource("Resource_ppe38")
 options = Array[ExtResource("1_gbrwn")]([])
+variables = Array[String]([])
 
 [sub_resource type="Resource" id="Resource_u07y4"]
 script = ExtResource("1_gbrwn")
@@ -28,12 +30,14 @@ script = ExtResource("2_0u5fl")
 content = "Anyways, if you're done playing tough..."
 next = ExtResource("3_76d83")
 options = Array[ExtResource("1_gbrwn")]([])
+variables = Array[String]([])
 
 [sub_resource type="Resource" id="Resource_kalse"]
 script = ExtResource("2_0u5fl")
 content = "That's what I should be asking YOU!"
 next = SubResource("Resource_p8lpm")
 options = Array[ExtResource("1_gbrwn")]([])
+variables = Array[String]([])
 
 [sub_resource type="Resource" id="Resource_8mkk2"]
 script = ExtResource("1_gbrwn")
@@ -45,12 +49,14 @@ script = ExtResource("2_0u5fl")
 content = "Kids these days I swear..."
 next = ExtResource("3_76d83")
 options = Array[ExtResource("1_gbrwn")]([])
+variables = Array[String]([])
 
 [sub_resource type="Resource" id="Resource_t2rbe"]
 script = ExtResource("2_0u5fl")
 content = "You'd wish, and what if I am? I'll haunt you till the end of your days now!"
 next = SubResource("Resource_7ruye")
 options = Array[ExtResource("1_gbrwn")]([])
+variables = Array[String]([])
 
 [sub_resource type="Resource" id="Resource_g1f5n"]
 script = ExtResource("1_gbrwn")
@@ -61,3 +67,4 @@ outcome = SubResource("Resource_t2rbe")
 script = ExtResource("2_0u5fl")
 content = "Hey kiddo"
 options = Array[ExtResource("1_gbrwn")]([SubResource("Resource_u07y4"), SubResource("Resource_8mkk2"), SubResource("Resource_g1f5n")])
+variables = Array[String]([])

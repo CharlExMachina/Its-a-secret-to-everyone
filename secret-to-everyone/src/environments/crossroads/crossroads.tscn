@@ -2442,12 +2442,22 @@ transform = Transform3D(0.357349, 0, 0, 0, 0.357349, 0, 0, 0, 0.357349, -10.9085
 [node name="Label3D" parent="Interactables/GoToMansionInteractable/Sprite3D" index="0"]
 text = "Go to the mansion"
 
-[node name="GoToBarInteractable" parent="Interactables" index="2" instance=ExtResource("21_w52ix")]
+[node name="GoToDockInteractable" parent="Interactables" index="2" instance=ExtResource("21_w52ix")]
+transform = Transform3D(0.357349, 0, 0, 0, 0.357349, 0, 0, 0, 0.357349, -5.7489, 0.984963, 2.61933)
+
+[node name="Label3D" parent="Interactables/GoToDockInteractable/Sprite3D" index="0"]
+text = "Go to the dock"
+
+[node name="GoToBarInteractable" parent="Interactables" index="3" instance=ExtResource("21_w52ix")]
 transform = Transform3D(0.357349, 0, 0, 0, 0.357349, 0, 0, 0, 0.357349, 4.39495, 0.984963, 1.46599)
 
 [node name="Label3D" parent="Interactables/GoToBarInteractable/Sprite3D" index="0"]
 text = "Go to the bar"
 
+[connection signal="action_triggered" from="Interactables/GoToMansionInteractable" to="." method="_on_go_to_mansion_interactable_action_triggered"]
+[connection signal="action_triggered" from="Interactables/GoToDockInteractable" to="." method="_on_go_to_dock_interactable_2_action_triggered"]
+
 [editable path="Interactables/InteractableProp"]
 [editable path="Interactables/GoToMansionInteractable"]
+[editable path="Interactables/GoToDockInteractable"]
 [editable path="Interactables/GoToBarInteractable"]

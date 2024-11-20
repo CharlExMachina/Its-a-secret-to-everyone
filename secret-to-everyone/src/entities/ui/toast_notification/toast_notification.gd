@@ -18,7 +18,7 @@ func _ready() -> void:
 	tween.play()
 
 	await tween.finished
-	await get_tree().create_timer(1.5).timeout
+	await get_tree().create_timer(2.5).timeout
 
 	var last_tween = get_tree().create_tween()
 	last_tween.tween_property(popup, "modulate", Color(Color.WHITE, 0.0), 0.3)
