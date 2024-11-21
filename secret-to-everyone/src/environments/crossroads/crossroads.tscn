@@ -2456,6 +2456,7 @@ text = "Go to the bar"
 
 [connection signal="action_triggered" from="Interactables/GoToMansionInteractable" to="." method="_on_go_to_mansion_interactable_action_triggered"]
 [connection signal="action_triggered" from="Interactables/GoToDockInteractable" to="." method="_on_go_to_dock_interactable_2_action_triggered"]
+[connection signal="action_triggered" from="Interactables/GoToBarInteractable" to="." method="_on_go_to_bar_interactable_action_triggered"]
 
 [editable path="Interactables/InteractableProp"]
 [editable path="Interactables/GoToMansionInteractable"]

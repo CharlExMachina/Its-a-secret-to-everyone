@@ -20,3 +20,10 @@ func _on_go_to_mansion_interactable_action_triggered() -> void:
 
 func _on_go_to_dock_interactable_2_action_triggered() -> void:
 	get_tree().change_scene_to_file.bind("res://src/environments/dock/dock.tscn").call_deferred()
+
+
+func _on_go_to_bar_interactable_action_triggered() -> void:
+	if not ProgressManager.met_viktor:
+		ToastLoader.show_toast('"This road doesn\'t appear to lead to the mansion"')
+	else:
+		get_tree().change_scene_to_file.bind("res://src/environments/beach_bar/beach_bar.tscn").call_deferred()
