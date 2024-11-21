@@ -7,10 +7,17 @@
 [node name="MansionInterior1" instance=ExtResource("1_gi7bu")]
 script = ExtResource("2_p0g67")
 
-[node name="ActionInteractable" parent="." index="4" instance=ExtResource("3_gorel")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.4744, 1.96633, -4.72382)
+[node name="GoToUpperFloorInteractable" parent="." index="4" instance=ExtResource("3_gorel")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.5725, 1.96633, -4.72382)
 
-[node name="Label3D" parent="ActionInteractable/Sprite3D" index="0"]
-text = "Go to upper floors"
+[node name="Label3D" parent="GoToUpperFloorInteractable/Sprite3D" index="0"]
+text = "Go to 2nd floor"
 
-[editable path="ActionInteractable"]
+[node name="GoToDinnerHallInteractable" parent="." index="5" instance=ExtResource("3_gorel")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.71719, 1.96633, -4.72382)
+
+[node name="Label3D" parent="GoToDinnerHallInteractable/Sprite3D" index="0"]
+text = "Go to dinner hall"
+
+[editable path="GoToUpperFloorInteractable"]
+[editable path="GoToDinnerHallInteractable"]

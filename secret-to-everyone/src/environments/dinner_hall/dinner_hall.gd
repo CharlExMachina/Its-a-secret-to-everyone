@@ -1,5 +1,6 @@
 extends Node
 
+
 func _ready() -> void:
 	var limit_min_x = -8.63
 	var limit_max_x = 2.678
@@ -14,5 +15,5 @@ func _ready() -> void:
 	$Player.max_clamp_z = limit_max_z
 
 
-func _on_go_to_crossroads_interactable_action_triggered() -> void:
-	get_tree().change_scene_to_file.bind("res://src/environments/crossroads/crossroads.tscn").call_deferred()
+func _on_go_to_main_hall_interactable_action_triggered() -> void:
+	get_tree().change_scene_to_file.bind("res://src/environments/mansion_interior_1/mansion_interior_1.tscn").call_deferred()

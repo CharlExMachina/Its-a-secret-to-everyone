@@ -70,3 +70,7 @@ func set_player_name(name: String) -> void:
 	popup_instance.character_portrait = npc_portrait
 	popup_instance.set_dialogue_sequence(ending_dialog_sequence)
 	popup_instance.set_npc_name("Viktor")
+
+
+func _on_go_to_crossroads_interactable_action_triggered() -> void:
+	get_tree().change_scene_to_file.bind("res://src/environments/crossroads/crossroads.tscn").call_deferred()

@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://cs7f8a28k3hfx"]
+[gd_scene load_steps=6 format=3 uid="uid://cs7f8a28k3hfx"]
 
 [ext_resource type="PackedScene" uid="uid://yqbjk2dtw1hk" path="res://src/environments/explorable_zone.tscn" id="1_bdmbo"]
 [ext_resource type="Script" path="res://src/environments/beach_bar/beach_bar.gd" id="2_0l7aq"]
 [ext_resource type="PackedScene" uid="uid://db8yh7nc2dxqn" path="res://src/entities/props/interactable_props/pickup_interactable/pickup_interactable.tscn" id="2_cj4tk"]
 [ext_resource type="Resource" uid="uid://h7qjfi8307bc" path="res://src/key_items/mansion_keys.tres" id="3_n4m4h"]
+[ext_resource type="PackedScene" uid="uid://drc087t34sdxo" path="res://src/entities/props/interactable_props/action_interactable/action_interactable.tscn" id="5_c7sg7"]
 
 [node name="BeachBar" instance=ExtResource("1_bdmbo")]
 script = ExtResource("2_0l7aq")
@@ -15,5 +16,10 @@ metadata/_edit_group_ = true
 
 [node name="Sprite3D" parent="PickupInteractable" index="0"]
 transform = Transform3D(0.391286, 0, 0, 0, 0.391286, 0, 0, 0, 0.391286, 0, 0.1982, 0)
+
+[node name="GoToCrossroadsInteractable" parent="." index="5" instance=ExtResource("5_c7sg7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.3728, 2.93266, -2.00658)
+
+[connection signal="action_triggered" from="GoToCrossroadsInteractable" to="." method="_on_go_to_crossroads_interactable_action_triggered"]
 
 [editable path="PickupInteractable"]

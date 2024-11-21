@@ -2443,7 +2443,7 @@ transform = Transform3D(0.357349, 0, 0, 0, 0.357349, 0, 0, 0, 0.357349, -10.9085
 text = "Go to the mansion"
 
 [node name="GoToDockInteractable" parent="Interactables" index="2" instance=ExtResource("21_w52ix")]
-transform = Transform3D(0.357349, 0, 0, 0, 0.357349, 0, 0, 0, 0.357349, -5.7489, 0.984963, 2.61933)
+transform = Transform3D(0.357349, 0, 0, 0, 0.357349, 0, 0, 0, 0.357349, -6.47664, 0.984963, -0.408467)
 
 [node name="Label3D" parent="Interactables/GoToDockInteractable/Sprite3D" index="0"]
 text = "Go to the dock"
