@@ -99,7 +99,7 @@ void fragment() {
 render_priority = 0
 shader = SubResource("Shader_hwdjj")
 shader_parameter/shadow_color = Color(0, 0, 0, 1)
-shader_parameter/shadow_thickness = 2.795
+shader_parameter/shadow_thickness = 2.39
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7iopl"]
 shading_mode = 0
@@ -712,7 +712,7 @@ outline_size = 0
 horizontal_alignment = 0
 
 [node name="Camera3D" type="Camera3D" parent="." index="5"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00262469, 1.04825, 2.24562)
+transform = Transform3D(1, 0, 0, 0, 0.999872, 0.016004, 0, -0.016004, 0.999872, -0.0113284, 1.0356, 2.20541)
 
 [node name="Status" type="Sprite3D" parent="." index="6"]
 transform = Transform3D(0.0777842, 0, 0, 0, 0.0777842, 0, 0, 0, 0.0777842, 0.886274, 1.54903, 0.945493)
