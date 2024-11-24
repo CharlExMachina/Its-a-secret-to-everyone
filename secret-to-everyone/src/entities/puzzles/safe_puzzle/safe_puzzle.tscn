@@ -158,8 +158,8 @@ albedo_color = Color(0.854902, 0, 0.0862745, 1)
 [sub_resource type="BoxShape3D" id="BoxShape3D_kmqya"]
 size = Vector3(0.478058, 0.453579, 1.13489)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_2uaed"]
-size = Vector3(0.130692, 0.453579, 1.13489)
+[sub_resource type="BoxShape3D" id="BoxShape3D_05l72"]
+size = Vector3(0.964863, 0.156241, 1.13489)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8hlah"]
 shading_mode = 0
@@ -212,6 +212,13 @@ font = ExtResource("2_syojb")
 font_size = 38
 outline_size = 3
 
+[node name="BCollider" type="StaticBody3D" parent="Keys/B" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0919165, -0.212773, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Keys/B/BCollider" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00604248, -0.0163803, 0.0674438)
+shape = SubResource("BoxShape3D_834df")
+
 [node name="Backspace" parent="Keys" index="2"]
 material_override = SubResource("StandardMaterial3D_6e6hm")
 
@@ -240,6 +247,13 @@ text = "C"
 font = ExtResource("2_syojb")
 font_size = 38
 outline_size = 3
+
+[node name="CCollider" type="StaticBody3D" parent="Keys/C" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.465635, -0.212773, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Keys/C/CCollider" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00604248, -0.0163803, 0.0674438)
+shape = SubResource("BoxShape3D_834df")
 
 [node name="D" parent="Keys" index="4"]
 material_override = SubResource("StandardMaterial3D_kppjr")
@@ -414,6 +428,13 @@ font = ExtResource("2_syojb")
 font_size = 38
 outline_size = 3
 
+[node name="MCollider" type="StaticBody3D" parent="Keys/M" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.28592, -0.212773, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Keys/M/MCollider" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00604248, -0.0163803, 0.0674438)
+shape = SubResource("BoxShape3D_834df")
+
 [node name="N" parent="Keys" index="14"]
 material_override = SubResource("StandardMaterial3D_kppjr")
 
@@ -424,6 +445,13 @@ text = "N"
 font = ExtResource("2_syojb")
 font_size = 38
 outline_size = 3
+
+[node name="NCollider" type="StaticBody3D" parent="Keys/N" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0892804, -0.212773, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Keys/N/NCollider" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00604248, -0.0163803, 0.0674438)
+shape = SubResource("BoxShape3D_834df")
 
 [node name="O" parent="Keys" index="15"]
 material_override = SubResource("StandardMaterial3D_kppjr")
@@ -522,8 +550,8 @@ material_override = SubResource("StandardMaterial3D_kppjr")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00123453, 0.00589538, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Keys/Space/SpaceCollider" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00604248, -0.0163803, 0.0674438)
-shape = SubResource("BoxShape3D_2uaed")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000681043, -0.00709867, 0.0674438)
+shape = SubResource("BoxShape3D_05l72")
 
 [node name="Submit" parent="Keys" index="21"]
 material_override = SubResource("StandardMaterial3D_8hlah")
@@ -581,6 +609,13 @@ text = "V"
 font = ExtResource("2_syojb")
 font_size = 38
 outline_size = 3
+
+[node name="VCollider" type="StaticBody3D" parent="Keys/V" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.276202, -0.212773, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Keys/V/VCollider" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00604248, -0.0163803, 0.0674438)
+shape = SubResource("BoxShape3D_834df")
 
 [node name="W" parent="Keys" index="25"]
 material_override = SubResource("StandardMaterial3D_kppjr")
@@ -655,7 +690,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00604248, -0.0163803, 0.067
 shape = SubResource("BoxShape3D_834df")
 
 [node name="Screen" parent="." index="4"]
-transform = Transform3D(1.53976, 0, 0, 0, 1, 0, 0, 0, 1, 0.129597, 1.01964, 0.910895)
+transform = Transform3D(1.53976, 0, 0, 0, 1, 0, 0, 0, 1, 0.21448, 1.01964, 0.910895)
 material_override = SubResource("StandardMaterial3D_yw3j6")
 
 [node name="ScreenText" type="Label3D" parent="Screen" index="0"]
@@ -670,7 +705,9 @@ horizontal_alignment = 0
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00262469, 1.04825, 2.24562)
 
 [connection signal="input_event" from="Keys/A/ACollider" to="." method="_on_a_collider_input_event"]
+[connection signal="input_event" from="Keys/B/BCollider" to="." method="_on_b_collider_input_event"]
 [connection signal="input_event" from="Keys/Backspace/BackspaceCollider" to="." method="_on_backspace_collider_input_event"]
+[connection signal="input_event" from="Keys/C/CCollider" to="." method="_on_c_collider_input_event"]
 [connection signal="input_event" from="Keys/D/DCollider" to="." method="_on_d_collider_input_event"]
 [connection signal="input_event" from="Keys/E/ECollider" to="." method="_on_e_collider_input_event"]
 [connection signal="input_event" from="Keys/F/FCollider" to="." method="_on_f_collider_input_event"]
@@ -680,13 +717,17 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00262469, 1.04825, 2.24562)
 [connection signal="input_event" from="Keys/J/JCollider" to="." method="_on_j_collider_input_event"]
 [connection signal="input_event" from="Keys/K/KCollider" to="." method="_on_k_collider_input_event"]
 [connection signal="input_event" from="Keys/L/LCollider" to="." method="_on_l_collider_input_event"]
+[connection signal="input_event" from="Keys/M/MCollider" to="." method="_on_m_collider_input_event"]
+[connection signal="input_event" from="Keys/N/NCollider" to="." method="_on_n_collider_input_event"]
 [connection signal="input_event" from="Keys/O/OCollider" to="." method="_on_o_collider_input_event"]
 [connection signal="input_event" from="Keys/P/PCollider" to="." method="_on_p_collider_input_event"]
 [connection signal="input_event" from="Keys/Q/QCollider" to="." method="_on_q_collider_input_event"]
 [connection signal="input_event" from="Keys/R/RCollider" to="." method="_on_r_collider_input_event"]
 [connection signal="input_event" from="Keys/S/SCollider" to="." method="_on_s_collider_input_event"]
+[connection signal="input_event" from="Keys/Space/SpaceCollider" to="." method="_on_space_collider_input_event"]
 [connection signal="input_event" from="Keys/T/TCollider" to="." method="_on_t_collider_input_event"]
 [connection signal="input_event" from="Keys/U/UCollider" to="." method="_on_u_collider_input_event"]
+[connection signal="input_event" from="Keys/V/VCollider" to="." method="_on_v_collider_input_event"]
 [connection signal="input_event" from="Keys/W/WCollider" to="." method="_on_w_collider_input_event"]
 [connection signal="input_event" from="Keys/X/XCollider" to="." method="_on_x_collider_input_event"]
 [connection signal="input_event" from="Keys/Y/YCollider" to="." method="_on_y_collider_input_event"]

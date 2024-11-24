@@ -106,3 +106,27 @@ func _on_z_collider_input_event(camera: Node, event: InputEvent, event_position:
 
 func _on_x_collider_input_event(camera: Node, event: InputEvent, event_position: Vector3, normal: Vector3, shape_idx: int) -> void:
 	add_text(event, "X")
+
+
+func _on_space_collider_input_event(camera: Node, event: InputEvent, event_position: Vector3, normal: Vector3, shape_idx: int) -> void:
+	add_text(event, " ")
+
+
+func _on_c_collider_input_event(camera: Node, event: InputEvent, event_position: Vector3, normal: Vector3, shape_idx: int) -> void:
+	add_text(event, "C")
+
+
+func _on_v_collider_input_event(camera: Node, event: InputEvent, event_position: Vector3, normal: Vector3, shape_idx: int) -> void:
+	add_text(event, "V")
+
+
+func _on_b_collider_input_event(camera: Node, event: InputEvent, event_position: Vector3, normal: Vector3, shape_idx: int) -> void:
+	add_text(event, "B")
+
+
+func _on_n_collider_input_event(camera: Node, event: InputEvent, event_position: Vector3, normal: Vector3, shape_idx: int) -> void:
+	add_text(event, "N")
+
+
+func _on_m_collider_input_event(camera: Node, event: InputEvent, event_position: Vector3, normal: Vector3, shape_idx: int) -> void:
+	add_text(event, "M")
