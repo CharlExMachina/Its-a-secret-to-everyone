@@ -14,6 +14,14 @@ metadata/_edit_group_ = true
 [node name="Label3D" parent="GoToMainHallInteractable/Sprite3D" index="0"]
 text = "Go to the main hall"
 
+[node name="SafePuzzleInteractable" parent="." index="5" instance=ExtResource("3_iv1ym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.85672, -7.11755)
+
+[node name="Label3D" parent="SafePuzzleInteractable/Sprite3D" index="0"]
+text = "Safe puzzle"
+
 [connection signal="action_triggered" from="GoToMainHallInteractable" to="." method="_on_go_to_main_hall_interactable_action_triggered"]
+[connection signal="action_triggered" from="SafePuzzleInteractable" to="." method="_on_safe_puzzle_interactable_action_triggered"]
 
 [editable path="GoToMainHallInteractable"]
+[editable path="SafePuzzleInteractable"]

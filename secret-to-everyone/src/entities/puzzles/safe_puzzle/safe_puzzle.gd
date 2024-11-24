@@ -1,15 +1,38 @@
 extends Node3D
 
+@export var portrait_item: InventoryItem
+
 @onready var screen_text = $Screen/ScreenText
 @onready var status = $Status
 
+var pickable_popup = preload("res://src/entities/ui/pickable_popup/pickable_popup.tscn")
 var checkmark = preload("res://src/assets/sprites/puzzles/safe/check_mark.png")
 var x = preload("res://src/assets/sprites/puzzles/safe/x.png")
 
 var can_submit := true
+var puzzle_is_complete := false
+
+
+func _ready() -> void:
+	$Control/FadeOutBg.self_modulate = Color(Color.WHITE, 0.0)
+	await get_tree().create_timer(1).timeout
+	ToastLoader.show_toast('"The password could be anything, a word, a phrase?"')
+
+
+func animate_fade_out() -> void:
+	var tween = get_tree().create_tween()
+	tween.tween_property($Control/FadeOutBg, "self_modulate", Color(Color.WHITE, 1.0), 1.8)
+	tween.play()
+
+	await tween.finished
+	await get_tree().create_timer(0.8).timeout
+	get_tree().change_scene_to_file.bind("res://src/environments/dinner_hall/dinner_hall.tscn").call_deferred()
 
 
 func add_text(event: InputEvent, letter: String) -> void:
+	if puzzle_is_complete:
+		return
+
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
 			if (screen_text.text as String).length() < 22:
@@ -17,12 +40,28 @@ func add_text(event: InputEvent, letter: String) -> void:
 
 
 func remove_text(event: InputEvent) -> void:
+	if puzzle_is_complete:
+		return
+
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
 			if (screen_text.text as String).length() > 0:
 				var written_text = screen_text.text as String
 				var result = written_text.erase(written_text.length() - 1, 1)
 				screen_text.text = result
+
+
+func animate_handle() -> void:
+	var tween = get_tree().create_tween()
+	var handle = $Handle
+
+	tween.tween_property(handle, "rotation_degrees", Vector3(0, 0, 90), 1.8).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
+	tween.play()
+
+
+func on_item_picked_handler() -> void:
+	ToastLoader.show_toast("%s added to inventory" % [portrait_item.item_name])
+	animate_fade_out()
 
 
 func _on_a_collider_input_event(camera: Node, event: InputEvent, event_position: Vector3, normal: Vector3, shape_idx: int) -> void:
@@ -144,16 +183,39 @@ func _on_submit_collider_input_event(camera: Node, event: InputEvent, event_posi
 					return
 
 				can_submit = false
+				puzzle_is_complete = true
+				$Control/GoBackButton.disabled = true
 
 				var text = $Screen/ScreenText.text
 
 				if text == "BRILLIANT FUTURE AHEAD":
-					print("Puzzle completed!")
 					status.texture = checkmark
+					ProgressManager.unlocked_safe = true
 					await get_tree().create_timer(1.5).timeout
+
+					animate_handle()
+
+					await get_tree().create_timer(0.5).timeout
+
+					ToastLoader.show_toast('"You always loved your long passwords, huh?"')
+
+					await get_tree().create_timer(2.7).timeout
+
+					var popup_instance = pickable_popup.instantiate()
+
+					popup_instance.item_name = portrait_item.item_name
+					popup_instance.item_sprite = portrait_item.item_sprite
+					popup_instance.description = portrait_item.description
+					popup_instance.item = portrait_item
+					popup_instance.connect("item_picked", on_item_picked_handler.bind())
+
+					get_parent().add_child(popup_instance)
 				else:
 					status.texture = x
 					await get_tree().create_timer(1.5).timeout
 					status.texture = null
 					can_submit = true
-					print("Wrong answer!")
+
+
+func _on_custom_button_pressed() -> void:
+	get_tree().change_scene_to_file.bind("res://src/environments/dinner_hall/dinner_hall.tscn").call_deferred()

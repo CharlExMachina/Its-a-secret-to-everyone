@@ -1,8 +1,10 @@
-[gd_scene load_steps=19 format=4 uid="uid://keyfrccsk8ry"]
+[gd_scene load_steps=22 format=4 uid="uid://keyfrccsk8ry"]
 
 [ext_resource type="PackedScene" uid="uid://cxbl4rgbmjvh3" path="res://src/assets/models/Safe.glb" id="1_dpvvm"]
 [ext_resource type="Script" path="res://src/entities/puzzles/safe_puzzle/safe_puzzle.gd" id="2_cr182"]
 [ext_resource type="FontFile" uid="uid://cicxg3vljjyu2" path="res://src/assets/fonts/Handjet-VariableFont_ELGR,ELSH,wght.ttf" id="2_syojb"]
+[ext_resource type="Resource" uid="uid://4fkxtdrbmtdm" path="res://src/key_items/old_portrait.tres" id="3_u25be"]
+[ext_resource type="PackedScene" uid="uid://db0mili71rbvq" path="res://src/entities/ui/custom_button/custom_button.tscn" id="4_yaqud"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_eoxly"]
 shading_mode = 0
@@ -171,8 +173,12 @@ size = Vector3(0.553596, 0.453579, 1.13489)
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yw3j6"]
 albedo_color = Color(0.275884, 0.275884, 0.275884, 1)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lwfpb"]
+bg_color = Color(0, 0, 0, 1)
+
 [node name="Safe" instance=ExtResource("1_dpvvm")]
 script = ExtResource("2_cr182")
+portrait_item = ExtResource("3_u25be")
 
 [node name="Handle" parent="." index="0"]
 material_override = SubResource("StandardMaterial3D_eoxly")
@@ -706,16 +712,48 @@ material_override = SubResource("StandardMaterial3D_yw3j6")
 [node name="ScreenText" type="Label3D" parent="Screen" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.522555, 0.523074, 0.0481995)
 modulate = Color(0.227451, 1, 0.0117647, 1)
+text = "BRILLIANT FUTURE AHEAD"
 font = ExtResource("2_syojb")
 font_size = 19
 outline_size = 0
 horizontal_alignment = 0
 
 [node name="Camera3D" type="Camera3D" parent="." index="5"]
-transform = Transform3D(1, 0, 0, 0, 0.999872, 0.016004, 0, -0.016004, 0.999872, -0.0113284, 1.0356, 2.20541)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0214785, 0.989031, 3.72275)
+projection = 1
+current = true
+fov = 77.7
+size = 1.73598
 
 [node name="Status" type="Sprite3D" parent="." index="6"]
 transform = Transform3D(0.0777842, 0, 0, 0, 0.0777842, 0, 0, 0, 0.0777842, 0.886274, 1.54903, 0.945493)
+
+[node name="Control" type="Control" parent="." index="7"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+
+[node name="GoBackButton" parent="Control" index="0" instance=ExtResource("4_yaqud")]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 23.0
+offset_right = 233.0
+offset_bottom = 86.0
+text = "Go back"
+
+[node name="FadeOutBg" type="Panel" parent="Control" index="1"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_lwfpb")
 
 [connection signal="input_event" from="Keys/A/ACollider" to="." method="_on_a_collider_input_event"]
 [connection signal="input_event" from="Keys/B/BCollider" to="." method="_on_b_collider_input_event"]
@@ -746,3 +784,4 @@ transform = Transform3D(0.0777842, 0, 0, 0, 0.0777842, 0, 0, 0, 0.0777842, 0.886
 [connection signal="input_event" from="Keys/X/XCollider" to="." method="_on_x_collider_input_event"]
 [connection signal="input_event" from="Keys/Y/YCollider" to="." method="_on_y_collider_input_event"]
 [connection signal="input_event" from="Keys/Z/ZCollider" to="." method="_on_z_collider_input_event"]
+[connection signal="pressed" from="Control/GoBackButton" to="." method="_on_custom_button_pressed"]

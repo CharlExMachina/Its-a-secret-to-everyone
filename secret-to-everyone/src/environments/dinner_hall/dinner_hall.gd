@@ -17,3 +17,10 @@ func _ready() -> void:
 
 func _on_go_to_main_hall_interactable_action_triggered() -> void:
 	get_tree().change_scene_to_file.bind("res://src/environments/mansion_interior_1/mansion_interior_1.tscn").call_deferred()
+
+
+func _on_safe_puzzle_interactable_action_triggered() -> void:
+	if ProgressManager.unlocked_safe:
+		ToastLoader.show_toast('"There\'s nothing in there, I already got what I need"')
+	else:
+		get_tree().change_scene_to_file.bind("res://src/entities/puzzles/safe_puzzle/safe_puzzle.tscn").call_deferred()
