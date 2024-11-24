@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=4 uid="uid://keyfrccsk8ry"]
+[gd_scene load_steps=18 format=4 uid="uid://keyfrccsk8ry"]
 
 [ext_resource type="PackedScene" uid="uid://cxbl4rgbmjvh3" path="res://src/assets/models/Safe.glb" id="1_dpvvm"]
 [ext_resource type="Script" path="res://src/entities/puzzles/safe_puzzle/safe_puzzle.gd" id="2_cr182"]
@@ -149,11 +149,17 @@ shading_mode = 0
 albedo_color = Color(0.927854, 0.920984, 0.885322, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_834df"]
-size = Vector3(0.161255, 0.382675, 1.13489)
+size = Vector3(0.130692, 0.453579, 1.13489)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6e6hm"]
 shading_mode = 0
 albedo_color = Color(0.854902, 0, 0.0862745, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kmqya"]
+size = Vector3(0.478058, 0.453579, 1.13489)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2uaed"]
+size = Vector3(0.130692, 0.453579, 1.13489)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8hlah"]
 shading_mode = 0
@@ -217,6 +223,13 @@ font = ExtResource("2_syojb")
 font_size = 20
 outline_size = 3
 
+[node name="BackspaceCollider" type="StaticBody3D" parent="Keys/Backspace" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0091907, 0.0200848, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Keys/Backspace/BackspaceCollider" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00984168, -0.019537, 0.0674438)
+shape = SubResource("BoxShape3D_kmqya")
+
 [node name="C" parent="Keys" index="3"]
 material_override = SubResource("StandardMaterial3D_kppjr")
 
@@ -239,6 +252,13 @@ font = ExtResource("2_syojb")
 font_size = 38
 outline_size = 3
 
+[node name="DCollider" type="StaticBody3D" parent="Keys/D" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.471517, 0.223821, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Keys/D/DCollider" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00604248, -0.0163803, 0.0674438)
+shape = SubResource("BoxShape3D_834df")
+
 [node name="E" parent="Keys" index="5"]
 material_override = SubResource("StandardMaterial3D_kppjr")
 
@@ -249,6 +269,13 @@ text = "E"
 font = ExtResource("2_syojb")
 font_size = 38
 outline_size = 3
+
+[node name="ECollider" type="StaticBody3D" parent="Keys/E" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.475152, 0.713311, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Keys/E/ECollider" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0084652, -0.0163805, 0.0674438)
+shape = SubResource("BoxShape3D_834df")
 
 [node name="F" parent="Keys" index="6"]
 material_override = SubResource("StandardMaterial3D_kppjr")
@@ -261,6 +288,13 @@ font = ExtResource("2_syojb")
 font_size = 38
 outline_size = 3
 
+[node name="FCollider" type="StaticBody3D" parent="Keys/F" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.288767, 0.223821, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Keys/F/FCollider" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00604248, -0.0163803, 0.0674438)
+shape = SubResource("BoxShape3D_834df")
+
 [node name="G" parent="Keys" index="7"]
 material_override = SubResource("StandardMaterial3D_kppjr")
 
@@ -271,6 +305,13 @@ text = "G"
 font = ExtResource("2_syojb")
 font_size = 38
 outline_size = 3
+
+[node name="GCollider" type="StaticBody3D" parent="Keys/G" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0741624, 0.223821, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Keys/G/GCollider" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00604248, -0.0163803, 0.0674438)
+shape = SubResource("BoxShape3D_834df")
 
 [node name="H" parent="Keys" index="8"]
 material_override = SubResource("StandardMaterial3D_kppjr")
@@ -283,6 +324,13 @@ font = ExtResource("2_syojb")
 font_size = 38
 outline_size = 3
 
+[node name="HCollider" type="StaticBody3D" parent="Keys/H" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.107617, 0.223821, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Keys/H/HCollider" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00604248, -0.0163803, 0.0674438)
+shape = SubResource("BoxShape3D_834df")
+
 [node name="I" parent="Keys" index="9"]
 material_override = SubResource("StandardMaterial3D_kppjr")
 
@@ -293,6 +341,13 @@ text = "I"
 font = ExtResource("2_syojb")
 font_size = 38
 outline_size = 3
+
+[node name="ICollider" type="StaticBody3D" parent="Keys/I" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.491072, 0.713311, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Keys/I/ICollider" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00604248, -0.0163803, 0.0674438)
+shape = SubResource("BoxShape3D_834df")
 
 [node name="J" parent="Keys" index="10"]
 material_override = SubResource("StandardMaterial3D_kppjr")
@@ -305,6 +360,13 @@ font = ExtResource("2_syojb")
 font_size = 38
 outline_size = 3
 
+[node name="JCollider" type="StaticBody3D" parent="Keys/J" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.278742, 0.223821, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Keys/J/JCollider" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00604248, -0.0163803, 0.0674438)
+shape = SubResource("BoxShape3D_834df")
+
 [node name="K" parent="Keys" index="11"]
 material_override = SubResource("StandardMaterial3D_kppjr")
 
@@ -316,6 +378,13 @@ font = ExtResource("2_syojb")
 font_size = 38
 outline_size = 3
 
+[node name="KCollider" type="StaticBody3D" parent="Keys/K" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.494237, 0.223821, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Keys/K/KCollider" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00604248, -0.0163803, 0.0674438)
+shape = SubResource("BoxShape3D_834df")
+
 [node name="L" parent="Keys" index="12"]
 material_override = SubResource("StandardMaterial3D_kppjr")
 
@@ -326,6 +395,13 @@ text = "L"
 font = ExtResource("2_syojb")
 font_size = 38
 outline_size = 3
+
+[node name="LCollider" type="StaticBody3D" parent="Keys/L" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.645713, 0.223821, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Keys/L/LCollider" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00604248, -0.0163803, 0.0674438)
+shape = SubResource("BoxShape3D_834df")
 
 [node name="M" parent="Keys" index="13"]
 material_override = SubResource("StandardMaterial3D_kppjr")
@@ -360,6 +436,13 @@ font = ExtResource("2_syojb")
 font_size = 38
 outline_size = 3
 
+[node name="OCollider" type="StaticBody3D" parent="Keys/O" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.688216, 0.713311, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Keys/O/OCollider" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00604248, -0.0163803, 0.0674438)
+shape = SubResource("BoxShape3D_834df")
+
 [node name="P" parent="Keys" index="16"]
 material_override = SubResource("StandardMaterial3D_kppjr")
 
@@ -370,6 +453,13 @@ text = "P"
 font = ExtResource("2_syojb")
 font_size = 38
 outline_size = 3
+
+[node name="PCollider" type="StaticBody3D" parent="Keys/P" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.870776, 0.713311, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Keys/P/PCollider" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00604248, -0.0163803, 0.0674438)
+shape = SubResource("BoxShape3D_834df")
 
 [node name="Q" parent="Keys" index="17"]
 material_override = SubResource("StandardMaterial3D_kppjr")
@@ -382,6 +472,13 @@ font = ExtResource("2_syojb")
 font_size = 38
 outline_size = 3
 
+[node name="QCollider" type="StaticBody3D" parent="Keys/Q" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.848541, 0.713311, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Keys/Q/QCollider" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00604248, -0.0163803, 0.0674438)
+shape = SubResource("BoxShape3D_834df")
+
 [node name="R" parent="Keys" index="18"]
 material_override = SubResource("StandardMaterial3D_kppjr")
 
@@ -392,6 +489,13 @@ text = "R"
 font = ExtResource("2_syojb")
 font_size = 38
 outline_size = 3
+
+[node name="RCollider" type="StaticBody3D" parent="Keys/R" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.287932, 0.713311, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Keys/R/RCollider" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00604248, -0.0163803, 0.0674438)
+shape = SubResource("BoxShape3D_834df")
 
 [node name="S" parent="Keys" index="19"]
 material_override = SubResource("StandardMaterial3D_kppjr")
@@ -404,8 +508,22 @@ font = ExtResource("2_syojb")
 font_size = 38
 outline_size = 3
 
+[node name="SCollider" type="StaticBody3D" parent="Keys/S" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.673034, 0.223821, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Keys/S/SCollider" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00604248, -0.0163803, 0.0674438)
+shape = SubResource("BoxShape3D_834df")
+
 [node name="Space" parent="Keys" index="20"]
 material_override = SubResource("StandardMaterial3D_kppjr")
+
+[node name="SpaceCollider" type="StaticBody3D" parent="Keys/Space" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00123453, 0.00589538, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Keys/Space/SpaceCollider" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00604248, -0.0163803, 0.0674438)
+shape = SubResource("BoxShape3D_2uaed")
 
 [node name="Submit" parent="Keys" index="21"]
 material_override = SubResource("StandardMaterial3D_8hlah")
@@ -428,6 +546,13 @@ font = ExtResource("2_syojb")
 font_size = 38
 outline_size = 3
 
+[node name="TCollider" type="StaticBody3D" parent="Keys/T" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0900449, 0.713311, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Keys/T/TCollider" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00604248, -0.0163803, 0.0674438)
+shape = SubResource("BoxShape3D_834df")
+
 [node name="U" parent="Keys" index="23"]
 material_override = SubResource("StandardMaterial3D_kppjr")
 
@@ -438,6 +563,13 @@ text = "U"
 font = ExtResource("2_syojb")
 font_size = 38
 outline_size = 3
+
+[node name="UCollider" type="StaticBody3D" parent="Keys/U" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.29928, 0.713311, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Keys/U/UCollider" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00604248, -0.0163803, 0.0674438)
+shape = SubResource("BoxShape3D_834df")
 
 [node name="V" parent="Keys" index="24"]
 material_override = SubResource("StandardMaterial3D_kppjr")
@@ -461,6 +593,13 @@ font = ExtResource("2_syojb")
 font_size = 38
 outline_size = 3
 
+[node name="WCollider" type="StaticBody3D" parent="Keys/W" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.665387, 0.713311, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Keys/W/WCollider" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00604248, -0.0163803, 0.0674438)
+shape = SubResource("BoxShape3D_834df")
+
 [node name="X" parent="Keys" index="26"]
 material_override = SubResource("StandardMaterial3D_kppjr")
 
@@ -471,6 +610,13 @@ text = "X"
 font = ExtResource("2_syojb")
 font_size = 38
 outline_size = 3
+
+[node name="XCollider" type="StaticBody3D" parent="Keys/X" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.666393, -0.264969, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Keys/X/XCollider" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00604248, -0.0163803, 0.0674438)
+shape = SubResource("BoxShape3D_834df")
 
 [node name="Y" parent="Keys" index="27"]
 material_override = SubResource("StandardMaterial3D_kppjr")
@@ -483,6 +629,13 @@ font = ExtResource("2_syojb")
 font_size = 38
 outline_size = 3
 
+[node name="YCollider" type="StaticBody3D" parent="Keys/Y" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.10474, 0.713311, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Keys/Y/YCollider" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00604248, -0.0163803, 0.0674438)
+shape = SubResource("BoxShape3D_834df")
+
 [node name="Z" parent="Keys" index="28"]
 material_override = SubResource("StandardMaterial3D_kppjr")
 
@@ -494,18 +647,47 @@ font = ExtResource("2_syojb")
 font_size = 38
 outline_size = 3
 
+[node name="ZCollider" type="StaticBody3D" parent="Keys/Z" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.847377, -0.242813, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Keys/Z/ZCollider" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00604248, -0.0163803, 0.0674438)
+shape = SubResource("BoxShape3D_834df")
+
 [node name="Screen" parent="." index="4"]
 transform = Transform3D(1.53976, 0, 0, 0, 1, 0, 0, 0, 1, 0.129597, 1.01964, 0.910895)
 material_override = SubResource("StandardMaterial3D_yw3j6")
 
-[node name="Label3D" type="Label3D" parent="Screen" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00618404, 0.523074, 0.0481995)
+[node name="ScreenText" type="Label3D" parent="Screen" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.522555, 0.523074, 0.0481995)
 modulate = Color(0.227451, 1, 0.0117647, 1)
 font = ExtResource("2_syojb")
-font_size = 28
+font_size = 19
 outline_size = 0
+horizontal_alignment = 0
 
 [node name="Camera3D" type="Camera3D" parent="." index="5"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00262469, 1.04825, 2.24562)
 
 [connection signal="input_event" from="Keys/A/ACollider" to="." method="_on_a_collider_input_event"]
+[connection signal="input_event" from="Keys/Backspace/BackspaceCollider" to="." method="_on_backspace_collider_input_event"]
+[connection signal="input_event" from="Keys/D/DCollider" to="." method="_on_d_collider_input_event"]
+[connection signal="input_event" from="Keys/E/ECollider" to="." method="_on_e_collider_input_event"]
+[connection signal="input_event" from="Keys/F/FCollider" to="." method="_on_f_collider_input_event"]
+[connection signal="input_event" from="Keys/G/GCollider" to="." method="_on_g_collider_input_event"]
+[connection signal="input_event" from="Keys/H/HCollider" to="." method="_on_h_collider_input_event"]
+[connection signal="input_event" from="Keys/I/ICollider" to="." method="_on_i_collider_input_event"]
+[connection signal="input_event" from="Keys/J/JCollider" to="." method="_on_j_collider_input_event"]
+[connection signal="input_event" from="Keys/K/KCollider" to="." method="_on_k_collider_input_event"]
+[connection signal="input_event" from="Keys/L/LCollider" to="." method="_on_l_collider_input_event"]
+[connection signal="input_event" from="Keys/O/OCollider" to="." method="_on_o_collider_input_event"]
+[connection signal="input_event" from="Keys/P/PCollider" to="." method="_on_p_collider_input_event"]
+[connection signal="input_event" from="Keys/Q/QCollider" to="." method="_on_q_collider_input_event"]
+[connection signal="input_event" from="Keys/R/RCollider" to="." method="_on_r_collider_input_event"]
+[connection signal="input_event" from="Keys/S/SCollider" to="." method="_on_s_collider_input_event"]
+[connection signal="input_event" from="Keys/T/TCollider" to="." method="_on_t_collider_input_event"]
+[connection signal="input_event" from="Keys/U/UCollider" to="." method="_on_u_collider_input_event"]
+[connection signal="input_event" from="Keys/W/WCollider" to="." method="_on_w_collider_input_event"]
+[connection signal="input_event" from="Keys/X/XCollider" to="." method="_on_x_collider_input_event"]
+[connection signal="input_event" from="Keys/Y/YCollider" to="." method="_on_y_collider_input_event"]
+[connection signal="input_event" from="Keys/Z/ZCollider" to="." method="_on_z_collider_input_event"]
