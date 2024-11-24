@@ -712,7 +712,6 @@ material_override = SubResource("StandardMaterial3D_yw3j6")
 [node name="ScreenText" type="Label3D" parent="Screen" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.522555, 0.523074, 0.0481995)
 modulate = Color(0.227451, 1, 0.0117647, 1)
-text = "BRILLIANT FUTURE AHEAD"
 font = ExtResource("2_syojb")
 font_size = 19
 outline_size = 0
