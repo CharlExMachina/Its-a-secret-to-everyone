@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=4 uid="uid://keyfrccsk8ry"]
+[gd_scene load_steps=19 format=4 uid="uid://keyfrccsk8ry"]
 
 [ext_resource type="PackedScene" uid="uid://cxbl4rgbmjvh3" path="res://src/assets/models/Safe.glb" id="1_dpvvm"]
 [ext_resource type="Script" path="res://src/entities/puzzles/safe_puzzle/safe_puzzle.gd" id="2_cr182"]
@@ -164,6 +164,9 @@ size = Vector3(0.964863, 0.156241, 1.13489)
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8hlah"]
 shading_mode = 0
 albedo_color = Color(0.0588235, 0.827451, 0.0862745, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_eqrll"]
+size = Vector3(0.553596, 0.453579, 1.13489)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yw3j6"]
 albedo_color = Color(0.275884, 0.275884, 0.275884, 1)
@@ -563,6 +566,13 @@ text = "ENTER"
 font = ExtResource("2_syojb")
 outline_size = 3
 
+[node name="SubmitCollider" type="StaticBody3D" parent="Keys/Submit" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0555195, 0.0064687, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Keys/Submit/SubmitCollider" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0133169, -0.019537, 0.0674438)
+shape = SubResource("BoxShape3D_eqrll")
+
 [node name="T" parent="Keys" index="22"]
 material_override = SubResource("StandardMaterial3D_kppjr")
 
@@ -704,6 +714,9 @@ horizontal_alignment = 0
 [node name="Camera3D" type="Camera3D" parent="." index="5"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00262469, 1.04825, 2.24562)
 
+[node name="Status" type="Sprite3D" parent="." index="6"]
+transform = Transform3D(0.0777842, 0, 0, 0, 0.0777842, 0, 0, 0, 0.0777842, 0.886274, 1.54903, 0.945493)
+
 [connection signal="input_event" from="Keys/A/ACollider" to="." method="_on_a_collider_input_event"]
 [connection signal="input_event" from="Keys/B/BCollider" to="." method="_on_b_collider_input_event"]
 [connection signal="input_event" from="Keys/Backspace/BackspaceCollider" to="." method="_on_backspace_collider_input_event"]
@@ -725,6 +738,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00262469, 1.04825, 2.24562)
 [connection signal="input_event" from="Keys/R/RCollider" to="." method="_on_r_collider_input_event"]
 [connection signal="input_event" from="Keys/S/SCollider" to="." method="_on_s_collider_input_event"]
 [connection signal="input_event" from="Keys/Space/SpaceCollider" to="." method="_on_space_collider_input_event"]
+[connection signal="input_event" from="Keys/Submit/SubmitCollider" to="." method="_on_submit_collider_input_event"]
 [connection signal="input_event" from="Keys/T/TCollider" to="." method="_on_t_collider_input_event"]
 [connection signal="input_event" from="Keys/U/UCollider" to="." method="_on_u_collider_input_event"]
 [connection signal="input_event" from="Keys/V/VCollider" to="." method="_on_v_collider_input_event"]

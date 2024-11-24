@@ -1,7 +1,12 @@
 extends Node3D
 
-
 @onready var screen_text = $Screen/ScreenText
+@onready var status = $Status
+
+var checkmark = preload("res://src/assets/sprites/puzzles/safe/check_mark.png")
+var x = preload("res://src/assets/sprites/puzzles/safe/x.png")
+
+var can_submit := true
 
 
 func add_text(event: InputEvent, letter: String) -> void:
@@ -130,3 +135,25 @@ func _on_n_collider_input_event(camera: Node, event: InputEvent, event_position:
 
 func _on_m_collider_input_event(camera: Node, event: InputEvent, event_position: Vector3, normal: Vector3, shape_idx: int) -> void:
 	add_text(event, "M")
+
+
+func _on_submit_collider_input_event(camera: Node, event: InputEvent, event_position: Vector3, normal: Vector3, shape_idx: int) -> void:
+		if event is InputEventMouseButton:
+			if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+				if not can_submit:
+					return
+
+				can_submit = false
+
+				var text = $Screen/ScreenText.text
+
+				if text == "BRILLIANT FUTURE AHEAD":
+					print("Puzzle completed!")
+					status.texture = checkmark
+					await get_tree().create_timer(1.5).timeout
+				else:
+					status.texture = x
+					await get_tree().create_timer(1.5).timeout
+					status.texture = null
+					can_submit = true
+					print("Wrong answer!")
