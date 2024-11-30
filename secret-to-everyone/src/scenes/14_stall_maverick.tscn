@@ -1,0 +1,161 @@
+[gd_scene load_steps=16 format=3 uid="uid://d002dlg43tds5"]
+
+[ext_resource type="PackedScene" uid="uid://yqbjk2dtw1hk" path="res://src/environments/explorable_zone.tscn" id="1_owrvo"]
+[ext_resource type="Texture2D" uid="uid://clm2med4fn3v0" path="res://src/assets/sprites/elements/positioned/stall-general/background-stall.png" id="2_f2xi3"]
+[ext_resource type="Texture2D" uid="uid://c2g6y4vyq1rhr" path="res://src/assets/sprites/elements/positioned/stall-general/walls-1.png" id="3_8c2bp"]
+[ext_resource type="Texture2D" uid="uid://dmb2107lmltx3" path="res://src/assets/sprites/elements/positioned/stall-maverick/quote-1.png" id="4_iw7sj"]
+[ext_resource type="Texture2D" uid="uid://bmg5xprs844wl" path="res://src/assets/sprites/elements/positioned/stall-maverick/quote-2.png" id="5_dlbuw"]
+[ext_resource type="PackedScene" uid="uid://vhf0l0b53njs" path="res://src/entities/props/interactable_props/information_interactable/information_interactable_prop.tscn" id="6_uthxo"]
+[ext_resource type="Texture2D" uid="uid://c1w2133t7ww7l" path="res://src/assets/sprites/elements/positioned/stall-maverick/calendar-1.png" id="7_w8ldy"]
+[ext_resource type="Texture2D" uid="uid://b7vixa2pjbqpy" path="res://src/assets/sprites/elements/positioned/stall-maverick/race-horse-poster-1.png" id="8_3uh5y"]
+[ext_resource type="PackedScene" uid="uid://dqwky4rusmijd" path="res://src/entities/props/interactable_props/travel_button_interactable/travel_button_interactable.tscn" id="8_16vm3"]
+[ext_resource type="Texture2D" uid="uid://d18tsdngtgad4" path="res://src/assets/sprites/elements/positioned/stall-maverick/ripped-diploma-1.png" id="9_45jru"]
+[ext_resource type="PackedScene" uid="uid://byobhlskhpimu" path="res://src/entities/props/interactable_props/switch_interactable/switch_interactable.tscn" id="10_8f5t2"]
+[ext_resource type="Resource" uid="uid://dc4m38lx62ro3" path="res://src/key_items/rake.tres" id="11_qwaod"]
+[ext_resource type="Texture2D" uid="uid://bp72hpqtuolrf" path="res://src/assets/sprites/elements/positioned/stall-general/floor-hay-1.png" id="12_tqlrx"]
+[ext_resource type="Texture2D" uid="uid://botlkv2hp0ewq" path="res://src/assets/sprites/elements/positioned/stall-general/floor-hay-2.png" id="13_3oy6y"]
+[ext_resource type="Texture2D" uid="uid://c31ay6jd1ssku" path="res://src/assets/sprites/elements/positioned/stall-general/floor-hay-3.png" id="14_k53u2"]
+
+[node name="Docks" instance=ExtResource("1_owrvo")]
+
+[node name="MeshInstance3D" parent="." index="1"]
+visible = false
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D2" parent="." index="2"]
+transform = Transform3D(129.827, 0, 0, 0, -4.37114e-08, -79.2961, 0, 1, -3.46613e-06, -0.345512, 4.71619, -8.01931)
+metadata/_edit_lock_ = true
+
+[node name="Player" parent="." index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.91)
+min_clamp_x = -2.4
+max_clamp_x = 2.4
+
+[node name="PlayerCamera" parent="Player" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="Elements" type="Node3D" parent="." index="4"]
+
+[node name="Background" type="Node3D" parent="Elements" index="0"]
+
+[node name="Wall" type="Sprite3D" parent="Elements/Background" index="0"]
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("2_f2xi3")
+
+[node name="Gate" type="Sprite3D" parent="Elements/Background" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.01)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("3_8c2bp")
+
+[node name="Props" type="Node3D" parent="Elements" index="1"]
+
+[node name="Quote" type="Sprite3D" parent="Elements/Props" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.01)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("4_iw7sj")
+
+[node name="Quote2" type="Sprite3D" parent="Elements/Props" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.01)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("5_dlbuw")
+
+[node name="Interactables" type="Node3D" parent="Elements" index="2"]
+
+[node name="Calendar" parent="Elements/Interactables" index="0" instance=ExtResource("6_uthxo")]
+item_name = "Calendar"
+item_description = "Monday: Oats with a side of hay
+Tuesday: Hay first, oats second
+Wednesday: Signature combo, hay and oats
+Thursday: Oats and hay cake cheat day
+Friday: Double oats and hay
+Saturday: Race day!"
+
+[node name="CollisionShape3D" parent="Elements/Interactables/Calendar" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.21452, 0.957349, 0)
+
+[node name="Sprite3D" parent="Elements/Interactables/Calendar" index="1"]
+texture = ExtResource("7_w8ldy")
+
+[node name="Poster" parent="Elements/Interactables" index="1" instance=ExtResource("6_uthxo")]
+item_name = "Signed Poster"
+item_description = "Lightning Hoof: The Racing Legend
+Featured in the Golden Oaks Classic and crowned Champion of the Year!
+
+Keep running fast, Maverick. You’ve got the heart of a champion, too!
+- Lightning Hoof"
+
+[node name="CollisionShape3D" parent="Elements/Interactables/Poster" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.28647, 2.02217, 0)
+
+[node name="Sprite3D" parent="Elements/Interactables/Poster" index="1"]
+texture = ExtResource("8_3uh5y")
+
+[node name="Hay1" parent="Elements/Interactables" index="2" node_paths=PackedStringArray("target") instance=ExtResource("10_8f5t2")]
+target = NodePath("../Hay2")
+required_item = ExtResource("11_qwaod")
+requirement_message = "I'm not touching that barehanded."
+
+[node name="CollisionShape3D" parent="Elements/Interactables/Hay1" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.269236, -1.62752, 0.0629883)
+
+[node name="Sprite3D" parent="Elements/Interactables/Hay1" index="1"]
+texture = ExtResource("12_tqlrx")
+
+[node name="Hay2" parent="Elements/Interactables" index="3" node_paths=PackedStringArray("target") instance=ExtResource("10_8f5t2")]
+visible = false
+target = NodePath("../Hay3")
+required_item = ExtResource("11_qwaod")
+requirement_message = "I'm not touching that barehanded."
+
+[node name="CollisionShape3D" parent="Elements/Interactables/Hay2" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.269236, -1.62752, 0.0629883)
+
+[node name="Sprite3D" parent="Elements/Interactables/Hay2" index="1"]
+texture = ExtResource("13_3oy6y")
+
+[node name="Hay3" type="Node3D" parent="Elements/Interactables" index="4"]
+visible = false
+
+[node name="Hay" type="Sprite3D" parent="Elements/Interactables/Hay3" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.01)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("14_k53u2")
+
+[node name="Diploma" parent="Elements/Interactables/Hay3" index="1" instance=ExtResource("6_uthxo")]
+item_name = "Torn Diploma"
+item_description = "2ND PLACE DIPLOMA
+
+Awarded to Maverick for a stunning performance!
+
+Congratulations on your well earned second place finish! You’ve got the speed and the style, just remember to wear your shoes next time, and 1st place might be yours for sure!
+
+Keep running fast,
+The Ranch Team"
+
+[node name="CollisionShape3D" parent="Elements/Interactables/Hay3/Diploma" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.119717, -2.01051, 0)
+
+[node name="Sprite3D" parent="Elements/Interactables/Hay3/Diploma" index="1"]
+texture = ExtResource("9_45jru")
+
+[node name="Buttons" type="Node3D" parent="Elements" index="3"]
+
+[node name="Barn" parent="Elements/Buttons" index="0" instance=ExtResource("8_16vm3")]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -3.75, -2.637, 0.02)
+scene_to_load = "12_barn"
+
+[node name="Label3D" parent="Elements/Buttons/Barn/Sprite3D" index="0"]
+text = "Go Back"
+
+[editable path="Player"]
+[editable path="Elements/Interactables/Calendar"]
+[editable path="Elements/Interactables/Poster"]
+[editable path="Elements/Interactables/Hay1"]
+[editable path="Elements/Interactables/Hay2"]
+[editable path="Elements/Interactables/Hay3/Diploma"]
+[editable path="Elements/Buttons/Barn"]

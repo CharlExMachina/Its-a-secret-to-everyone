@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://dj72dasmlchv2"]
+[gd_scene load_steps=29 format=3 uid="uid://dj72dasmlchv2"]
 
 [ext_resource type="PackedScene" uid="uid://yqbjk2dtw1hk" path="res://src/environments/explorable_zone.tscn" id="1_ig34o"]
 [ext_resource type="Texture2D" uid="uid://b74mtqraq42bl" path="res://src/assets/sprites/elements/positioned/forest-hut/background-complete.png" id="2_juyir"]
@@ -11,9 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://byobhlskhpimu" path="res://src/entities/props/interactable_props/switch_interactable/switch_interactable.tscn" id="9_4a8th"]
 [ext_resource type="Texture2D" uid="uid://bvkeigyf677bt" path="res://src/assets/sprites/elements/positioned/forest-hut/hut-closed.png" id="10_jjvh7"]
 [ext_resource type="PackedScene" uid="uid://bvavsehs0u07j" path="res://src/entities/props/interactable_props/travel_item_interactable/travel_item_interactable.tscn" id="11_u3fo6"]
-[ext_resource type="PackedScene" uid="uid://ftcx1wmpe3gh" path="res://src/scenes/02_hut_interior.tscn" id="12_is4kn"]
 [ext_resource type="Texture2D" uid="uid://wpxn2xsaiwcd" path="res://src/assets/sprites/elements/positioned/forest-hut/hut-open.png" id="13_372eu"]
-[ext_resource type="PackedScene" uid="uid://c2e1uk380jjn3" path="res://src/environments/dock/dock.tscn" id="14_tklw0"]
 [ext_resource type="Resource" uid="uid://byq3as07hgpfv" path="res://src/key_items/oar.tres" id="15_nrh6o"]
 [ext_resource type="Texture2D" uid="uid://cggnnxbx7ylnf" path="res://src/assets/sprites/elements/positioned/forest-hut/boat.png" id="16_wptcg"]
 [ext_resource type="Texture2D" uid="uid://ub0yr7btg8qq" path="res://src/assets/sprites/elements/cropped/nature/foliage-10.png" id="17_exul8"]
@@ -67,12 +65,13 @@ texture = ExtResource("3_b6i8w")
 [node name="Props" type="Node3D" parent="Elements" index="1"]
 
 [node name="Forest" type="Sprite3D" parent="Elements/Props" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.01)
 alpha_cut = 1
 texture_filter = 0
 texture = ExtResource("4_2b13x")
 
 [node name="Terrace" type="Sprite3D" parent="Elements/Props" index="1"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.01)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.02)
 alpha_cut = 1
 texture_filter = 0
 texture = ExtResource("5_rjoh0")
@@ -98,7 +97,7 @@ texture = ExtResource("8_nxn35")
 [node name="Interactables" type="Node3D" parent="Elements" index="2"]
 
 [node name="HutClosed" parent="Elements/Interactables" index="0" node_paths=PackedStringArray("target") instance=ExtResource("9_4a8th")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.01)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.02)
 target = NodePath("../HutOpen")
 
 [node name="CollisionShape3D" parent="Elements/Interactables/HutClosed" index="0"]
@@ -108,8 +107,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.23097, 0.0107422, 0.0629883
 texture = ExtResource("10_jjvh7")
 
 [node name="HutOpen" parent="Elements/Interactables" index="1" instance=ExtResource("11_u3fo6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.01)
-scene_to_load = ExtResource("12_is4kn")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.02)
+scene_to_load = "02_hut_interior"
 
 [node name="CollisionShape3D" parent="Elements/Interactables/HutOpen" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.24787, -0.0145874, 0.0629883)
@@ -118,12 +117,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.24787, -0.0145874, 0.062988
 texture = ExtResource("13_372eu")
 
 [node name="Boat" parent="Elements/Interactables" index="2" instance=ExtResource("11_u3fo6")]
-scene_to_load = ExtResource("14_tklw0")
+scene_to_load = "03_the_dock"
 required_item = ExtResource("15_nrh6o")
 requirement_message = "I can't row with my bare hands."
 
 [node name="CollisionShape3D" parent="Elements/Interactables/Boat" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.13193, -1.45409, 0.0629883)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.13922, -1.45045, -0.0511474)
 
 [node name="Sprite3D" parent="Elements/Interactables/Boat" index="1"]
 texture = ExtResource("16_wptcg")

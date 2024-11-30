@@ -1,10 +1,10 @@
 [gd_resource type="Resource" script_class="InventoryItem" load_steps=3 format=3 uid="uid://h7qjfi8307bc"]
 
-[ext_resource type="Texture2D" uid="uid://cvv5tn6f4lsb2" path="res://src/assets/sprites/placeholder_pickup.png" id="1_pm1ay"]
+[ext_resource type="Texture2D" uid="uid://c5yyqtocyub5d" path="res://src/assets/sprites/elements/cropped/beachside-bar/wall-keys-2.png" id="1_e5kkg"]
 [ext_resource type="Script" path="res://src/core/inventory/inventory_item.gd" id="1_xytm3"]
 
 [resource]
 script = ExtResource("1_xytm3")
 item_name = "Mansion keys"
-item_sprite = ExtResource("1_pm1ay")
+item_sprite = ExtResource("1_e5kkg")
 description = "Keys to grandpa's mansion. I can use it to enter the mansion and access most of its rooms."

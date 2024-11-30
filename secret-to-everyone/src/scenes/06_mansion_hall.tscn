@@ -1,0 +1,172 @@
+[gd_scene load_steps=22 format=3 uid="uid://dhr21gnrqhtjf"]
+
+[ext_resource type="PackedScene" uid="uid://yqbjk2dtw1hk" path="res://src/environments/explorable_zone.tscn" id="1_s0ht6"]
+[ext_resource type="Texture2D" uid="uid://djin6l08366p4" path="res://src/assets/sprites/elements/positioned/mansion-hall/background.png" id="2_5yb2a"]
+[ext_resource type="Texture2D" uid="uid://dvoaejdolokyv" path="res://src/assets/sprites/elements/positioned/mansion-hall/carpet-1.png" id="3_dd20f"]
+[ext_resource type="Texture2D" uid="uid://d2g5x0iucd3ol" path="res://src/assets/sprites/elements/positioned/mansion-hall/carpet-4.png" id="4_n21xi"]
+[ext_resource type="Texture2D" uid="uid://hipy3lyqk30o" path="res://src/assets/sprites/elements/positioned/mansion-hall/table.png" id="5_572j6"]
+[ext_resource type="PackedScene" uid="uid://vhf0l0b53njs" path="res://src/entities/props/interactable_props/information_interactable/information_interactable_prop.tscn" id="5_nqrbd"]
+[ext_resource type="PackedScene" uid="uid://bvavsehs0u07j" path="res://src/entities/props/interactable_props/travel_item_interactable/travel_item_interactable.tscn" id="6_bdemu"]
+[ext_resource type="Texture2D" uid="uid://ba4mlif2dahfb" path="res://src/assets/sprites/elements/positioned/mansion-hall/veranda-door.png" id="6_gu8wy"]
+[ext_resource type="Texture2D" uid="uid://c6gqa87oca06a" path="res://src/assets/sprites/elements/positioned/mansion-hall/gramophone.png" id="6_m24u4"]
+[ext_resource type="Texture2D" uid="uid://dmivv7n8x7se6" path="res://src/assets/sprites/elements/positioned/mansion-hall/lamp-left.png" id="7_kp7v7"]
+[ext_resource type="Texture2D" uid="uid://da1iyjwn6nhyo" path="res://src/assets/sprites/elements/positioned/mansion-hall/lamp-right.png" id="8_nlc45"]
+[ext_resource type="PackedScene" uid="uid://dqwky4rusmijd" path="res://src/entities/props/interactable_props/travel_button_interactable/travel_button_interactable.tscn" id="8_xtbpp"]
+[ext_resource type="Texture2D" uid="uid://c767k57ppjouk" path="res://src/assets/sprites/elements/positioned/mansion-hall/painting-chess.png" id="9_w1ug2"]
+[ext_resource type="Texture2D" uid="uid://d1olanja2upix" path="res://src/assets/sprites/elements/positioned/mansion-hall/painting-man.png" id="10_mua7j"]
+[ext_resource type="Texture2D" uid="uid://c6e7wsptt86ix" path="res://src/assets/sprites/elements/positioned/mansion-hall/sofa.png" id="11_3xoqx"]
+[ext_resource type="Texture2D" uid="uid://sybuqko648r3" path="res://src/assets/sprites/elements/positioned/mansion-hall/sword-1.png" id="12_okty8"]
+[ext_resource type="Texture2D" uid="uid://juexddhigfca" path="res://src/assets/sprites/elements/positioned/mansion-hall/door-music-room.png" id="16_8mr1d"]
+[ext_resource type="Texture2D" uid="uid://cyw1bdnyvg2r0" path="res://src/assets/sprites/elements/positioned/mansion-hall/door-dining-hall.png" id="17_se6il"]
+[ext_resource type="PackedScene" uid="uid://byobhlskhpimu" path="res://src/entities/props/interactable_props/switch_interactable/switch_interactable.tscn" id="18_5382i"]
+[ext_resource type="Texture2D" uid="uid://bxmffvettqhfd" path="res://src/assets/sprites/elements/positioned/mansion-hall/painting-ship.png" id="19_yvuq4"]
+[ext_resource type="Texture2D" uid="uid://bmif35fm52bqd" path="res://src/assets/sprites/elements/positioned/mansion-hall/safe.png" id="20_dt42v"]
+
+[node name="Docks" instance=ExtResource("1_s0ht6")]
+
+[node name="MeshInstance3D" parent="." index="1"]
+visible = false
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D2" parent="." index="2"]
+transform = Transform3D(129.827, 0, 0, 0, -4.37114e-08, -79.2961, 0, 1, -3.46613e-06, -0.345512, 4.71619, -8.01931)
+metadata/_edit_lock_ = true
+
+[node name="Player" parent="." index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.91)
+min_clamp_x = -4.5
+max_clamp_x = 4.5
+
+[node name="PlayerCamera" parent="Player" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="Elements" type="Node3D" parent="." index="4"]
+
+[node name="Background" type="Node3D" parent="Elements" index="0"]
+
+[node name="Walls" type="Sprite3D" parent="Elements/Background" index="0"]
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("2_5yb2a")
+
+[node name="Props" type="Node3D" parent="Elements" index="1"]
+
+[node name="Carpet" type="Sprite3D" parent="Elements/Props" index="0"]
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("3_dd20f")
+
+[node name="Carpet2" type="Sprite3D" parent="Elements/Props" index="1"]
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("4_n21xi")
+
+[node name="Table" type="Sprite3D" parent="Elements/Props" index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.1)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("5_572j6")
+
+[node name="Gramophone" type="Sprite3D" parent="Elements/Props" index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.2)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("6_m24u4")
+
+[node name="Lamp" type="Sprite3D" parent="Elements/Props" index="4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.1)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("7_kp7v7")
+
+[node name="Lamp2" type="Sprite3D" parent="Elements/Props" index="5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.1)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("8_nlc45")
+
+[node name="Painting" type="Sprite3D" parent="Elements/Props" index="6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.1)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("9_w1ug2")
+
+[node name="Painting2" type="Sprite3D" parent="Elements/Props" index="7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.1)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("10_mua7j")
+
+[node name="Sofa" type="Sprite3D" parent="Elements/Props" index="8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.1)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("11_3xoqx")
+
+[node name="Swords" type="Sprite3D" parent="Elements/Props" index="9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.1)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("12_okty8")
+
+[node name="Interactables" type="Node3D" parent="Elements" index="2"]
+
+[node name="VerandaDoor" parent="Elements/Interactables" index="0" instance=ExtResource("5_nqrbd")]
+item_name = "Door to Veranda"
+item_description = "Grandpa has a pool in the back, but I don’t have time to swim around right now."
+
+[node name="CollisionShape3D" parent="Elements/Interactables/VerandaDoor" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0430725, 0.344463, 0.028332)
+
+[node name="Sprite3D" parent="Elements/Interactables/VerandaDoor" index="1"]
+texture = ExtResource("6_gu8wy")
+
+[node name="MusicRoomDoor" parent="Elements/Interactables" index="1" instance=ExtResource("6_bdemu")]
+scene_to_load = "08_music_room"
+
+[node name="CollisionShape3D" parent="Elements/Interactables/MusicRoomDoor" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.09799, 0.168638, -1.0431)
+
+[node name="Sprite3D" parent="Elements/Interactables/MusicRoomDoor" index="1"]
+texture = ExtResource("16_8mr1d")
+
+[node name="DinerDoor" parent="Elements/Interactables" index="2" instance=ExtResource("6_bdemu")]
+scene_to_load = "07_mansion_diner"
+
+[node name="CollisionShape3D" parent="Elements/Interactables/DinerDoor" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.39779, 0.168638, -1.0431)
+
+[node name="Sprite3D" parent="Elements/Interactables/DinerDoor" index="1"]
+texture = ExtResource("17_se6il")
+
+[node name="ShipPainting" parent="Elements/Interactables" index="3" node_paths=PackedStringArray("target") instance=ExtResource("18_5382i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.01)
+target = NodePath("../Safe")
+
+[node name="CollisionShape3D" parent="Elements/Interactables/ShipPainting" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0573368, 2.22827, 0.152588)
+
+[node name="Sprite3D" parent="Elements/Interactables/ShipPainting" index="1"]
+texture = ExtResource("19_yvuq4")
+
+[node name="Safe" type="Sprite3D" parent="Elements/Interactables" index="4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.01)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("20_dt42v")
+
+[node name="Buttons" type="Node3D" parent="Elements" index="3"]
+
+[node name="MansionHall" parent="Elements/Buttons" index="0" instance=ExtResource("8_xtbpp")]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, -2.75666, 0.02)
+scene_to_load = "05_mansion_gate"
+
+[node name="Label3D" parent="Elements/Buttons/MansionHall/Sprite3D" index="0"]
+text = "Go Back"
+
+[editable path="Player"]
+[editable path="Elements/Interactables/VerandaDoor"]
+[editable path="Elements/Interactables/MusicRoomDoor"]
+[editable path="Elements/Interactables/DinerDoor"]
+[editable path="Elements/Interactables/ShipPainting"]
+[editable path="Elements/Buttons/MansionHall"]

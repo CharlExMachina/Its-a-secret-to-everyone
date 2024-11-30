@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="InventoryItem" load_steps=2 format=3 uid="uid://du53efac13yt8"]
+
+[ext_resource type="Script" path="res://src/core/inventory/inventory_item.gd" id="2_oraeg"]
+
+[resource]
+script = ExtResource("2_oraeg")
+item_name = "Golden Horseshoe"
+description = "Maybe it will bring me luck."

@@ -1,0 +1,144 @@
+[gd_scene load_steps=18 format=3 uid="uid://bnnhl03a7uf5u"]
+
+[ext_resource type="PackedScene" uid="uid://yqbjk2dtw1hk" path="res://src/environments/explorable_zone.tscn" id="1_b0edc"]
+[ext_resource type="Texture2D" uid="uid://baj0i12u14j23" path="res://src/assets/sprites/elements/positioned/music-room/background.png" id="2_kh426"]
+[ext_resource type="Texture2D" uid="uid://bm0ei2adqgq46" path="res://src/assets/sprites/elements/positioned/music-room/bookshelf.png" id="3_r6te3"]
+[ext_resource type="Texture2D" uid="uid://gmr3sa4o2f6c" path="res://src/assets/sprites/elements/positioned/music-room/cabinet.png" id="4_q8nmi"]
+[ext_resource type="Texture2D" uid="uid://bcbgpj1ohg673" path="res://src/assets/sprites/elements/positioned/music-room/carpet.png" id="5_67n0s"]
+[ext_resource type="Texture2D" uid="uid://cnkffnnqir5yr" path="res://src/assets/sprites/elements/positioned/music-room/drapes.png" id="6_3rv7b"]
+[ext_resource type="PackedScene" uid="uid://bvavsehs0u07j" path="res://src/entities/props/interactable_props/travel_item_interactable/travel_item_interactable.tscn" id="6_mm6og"]
+[ext_resource type="Texture2D" uid="uid://dfs2p5xc2vdhg" path="res://src/assets/sprites/elements/positioned/music-room/lamp.png" id="7_1lnjq"]
+[ext_resource type="Texture2D" uid="uid://c7v80y02x6l1q" path="res://src/assets/sprites/elements/positioned/music-room/painting-brain.png" id="8_4oml0"]
+[ext_resource type="PackedScene" uid="uid://dqwky4rusmijd" path="res://src/entities/props/interactable_props/travel_button_interactable/travel_button_interactable.tscn" id="8_n7atw"]
+[ext_resource type="Texture2D" uid="uid://dkubtxck0awu1" path="res://src/assets/sprites/elements/positioned/music-room/painting-couple.png" id="9_soek8"]
+[ext_resource type="Texture2D" uid="uid://buui2k0rn13ih" path="res://src/assets/sprites/elements/positioned/music-room/painting-horse.png" id="10_rh3ae"]
+[ext_resource type="Texture2D" uid="uid://3yq2f82sscbo" path="res://src/assets/sprites/elements/positioned/music-room/painting-portrait.png" id="11_h2ueq"]
+[ext_resource type="Texture2D" uid="uid://x5apshpr0f3c" path="res://src/assets/sprites/elements/positioned/music-room/piano.png" id="12_xur16"]
+[ext_resource type="Texture2D" uid="uid://lj66rc31fx23" path="res://src/assets/sprites/elements/positioned/music-room/piano-chair.png" id="13_bqooy"]
+[ext_resource type="Texture2D" uid="uid://bkkingqqolgic" path="res://src/assets/sprites/elements/positioned/music-room/sofa-2.png" id="14_2hn8l"]
+[ext_resource type="Texture2D" uid="uid://cex3ixc2td82e" path="res://src/assets/sprites/elements/positioned/music-room/fireplace.png" id="16_denld"]
+
+[node name="Docks" instance=ExtResource("1_b0edc")]
+
+[node name="MeshInstance3D" parent="." index="1"]
+visible = false
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D2" parent="." index="2"]
+transform = Transform3D(129.827, 0, 0, 0, -4.37114e-08, -79.2961, 0, 1, -3.46613e-06, -0.345512, 4.71619, -8.01931)
+metadata/_edit_lock_ = true
+
+[node name="Player" parent="." index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.91)
+min_clamp_x = -2.4
+max_clamp_x = 2.4
+
+[node name="PlayerCamera" parent="Player" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="Elements" type="Node3D" parent="." index="4"]
+
+[node name="Background" type="Node3D" parent="Elements" index="0"]
+
+[node name="Walls" type="Sprite3D" parent="Elements/Background" index="0"]
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("2_kh426")
+
+[node name="Props" type="Node3D" parent="Elements" index="1"]
+
+[node name="Bookshelf" type="Sprite3D" parent="Elements/Props" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.01)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("3_r6te3")
+
+[node name="Cabinet" type="Sprite3D" parent="Elements/Props" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.01)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("4_q8nmi")
+
+[node name="Carpet" type="Sprite3D" parent="Elements/Props" index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.01)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("5_67n0s")
+
+[node name="Drapes" type="Sprite3D" parent="Elements/Props" index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.01)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("6_3rv7b")
+
+[node name="Lamp" type="Sprite3D" parent="Elements/Props" index="4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.02)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("7_1lnjq")
+
+[node name="Painting" type="Sprite3D" parent="Elements/Props" index="5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.02)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("8_4oml0")
+
+[node name="Painting2" type="Sprite3D" parent="Elements/Props" index="6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.02)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("9_soek8")
+
+[node name="Painting3" type="Sprite3D" parent="Elements/Props" index="7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.02)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("10_rh3ae")
+
+[node name="Painting4" type="Sprite3D" parent="Elements/Props" index="8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.02)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("11_h2ueq")
+
+[node name="Piano" type="Sprite3D" parent="Elements/Props" index="9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.02)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("12_xur16")
+
+[node name="Chair" type="Sprite3D" parent="Elements/Props" index="10"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.02)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("13_bqooy")
+
+[node name="Sofa" type="Sprite3D" parent="Elements/Props" index="11"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.02)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("14_2hn8l")
+
+[node name="Interactables" type="Node3D" parent="Elements" index="2"]
+
+[node name="Fireplace" parent="Elements/Interactables" index="0" instance=ExtResource("6_mm6og")]
+scene_to_load = "18_fireplace"
+
+[node name="CollisionShape3D" parent="Elements/Interactables/Fireplace" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.14122, -1.0172, 0.0629883)
+
+[node name="Sprite3D" parent="Elements/Interactables/Fireplace" index="1"]
+texture = ExtResource("16_denld")
+
+[node name="Buttons" type="Node3D" parent="Elements" index="3"]
+
+[node name="MansionHall" parent="Elements/Buttons" index="0" instance=ExtResource("8_n7atw")]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, -2.75666, 0.02)
+scene_to_load = "06_mansion_hall"
+
+[node name="Label3D" parent="Elements/Buttons/MansionHall/Sprite3D" index="0"]
+text = "Go Back"
+
+[editable path="Player"]
+[editable path="Elements/Interactables/Fireplace"]
+[editable path="Elements/Buttons/MansionHall"]

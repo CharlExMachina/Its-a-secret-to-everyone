@@ -1,0 +1,190 @@
+[gd_scene load_steps=23 format=3 uid="uid://c7t8hhqc7hobp"]
+
+[ext_resource type="PackedScene" uid="uid://yqbjk2dtw1hk" path="res://src/environments/explorable_zone.tscn" id="1_2m2sq"]
+[ext_resource type="Texture2D" uid="uid://dl2mqq8iq2wov" path="res://src/assets/sprites/elements/positioned/apothecary-room/background.png" id="2_0hdv2"]
+[ext_resource type="Texture2D" uid="uid://conklx3ugpo7i" path="res://src/assets/sprites/elements/positioned/apothecary-room/book.png" id="3_a5thc"]
+[ext_resource type="Texture2D" uid="uid://c8utsr876k2hv" path="res://src/assets/sprites/elements/positioned/apothecary-room/bottle-4.png" id="4_6t20d"]
+[ext_resource type="Texture2D" uid="uid://fytajiupida6" path="res://src/assets/sprites/elements/positioned/apothecary-room/candles-1.png" id="5_pxjtv"]
+[ext_resource type="PackedScene" uid="uid://bvavsehs0u07j" path="res://src/entities/props/interactable_props/travel_item_interactable/travel_item_interactable.tscn" id="6_2ymw3"]
+[ext_resource type="Texture2D" uid="uid://dtjiv5jergcwa" path="res://src/assets/sprites/elements/positioned/apothecary-room/candles-2.png" id="6_716q3"]
+[ext_resource type="Texture2D" uid="uid://c2mlkn0cw2dal" path="res://src/assets/sprites/elements/positioned/apothecary-room/drawer-center-closed.png" id="7_lb6u7"]
+[ext_resource type="Texture2D" uid="uid://cy5q3e0fx8nql" path="res://src/assets/sprites/elements/positioned/apothecary-room/drawer-left-closed.png" id="8_bmtr4"]
+[ext_resource type="PackedScene" uid="uid://dqwky4rusmijd" path="res://src/entities/props/interactable_props/travel_button_interactable/travel_button_interactable.tscn" id="8_f5kjj"]
+[ext_resource type="Texture2D" uid="uid://d3cdofg2cei1p" path="res://src/assets/sprites/elements/positioned/apothecary-room/drawer-right-closed.png" id="9_3k4y6"]
+[ext_resource type="Texture2D" uid="uid://dpqwdut43y8kg" path="res://src/assets/sprites/elements/positioned/apothecary-room/drawing-1.png" id="10_fo4o5"]
+[ext_resource type="Texture2D" uid="uid://dkhkj5djxwlm2" path="res://src/assets/sprites/elements/positioned/apothecary-room/mannequin-1.png" id="11_phocv"]
+[ext_resource type="Texture2D" uid="uid://hvbecvldau6r" path="res://src/assets/sprites/elements/positioned/apothecary-room/shelf-1.png" id="12_w5cwf"]
+[ext_resource type="Texture2D" uid="uid://dg1wcf4umdnt2" path="res://src/assets/sprites/elements/positioned/apothecary-room/shelf-2.png" id="13_gstyt"]
+[ext_resource type="Texture2D" uid="uid://bwgq677fdhm7q" path="res://src/assets/sprites/elements/positioned/apothecary-room/shelf-3.png" id="14_76yfn"]
+[ext_resource type="Texture2D" uid="uid://fygjapfdrk7s" path="res://src/assets/sprites/elements/positioned/apothecary-room/table.png" id="15_5hyrg"]
+[ext_resource type="PackedScene" uid="uid://vhf0l0b53njs" path="res://src/entities/props/interactable_props/information_interactable/information_interactable_prop.tscn" id="16_c003v"]
+[ext_resource type="Texture2D" uid="uid://b182kdm3vde5" path="res://src/assets/sprites/elements/positioned/apothecary-room/table-notes.png" id="17_bhgdw"]
+[ext_resource type="Texture2D" uid="uid://bnuvdfa0pskun" path="res://src/assets/sprites/elements/positioned/apothecary-room/wall-notes-1.png" id="18_n7oqk"]
+[ext_resource type="Texture2D" uid="uid://yu11n8ceqk2v" path="res://src/assets/sprites/elements/positioned/apothecary-room/wall-notes-2.png" id="19_rbg5t"]
+[ext_resource type="Texture2D" uid="uid://dhdspg5v23k73" path="res://src/assets/sprites/elements/positioned/apothecary-room/chest-1.png" id="21_8vyar"]
+
+[node name="Docks" instance=ExtResource("1_2m2sq")]
+
+[node name="MeshInstance3D" parent="." index="1"]
+visible = false
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D2" parent="." index="2"]
+transform = Transform3D(129.827, 0, 0, 0, -4.37114e-08, -79.2961, 0, 1, -3.46613e-06, -0.345512, 4.71619, -8.01931)
+metadata/_edit_lock_ = true
+
+[node name="Player" parent="." index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.91)
+
+[node name="PlayerCamera" parent="Player" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="Elements" type="Node3D" parent="." index="4"]
+
+[node name="Background" type="Node3D" parent="Elements" index="0"]
+
+[node name="Walls" type="Sprite3D" parent="Elements/Background" index="0"]
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("2_0hdv2")
+
+[node name="Props" type="Node3D" parent="Elements" index="1"]
+
+[node name="Book" type="Sprite3D" parent="Elements/Props" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.02)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("3_a5thc")
+
+[node name="Bottles" type="Sprite3D" parent="Elements/Props" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.02)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("4_6t20d")
+
+[node name="Candles" type="Sprite3D" parent="Elements/Props" index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.02)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("5_pxjtv")
+
+[node name="Candles2" type="Sprite3D" parent="Elements/Props" index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.02)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("6_716q3")
+
+[node name="Drawer" type="Sprite3D" parent="Elements/Props" index="4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.02)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("7_lb6u7")
+
+[node name="Drawer2" type="Sprite3D" parent="Elements/Props" index="5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.02)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("8_bmtr4")
+
+[node name="Drawer3" type="Sprite3D" parent="Elements/Props" index="6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.02)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("9_3k4y6")
+
+[node name="Drawing" type="Sprite3D" parent="Elements/Props" index="7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.02)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("10_fo4o5")
+
+[node name="Mannequin" type="Sprite3D" parent="Elements/Props" index="8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.02)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("11_phocv")
+
+[node name="Shelf" type="Sprite3D" parent="Elements/Props" index="9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.02)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("12_w5cwf")
+
+[node name="Shelf2" type="Sprite3D" parent="Elements/Props" index="10"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.02)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("13_gstyt")
+
+[node name="Shelf3" type="Sprite3D" parent="Elements/Props" index="11"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.02)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("14_76yfn")
+
+[node name="Table" type="Sprite3D" parent="Elements/Props" index="12"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.01)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("15_5hyrg")
+
+[node name="Interactables" type="Node3D" parent="Elements" index="2"]
+
+[node name="Notes" parent="Elements/Interactables" index="0" instance=ExtResource("16_c003v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.02)
+item_name = "Old Notes"
+item_description = "Hmm... it's some weird recipe."
+
+[node name="CollisionShape3D" parent="Elements/Interactables/Notes" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.07856, -0.646287, 0)
+
+[node name="Sprite3D" parent="Elements/Interactables/Notes" index="1"]
+texture = ExtResource("17_bhgdw")
+
+[node name="Notes2" parent="Elements/Interactables" index="1" instance=ExtResource("16_c003v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.02)
+item_name = "Dated Article"
+item_description = "Annika T. awarded for her work in herbal preservation, credited with crafting remedies still in use today. Some claim her knowledge stems from ancient, forbidden texts."
+
+[node name="CollisionShape3D" parent="Elements/Interactables/Notes2" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.67443, 0.291072, 0)
+
+[node name="Sprite3D" parent="Elements/Interactables/Notes2" index="1"]
+texture = ExtResource("18_n7oqk")
+
+[node name="Notes3" parent="Elements/Interactables" index="2" instance=ExtResource("16_c003v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.02)
+item_name = "Old Notes"
+item_description = "I can't read this. The writing has faded..."
+
+[node name="CollisionShape3D" parent="Elements/Interactables/Notes3" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.09595, 0.352304, 0)
+
+[node name="Sprite3D" parent="Elements/Interactables/Notes3" index="1"]
+texture = ExtResource("19_rbg5t")
+
+[node name="Chest" parent="Elements/Interactables" index="3" instance=ExtResource("6_2ymw3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.2)
+scene_to_load = "19_chest"
+
+[node name="CollisionShape3D" parent="Elements/Interactables/Chest" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.02007, -1.978, 0.0629883)
+
+[node name="Sprite3D" parent="Elements/Interactables/Chest" index="1"]
+texture = ExtResource("21_8vyar")
+
+[node name="Buttons" type="Node3D" parent="Elements" index="3"]
+
+[node name="Fireplace" parent="Elements/Buttons" index="0" instance=ExtResource("8_f5kjj")]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, -2.637, 0.02)
+scene_to_load = "18_fireplace"
+
+[node name="Label3D" parent="Elements/Buttons/Fireplace/Sprite3D" index="0"]
+text = "Go Back"
+
+[editable path="Player"]
+[editable path="Elements/Interactables/Notes"]
+[editable path="Elements/Interactables/Notes2"]
+[editable path="Elements/Interactables/Notes3"]
+[editable path="Elements/Interactables/Chest"]
+[editable path="Elements/Buttons/Fireplace"]

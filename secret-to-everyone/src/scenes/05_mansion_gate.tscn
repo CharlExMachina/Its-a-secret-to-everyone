@@ -1,0 +1,96 @@
+[gd_scene load_steps=11 format=3 uid="uid://chfw1eb7e0loa"]
+
+[ext_resource type="PackedScene" uid="uid://yqbjk2dtw1hk" path="res://src/environments/explorable_zone.tscn" id="1_ash46"]
+[ext_resource type="Texture2D" uid="uid://btqovbgkmrlf" path="res://src/assets/sprites/elements/positioned/mansion-gate/floor.png" id="2_87sc7"]
+[ext_resource type="Texture2D" uid="uid://cei0ljqg5llpu" path="res://src/assets/sprites/elements/cropped/repeating-backgrounds/repeat-clouds.png" id="3_4o7j3"]
+[ext_resource type="Texture2D" uid="uid://by4h3b3u8vybs" path="res://src/assets/sprites/elements/positioned/mansion-gate/gate-open.png" id="3_sojrc"]
+[ext_resource type="PackedScene" uid="uid://byobhlskhpimu" path="res://src/entities/props/interactable_props/switch_interactable/switch_interactable.tscn" id="4_s6ohr"]
+[ext_resource type="Texture2D" uid="uid://cqac7qhb1rf61" path="res://src/assets/sprites/elements/positioned/mansion-gate/gate-closed.png" id="5_1qiqw"]
+[ext_resource type="PackedScene" uid="uid://bvavsehs0u07j" path="res://src/entities/props/interactable_props/travel_item_interactable/travel_item_interactable.tscn" id="6_pw32y"]
+[ext_resource type="Texture2D" uid="uid://5gj3nlh7u1tb" path="res://src/assets/sprites/elements/positioned/mansion-gate/mansion.png" id="7_7jvp1"]
+[ext_resource type="Resource" uid="uid://h7qjfi8307bc" path="res://src/key_items/mansion_keys.tres" id="7_qkbmu"]
+[ext_resource type="PackedScene" uid="uid://dqwky4rusmijd" path="res://src/entities/props/interactable_props/travel_button_interactable/travel_button_interactable.tscn" id="8_8hlt8"]
+
+[node name="Docks" instance=ExtResource("1_ash46")]
+
+[node name="MeshInstance3D" parent="." index="1"]
+visible = false
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D2" parent="." index="2"]
+transform = Transform3D(129.827, 0, 0, 0, -4.37114e-08, -79.2961, 0, 1, -3.46613e-06, -0.345512, 4.71619, -8.01931)
+metadata/_edit_lock_ = true
+
+[node name="Player" parent="." index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.91)
+
+[node name="PlayerCamera" parent="Player" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="Elements" type="Node3D" parent="." index="4"]
+
+[node name="Background" type="Node3D" parent="Elements" index="0"]
+
+[node name="Road" type="Sprite3D" parent="Elements/Background" index="0"]
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("2_87sc7")
+
+[node name="Clouds" type="Sprite3D" parent="Elements/Background" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.86059, 0)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("3_4o7j3")
+
+[node name="GateOpen" type="Sprite3D" parent="Elements/Background" index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.01)
+visible = false
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("3_sojrc")
+
+[node name="Interactables" type="Node3D" parent="Elements" index="1"]
+
+[node name="GateClosed" parent="Elements/Interactables" index="0" node_paths=PackedStringArray("target") instance=ExtResource("4_s6ohr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.01)
+target = NodePath("../../Background/GateOpen")
+required_item = ExtResource("7_qkbmu")
+
+[node name="CollisionShape3D" parent="Elements/Interactables/GateClosed" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.253074, -0.0644531, 0.0629883)
+
+[node name="Sprite3D" parent="Elements/Interactables/GateClosed" index="1"]
+texture = ExtResource("5_1qiqw")
+
+[node name="Mansion" parent="Elements/Interactables" index="1" instance=ExtResource("6_pw32y")]
+scene_to_load = "06_mansion_hall"
+required_item = ExtResource("7_qkbmu")
+requirement_message = "It's locked..."
+
+[node name="CollisionShape3D" parent="Elements/Interactables/Mansion" index="0"]
+transform = Transform3D(0.973211, 0, -0.229914, 0, 1, 0, 0.229914, 0, 0.973211, -0.0258017, -1.03158, 0.167859)
+
+[node name="Sprite3D" parent="Elements/Interactables/Mansion" index="1"]
+texture = ExtResource("7_7jvp1")
+
+[node name="Buttons" type="Node3D" parent="Elements" index="2"]
+
+[node name="Ranch" parent="Elements/Buttons" index="0" instance=ExtResource("8_8hlt8")]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -4.00079, -2.75666, 0.02)
+scene_to_load = "10_ranch_gate"
+
+[node name="Label3D" parent="Elements/Buttons/Ranch/Sprite3D" index="0"]
+text = "Go to the Ranch"
+
+[node name="Crossroads" parent="Elements/Buttons" index="1" instance=ExtResource("8_8hlt8")]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 3.94054, -2.75666, 0.02)
+scene_to_load = "04_crossroads"
+
+[node name="Label3D" parent="Elements/Buttons/Crossroads/Sprite3D" index="0"]
+text = "Go to the Crossroads"
+
+[editable path="Player"]
+[editable path="Elements/Interactables/GateClosed"]
+[editable path="Elements/Interactables/Mansion"]
+[editable path="Elements/Buttons/Ranch"]
+[editable path="Elements/Buttons/Crossroads"]

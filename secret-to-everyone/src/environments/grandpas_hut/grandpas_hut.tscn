@@ -66,7 +66,6 @@ metadata/_edit_group_ = true
 
 [node name="Sprite3D" parent="Interactables/OarItem" index="0"]
 transform = Transform3D(0.531244, 0, 0, 0, 0.531244, 0, 0, 0, 0.531244, 0, 0, 0)
-alpha_cut = 1
 texture = ExtResource("2_nqfo6")
 
 [node name="BedProp" parent="Interactables" index="1" instance=ExtResource("5_3b15k")]
@@ -80,7 +79,6 @@ shape = SubResource("BoxShape3D_rm6fh")
 
 [node name="Sprite3D" parent="Interactables/BedProp" index="1"]
 transform = Transform3D(1.27519, 0, 0, 0, 1.27519, 0, 0, 0, 3.77226, 0, 0.645455, 0)
-alpha_cut = 1
 texture = ExtResource("7_qjqvm")
 
 [node name="CoatProp" parent="Interactables" index="2" instance=ExtResource("5_3b15k")]

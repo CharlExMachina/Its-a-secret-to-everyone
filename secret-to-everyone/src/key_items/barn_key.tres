@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="InventoryItem" load_steps=3 format=3 uid="uid://h57u6slrt01t"]
+
+[ext_resource type="Texture2D" uid="uid://b647ysv8mn5ec" path="res://src/assets/sprites/elements/cropped/beachside-bar/wall-keys-1.png" id="1_1g8li"]
+[ext_resource type="Script" path="res://src/core/inventory/inventory_item.gd" id="2_bp7du"]
+
+[resource]
+script = ExtResource("2_bp7du")
+item_name = "Barn Key"
+item_sprite = ExtResource("1_1g8li")
+description = "A big, rusty key that’s seen better days. It has a keychain with the letter \"A\" on it."

@@ -1,6 +1,6 @@
 extends Area3D
 
-@export var scene_to_load: PackedScene
+@export var scene_to_load: String
 
 var is_in_focus: bool = false
 
@@ -8,7 +8,8 @@ var is_in_focus: bool = false
 
 func _on_input_event(camera: Node, event: InputEvent, event_position: Vector3, normal: Vector3, shape_idx: int) -> void:
 	if is_in_focus and event is InputEventMouseButton and event.is_action_released("pan_view"):
-		get_tree().change_scene_to_packed.bind(scene_to_load).call_deferred()
+		var scene: String = "res://src/scenes/" + scene_to_load + ".tscn"
+		get_tree().change_scene_to_file.bind(scene).call_deferred()
 
 
 func _on_mouse_entered() -> void:
@@ -18,7 +19,7 @@ func _on_mouse_entered() -> void:
 	var tween = get_tree().create_tween()
 	var sprite = $Sprite3D
 
-	tween.tween_property(sprite, "scale", Vector3(1.8, 1.8, 1.8), 0.2).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
+	tween.tween_property(sprite, "scale", Vector3(1.2, 1.2, 1.2), 0.2).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
 	tween.play()
 
 
@@ -30,5 +31,5 @@ func _on_mouse_exited() -> void:
 	var tween = get_tree().create_tween()
 	var sprite = $Sprite3D
 
-	tween.tween_property(sprite, "scale", Vector3(1.5, 1.5, 1), 0.2)
+	tween.tween_property(sprite, "scale", Vector3(1, 1, 1), 0.2)
 	tween.play()

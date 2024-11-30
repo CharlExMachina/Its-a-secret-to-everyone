@@ -13,8 +13,6 @@ func _ready() -> void:
 	if ProgressManager.has_item(item):
 		queue_free()
 
-	$Sprite3D.texture = item.item_sprite
-
 
 func _on_input_event(camera: Node, event: InputEvent, event_position: Vector3, normal: Vector3, shape_idx: int) -> void:
 	if event is InputEventMouseMotion:

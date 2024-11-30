@@ -1,0 +1,168 @@
+[gd_scene load_steps=22 format=3 uid="uid://dg3f57shyx3s6"]
+
+[ext_resource type="PackedScene" uid="uid://yqbjk2dtw1hk" path="res://src/environments/explorable_zone.tscn" id="1_plp64"]
+[ext_resource type="Texture2D" uid="uid://bljon8fagq0xd" path="res://src/assets/sprites/elements/positioned/beachside-bar/background-horizon-line.png" id="2_1ux3n"]
+[ext_resource type="Texture2D" uid="uid://c35dbpnc7sa4a" path="res://src/assets/sprites/elements/positioned/beachside-bar/background-shore-line.png" id="3_ds4i7"]
+[ext_resource type="Texture2D" uid="uid://b7fycin07ch0j" path="res://src/assets/sprites/elements/positioned/beachside-bar/bar.png" id="4_dcj03"]
+[ext_resource type="Texture2D" uid="uid://ca3a67uqns2gn" path="res://src/assets/sprites/elements/positioned/beachside-bar/background-sand.png" id="4_jonpi"]
+[ext_resource type="Texture2D" uid="uid://3kds60n3p81m" path="res://src/assets/sprites/elements/positioned/beachside-bar/bar-complete.png" id="5_6kjci"]
+[ext_resource type="Texture2D" uid="uid://bo05gemthw1tw" path="res://src/assets/sprites/elements/positioned/beachside-bar/background-waves.png" id="5_kqmkj"]
+[ext_resource type="Texture2D" uid="uid://efa8afwgq0h5" path="res://src/assets/sprites/elements/positioned/beachside-bar/chair-1.png" id="6_cvhuo"]
+[ext_resource type="Texture2D" uid="uid://c8o7j2b23l4jp" path="res://src/assets/sprites/elements/positioned/beachside-bar/background-birds.png" id="6_susc0"]
+[ext_resource type="Texture2D" uid="uid://kf74jpkmlexx" path="res://src/assets/sprites/elements/positioned/beachside-bar/chair-2.png" id="7_0ea2e"]
+[ext_resource type="Texture2D" uid="uid://dia3w03f3jgro" path="res://src/assets/sprites/elements/positioned/beachside-bar/background-clouds.png" id="7_q0wi6"]
+[ext_resource type="Texture2D" uid="uid://ct7jbk3ftbskv" path="res://src/assets/sprites/elements/positioned/beachside-bar/lamp-left.png" id="8_3btk1"]
+[ext_resource type="PackedScene" uid="uid://dqwky4rusmijd" path="res://src/entities/props/interactable_props/travel_button_interactable/travel_button_interactable.tscn" id="8_5rkej"]
+[ext_resource type="Texture2D" uid="uid://bnt3an6a0kk8c" path="res://src/assets/sprites/elements/positioned/beachside-bar/lamp-center.png" id="9_8q2s3"]
+[ext_resource type="Texture2D" uid="uid://c830gw3s8m0hn" path="res://src/assets/sprites/elements/positioned/beachside-bar/lamp-right.png" id="10_8xuxg"]
+[ext_resource type="Texture2D" uid="uid://cugyxj1j8gvg1" path="res://src/assets/sprites/elements/positioned/beachside-bar/sun.png" id="11_7j4a8"]
+[ext_resource type="PackedScene" uid="uid://db8yh7nc2dxqn" path="res://src/entities/props/interactable_props/pickup_interactable/pickup_interactable.tscn" id="12_f6321"]
+[ext_resource type="Resource" uid="uid://h7qjfi8307bc" path="res://src/key_items/mansion_keys.tres" id="13_f1yrf"]
+[ext_resource type="Texture2D" uid="uid://vmwk0j184cpo" path="res://src/assets/sprites/elements/positioned/beachside-bar/wall-keys-2.png" id="14_hm5jm"]
+[ext_resource type="PackedScene" uid="uid://vhf0l0b53njs" path="res://src/entities/props/interactable_props/information_interactable/information_interactable_prop.tscn" id="15_3lbnx"]
+[ext_resource type="Texture2D" uid="uid://c661nrk87it24" path="res://src/assets/sprites/elements/positioned/beachside-bar/scribble-2.png" id="16_mffew"]
+
+[node name="Docks" instance=ExtResource("1_plp64")]
+
+[node name="MeshInstance3D" parent="." index="1"]
+visible = false
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D2" parent="." index="2"]
+transform = Transform3D(129.827, 0, 0, 0, -4.37114e-08, -79.2961, 0, 1, -3.46613e-06, -0.345512, 4.71619, -8.01931)
+metadata/_edit_lock_ = true
+
+[node name="Player" parent="." index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.91)
+
+[node name="PlayerCamera" parent="Player" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="Elements" type="Node3D" parent="." index="4"]
+
+[node name="Background" type="Node3D" parent="Elements" index="0"]
+
+[node name="Horizon" type="Sprite3D" parent="Elements/Background" index="0"]
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("2_1ux3n")
+
+[node name="ShoreLine" type="Sprite3D" parent="Elements/Background" index="1"]
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("3_ds4i7")
+
+[node name="Sand" type="Sprite3D" parent="Elements/Background" index="2"]
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("4_jonpi")
+
+[node name="Waves" type="Sprite3D" parent="Elements/Background" index="3"]
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("5_kqmkj")
+
+[node name="Birds" type="Sprite3D" parent="Elements/Background" index="4"]
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("6_susc0")
+
+[node name="Clouds" type="Sprite3D" parent="Elements/Background" index="5"]
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("7_q0wi6")
+
+[node name="Props" type="Node3D" parent="Elements" index="1"]
+
+[node name="Bar" type="Sprite3D" parent="Elements/Props" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.01)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("4_dcj03")
+
+[node name="BarItems" type="Sprite3D" parent="Elements/Props" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.01)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("5_6kjci")
+
+[node name="Chair" type="Sprite3D" parent="Elements/Props" index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.01)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("6_cvhuo")
+
+[node name="Chair2" type="Sprite3D" parent="Elements/Props" index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.02)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("7_0ea2e")
+
+[node name="Lamp" type="Sprite3D" parent="Elements/Props" index="4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.02)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("8_3btk1")
+
+[node name="Lamp2" type="Sprite3D" parent="Elements/Props" index="5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.02)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("9_8q2s3")
+
+[node name="Lamp3" type="Sprite3D" parent="Elements/Props" index="6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.02)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("10_8xuxg")
+
+[node name="Sun" type="Sprite3D" parent="Elements/Props" index="7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.01)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("11_7j4a8")
+
+[node name="Interactables" type="Node3D" parent="Elements" index="2"]
+
+[node name="MansionKeys" parent="Elements/Interactables" index="0" instance=ExtResource("12_f6321")]
+item = ExtResource("13_f1yrf")
+
+[node name="Sprite3D" parent="Elements/Interactables/MansionKeys" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.02)
+texture = ExtResource("14_hm5jm")
+
+[node name="CollisionShape3D" parent="Elements/Interactables/MansionKeys" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.84055, 0.52009, 0)
+
+[node name="Scribble" parent="Elements/Interactables" index="1" instance=ExtResource("15_3lbnx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.02)
+item_name = "Old Scribble"
+item_description = "I can't read it. The sand has damaged it too much."
+
+[node name="CollisionShape3D" parent="Elements/Interactables/Scribble" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.957446, 1.55556, 0)
+
+[node name="Sprite3D" parent="Elements/Interactables/Scribble" index="1"]
+texture = ExtResource("16_mffew")
+
+[node name="Buttons" type="Node3D" parent="Elements" index="3"]
+
+[node name="RanchGate" parent="Elements/Buttons" index="0" instance=ExtResource("8_5rkej")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.644672, -2.539, 0.3)
+scene_to_load = "10_ranch_gate"
+
+[node name="Label3D" parent="Elements/Buttons/RanchGate/Sprite3D" index="0"]
+text = "Go to the Ranch"
+
+[node name="Crossroads" parent="Elements/Buttons" index="1" instance=ExtResource("8_5rkej")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 3.9346, -1.78513, 0.3)
+scene_to_load = "04_crossroads"
+
+[node name="Label3D" parent="Elements/Buttons/Crossroads/Sprite3D" index="0"]
+text = "Go to the Crossroads"
+
+[editable path="Player"]
+[editable path="Elements/Interactables/MansionKeys"]
+[editable path="Elements/Interactables/Scribble"]
+[editable path="Elements/Buttons/RanchGate"]
+[editable path="Elements/Buttons/Crossroads"]

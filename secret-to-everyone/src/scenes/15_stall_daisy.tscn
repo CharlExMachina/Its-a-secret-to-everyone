@@ -1,0 +1,161 @@
+[gd_scene load_steps=16 format=3 uid="uid://ch1yityvrcvta"]
+
+[ext_resource type="PackedScene" uid="uid://yqbjk2dtw1hk" path="res://src/environments/explorable_zone.tscn" id="1_wyljl"]
+[ext_resource type="Texture2D" uid="uid://clm2med4fn3v0" path="res://src/assets/sprites/elements/positioned/stall-general/background-stall.png" id="2_lko6d"]
+[ext_resource type="Texture2D" uid="uid://c2g6y4vyq1rhr" path="res://src/assets/sprites/elements/positioned/stall-general/walls-1.png" id="3_hpx4l"]
+[ext_resource type="PackedScene" uid="uid://vhf0l0b53njs" path="res://src/entities/props/interactable_props/information_interactable/information_interactable_prop.tscn" id="4_fk2ta"]
+[ext_resource type="Texture2D" uid="uid://bq8fcqoltji6h" path="res://src/assets/sprites/elements/positioned/stall-daisy/scribble-1.png" id="4_wwcb0"]
+[ext_resource type="Texture2D" uid="uid://bv4qn7twa6ofp" path="res://src/assets/sprites/elements/positioned/stall-daisy/box-1.png" id="6_grvfg"]
+[ext_resource type="PackedScene" uid="uid://byobhlskhpimu" path="res://src/entities/props/interactable_props/switch_interactable/switch_interactable.tscn" id="6_y3ylq"]
+[ext_resource type="Texture2D" uid="uid://bgycqv06fm4ks" path="res://src/assets/sprites/elements/positioned/stall-daisy/bucket-list-1.png" id="7_g0qvi"]
+[ext_resource type="Resource" uid="uid://dc4m38lx62ro3" path="res://src/key_items/rake.tres" id="7_i5xep"]
+[ext_resource type="Texture2D" uid="uid://bp72hpqtuolrf" path="res://src/assets/sprites/elements/positioned/stall-general/floor-hay-1.png" id="8_1jkch"]
+[ext_resource type="PackedScene" uid="uid://dqwky4rusmijd" path="res://src/entities/props/interactable_props/travel_button_interactable/travel_button_interactable.tscn" id="8_721ro"]
+[ext_resource type="Texture2D" uid="uid://c2t6b7ot6vi7u" path="res://src/assets/sprites/elements/positioned/stall-daisy/diploma-1.png" id="8_f1crh"]
+[ext_resource type="Texture2D" uid="uid://botlkv2hp0ewq" path="res://src/assets/sprites/elements/positioned/stall-general/floor-hay-2.png" id="9_h7lkm"]
+[ext_resource type="Texture2D" uid="uid://rfn3gdyrshtb" path="res://src/assets/sprites/elements/positioned/stall-daisy/ripped-letter-1.png" id="9_hpxeo"]
+[ext_resource type="Texture2D" uid="uid://c31ay6jd1ssku" path="res://src/assets/sprites/elements/positioned/stall-general/floor-hay-3.png" id="10_s7l6o"]
+
+[node name="Docks" instance=ExtResource("1_wyljl")]
+
+[node name="MeshInstance3D" parent="." index="1"]
+visible = false
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D2" parent="." index="2"]
+transform = Transform3D(129.827, 0, 0, 0, -4.37114e-08, -79.2961, 0, 1, -3.46613e-06, -0.345512, 4.71619, -8.01931)
+metadata/_edit_lock_ = true
+
+[node name="Player" parent="." index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.91)
+min_clamp_x = -2.4
+max_clamp_x = 2.4
+
+[node name="PlayerCamera" parent="Player" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="Elements" type="Node3D" parent="." index="4"]
+
+[node name="Background" type="Node3D" parent="Elements" index="0"]
+
+[node name="Wall" type="Sprite3D" parent="Elements/Background" index="0"]
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("2_lko6d")
+
+[node name="Gate" type="Sprite3D" parent="Elements/Background" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.01)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("3_hpx4l")
+
+[node name="Props" type="Node3D" parent="Elements" index="1"]
+
+[node name="Scribble" type="Sprite3D" parent="Elements/Props" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.01)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("4_wwcb0")
+
+[node name="Interactables" type="Node3D" parent="Elements" index="2"]
+
+[node name="Box" parent="Elements/Interactables" index="0" instance=ExtResource("4_fk2ta")]
+item_name = "Hoof Care Kit"
+item_description = "..."
+
+[node name="CollisionShape3D" parent="Elements/Interactables/Box" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5256, -0.68217, 0)
+
+[node name="Sprite3D" parent="Elements/Interactables/Box" index="1"]
+texture = ExtResource("6_grvfg")
+
+[node name="BucketList" parent="Elements/Interactables" index="1" instance=ExtResource("4_fk2ta")]
+item_name = "Daisy’s Ultimate Bucket List"
+item_description = "- Roll in the freshest hay
+- Outrun the wind
+- Find \"The Squirrel\""
+
+[node name="CollisionShape3D" parent="Elements/Interactables/BucketList" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.598318, 0.83171, 0)
+
+[node name="Sprite3D" parent="Elements/Interactables/BucketList" index="1"]
+texture = ExtResource("7_g0qvi")
+
+[node name="Diploma" parent="Elements/Interactables" index="2" instance=ExtResource("4_fk2ta")]
+item_name = "Certificate of Excellence"
+item_description = "The Most Luxurious Tail
+Awarded to Daisy
+
+Signed,
+The Ranch Team"
+
+[node name="CollisionShape3D" parent="Elements/Interactables/Diploma" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.01704, 1.16077, 0)
+
+[node name="Sprite3D" parent="Elements/Interactables/Diploma" index="1"]
+texture = ExtResource("8_f1crh")
+
+[node name="Hay1" parent="Elements/Interactables" index="3" node_paths=PackedStringArray("target") instance=ExtResource("6_y3ylq")]
+target = NodePath("../Hay2")
+required_item = ExtResource("7_i5xep")
+requirement_message = "I'm not touching that barehanded."
+
+[node name="CollisionShape3D" parent="Elements/Interactables/Hay1" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.269236, -1.62752, 0.0629883)
+
+[node name="Sprite3D" parent="Elements/Interactables/Hay1" index="1"]
+texture = ExtResource("8_1jkch")
+
+[node name="Hay2" parent="Elements/Interactables" index="4" node_paths=PackedStringArray("target") instance=ExtResource("6_y3ylq")]
+visible = false
+target = NodePath("../Hay3")
+required_item = ExtResource("7_i5xep")
+requirement_message = "I'm not touching that barehanded."
+
+[node name="CollisionShape3D" parent="Elements/Interactables/Hay2" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.269236, -1.62752, 0.0629883)
+
+[node name="Sprite3D" parent="Elements/Interactables/Hay2" index="1"]
+texture = ExtResource("9_h7lkm")
+
+[node name="Hay3" type="Node3D" parent="Elements/Interactables" index="5"]
+visible = false
+
+[node name="Hay" type="Sprite3D" parent="Elements/Interactables/Hay3" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.01)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("10_s7l6o")
+
+[node name="Letter" parent="Elements/Interactables/Hay3" index="1" instance=ExtResource("4_fk2ta")]
+item_name = "Torn Note"
+item_description = "To Daisy,
+
+Can I take you out for oats?
+
+Your secret admirer,
+Rusty"
+
+[node name="CollisionShape3D" parent="Elements/Interactables/Hay3/Letter" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.259485, -2.05545, 0)
+
+[node name="Sprite3D" parent="Elements/Interactables/Hay3/Letter" index="1"]
+texture = ExtResource("9_hpxeo")
+
+[node name="Buttons" type="Node3D" parent="Elements" index="3"]
+
+[node name="Barn" parent="Elements/Buttons" index="0" instance=ExtResource("8_721ro")]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -3.75, -2.637, 0.02)
+scene_to_load = "12_barn"
+
+[node name="Label3D" parent="Elements/Buttons/Barn/Sprite3D" index="0"]
+text = "Go Back"
+
+[editable path="Player"]
+[editable path="Elements/Interactables/Box"]
+[editable path="Elements/Interactables/BucketList"]
+[editable path="Elements/Interactables/Diploma"]
+[editable path="Elements/Interactables/Hay1"]
+[editable path="Elements/Interactables/Hay2"]
+[editable path="Elements/Interactables/Hay3/Letter"]
+[editable path="Elements/Buttons/Barn"]

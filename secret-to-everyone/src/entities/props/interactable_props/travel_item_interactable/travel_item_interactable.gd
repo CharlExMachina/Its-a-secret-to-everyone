@@ -1,6 +1,6 @@
 extends Area3D
 
-@export var scene_to_load: PackedScene
+@export var scene_to_load: String
 @export var required_item: InventoryItem = null
 @export var requirement_message: String = "Hmm... I'm missing something here."
 
@@ -13,7 +13,8 @@ func _on_input_event(camera: Node, event: InputEvent, event_position: Vector3, n
 			ToastLoader.show_toast(requirement_message)
 			return
 		
-		get_tree().change_scene_to_packed.bind(scene_to_load).call_deferred()
+		var scene: String = "res://src/scenes/" + scene_to_load + ".tscn"
+		get_tree().change_scene_to_file.bind(scene).call_deferred()
 
 
 func _on_mouse_entered() -> void:

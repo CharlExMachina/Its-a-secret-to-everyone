@@ -1,0 +1,62 @@
+[gd_scene load_steps=7 format=3 uid="uid://d3mlapstmiafm"]
+
+[ext_resource type="PackedScene" uid="uid://yqbjk2dtw1hk" path="res://src/environments/explorable_zone.tscn" id="1_fyijc"]
+[ext_resource type="PackedScene" uid="uid://byobhlskhpimu" path="res://src/entities/props/interactable_props/switch_interactable/switch_interactable.tscn" id="2_4c7s8"]
+[ext_resource type="Texture2D" uid="uid://bpdqd5yaqwt4t" path="res://src/assets/sprites/elements/positioned/chest/chest-closed.png" id="3_sqkhi"]
+[ext_resource type="Texture2D" uid="uid://leu83jlwoomq" path="res://src/assets/sprites/elements/positioned/chest/dials-reference.png" id="4_yp1xp"]
+[ext_resource type="Texture2D" uid="uid://ccer0ld3k83xy" path="res://src/assets/sprites/elements/positioned/chest/chest-open.png" id="5_pmcoe"]
+[ext_resource type="PackedScene" uid="uid://dqwky4rusmijd" path="res://src/entities/props/interactable_props/travel_button_interactable/travel_button_interactable.tscn" id="8_il3wc"]
+
+[node name="Docks" instance=ExtResource("1_fyijc")]
+
+[node name="MeshInstance3D" parent="." index="1"]
+visible = false
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D2" parent="." index="2"]
+transform = Transform3D(129.827, 0, 0, 0, -4.37114e-08, -79.2961, 0, 1, -3.46613e-06, -0.345512, 4.71619, -8.01931)
+metadata/_edit_lock_ = true
+
+[node name="Player" parent="." index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.91)
+
+[node name="PlayerCamera" parent="Player" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="Elements" type="Node3D" parent="." index="4"]
+
+[node name="Interactables" type="Node3D" parent="Elements" index="0"]
+
+[node name="ChestClosed" parent="Elements/Interactables" index="0" node_paths=PackedStringArray("target") instance=ExtResource("2_4c7s8")]
+target = NodePath("../ChestOpen")
+
+[node name="CollisionShape3D" parent="Elements/Interactables/ChestClosed" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0598869, 0.64021, 0.0629883)
+
+[node name="Sprite3D" parent="Elements/Interactables/ChestClosed" index="1"]
+texture = ExtResource("3_sqkhi")
+
+[node name="Sprite3D2" type="Sprite3D" parent="Elements/Interactables/ChestClosed" index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.01)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("4_yp1xp")
+
+[node name="ChestOpen" type="Sprite3D" parent="Elements/Interactables" index="1"]
+visible = false
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("5_pmcoe")
+
+[node name="Buttons" type="Node3D" parent="Elements" index="1"]
+
+[node name="Return" parent="Elements/Buttons" index="0" instance=ExtResource("8_il3wc")]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, -2.47699, 0)
+scene_to_load = "09_apothecary_room"
+
+[node name="Label3D" parent="Elements/Buttons/Return/Sprite3D" index="0"]
+text = "Go Back"
+
+[editable path="Player"]
+[editable path="Elements/Interactables/ChestClosed"]
+[editable path="Elements/Buttons/Return"]

@@ -1,0 +1,141 @@
+[gd_scene load_steps=11 format=3 uid="uid://c0ekjmj2n8pvx"]
+
+[ext_resource type="PackedScene" uid="uid://yqbjk2dtw1hk" path="res://src/environments/explorable_zone.tscn" id="1_k88x0"]
+[ext_resource type="Texture2D" uid="uid://cpwkxa82shrep" path="res://src/assets/sprites/elements/positioned/barn/background-barn.png" id="2_nrjyg"]
+[ext_resource type="Texture2D" uid="uid://biwrwihv0viyk" path="res://src/assets/sprites/elements/positioned/barn/stalls-1.png" id="3_5lt78"]
+[ext_resource type="Texture2D" uid="uid://mu6mvw5waa1p" path="res://src/assets/sprites/elements/positioned/barn/bucket-1.png" id="4_24pme"]
+[ext_resource type="Texture2D" uid="uid://bq6s0xkp24vbs" path="res://src/assets/sprites/elements/positioned/barn/hanger-1.png" id="5_b4mku"]
+[ext_resource type="PackedScene" uid="uid://bvavsehs0u07j" path="res://src/entities/props/interactable_props/travel_item_interactable/travel_item_interactable.tscn" id="6_230d0"]
+[ext_resource type="Texture2D" uid="uid://beectg0qo3u0f" path="res://src/assets/sprites/elements/positioned/barn/large-floor-hay-1.png" id="6_o62hh"]
+[ext_resource type="Texture2D" uid="uid://c1cfgttqmamkb" path="res://src/assets/sprites/elements/positioned/barn/leash-1.png" id="7_k26r1"]
+[ext_resource type="PackedScene" uid="uid://vhf0l0b53njs" path="res://src/entities/props/interactable_props/information_interactable/information_interactable_prop.tscn" id="8_rm2o7"]
+[ext_resource type="Texture2D" uid="uid://bxo084kassa3" path="res://src/assets/sprites/elements/positioned/barn/wanted-poster-1.png" id="9_txpa6"]
+
+[node name="Docks" instance=ExtResource("1_k88x0")]
+
+[node name="MeshInstance3D" parent="." index="1"]
+visible = false
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D2" parent="." index="2"]
+transform = Transform3D(129.827, 0, 0, 0, -4.37114e-08, -79.2961, 0, 1, -3.46613e-06, -0.345512, 4.71619, -8.01931)
+metadata/_edit_lock_ = true
+
+[node name="Player" parent="." index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.91)
+min_clamp_x = -2.4
+max_clamp_x = 2.4
+
+[node name="PlayerCamera" parent="Player" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="Elements" type="Node3D" parent="." index="4"]
+
+[node name="Background" type="Node3D" parent="Elements" index="0"]
+
+[node name="Walls" type="Sprite3D" parent="Elements/Background" index="0"]
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("2_nrjyg")
+
+[node name="Stalls" type="Sprite3D" parent="Elements/Background" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.01)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("3_5lt78")
+
+[node name="Props" type="Node3D" parent="Elements" index="1"]
+
+[node name="Bucket" type="Sprite3D" parent="Elements/Props" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.01)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("4_24pme")
+
+[node name="Hanger" type="Sprite3D" parent="Elements/Props" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.01)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("5_b4mku")
+
+[node name="Hay" type="Sprite3D" parent="Elements/Props" index="2"]
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("6_o62hh")
+
+[node name="Leash" type="Sprite3D" parent="Elements/Props" index="3"]
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("7_k26r1")
+
+[node name="Interactables" type="Node3D" parent="Elements" index="2"]
+
+[node name="Poster" parent="Elements/Interactables" index="0" instance=ExtResource("8_rm2o7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.01)
+item_name = "WANTED - The Squirrel"
+item_description = "Suspected of stealing a golden horseshoe, the squirrel is wanted for questioning.
+
+Signed,
+Maverick
+"
+
+[node name="CollisionShape3D" parent="Elements/Interactables/Poster" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.99761, 1.40624, 0)
+
+[node name="Sprite3D" parent="Elements/Interactables/Poster" index="1"]
+texture = ExtResource("9_txpa6")
+
+[node name="StorageStall" parent="Elements/Interactables" index="1" instance=ExtResource("6_230d0")]
+scene_to_load = "13_barn_storage"
+
+[node name="CollisionShape3D" parent="Elements/Interactables/StorageStall" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.01293, -0.317175, 0.0629883)
+
+[node name="Sprite3D" parent="Elements/Interactables/StorageStall" index="1"]
+visible = false
+
+[node name="MaverickStall" parent="Elements/Interactables" index="2" instance=ExtResource("6_230d0")]
+scene_to_load = "14_stall_maverick"
+
+[node name="CollisionShape3D" parent="Elements/Interactables/MaverickStall" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.07242, -0.553611, 0.0629883)
+
+[node name="Sprite3D" parent="Elements/Interactables/MaverickStall" index="1"]
+visible = false
+
+[node name="DaisyStall" parent="Elements/Interactables" index="3" instance=ExtResource("6_230d0")]
+scene_to_load = "15_stall_daisy"
+
+[node name="CollisionShape3D" parent="Elements/Interactables/DaisyStall" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.57789, 0.287094, 0.0629883)
+
+[node name="Sprite3D" parent="Elements/Interactables/DaisyStall" index="1"]
+visible = false
+
+[node name="RustyStall" parent="Elements/Interactables" index="4" instance=ExtResource("6_230d0")]
+scene_to_load = "16_stall_rusty"
+
+[node name="CollisionShape3D" parent="Elements/Interactables/RustyStall" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.67109, 0.161601, 0.0629883)
+
+[node name="Sprite3D" parent="Elements/Interactables/RustyStall" index="1"]
+visible = false
+
+[node name="RanchFarm" parent="Elements/Interactables" index="5" instance=ExtResource("6_230d0")]
+scene_to_load = "11_ranch_farm"
+
+[node name="CollisionShape3D" parent="Elements/Interactables/RanchFarm" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0478752, 0.23333, 1.06214)
+
+[node name="Sprite3D" parent="Elements/Interactables/RanchFarm" index="1"]
+visible = false
+
+[node name="Buttons" type="Node3D" parent="Elements" index="3"]
+
+[editable path="Player"]
+[editable path="Elements/Interactables/Poster"]
+[editable path="Elements/Interactables/StorageStall"]
+[editable path="Elements/Interactables/MaverickStall"]
+[editable path="Elements/Interactables/DaisyStall"]
+[editable path="Elements/Interactables/RustyStall"]
+[editable path="Elements/Interactables/RanchFarm"]

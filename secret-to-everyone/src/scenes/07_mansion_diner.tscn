@@ -1,0 +1,173 @@
+[gd_scene load_steps=23 format=3 uid="uid://drw5simhn32o"]
+
+[ext_resource type="PackedScene" uid="uid://yqbjk2dtw1hk" path="res://src/environments/explorable_zone.tscn" id="1_e7sfr"]
+[ext_resource type="Texture2D" uid="uid://dndt6452ft1yi" path="res://src/assets/sprites/elements/positioned/mansion-diner/background-wall.png" id="2_b0et7"]
+[ext_resource type="Texture2D" uid="uid://ckb3fpkebcy0l" path="res://src/assets/sprites/elements/positioned/mansion-diner/carpet.png" id="3_x7idh"]
+[ext_resource type="Texture2D" uid="uid://f14v8qt8quo" path="res://src/assets/sprites/elements/positioned/mansion-diner/chair-1.png" id="4_4kbrx"]
+[ext_resource type="Texture2D" uid="uid://mdyn18v3wdif" path="res://src/assets/sprites/elements/positioned/mansion-diner/chair-2.png" id="5_edq6e"]
+[ext_resource type="Texture2D" uid="uid://bspbwmckcwnbp" path="res://src/assets/sprites/elements/positioned/mansion-diner/chair-3.png" id="6_sa73w"]
+[ext_resource type="Texture2D" uid="uid://cpy1d7jniabsb" path="res://src/assets/sprites/elements/positioned/mansion-diner/chair-4.png" id="7_5uqla"]
+[ext_resource type="Texture2D" uid="uid://chf5nsh24fgqv" path="res://src/assets/sprites/elements/positioned/mansion-diner/chair-5.png" id="8_ua153"]
+[ext_resource type="PackedScene" uid="uid://dqwky4rusmijd" path="res://src/entities/props/interactable_props/travel_button_interactable/travel_button_interactable.tscn" id="8_wwxof"]
+[ext_resource type="Texture2D" uid="uid://bwj1ekof4nqyd" path="res://src/assets/sprites/elements/positioned/mansion-diner/chair-6.png" id="9_m5cbx"]
+[ext_resource type="Texture2D" uid="uid://d1tm0etr5lf6j" path="res://src/assets/sprites/elements/positioned/mansion-diner/chandelier.png" id="10_v3h0o"]
+[ext_resource type="Texture2D" uid="uid://dfb1klecgs5o8" path="res://src/assets/sprites/elements/positioned/mansion-diner/drapes-left.png" id="11_m7uuw"]
+[ext_resource type="Texture2D" uid="uid://dnqv4xm77gl06" path="res://src/assets/sprites/elements/positioned/mansion-diner/drapes-center.png" id="12_ch0qa"]
+[ext_resource type="Texture2D" uid="uid://dl2vfc6smknm4" path="res://src/assets/sprites/elements/positioned/mansion-diner/drapes-right.png" id="13_840qw"]
+[ext_resource type="Texture2D" uid="uid://cyx7cthuipc2v" path="res://src/assets/sprites/elements/positioned/mansion-diner/painting-apple-head.png" id="14_wtj5k"]
+[ext_resource type="Texture2D" uid="uid://g4hfcwxq1cgl" path="res://src/assets/sprites/elements/positioned/mansion-diner/painting-still-life.png" id="15_l18ai"]
+[ext_resource type="Texture2D" uid="uid://cj1b1i6377obk" path="res://src/assets/sprites/elements/positioned/mansion-diner/table.png" id="16_2dk0f"]
+[ext_resource type="PackedScene" uid="uid://vhf0l0b53njs" path="res://src/entities/props/interactable_props/information_interactable/information_interactable_prop.tscn" id="17_ephu7"]
+[ext_resource type="Texture2D" uid="uid://cpvnc0ax8wren" path="res://src/assets/sprites/elements/positioned/mansion-diner/kitchen-door.png" id="18_pakom"]
+[ext_resource type="PackedScene" uid="uid://db8yh7nc2dxqn" path="res://src/entities/props/interactable_props/pickup_interactable/pickup_interactable.tscn" id="19_d0nt4"]
+[ext_resource type="Resource" uid="uid://h57u6slrt01t" path="res://src/key_items/barn_key.tres" id="20_26ohe"]
+[ext_resource type="Texture2D" uid="uid://b647ysv8mn5ec" path="res://src/assets/sprites/elements/cropped/beachside-bar/wall-keys-1.png" id="21_cj8a3"]
+
+[node name="Docks" instance=ExtResource("1_e7sfr")]
+
+[node name="MeshInstance3D" parent="." index="1"]
+visible = false
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D2" parent="." index="2"]
+transform = Transform3D(129.827, 0, 0, 0, -4.37114e-08, -79.2961, 0, 1, -3.46613e-06, -0.345512, 4.71619, -8.01931)
+metadata/_edit_lock_ = true
+
+[node name="Player" parent="." index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.91)
+min_clamp_x = -2.3
+max_clamp_x = 2.3
+
+[node name="PlayerCamera" parent="Player" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="Elements" type="Node3D" parent="." index="4"]
+
+[node name="Background" type="Node3D" parent="Elements" index="0"]
+
+[node name="Walls" type="Sprite3D" parent="Elements/Background" index="0"]
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("2_b0et7")
+
+[node name="Props" type="Node3D" parent="Elements" index="1"]
+
+[node name="Carpet" type="Sprite3D" parent="Elements/Props" index="0"]
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("3_x7idh")
+
+[node name="Chair1" type="Sprite3D" parent="Elements/Props" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.02)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("4_4kbrx")
+
+[node name="Chair2" type="Sprite3D" parent="Elements/Props" index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.02)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("5_edq6e")
+
+[node name="Chair3" type="Sprite3D" parent="Elements/Props" index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.02)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("6_sa73w")
+
+[node name="Chair4" type="Sprite3D" parent="Elements/Props" index="4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.02)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("7_5uqla")
+
+[node name="Chair5" type="Sprite3D" parent="Elements/Props" index="5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.02)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("8_ua153")
+
+[node name="Chair6" type="Sprite3D" parent="Elements/Props" index="6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.02)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("9_m5cbx")
+
+[node name="Chandelier" type="Sprite3D" parent="Elements/Props" index="7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.02)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("10_v3h0o")
+
+[node name="Drapes" type="Sprite3D" parent="Elements/Props" index="8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.01)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("11_m7uuw")
+
+[node name="Drapes2" type="Sprite3D" parent="Elements/Props" index="9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.01)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("12_ch0qa")
+
+[node name="Drapes3" type="Sprite3D" parent="Elements/Props" index="10"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.01)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("13_840qw")
+
+[node name="Painting" type="Sprite3D" parent="Elements/Props" index="11"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.01)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("14_wtj5k")
+
+[node name="Painting2" type="Sprite3D" parent="Elements/Props" index="12"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.01)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("15_l18ai")
+
+[node name="Table" type="Sprite3D" parent="Elements/Props" index="13"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.01)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("16_2dk0f")
+
+[node name="Interactables" type="Node3D" parent="Elements" index="2"]
+
+[node name="KitchenDoor" parent="Elements/Interactables" index="0" instance=ExtResource("17_ephu7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.1)
+item_name = "Kitchen Door"
+item_description = "Yeah, no thanks. This place has been abandoned long enough for the food to grow a personality."
+
+[node name="CollisionShape3D" parent="Elements/Interactables/KitchenDoor" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.69804, -0.447942, 0)
+
+[node name="Sprite3D" parent="Elements/Interactables/KitchenDoor" index="1"]
+texture = ExtResource("18_pakom")
+
+[node name="BarnKey" parent="Elements/Interactables" index="1" instance=ExtResource("19_d0nt4")]
+item = ExtResource("20_26ohe")
+
+[node name="Sprite3D" parent="Elements/Interactables/BarnKey" index="0"]
+transform = Transform3D(0.289784, 0.957092, 0, -0.957092, 0.289784, 0, 0, 0, 1, -7.07874, -1.90818, 0)
+texture = ExtResource("21_cj8a3")
+
+[node name="CollisionShape3D" parent="Elements/Interactables/BarnKey" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.06992, -1.86395, 0)
+
+[node name="Buttons" type="Node3D" parent="Elements" index="3"]
+
+[node name="MansionHall" parent="Elements/Buttons" index="0" instance=ExtResource("8_wwxof")]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, -2.65199, 0.02)
+scene_to_load = "06_mansion_hall"
+
+[node name="Label3D" parent="Elements/Buttons/MansionHall/Sprite3D" index="0"]
+text = "Go Back"
+
+[editable path="Player"]
+[editable path="Elements/Interactables/KitchenDoor"]
+[editable path="Elements/Interactables/BarnKey"]
+[editable path="Elements/Buttons/MansionHall"]
