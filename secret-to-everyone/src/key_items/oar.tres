@@ -5,6 +5,6 @@
 
 [resource]
 script = ExtResource("2_pf5co")
-item_name = "Oar"
+item_name = "Oars"
 item_sprite = ExtResource("1_6tuao")
-description = "This oar has definitely seen better days. It's usable enough to get to St. Angela Island."
+description = "These oars have definitely seen better days. They're usable enough to get to St. Angela Island."

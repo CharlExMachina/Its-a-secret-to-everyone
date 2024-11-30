@@ -6,6 +6,12 @@ var inventory_menu = preload("res://src/entities/ui/inventory_menu/inventory_men
 @export var movement_speed := 400.0
 @export var sensitivity_value := 0.02
 
+@export var min_clamp_x: float = 0
+@export var max_clamp_x: float = 0
+@export var min_clamp_z: float = 2.0
+@export var max_clamp_z: float = 3.91
+
+
 const DRAG_MOTION_X_MIN_THRESHOLD := 13.0
 const DRAG_MOTION_Y_MIN_THRESHOLD := 13.0
 
@@ -19,10 +25,6 @@ var is_moving := false
 var is_frozen := false
 var mouse_drag_start_pos: Vector2
 var mouse_drag_current_pos: Vector2
-var min_clamp_x: float
-var max_clamp_x: float
-var min_clamp_z: float
-var max_clamp_z: float
 
 
 func _physics_process(delta: float) -> void:

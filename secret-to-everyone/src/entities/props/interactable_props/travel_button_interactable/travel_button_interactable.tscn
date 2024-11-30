@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://dqwky4rusmijd"]
+
+[ext_resource type="Script" path="res://src/entities/props/interactable_props/travel_button_interactable/travel_button_interactable.gd" id="1_vn0hf"]
+[ext_resource type="Texture2D" uid="uid://cm427q4fdtl4i" path="res://src/assets/sprites/interactables/action-interactable-bg.png" id="2_wm5gn"]
+[ext_resource type="FontFile" uid="uid://cr0veva7b3pab" path="res://src/assets/fonts/caveat_regular.ttf" id="3_ue0nx"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pviht"]
+size = Vector3(2.94769, 1, 0.24707)
+
+[node name="TravelButtonInteractable" type="Area3D"]
+script = ExtResource("1_vn0hf")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0393982, 0, 0.0629883)
+shape = SubResource("BoxShape3D_pviht")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+alpha_cut = 2
+texture_filter = 0
+texture = ExtResource("2_wm5gn")
+
+[node name="Label3D" type="Label3D" parent="Sprite3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.0246831)
+render_priority = 1
+outline_render_priority = -2
+modulate = Color(0.110036, 0.110036, 0.110036, 1)
+text = "Exit"
+font = ExtResource("3_ue0nx")
+font_size = 72
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

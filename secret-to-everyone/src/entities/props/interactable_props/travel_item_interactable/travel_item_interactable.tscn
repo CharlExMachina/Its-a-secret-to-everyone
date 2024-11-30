@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://bvavsehs0u07j"]
+
+[ext_resource type="Script" path="res://src/entities/props/interactable_props/travel_item_interactable/travel_item_interactable.gd" id="1_gbyw5"]
+[ext_resource type="Texture2D" uid="uid://cvv5tn6f4lsb2" path="res://src/assets/sprites/placeholder_pickup.png" id="2_xllyu"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pviht"]
+size = Vector3(0.573226, 0.819458, 0.24707)
+
+[node name="TravelItemInteractable" type="Area3D"]
+script = ExtResource("1_gbyw5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0393982, 0, 0.0629883)
+shape = SubResource("BoxShape3D_pviht")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("2_xllyu")
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

@@ -119,3 +119,7 @@ func _on_continue_button_pressed() -> void:
 		narration_step += 1
 		disable_continue_button()
 		fade_out_narration()
+
+
+func _on_skip_button_pressed():
+		get_tree().change_scene_to_file("res://src/scenes/01_forest_hut.tscn")

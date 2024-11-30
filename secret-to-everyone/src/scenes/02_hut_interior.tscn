@@ -1,0 +1,163 @@
+[gd_scene load_steps=20 format=3 uid="uid://ftcx1wmpe3gh"]
+
+[ext_resource type="PackedScene" uid="uid://yqbjk2dtw1hk" path="res://src/environments/explorable_zone.tscn" id="1_hqdbw"]
+[ext_resource type="Texture2D" uid="uid://7eiy0blt0d6y" path="res://src/assets/sprites/elements/positioned/hut/background-hut.png" id="2_b00q8"]
+[ext_resource type="PackedScene" uid="uid://vhf0l0b53njs" path="res://src/entities/props/interactable_props/information_interactable/information_interactable_prop.tscn" id="3_7vtpt"]
+[ext_resource type="Texture2D" uid="uid://b1ijuxwpi5h81" path="res://src/assets/sprites/elements/positioned/hut/nightstand-1.png" id="3_morsb"]
+[ext_resource type="Texture2D" uid="uid://2ilhrrlixya8" path="res://src/assets/sprites/elements/positioned/hut/bed-1.png" id="4_ulpcv"]
+[ext_resource type="Texture2D" uid="uid://588q8vky7v0e" path="res://src/assets/sprites/elements/positioned/hut/glass-1.png" id="4_xsmgy"]
+[ext_resource type="Texture2D" uid="uid://ddu2qljefjeu7" path="res://src/assets/sprites/elements/positioned/hut/chair-2.png" id="5_3ux62"]
+[ext_resource type="Texture2D" uid="uid://bwm5x8i87318d" path="res://src/assets/sprites/elements/positioned/hut/hanger-1.png" id="5_6kp8a"]
+[ext_resource type="Texture2D" uid="uid://b3qci0qemx0" path="res://src/assets/sprites/elements/positioned/hut/coat-1.png" id="5_hdaje"]
+[ext_resource type="PackedScene" uid="uid://db8yh7nc2dxqn" path="res://src/entities/props/interactable_props/pickup_interactable/pickup_interactable.tscn" id="6_6b573"]
+[ext_resource type="Texture2D" uid="uid://c02ifx80ytnh3" path="res://src/assets/sprites/elements/positioned/hut/table-1.png" id="6_81f2p"]
+[ext_resource type="Texture2D" uid="uid://bqfpfdktpst7g" path="res://src/assets/sprites/elements/positioned/hut/rug-1.png" id="6_seu6n"]
+[ext_resource type="Texture2D" uid="uid://hl2a0fkcqsq2" path="res://src/assets/sprites/elements/positioned/hut/shelf-1.png" id="7_63nnc"]
+[ext_resource type="Texture2D" uid="uid://cy2au5x1dutkp" path="res://src/assets/sprites/elements/positioned/hut/oar-1.png" id="7_mwdbi"]
+[ext_resource type="Texture2D" uid="uid://cfofob4j2cjem" path="res://src/assets/sprites/elements/positioned/hut/drawer-1.png" id="11_51gon"]
+[ext_resource type="Texture2D" uid="uid://b7o8dutaprmwi" path="res://src/assets/sprites/elements/positioned/hut/stove-1.png" id="14_6mgol"]
+[ext_resource type="Resource" uid="uid://byq3as07hgpfv" path="res://src/key_items/oar.tres" id="15_58ols"]
+[ext_resource type="PackedScene" uid="uid://dqwky4rusmijd" path="res://src/entities/props/interactable_props/travel_button_interactable/travel_button_interactable.tscn" id="18_l0644"]
+
+[node name="ForestHut" instance=ExtResource("1_hqdbw")]
+
+[node name="MeshInstance3D" parent="." index="1"]
+visible = false
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D2" parent="." index="2"]
+transform = Transform3D(129.827, 0, 0, 0, -4.37114e-08, -79.2961, 0, 1, -3.46613e-06, -0.345512, 4.71619, -8.01931)
+metadata/_edit_lock_ = true
+
+[node name="Player" parent="." index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.91)
+min_clamp_x = -2.4
+max_clamp_x = 2.4
+
+[node name="PlayerCamera" parent="Player" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="Elements" type="Node3D" parent="." index="4"]
+
+[node name="Background" type="Node3D" parent="Elements" index="0"]
+
+[node name="Walls" type="Sprite3D" parent="Elements/Background" index="0"]
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("2_b00q8")
+
+[node name="Props" type="Node3D" parent="Elements" index="1"]
+
+[node name="Nightstand" type="Sprite3D" parent="Elements/Props" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.02)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("3_morsb")
+
+[node name="Glass" type="Sprite3D" parent="Elements/Props" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.03)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("4_xsmgy")
+
+[node name="Hanger" type="Sprite3D" parent="Elements/Props" index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.01)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("5_6kp8a")
+
+[node name="Rug" type="Sprite3D" parent="Elements/Props" index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.01)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("6_seu6n")
+
+[node name="Shelf" type="Sprite3D" parent="Elements/Props" index="4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.01)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("7_63nnc")
+
+[node name="Interactables" type="Node3D" parent="Elements" index="2"]
+
+[node name="Oars" parent="Elements/Interactables" index="0" instance=ExtResource("6_6b573")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.01)
+item = ExtResource("15_58ols")
+
+[node name="Sprite3D" parent="Elements/Interactables/Oars" index="0"]
+texture = ExtResource("7_mwdbi")
+
+[node name="Bed" parent="Elements/Interactables" index="1" instance=ExtResource("3_7vtpt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.01)
+item_name = "Old Bed"
+item_description = "I don't feel like sleeping right now, and this bed is quite uncomfortable..."
+
+[node name="CollisionShape3D" parent="Elements/Interactables/Bed" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.61401, 0.466251, 0)
+
+[node name="Sprite3D" parent="Elements/Interactables/Bed" index="1"]
+texture = ExtResource("4_ulpcv")
+
+[node name="Coat" parent="Elements/Interactables" index="2" instance=ExtResource("3_7vtpt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.01)
+item_name = "Old Coat"
+item_description = "If I'm going to an island, I don't think I'll need a coat like this one."
+
+[node name="CollisionShape3D" parent="Elements/Interactables/Coat" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.18622, 1.2091, 0)
+
+[node name="Sprite3D" parent="Elements/Interactables/Coat" index="1"]
+texture = ExtResource("5_hdaje")
+
+[node name="Drawer" parent="Elements/Interactables" index="3" instance=ExtResource("3_7vtpt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.01)
+item_name = "Old Drawer"
+item_description = "I basically store in here anything I can't find a space for in home. I can't remember storing any oars though."
+
+[node name="CollisionShape3D" parent="Elements/Interactables/Drawer" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.10665, -0.964078, 0)
+
+[node name="Sprite3D" parent="Elements/Interactables/Drawer" index="1"]
+texture = ExtResource("11_51gon")
+
+[node name="Stove" parent="Elements/Interactables" index="4" instance=ExtResource("3_7vtpt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.01)
+item_name = "Old Stove"
+item_description = "I'm not even sure if this can be turned on..."
+
+[node name="CollisionShape3D" parent="Elements/Interactables/Stove" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.10665, -0.964078, 0)
+
+[node name="Sprite3D" parent="Elements/Interactables/Stove" index="1"]
+texture = ExtResource("14_6mgol")
+
+[node name="TableChairs" parent="Elements/Interactables" index="5" instance=ExtResource("3_7vtpt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.02)
+item_name = "Table"
+item_description = "I used to have good conversation with gramps here, the man always gave me the weirdest advice..."
+
+[node name="CollisionShape3D" parent="Elements/Interactables/TableChairs" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.00453, -1.45578, 0)
+
+[node name="Sprite3D" parent="Elements/Interactables/TableChairs" index="1"]
+texture = ExtResource("5_3ux62")
+
+[node name="Sprite3D2" type="Sprite3D" parent="Elements/Interactables/TableChairs" index="2"]
+texture = ExtResource("6_81f2p")
+
+[node name="Buttons" type="Node3D" parent="Elements" index="3"]
+
+[node name="TravelButtonInteractable" parent="Elements/Buttons" index="0" instance=ExtResource("18_l0644")]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -4.12414, -2.36955, 0.05)
+
+[node name="Label3D" parent="Elements/Buttons/TravelButtonInteractable/Sprite3D" index="0"]
+text = "Exit Hut"
+
+[editable path="Player"]
+[editable path="Elements/Interactables/Oars"]
+[editable path="Elements/Interactables/Bed"]
+[editable path="Elements/Interactables/Coat"]
+[editable path="Elements/Interactables/Drawer"]
+[editable path="Elements/Interactables/Stove"]
+[editable path="Elements/Interactables/TableChairs"]
+[editable path="Elements/Buttons/TravelButtonInteractable"]

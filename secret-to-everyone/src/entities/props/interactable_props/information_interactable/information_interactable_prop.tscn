@@ -3,18 +3,18 @@
 [ext_resource type="Script" path="res://src/entities/props/interactable_props/information_interactable/information_interactable.gd" id="1_hen1t"]
 [ext_resource type="Texture2D" uid="uid://cyxbfkntq7dag" path="res://src/assets/sprites/scroll.png" id="1_tfyfj"]
 
-[sub_resource type="SphereShape3D" id="SphereShape3D_6ncqy"]
-radius = 0.596031
+[sub_resource type="BoxShape3D" id="BoxShape3D_k8vxn"]
+size = Vector3(3.39847, 2.05795, 1)
 
 [node name="InteractableProp" type="Area3D"]
 script = ExtResource("1_hen1t")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.168404, 0, 0)
-shape = SubResource("SphereShape3D_6ncqy")
+shape = SubResource("BoxShape3D_k8vxn")
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
-transform = Transform3D(0.338045, 0, 0, 0, 0.338045, 0, 0, 0, 1, 0, 0.645455, 0)
+alpha_cut = 1
+texture_filter = 0
 texture = ExtResource("1_tfyfj")
 
 [connection signal="input_event" from="." to="." method="_on_input_event"]

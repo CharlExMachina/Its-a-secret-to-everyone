@@ -1,0 +1,310 @@
+[gd_scene load_steps=31 format=3 uid="uid://dj72dasmlchv2"]
+
+[ext_resource type="PackedScene" uid="uid://yqbjk2dtw1hk" path="res://src/environments/explorable_zone.tscn" id="1_ig34o"]
+[ext_resource type="Texture2D" uid="uid://b74mtqraq42bl" path="res://src/assets/sprites/elements/positioned/forest-hut/background-complete.png" id="2_juyir"]
+[ext_resource type="Texture2D" uid="uid://cei0ljqg5llpu" path="res://src/assets/sprites/elements/cropped/repeating-backgrounds/repeat-clouds.png" id="3_b6i8w"]
+[ext_resource type="Texture2D" uid="uid://b584uta6pjftm" path="res://src/assets/sprites/elements/positioned/forest-hut/forest.png" id="4_2b13x"]
+[ext_resource type="Texture2D" uid="uid://bxpw10anbdh7n" path="res://src/assets/sprites/elements/positioned/forest-hut/hut-terrace.png" id="5_rjoh0"]
+[ext_resource type="Texture2D" uid="uid://dcr5ogy0vpy7h" path="res://src/assets/sprites/elements/positioned/forest-hut/pebble-1.png" id="6_qgril"]
+[ext_resource type="Texture2D" uid="uid://dkx6iq22j8bwa" path="res://src/assets/sprites/elements/positioned/forest-hut/pebble-2.png" id="7_8oef7"]
+[ext_resource type="Texture2D" uid="uid://b5f7umnl6lrg2" path="res://src/assets/sprites/elements/cropped/nature/sun.png" id="8_nxn35"]
+[ext_resource type="PackedScene" uid="uid://byobhlskhpimu" path="res://src/entities/props/interactable_props/switch_interactable/switch_interactable.tscn" id="9_4a8th"]
+[ext_resource type="Texture2D" uid="uid://bvkeigyf677bt" path="res://src/assets/sprites/elements/positioned/forest-hut/hut-closed.png" id="10_jjvh7"]
+[ext_resource type="PackedScene" uid="uid://bvavsehs0u07j" path="res://src/entities/props/interactable_props/travel_item_interactable/travel_item_interactable.tscn" id="11_u3fo6"]
+[ext_resource type="PackedScene" uid="uid://ftcx1wmpe3gh" path="res://src/scenes/02_hut_interior.tscn" id="12_is4kn"]
+[ext_resource type="Texture2D" uid="uid://wpxn2xsaiwcd" path="res://src/assets/sprites/elements/positioned/forest-hut/hut-open.png" id="13_372eu"]
+[ext_resource type="PackedScene" uid="uid://c2e1uk380jjn3" path="res://src/environments/dock/dock.tscn" id="14_tklw0"]
+[ext_resource type="Resource" uid="uid://byq3as07hgpfv" path="res://src/key_items/oar.tres" id="15_nrh6o"]
+[ext_resource type="Texture2D" uid="uid://cggnnxbx7ylnf" path="res://src/assets/sprites/elements/positioned/forest-hut/boat.png" id="16_wptcg"]
+[ext_resource type="Texture2D" uid="uid://ub0yr7btg8qq" path="res://src/assets/sprites/elements/cropped/nature/foliage-10.png" id="17_exul8"]
+[ext_resource type="Texture2D" uid="uid://dosybyemnqn1s" path="res://src/assets/sprites/elements/cropped/nature/foliage-9.png" id="18_j75iu"]
+[ext_resource type="Texture2D" uid="uid://jc8xbvk8evi8" path="res://src/assets/sprites/elements/cropped/nature/foliage-1.png" id="19_nk7pa"]
+[ext_resource type="Texture2D" uid="uid://d01n83velrr3i" path="res://src/assets/sprites/elements/cropped/nature/foliage-2.png" id="20_upd4w"]
+[ext_resource type="Texture2D" uid="uid://dbcxifg4sxwli" path="res://src/assets/sprites/elements/cropped/nature/foliage-7.png" id="21_bfvsn"]
+[ext_resource type="Texture2D" uid="uid://bkdaoghpsrmyc" path="res://src/assets/sprites/elements/cropped/nature/foliage-3.png" id="22_4q6ck"]
+[ext_resource type="Texture2D" uid="uid://nrsnvyukykq8" path="res://src/assets/sprites/elements/cropped/nature/foliage-4.png" id="23_7keot"]
+[ext_resource type="Texture2D" uid="uid://bwmjr6hhi8i73" path="res://src/assets/sprites/elements/cropped/nature/foliage-5.png" id="24_wxud6"]
+[ext_resource type="Texture2D" uid="uid://bpl6sn3d7tftq" path="res://src/assets/sprites/elements/cropped/nature/foliage-6.png" id="25_277uq"]
+[ext_resource type="Texture2D" uid="uid://bsjv1sfqaw6ni" path="res://src/assets/sprites/elements/cropped/nature/foliage-11.png" id="26_adx6n"]
+[ext_resource type="Texture2D" uid="uid://doguxr0m0qaxc" path="res://src/assets/sprites/elements/cropped/nature/foliage-12.png" id="27_17q2d"]
+[ext_resource type="Texture2D" uid="uid://doa58lyswuhdf" path="res://src/assets/sprites/elements/cropped/nature/foliage-8.png" id="28_2htnw"]
+[ext_resource type="Texture2D" uid="uid://cppxel632oc1g" path="res://src/assets/sprites/elements/cropped/nature/flower-1.png" id="29_nnn8h"]
+[ext_resource type="Texture2D" uid="uid://c4pa18mjltp7t" path="res://src/assets/sprites/elements/cropped/nature/flower-2.png" id="30_ai36x"]
+
+[node name="ForestHut" instance=ExtResource("1_ig34o")]
+
+[node name="MeshInstance3D" parent="." index="1"]
+visible = false
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D2" parent="." index="2"]
+transform = Transform3D(129.827, 0, 0, 0, -4.37114e-08, -79.2961, 0, 1, -3.46613e-06, -0.345512, 4.71619, -8.01931)
+metadata/_edit_lock_ = true
+
+[node name="Player" parent="." index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.91)
+min_clamp_x = -2.45
+max_clamp_x = 2.45
+
+[node name="PlayerCamera" parent="Player" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="Elements" type="Node3D" parent="." index="4"]
+
+[node name="Background" type="Node3D" parent="Elements" index="0"]
+
+[node name="HorizonBeachWaves" type="Sprite3D" parent="Elements/Background" index="0"]
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("2_juyir")
+
+[node name="Clouds" type="Sprite3D" parent="Elements/Background" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.041, 1.2, -0.01)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("3_b6i8w")
+
+[node name="Props" type="Node3D" parent="Elements" index="1"]
+
+[node name="Forest" type="Sprite3D" parent="Elements/Props" index="0"]
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("4_2b13x")
+
+[node name="Terrace" type="Sprite3D" parent="Elements/Props" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.01)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("5_rjoh0")
+
+[node name="Pebble1" type="Sprite3D" parent="Elements/Props" index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.01)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("6_qgril")
+
+[node name="Pebble2" type="Sprite3D" parent="Elements/Props" index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.01)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("7_8oef7")
+
+[node name="Sun" type="Sprite3D" parent="Elements/Props" index="4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.52926, 1.66191, 0.00999999)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("8_nxn35")
+
+[node name="Interactables" type="Node3D" parent="Elements" index="2"]
+
+[node name="HutClosed" parent="Elements/Interactables" index="0" node_paths=PackedStringArray("target") instance=ExtResource("9_4a8th")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.01)
+target = NodePath("../HutOpen")
+
+[node name="CollisionShape3D" parent="Elements/Interactables/HutClosed" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.23097, 0.0107422, 0.0629883)
+
+[node name="Sprite3D" parent="Elements/Interactables/HutClosed" index="1"]
+texture = ExtResource("10_jjvh7")
+
+[node name="HutOpen" parent="Elements/Interactables" index="1" instance=ExtResource("11_u3fo6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.01)
+scene_to_load = ExtResource("12_is4kn")
+
+[node name="CollisionShape3D" parent="Elements/Interactables/HutOpen" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.24787, -0.0145874, 0.0629883)
+
+[node name="Sprite3D" parent="Elements/Interactables/HutOpen" index="1"]
+texture = ExtResource("13_372eu")
+
+[node name="Boat" parent="Elements/Interactables" index="2" instance=ExtResource("11_u3fo6")]
+scene_to_load = ExtResource("14_tklw0")
+required_item = ExtResource("15_nrh6o")
+requirement_message = "I can't row with my bare hands."
+
+[node name="CollisionShape3D" parent="Elements/Interactables/Boat" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.13193, -1.45409, 0.0629883)
+
+[node name="Sprite3D" parent="Elements/Interactables/Boat" index="1"]
+texture = ExtResource("16_wptcg")
+
+[node name="Foliage" type="Node3D" parent="Elements" index="3"]
+
+[node name="Grass" type="Sprite3D" parent="Elements/Foliage" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.75542, -1.78688, 0.00999999)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("17_exul8")
+
+[node name="Grass28" type="Sprite3D" parent="Elements/Foliage" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.11803, -1.58459, 0.00999999)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("17_exul8")
+
+[node name="Grass2" type="Sprite3D" parent="Elements/Foliage" index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.44904, -1.75466, 0.00999999)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("18_j75iu")
+
+[node name="Grass3" type="Sprite3D" parent="Elements/Foliage" index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.389768, -1.22431, 0.00999999)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("19_nk7pa")
+
+[node name="Grass4" type="Sprite3D" parent="Elements/Foliage" index="4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.16611, -1.74913, 0.00999999)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("20_upd4w")
+
+[node name="Grass24" type="Sprite3D" parent="Elements/Foliage" index="5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.52819, -1.94559, 0.00999999)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("21_bfvsn")
+
+[node name="Grass5" type="Sprite3D" parent="Elements/Foliage" index="6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.84121, -0.677958, 0.00999999)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("22_4q6ck")
+
+[node name="Grass6" type="Sprite3D" parent="Elements/Foliage" index="7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.25024, -2.49004, 0.00999999)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("23_7keot")
+
+[node name="Grass7" type="Sprite3D" parent="Elements/Foliage" index="8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.933535, -1.06796, 0.00999999)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("24_wxud6")
+
+[node name="Grass27" type="Sprite3D" parent="Elements/Foliage" index="9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.85935, -1.15592, 0.00999999)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("24_wxud6")
+
+[node name="Grass8" type="Sprite3D" parent="Elements/Foliage" index="10"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.84577, -0.667615, 0.00999999)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("25_277uq")
+
+[node name="Grass29" type="Sprite3D" parent="Elements/Foliage" index="11"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.76555, -0.595817, 0.00999999)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("25_277uq")
+
+[node name="Grass9" type="Sprite3D" parent="Elements/Foliage" index="12"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.29816, -2.14459, 0.00999999)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("21_bfvsn")
+
+[node name="Grass10" type="Sprite3D" parent="Elements/Foliage" index="13"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.161627, -0.736547, 0.00999999)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("26_adx6n")
+
+[node name="Grass11" type="Sprite3D" parent="Elements/Foliage" index="14"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.0813, -0.822903, 0.00999999)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("26_adx6n")
+
+[node name="Grass12" type="Sprite3D" parent="Elements/Foliage" index="15"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.594098, -0.847921, 0.00999999)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("25_277uq")
+
+[node name="Grass21" type="Sprite3D" parent="Elements/Foliage" index="16"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.29333, -0.613499, 0.00999999)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("25_277uq")
+
+[node name="Grass13" type="Sprite3D" parent="Elements/Foliage" index="17"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.16038, -2.70003, 0.00999999)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("21_bfvsn")
+
+[node name="Grass25" type="Sprite3D" parent="Elements/Foliage" index="18"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.46482, -1.97879, 0.00999999)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("27_17q2d")
+
+[node name="Grass26" type="Sprite3D" parent="Elements/Foliage" index="19"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.903313, -1.52142, 0.00999999)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("27_17q2d")
+
+[node name="Grass14" type="Sprite3D" parent="Elements/Foliage" index="20"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.85395, -1.15403, 0.00999999)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("28_2htnw")
+
+[node name="Grass15" type="Sprite3D" parent="Elements/Foliage" index="21"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.52322, -2.29479, 0.00999999)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("23_7keot")
+
+[node name="Grass16" type="Sprite3D" parent="Elements/Foliage" index="22"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.87332, -1.65479, 0.00999999)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("18_j75iu")
+
+[node name="Grass22" type="Sprite3D" parent="Elements/Foliage" index="23"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.468355, -1.65479, 0.00999999)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("28_2htnw")
+
+[node name="Grass23" type="Sprite3D" parent="Elements/Foliage" index="24"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.34056, -2.50135, 0.00999999)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("28_2htnw")
+
+[node name="Grass17" type="Sprite3D" parent="Elements/Foliage" index="25"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.61967, -0.702062, 0.00999999)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("22_4q6ck")
+
+[node name="Grass18" type="Sprite3D" parent="Elements/Foliage" index="26"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00420547, -1.53397, 0.00999999)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("21_bfvsn")
+
+[node name="Grass19" type="Sprite3D" parent="Elements/Foliage" index="27"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.52013, -2.66507, 0.00999999)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("29_nnn8h")
+
+[node name="Grass20" type="Sprite3D" parent="Elements/Foliage" index="28"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.8677, -2.50273, 0.00999999)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("30_ai36x")
+
+[editable path="Player"]
+[editable path="Elements/Interactables/HutClosed"]
+[editable path="Elements/Interactables/HutOpen"]
+[editable path="Elements/Interactables/Boat"]

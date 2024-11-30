@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d333ngcsovsb3"
-path.s3tc="res://.godot/imported/dock-1.png-59dff2375bd9619b47c7fa1444e7c728.s3tc.ctex"
+path.bptc="res://.godot/imported/dock-1.png-59dff2375bd9619b47c7fa1444e7c728.bptc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -12,12 +12,12 @@ metadata={
 [deps]
 
 source_file="res://src/assets/sprites/environment/dock/dock-1.png"
-dest_files=["res://.godot/imported/dock-1.png-59dff2375bd9619b47c7fa1444e7c728.s3tc.ctex"]
+dest_files=["res://.godot/imported/dock-1.png-59dff2375bd9619b47c7fa1444e7c728.bptc.ctex"]
 
 [params]
 
 compress/mode=2
-compress/high_quality=false
+compress/high_quality=true
 compress/lossy_quality=0.7
 compress/hdr_compression=1
 compress/normal_map=0
